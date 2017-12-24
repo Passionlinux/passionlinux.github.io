@@ -1,0 +1,13 @@
+git@github.com:Passionlinux/passionlinux.github.io.git
+git init
+echo "# passionlinux.github.io" >> README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:Passionlinux/passionlinux.github.io.git
+git push -u origin master
+
+
+# mise a jour du git:
+git add --all *
+git commit -a
+git push origin master
