@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seb&#39;s blog / PassionGNU/Linux, la passion du Libre...</title>
+    <description>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</description>
+    <link>https://passiongnulinux.tuxfamily.org//</link>
+    <atom:link href="https://passiongnulinux.tuxfamily.org//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 09 Oct 2018 21:50:58 +0200</pubDate>
+    <lastBuildDate>Tue, 09 Oct 2018 21:50:58 +0200</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Ghostwriter sous Debian</title>
+        <description>&lt;p&gt;Je me relance à empaqueter &lt;a href=&quot;https://github.com/wereturtle/ghostwriter&quot;&gt;Ghostwriter&lt;/a&gt; pour Debian, suite aux mails reçus ces derniers temps. En effet, Dylan ayant été le premier à me donner des conseilles et une liste de chose à faire, j’ai reçu aussi dernièrement –c’est à dire hier– des mails de relance pour ce paquet.&lt;/p&gt;
+
+&lt;p&gt;Il reste pas mal de choses à comprendre et à faire, il reste des erreurs qui ne sont pas admissent chez Debian pour le faire paraître, mais je dis bien mais, il est totalement utilisable et propre déjà dans son état actuel, il est disponible &lt;a href=&quot;https://download.opensuse.org/repositories/home:/seb95passionlinux/Debian_9.0/&quot;&gt;ici&lt;/a&gt; en 64 bits uniquement pour le moment et en 32 bits pour Ubuntu par &lt;a href=&quot;https://download.opensuse.org/repositories/home:/seb95passionlinux/xUbuntu_18.04/&quot;&gt;là&lt;/a&gt;. J’ai des soucis de 32/64 bits chez openSUSE OBS, je sais pas bien pourquoi mais je pense pouvoir résoudre les soucis qu’en faisant un gros nettoyage et suppression dedans, en passant par exemple par un nouveau compte.&lt;/p&gt;
+
+&lt;p&gt;La page Debian:Mentor du paquet est par &lt;a href=&quot;https://mentors.debian.net/package/ghostwriter&quot;&gt;là&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Oct 2018 21:30:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/10/09/paquet-ghostwriter.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/10/09/paquet-ghostwriter.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Forum est de retour et il est mieux implanté.</title>
+        <description>&lt;p&gt;C’est suite à une mise à jour du site via mon ami &lt;code class=&quot;highlighter-rouge&quot;&gt;Rsync&lt;/code&gt; que j’ai planté le dite forum, j’utilisais une option de &lt;code class=&quot;highlighter-rouge&quot;&gt;Rsync&lt;/code&gt;, en l’occurrence –delete-after qui à la fin du transfert, supprime les fichiers dans le dossier de destination ne se trouvant pas dans le dossier source. Forcément la partie forum est géré par &lt;a href=&quot;http://camendesign.com/nononsense_forum&quot;&gt;NoNonsense Forum&lt;/a&gt; et n’est donc pas dans le dossier renouvelé à chaque nouveau billet ou par appel à la commande &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;J’ai donc un moment réfléchis à l’utilité de la partie forum, je n’en ai pas vu puisqu’elle est mal inséré comme je le disais une semaine auparavant:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;j’ai fait sauter le forum, j’ai utilisé une option de Rsync qui permet de supprimer tout ce qui est absent du local, la partie forum étant absente de mon dossier Jekyll, il a été congédié. Je verrais pour le remettre, bien que je doute de son utilité, ça ne prends pas, c’est pas assez inséré dans les billets et on passe donc à coté.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Comme je trouve que ce programme en PHP est vraiment ce que je voulais avoir pour ma partie commentaire, pour justement la grande liberté d’échange qu’on peut obtenir et pas seulement commenter sans aller plus loin, j’ai voulu redonner sa chance, cette fois je l’ai un peu plus inséré puisque maintenant à chaque fin de billet il y a une invitation à y aller.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 09 Oct 2018 16:32:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/10/09/forum-est-de-retour.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/10/09/forum-est-de-retour.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Le libriste français est un vrai con?</title>
+        <description>&lt;p&gt;C’est ce que je pense de plus en plus souvent ces derniers temps, oh que non, je ne suis pas fier de le dire et encore moins de le penser, mais chose est telle que je suis bien honnête de le dire et de ne pas cacher ce fait. Les guerres de chapelles sont ou étaient encore supportables, même si je trouve que c’est de plus en plus un concours à la plus grosse, on se croit encore en maternel. Je pense plutôt aux dramas qui se déroulent dans les vidéos de youtubeurs, ou bien aux cons qui jugent les autres sur leurs dépôts d’activés.&lt;/p&gt;
+
+&lt;p&gt;Dernièrement un énième épisode tragédie gréco-romaine s’est déroulé sur la toile, une engueulade sur le discord de Actualia, puis une blague des plus douteuses, un imbécile balance le numéro du portable de tonton Fred sur un site de rencontre… Ça montre un peu le niveau du monde libriste/linux francophone qui à force de trop ouvrir ses portes, se retrouve avec des abruties… Certains diront que Fred l’aurait mérité, à force de gueuler, de cracher sur les pauvres développeurs de distributions de merdes, moi je pense que si on a des couilles, on le dit en face ce qui ne va pas, déjà par un dialogue puis après par un face à face et non par un truc digne d’un lâche.&lt;/p&gt;
+
+&lt;p&gt;Dans cet épisode, Fred n’a pas été le seul à en avoir marre, Babaorhum et BlaBlalinux ont arrêté ce qu’ils faisaient sur Youtube, ils se sont mit ensemble contre un certain Easy-first-computer avec des bannières anti-Easy-first-computer et le retour de manivelle fut douloureux. Déjà leur appel à se soutenir tous contre ce monsieur à échoué, certains n’ont simplement pas suivit comme Adrien ou Actualia, et dans une autre mesure c’est la populace qui en a eu marre en les dénigrant. Il s’est ensuite passé l’histoire du téléphone –à mois que ce ne fut avant?–…&lt;/p&gt;
+
+&lt;p&gt;Je n’aurais pas suivi, car je n’ai jamais suivi le mouvement de foule, mais cette histoire dévoile les coulisses malsaines du libre francophone, ces lieux où pour quelques likes de plus on est prêt à faire les pires coups bas, comme balancer le numéro de quelqu’un sur un site de rencontre…&lt;/p&gt;
+
+&lt;p&gt;Mais ce ne sont pas les seules, je vois certains forums libres ou du moins de distributions linux qui parlent sans cesse de politique, peut on me dire ce que ça vient foutre la dedans?&lt;/p&gt;
+
+&lt;p&gt;C’est une des raisons que je ne suis plus vraiment sur les forums ou dans des formats comme discord, l’un des seules forums où je n’ai jamais vu ça est celui d’Alionet et c’est encore le seul où l’on pourra me voir séjourner.&lt;/p&gt;
+
+&lt;p&gt;L’autre type de connard qu’on croise dans le libre francophone, c’est celui qui se dit extrémiste du libre, il se dit libre comme l’air, aucuns logiciels privatifs, cassent les couilles à ses contemporains pour qu’ils en fassent autant, passent son temps à dénigrer ceux qui ne sont pas comme eux… La liste est longue, aussi bien leurs méfaits que leurs idioties, mais je ne parlerais pas plus d’eux, par contre j’ai voulu voir si le scandale qu’on me reprochait, était oui ou non justifié. J’installe donc un paquet du nom de &lt;code class=&quot;highlighter-rouge&quot;&gt;vrms&lt;/code&gt; pour &lt;em&gt;Richard M. Stallman virtuel&lt;/em&gt; qui sert à voir si on est oui ou non un bon samaritain du libre et voila la sortie:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;vrms
+           Non-free packages installed on debiacerlinux
+
+amd64-microcode                     Processor microcode firmware for AMD CPUs
+dgen                                Sega Genesis/MegaDrive emulator
+firmware-amd-graphics               Binary firmware for AMD/ATI graphics chips
+firmware-linux-nonfree              Binary firmware for various drivers in the Linux kerne
+firmware-misc-nonfree               Binary firmware for various drivers in the Linux kerne
+intel-microcode                     Processor microcode firmware for Intel CPUs
+
+            Contrib packages installed on debiacerlinux
+
+iucode-tool                         Intel processor microcode tool
+
+  6 non-free packages, 0.3% of 2296 installed packages.
+  1 contrib packages, 0.0% of 2296 installed packages.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donc j’ai 6 paquets venant de non-free, 5 drivers et un émulateur pour Megadrive, puis un driver venant de contrib. Voila ce qui, j’espère, fera fermer la gueule à certains.&lt;/p&gt;
+
+&lt;p&gt;Ça sera tout pour aujourd’hui;)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Oct 2018 21:09:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/10/08/libriste-fran%C3%A7ais-est-un-con.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/10/08/libriste-fran%C3%A7ais-est-un-con.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>je réfléchie à la nécessité d&#39;avoir internet.</title>
+        <description>&lt;p&gt;Plus j’y pense et plus je me dis que payer un abonnement internet qui frôle les 1000Ko/s est ridicule, surtout avec l’arrivée du 4G qui permet des débits bien plus haut. Peu être que mon nouveau lieu de vie a une meilleur situation que l’ancien concernant le débit, quoique j’en doute vu que je me suis encore plus isolé, mais si ce n’est pas le cas, mon téléphone portable sous Android fait très bien l’affaire dans son rôle de fournisseur d’accès!&lt;/p&gt;
+
+&lt;p&gt;Ce n’est pas non plus le manque d’une ligne fixe qui va me pousser à lâcher les plus de 1000€ que me demande Orange pour la création/raccordement d’une ligne et ce n’est pas non plus ce qui a à la TV qui me fera envier mes contemporains, les chaînes du TNT me suffisent amplement.&lt;/p&gt;
+
+&lt;p&gt;Je vois dans cette façon de vivre son internet, une moins grande dépendance, moi qui est toujours sur le net pour voir ce qui s’y passe, moi qui regarde sans cesse les nouveautés dans les logiciels, je n’ai plus la possibilité d’autant dépenser ma bande passante et du coup je passe plus de temps avec les vrais gens de la vraie vie.&lt;/p&gt;
+
+&lt;p&gt;Et puis on ne peut vraiment pas dire que je rate des choses essentielles, comme à ce que j’ai pu comprendre avec l’énième agitation de la sphère francophone dont certains ont simplement mit fin à leurs comptes Youtube, comme Babaorhum et Blablalinux. Je préfère rire de tout ça et de loin, car les guerres sur celui qui va sortir la plus grosse ne m’intéresse pas –et puis entre nous, on me dit toujours que vaut mieux une petite travailleuse qu’une grosse feignasse–… Tiens, je vois aussi que Baba arrête la Tux&amp;amp;vap, c’est pas comme si le projet était vraiment utile.&lt;/p&gt;
+
+&lt;p&gt;Vraiment rien de bon ou de bien dans le libre francophone, j’ai de plus en plus de mal à regarder avec intérêt ce qui s’y passe, en faite ce n’est pas si grave, c’est pas comme si linux et les distributions tournant dessus étaient restées dans la difficulté qui sévissait au début du siècle, maintenant installer un linux, le configurer, l’utiliser,… tout ça est devenu simpliste, même une distribution pour soit-disant barbus comme Debian s’est mise à jouer de la simplicité. Le plus dur reste de trouver une distribution de qualité dans la pléthore que propose distrowatch, entre les saloperies de forks doublons qui pullulent comme les mouches sur une merde, les distributions boiteuses manquantes de mains d’œuvre mais ayant les yeux plus gros que le ventre en proposant toujours plus de logiciels, oubliant par là la notion de qualité se fourguant comme excuse d’être le résultat d’amateurs, et pour finir les distributions de qualités mais qui sont peu ou pas connues, souvent le travail d’un seul homme, comme NuTyX, ils n’en restent pas tant que ça de vraiment installables. J’oublie volontairement la famille Gentoo, il ne reste “que” les familles Debian/Ubuntu, Fedora/Centos et openSUSE, pour les plus courageux et téméraires Archlinux.&lt;/p&gt;
+
+&lt;p&gt;Avec ma connexion inexistante, je suis vraiment content d’être sous Debian, déjà c’est en ayant pas ou peu de connexion que je remarque mon indifférence envers les dernières versions de mes logiciels, je n’en ai pas utilité. C’est aussi depuis ce moment que je sais oh combien j’aime ma Debian et son peu d’update (45 mises-à-jour pour mon système depuis 3 mois sur environ 2500 paquets), surtout le fait que rien ne se fait derrière mon dos, je peux connecter mon tel comme modem sans avoir peur que le système me bouffe ma bande passante en faisant une recherche ou une installation de mise à jour en tache de fond, c’est con mais Fedora et openSUSE m’ont fait le coup. Et puis le système de backport chez Debian est bien pensé, seul les logiciels installés volontairement par ce biais seront upgradés par ce canal, et non comme chez certaines, l’ensemble du système vers les backports, je pense à Mageia et aussi openSUSE dès qu’on installe via des dépôts expérimentales.&lt;/p&gt;
+
+&lt;p&gt;En ce qui concerne le site/blog, il est toujours construis via le GSS Jekyll, je synchronise l’ensemble soit via FTP avec Filezilla mais maintenant c’est de plus en plus via Rsync. Ça fonctionne au poil, je n’ai pas à m’en plaindre, j’ai juste fait une bourde, j’ai fait sauter le forum, j’ai utilisé une option de Rsync qui permet de supprimer tout ce qui est absent du local, la partie forum étant absente de mon dossier Jekyll, il a été congédié. Je verrais pour le remettre, bien que je doute de son utilité, ça ne prends pas, c’est pas assez inséré dans les billets et on passe donc à coté.&lt;/p&gt;
+
+&lt;p&gt;Je termine donc ce petit billet peu ou pas intéressant mais qui explique toujours un peu plus mes derniers temps.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 02 Oct 2018 13:53:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/10/02/internet.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/10/02/internet.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Sabayon, je n&#39;y comprends rien</title>
+        <description>&lt;p&gt;&lt;em&gt;date origine: 2018-02-09T23:28:05+01:00&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Un billet qui montre un peu ma déception ce 04 février, je suis bien triste de voir une distribution si prometteuse que fut Sabayon, s’en aller sur un si mauvais chemin. J’en avais parlé quand le blog tournait encore avec Wordpress, à moins que c’était l’époque du blog sous Dotclear, je ne sais plus, en tout cas, c’était l’époque où je testais des Gentoo-like dont Calculate linux et Sabayon. Autant j’étais enthousiaste pour Calculate, autant que je n’étais pas du tout emballé par Sabayon, celle-ci m’ayant pourtant des années auparavant, montré de quoi elle était capable. Donc la dernière fois, la version KDE ne voulait pas s’installer, ni même se lancer en live, je m’étais donc rabattu sur la version XFCE au look de Mate. Je remettrais le billet en question dans la partie &lt;em&gt;archive&lt;/em&gt; de ce blog mais aujourd’hui, je veux parler de Sabayon et uniquement de celle-ci.&lt;/p&gt;
+
+&lt;p&gt;Pour commencer, je vais sur &lt;a href=&quot;https://www.sabayon.org/&quot;&gt;le site de la distribution&lt;/a&gt;, je me dirige sur la partie &lt;a href=&quot;https://www.sabayon.org/desktop/&quot;&gt;download&lt;/a&gt;, qui m’envoie sur la 16.11. Je suis un peu étonné qu’il n’y ait rien eu depuis 2 ans… En tout cas rien sur &lt;a href=&quot;https://distrowatch.com/index.php?distribution=sabayon&quot;&gt;la page de Distrowatch&lt;/a&gt; qui en parle, mais sur la page de &lt;a href=&quot;https://distrowatch.com/table.php?distribution=sabayon&quot;&gt;la distribution&lt;/a&gt; on voit une version 18.02. Je retourne donc sur le site et regarde du &lt;a href=&quot;https://www.sabayon.org/mirrors/&quot;&gt;coté des miroirs&lt;/a&gt; et de là je tombe sur une &lt;a href=&quot;ftp://ftp.belnet.be/mirror/sabayonlinux/iso/monthly/&quot;&gt;liste d’ISO&lt;/a&gt; qui ne sont pas sur la page officiel, dont la 18.02(en faite une pour chaque mois…).&lt;/p&gt;
+
+&lt;p&gt;Première question, pourquoi le site n’est pas à jour sur les ISO? Pourquoi la page de téléchargement donne encore comme dernière version la 16.11? Pour moi, ça annonce déjà rien de bon et c’est bien dommage, car j’avais en 2006, fais une très belle découverte de cette distribution.&lt;/p&gt;
+
+&lt;p&gt;J’en télécharge plusieurs une 16.11 et une 18.02, chacune en différentes versions, une XFCE, une Mate, une GNOME et enfin une KDE, ce qui me fait 8 ISO à télécharger. Je vais par la suite continuer sur celle que j’ai le plus aimé, du moins mon bureau actuelle, la version GNOME car la XFCE est trop looké pour ressembler à GNOME2 malgré que Mate soit là pour ça.&lt;/p&gt;
+
+&lt;p&gt;La 18.02 comme la 18.01 ne se lance pas chez moi, ou plutôt elle se lance mais rien ça reste sur un TTY ou je ne peux rien faire, si je lance l’installation texte depuis le menu du boot au lieu du live c’est pareil. Je recommence avec la 16.11 qui elle se lance sans soucis, bien rapidement de plus, surtout si je compare à l’autre cousine Gentoo-like en live qui se nomme Calculate linux. GNOME nous accueille en 3.20, je note de suite des incohérence qui me gênes, comme l’on remarqué &lt;a href=&quot;https://www.linuxtricks.fr/news/10-logiciels-libres/103-sabayon-linux-que-vaut-cette-gentoo-like&quot;&gt;Adrien.d&lt;/a&gt; ou &lt;a href=&quot;http://frederic.bezies.free.fr/blog/?p=12671&quot;&gt;Frédéric Bezies&lt;/a&gt; -mais il me semblait qu’il le disait dans un test plus récent-, et quelques autres choses qui me fracassent un peu l’ensemble. Tout ça sera dit dans la partie teste en dur qui malheureusement ne durera pas longtemps.&lt;/p&gt;
+
+&lt;p&gt;Donc le live me permet d’installer aussi la distribution tout en jouant avec, je regarde vite fait via un &lt;code class=&quot;highlighter-rouge&quot;&gt;equo update &amp;amp;&amp;amp; equo upgrade&lt;/code&gt; dans un terminal les mises a jours qui me seront proposés une fois installé, je regarde si mes paquets essentiels dont minidlna, mldonkey et d’autres sont bien là avec un &lt;code class=&quot;highlighter-rouge&quot;&gt;equo search nom-du-paquet&lt;/code&gt;. Bref, tout y est ou sinon c’est seulement des petites choses qui vont me manquer, par exemple &lt;a href=&quot;http://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; le moteur de ce site et dont la vivacité du projet est flagrant avec des sorties mensuelles de l’ordre de 7 par mois… Chose qui pour des projets comme Debian ou Gentoo sont juste non faisable à suivre dans leurs versions &lt;em&gt;Stable&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Comme je le disais, j’ai lancé l’installateur qui n’est autre que celui de Fedora, le fameux Anaconda2, facilement compréhensible mais d’une lourdeur sans fin, je préfère de loin l’installateur de la openSUSE au doux nom de YAST. Anaconda est certes joli et facile à prendre en main mais il a cette lourdeur dans son utilisation et des plantages que j’ai aussi eu dans Fedora. Comme je le disais, j’ai donc eu des plantages, plusieurs au moment de partitionner, facile de mémoire j’en ai eu trois, bref, c’est pas au point cet installateur et ceci n’est pas seulement sur Sabayon mais aussi comme je l’ai dis sur Fedora! Par moment, je pensais que c’était planté mais non, c’était juste en train de réfléchir, je préfère un installateur linéaire du type Mageia, Debian, Ubuntu ou openSUSE pour ne citer qu’elles, que ce truc qui permet de faire dans l’ordre que l’on souhaite mais qui en fin de compte n’est pas des plus rapide/stable.&lt;/p&gt;
+
+&lt;p&gt;Enfin, il fait tout de même son taf et j’ai donc une belle Sabayon de fonctionnelle, sauf que l’ISO date de 2016, arrive avec tout un tas de programme datant de cette date et donc avec des milliers de mises à jour à faire en une fois. J’aurais pas eu de soucis si les ISOs plus récentes fonctionnaient mais ce n’est pas le cas chez moi. C’est pas grave, je fais donc les mises à jour, vous vous en doutez, comme toutes bonnes Gentoo, ce n’est pas des plus rapides, même si c’est du 100% binaire ou presque. Dans les bonnes choses, je trouve &lt;em&gt;equo&lt;/em&gt; sympa d’utilisation, peut être parce qu’il ressemble dans ses commandes à APT?&lt;/p&gt;
+
+&lt;p&gt;Mais à peine installé que les soucis commencent, première blague vient du fait que installer les traductions d’un logiciel, je vais prendre par exemple Thunderbird, donc installer thunderbird-l10n-fr n’installe pas le programme Thunderbird lui-même alors que sous Debian, Fedora, Archlinux ou openSUSE pour ne citer qu’elles, le font obligatoirement. Très utile d’avoir les traductions d’un programme non installés… Je me souviens pas trop de comment ça se passe sous Gentoo/Calculate mais si quelqu’un passe ici et le sait, qu’il n’hésite pas à le dire.&lt;/p&gt;
+
+&lt;p&gt;Autre blague, chrome au lieu de chromium et surtout de Firefox, je vais pas faire le chieur et con de libriste, je m’en fou que ce soit proprio c’est juste le coté offrir nos données directement à Google via ce programme qui ne me plaît pas…&lt;/p&gt;
+
+&lt;p&gt;Une autre blague, j’en ai parlé plus haut, mais les mises à jour est une cata aussi, c’est juste lent comme pas possible, alors peut être moins lent que Calculate et encore j’ai un doute. l’installation de paquets est aussi bien plus lent que sur une distribution à base de DEB ou de RPM.&lt;/p&gt;
+
+&lt;p&gt;En faite, l’ensemble sent vraiment le torchon qui brûle, ça pue le mal fait, le va vite ou le sauve qui peut. Bref, je vais pas m’attarder plus longtemps dessus, je garde un sentiment de bâclé et de mal fait. Je conseille plutôt d’aller sur du Calculate pour ceux qui veulent vraiment s’embêter avec du Gentoo.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 17 Sep 2018 18:15:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/09/17/sabayon-jy-comprends-rien.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/09/17/sabayon-jy-comprends-rien.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mageia 6.1, quel intérêt?</title>
+        <description>&lt;p&gt;Je regardais comme je peux une vidéo d’Adrien parlant de Mageia 6.1, rien de folichon, le truc est juste qu’on parle de celle-ci comme si c’était une nouvelle version, on lui reproche sa relative obsolescence notamment d’avoir encore un Firefox en version 52…&lt;/p&gt;
+
+&lt;p&gt;Bon, c’est vrai que pour Firefox, ils auraient bien pu le passer au moins en 60, qui est la dernière version ESR, pour juste prendre un exemple, Debian est passé à la 60… C’est surtout con quand on sait que les mecs de chez Mageia font passer des versions de Plasma (5.8-&amp;gt;5.12) qui du reste s’est révélé être une catastrophe pour nombre d’utilisateurs dont une personne de mon entourage.&lt;/p&gt;
+
+&lt;p&gt;Je ne suis pas fan de cette distribution, je dois dire que je la déconseille au plus haut point, mais pour sa défense, la version 6.1 n’est pas une version majeur mais une mineur, c’est-à-dire, pour reprendre l’exemple de Debian, c’est juste une ISO pour éviter de se taper toute la liste des mises-à-jour depuis la sortie de la Mageia 6. En gros et pour faire simple, ceux qui ont installé la version 6 et qui ont fait les mises-à-jour depuis le début sont au même niveau que ceux qui vont installer l’ISO de la 6.1.&lt;/p&gt;
+
+&lt;p&gt;Donc et si je dois résumer ma pensée, je ne suis pas choqué de voir un Plasma, Libreoffice ou un Gimp non à jour, par contre Firefox aurait dû être dans une version soutenue en amont chez Mozilla.&lt;/p&gt;
+
+&lt;p&gt;Maintenant, je cherche de plus en plus un intérêt à se faire chier avec cette distribution, pour rester dans le RPM, la stabilité à toute épreuve est du coté de Centos et openSUSE Leap, et dans le domaine des DEB, il y a Debian. Pour la fraîcheur, j’irais plutôt du coté de openSUSE tumbleweed voir Leap si on active les dépôts qui vont bien et de Fedora. Surtout que la stabilité de Mageia, ces derniers temps n’est plus du même gabarit, je pense aux soucis causés par les upgrades de Plasma et du kernel. Bref, ça fait pas trop sérieux et c’est la raison que je ne puisse plus la conseiller.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 17 Sep 2018 11:30:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/09/17/mageia61-interet.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/09/17/mageia61-interet.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mageia, quand amateurisme rime avec foutage de gueule, ou comment marcher dans la merde ne porte pas obligatoirement bonheur...</title>
+        <description>&lt;p&gt;Date du billet: 2018-06-01T00:36:35+02:00&lt;/p&gt;
+
+&lt;p&gt;Il y a peu, je disais suite à des réponses durs de la part de certains dans la communauté Fr de Mageia que &lt;a href=&quot;https://passiongnulinux.tuxfamily.org/2018/04/08/mageia-celui-qui-plantera-le-dernier-clou-du-cercueil-viendra-de-la-communauté.html&quot;&gt;celui qui plantera le dernier clou du cercueil, viendra de la communauté&lt;/a&gt;, la suite fut une réponse de la part de Vouf, &lt;a href=&quot;https://www.mageialinux-online.org/forum/topic-25023+amateurs-nous-etions-amateurs-nous-resterons.php&quot;&gt;Amateurs nous étions, Amateurs nous resterons …&lt;/a&gt;, je vais donc persister et je signe cette fois-ci, ce n’est plus être amateur voir passionné, c’est de l’amateurisme dans le sens néfaste du terme, autrement dit caractère d’un travail d’individus peu compétents ou négligents (Synonymes : dilettantisme, fumisterie)!&lt;/p&gt;
+
+&lt;p&gt;Ce billet qui au départ devait être totalement bienfaisant, devait parler uniquement de la bonne idée de mettre à jour le Plasma dans la Mageia 6, idée que je trouvais sympathique mais dangereuse tout de même et on verra par la suite pourquoi et comment on aurait pu éviter la chaos. Le billet avait encore pour titre 3 semaines avant(05/2018), &lt;strong&gt;Mettre à jour le bureau Plasma, bonne ou fausse bonne nouvelle?&lt;/strong&gt; Bonne nouvelle car c’est toujours sympa d’obtenir la dernière version de son bureau quand celui-ci corrige de nombreux soucis, mauvaise idée quand celle-ci est prise à la légère. Malheureusement chez Mageia, ce fut le cas, peu de test car l’équipe est relativement minuscule pour le projet, que cette mise-à-jour fut balancé comme telle dans les dépôts d’upgrade classique, et que pour finir, le public visé par cette distribution n’ont ni l’envie ni les compétences pour se faire chier autant.&lt;/p&gt;
+
+&lt;p&gt;Ce fut une catastrophe, j’ai dans mon entourage, une personne dérangée par celle-ci puis celle du kernel, je dois bien avouer que ce fut la réponse d’un modo de MLO qui fut la goutte d’eau, celui-ci me répond que l’on s’en fou de mes soucis… Bien, c’est du beau, modérateur de merde, tient… Ah oui, en y pensant, j’aurais pu faire un billet sur &lt;em&gt;comment ne pas passer pour un connard en modération d’un forum&lt;/em&gt;!&lt;/p&gt;
+
+&lt;p&gt;Une chose aurait été plus simple que de balancer telle quelle cette mise-à-jour, on aurait pu la placer dans les dépôts &lt;em&gt;backport&lt;/em&gt; de la distribution, ce qui aurait eu pour but de ne toucher que ceux qui auraient activé les fameux backports.&lt;/p&gt;
+
+&lt;p&gt;Cette distribution est trop peu sérieuse et surtout apporte pas mal d’emmerdes qu’on ne retrouvent pas dans d’autres plus sérieuses et mieux suivies, montre un linux amateur du plus mauvais effet et je me demande quelle sera la prochaine blague venant de ce projet.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 17 Sep 2018 00:36:35 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/09/17/mageia-quand-amateurisme-rime-avec-foutage-de-gueule.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/09/17/mageia-quand-amateurisme-rime-avec-foutage-de-gueule.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Les logiciels libres meurent lentement sans contributions ou le consommateur passif, conséquence de la massification de l’informatique personnelle ?</title>
+        <description>&lt;p&gt;Oui, je me suis pas foulé, j’ai pris le titre de &lt;a href=&quot;https://framablog.org/2018/08/29/les-logiciels-libres-meurent-lentement-sans-contributions/&quot;&gt;l’article original&lt;/a&gt; sensé nous donner de vilaines culpabilités et je l’ai mixé avec celui de &lt;a href=&quot;http://frederic.bezies.free.fr/blog/?p=17886&quot;&gt;Fred&lt;/a&gt;, me disant que je vais partir dans l’opposé de ce qui est dit dans ces deux billets pour exprimer mon point de vue et mon propre vécu sur la situation.&lt;/p&gt;
+
+&lt;p&gt;Plusieurs &lt;del&gt;bonnes&lt;/del&gt; raisons me poussent dans le sens contraire de ce que racontent les deux billets, puis il y a aussi la manière de faire, celle qui culpabilise, rendant coupable le simple utilisateur, le poussant à donner toujours plus, on l’invite à donner son avis, puis à donner un coup de main, remonter les bugs, dépanner sur les forums ou listes de discussions, donner de l’argent… On cherche à rendre coupable le petit utilisateur, celui-ci même qui n’a sûrement pas installé son linux lui-même, au lieu de regarder un peu plus le pourquoi et comment. Surtout de regarder du coté du codeur, le développeur est devenu une sorte de Dieu vivant, que ce soit le programmeur d’un logiciel/distribution ou le mainteneur d’un paquet Debian, combien de gens ont eu comme réponse un allez vous faire foutre?&lt;/p&gt;
+
+&lt;p&gt;Il y a aussi les habituels rapports de bugs qui n’ont jamais de réponses et qui n’en auront jamais car on s’en fout.&lt;/p&gt;
+
+&lt;p&gt;Le truc, c’est qu’au commencement personne ne s’attendait à gagner quelque chose de ce code donner à l’utilisateur, c’était par plaisir, mais maintenant de nos jours, tout n’est question que d’argent, le blogueur essaye de vendre ses billets, il nous impose ses PayPal et autres merdes, alors qu’avant tout ce qu’il écrivait était pour lui, du reste, un blog est un journal qu’on tient sur internet, rien de plus, vous voyez beaucoup de personnes vendre son journal intime couché sur papier? Tout comme le codeur qui nous tendait son programme de manière désintéressé, aujourd’hui, il en attend de pouvoir en vivre.&lt;/p&gt;
+
+&lt;p&gt;Je sais, je peins un tableau qui va m’attirer des jolis noms d’oiseaux, mais c’est pas grave, c’est du vécu, je n’invente pas.&lt;/p&gt;
+
+&lt;p&gt;J’ai souvent parler de Debian ici, un peu moins d’openSUSE, du reste ça tombe bien, j’apprends –mais dans quel monde je vis pour ne pas le savoir?– que Carl Chenet est développeur Debian… J’ai donc parlé d’un soucis pour moi chez Debian que openSUSE n’a clairement pas, c’est le coté développeur/Dieu du programme, impossible de participer simplement à l’empaquetage chez Debian si on n’est pas déjà connu, déjà c’est un jeu de chat et de la souris, un vrai jeu de piste ou de cache cache mais en plus, rien mais vraiment rien n’est fait pour améliorer la situation. Je ne vais pas revenir dessus mais je suis assez dégoûté de l’ensemble du processus, entre les mails pour avoir les autorisations de proposer un paquet, de le faire connaître, puis du temps qui passe sans personne nous approchant pour nous dire ce qui va/ne va pas, et puis un matin on reçoit un mail nous expliquant que personne ne s’intéresse à notre paquet et que donc il est retiré de DebianMentor… C’est donc ça, on me demande de participer pour enfin de compte me recaler et me jeter la pierre d’être “simplement” un utilisateur? Mais c’est pas faute d’avoir essayé d’être autre chose que simple utilisateur…&lt;/p&gt;
+
+&lt;p&gt;Mais bon, assez parlé de Debian, parlons d’un contre exemple, ce contre exemple est openSUSE, chez eux pas de jeu de piste, ni de cache cache, ni encore de souris et de chat, juste un outils simple à prendre en main, qui permet de participer –pardon de contribuer–, et tout ça de manière collaborative et simplement! Je finis même par faire des paquets pour Debian et les mettre à disposition &lt;a href=&quot;https://download.opensuse.org/repositories/home:/seb95passionlinux/Debian_9.0/&quot;&gt;chez eux&lt;/a&gt;, en plus de ceux pour openSUSE. Le plus important c’est que notre contribution n’est pas stocké dans un coin pour être mieux jeter,là c’est accepté avec un merci :).&lt;/p&gt;
+
+&lt;p&gt;Je vais continuer de parler de mon vécu, qui n’a jamais exprimé son soucis gentiment et calmement sans jeter la pierre à son voisin –plutôt rare chez moi– et s’est fait rembarrer d’un &lt;a href=&quot;https://www.mageialinux-online.org/forum/topic-25153+derniere-mise-a-jour-une-cata.php&quot;&gt;on s’en fout de toi avec en prime on va te bannir si tu continues?&lt;/a&gt;, avouer que ça ne donne aucune envie de faire quoique ce soit pour des gars comme ça.&lt;/p&gt;
+
+&lt;p&gt;Je reviens sur Debian, j’ai eu dernièrement un mail de &lt;a href=&quot;https://qa.debian.org/developer.php?login=bob.dybian@gmail.com&quot;&gt;Dylan&lt;/a&gt;, que je remercie au passage, m’expliquant deux ou trois choses importantes et me proposant son aide, je dois bien dire que c’est un peu comme une porte de sortie que j’ai pris le mail, enfin j’avais quelqu’un de l’autre coté de mon écran et non plus des SOS jetés à la mer sans être sûr d’être lu.&lt;/p&gt;
+
+&lt;p&gt;J’ai lu les billets en question, celui de Fred et de Carl, je sais pas, je trouve qu’on charge un peu trop les utilisateurs sans jamais se mettre dans leurs peaux, je l’ai dis plus haut, mon vécu ne s’invente pas, j’ai fais des choses, j’ai joué au béta-testeur pour des petites distributions; j’ai joué au contributeur occasionnels pour des distributions (je pourrais balancer surtout 0linux, NuTyX, openSUSE, Frugalware…); j’ai joué au con de service dans les forums, vous savez le truc qu’on appel entraide, mais qui de nos jours même les modos sont de vrais cons… Et ce que je lis dans leurs billets respectivement ne parle à aucun moment de la faute des projets/développeurs, si l’utilisateur ne participe pas c’est dû à ses mauvaises manière, il est avare, il est égoïste… Et bien non, il faudrait un peu mettre dans les raisons, le facteur projet qui demande diverses aides mais ne donne pas l’occasion réel de participer sans mettre des tonnes de barrières.&lt;/p&gt;
+
+&lt;p&gt;C’est con, mais j’ai depuis beaucoup moins d’envie d’entreprendre des actions pour faire quelque chose envers Debian, alors que pour openSUSE, je continue sans sourcilier et souvent depuis ma Debian. Vous voyez où je veux en venir, simplement que, si une part des utilisateurs ne se préoccupent pas de participer dans un effort global, d’autres font les efforts pour participer mais se retrouvent bloquer par toute une administration qui pénalise en faite le projet lui-même.&lt;/p&gt;
+
+&lt;p&gt;Participer c’est bien, c’est honorable, c’est juste normale, remonter des bugs et peu importe le système pour les remonter que ce soit Bugzilla (le plus répandu), que ce soit Reportbug (Debian), que ce soit simplement par mails, si les développeurs n’ont pas envie de vous répondre, bah tout les efforts ne servent à rien. Aider sur les forums, super et c’est plus facile et conviviale sauf que ça va un temps, si ce n’est que répéter à des gens qui n’écoutent pas ou qui ne font aucuns efforts ou de recherches, c’est sans moi… L’empaquetage de logiciels c’est ce qui est pour moi le plus vital et important, sauf que la plupart du temps ce n’est juste pas compréhensible ou accessible aux non informaticiens, ou juste trop chiant, je regarde Debian, je dois avoir autant d’architectures de machines que ce que je veux, par exemple je n’ai que des 64bits, je fais donc des paquets uniquement pour les 64, si je veux faire des paquets pour un 32, je ne peux pas sans passer par un chroot et encore je ne suis pas sûr… Donner des idées, oui sauf que les développeurs qui vous écoutent sont plutôt rare et que tout ce qu’on dit est prit comme critiques non constructives…&lt;/p&gt;
+
+&lt;p&gt;Je parle de distributions principalement car je ne connais que ça, je ne pense pas participer directement dans des projets, je n’ai aucunes qualifications, mais ça doit pas trop changer.&lt;/p&gt;
+
+&lt;p&gt;On pourra toujours en débattre dans &lt;a href=&quot;https://passiongnulinux.tuxfamily.org/forum/&quot;&gt;le forum&lt;/a&gt;, pour ceux et celles qui voudront, il suffit de créer un post.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 11 Sep 2018 16:46:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/09/11/les-logiciels-libres-meurent-lentement-sans-contributions.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/09/11/les-logiciels-libres-meurent-lentement-sans-contributions.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Un nouveau cap.</title>
+        <description>&lt;p&gt;Fallait bien que ce jour arrive, celui du déménagement officiel, celui où je n’aurais plus d’internet et autre joyeusetés. Ne plus avoir de fixe ne me dérange pas, par contre internet, surtout que tout se fait via ce moyen, est plutôt pénible.&lt;/p&gt;
+
+&lt;p&gt;Nouveau cap, nouvelle vie, un simple mot pour vous dire que je serais bien moins présent sur le net, d’après ce que je vois sur le devis d’Orange, faudra compter 5 mois.&lt;/p&gt;
+
+&lt;p&gt;En attendant, je “surf” sur le net via mon tel, et/ou je me sers de lui comme modem.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Sep 2018 16:39:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/09/03/nouveau-cap.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/09/03/nouveau-cap.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>C&#39;est calme chez les linuxiens</title>
+        <description>&lt;p&gt;Je trouve que c’est le calme absolu dans le monde Linux, c’est inquiétant ou rassurant selon comment on interprète la chose, on peut croire à une baisse des motivations, que c’est dû aux vacances, ou simplement que les distributions sont dans l’ensemble, devenues bien sérieuses et stables.&lt;/p&gt;
+
+&lt;p&gt;Je pense pas que la motivation soit descendue, ceux qui aiment notre OS et le font, sont toujours là, les blogueurs aussi par la même et ce malgré qu’on annonce depuis des lustres la fin des blogs. Par contre les vacances ont joué un rôle dans le manque de nouveautés, ça et les distributions qui sont de moins en moins des tests à échelle réelle. Il reste encore des distributions “pour le CV”, mais si on regarde, elles disparaissent bien plus rapidement sans faire grand bruit, ainsi que des distributions qui pourtant avaient de fort potentiels…&lt;/p&gt;
+
+&lt;p&gt;Dans les distributions à fort potentiel, il y en a deux qui ne font plus parler d’elles, pourtant elles sont bien là, c’est Frugalware et Sabayon. La frugalware est toujours bien maintenue, reste à jour, est dans une unique version dite &lt;em&gt;current&lt;/em&gt; qui est une distribution en sortie continue. Je ne m’attarde pas trop car mine de rien, elle se porte bien mieux que ne fut un temps.&lt;/p&gt;
+
+&lt;p&gt;Non, je m’attarderais sur la Sabayon, qui pourtant partait d’une bonne intention, prendre une Gentoo et la rendre utilisable par tous, être ce que Ubuntu est pour Debian. Alors on ne sait pas ce qui a merdé en route, mais ce qui aurait dû devenir une bombe, n’est en fait qu’un pétard mouillé… Pour moi, ce qui m’avait bloqué, c’était toutes cette publicité, ces demandes de fonds, ce truc Paypal en gros et bien voyant sur leur site, tout ce coté “&lt;em&gt;être là pour être payé&lt;/em&gt;”, j’avais fuis et puis il y avait aussi cette lourdeur, aussi bien dans la gestion des paquets que dans l’utilisation de la machine. Dommage, il y avait un quelque chose.&lt;/p&gt;
+
+&lt;p&gt;Aujourd’hui, je vois beaucoup de blogueurs dire qu’il y a une baisse de qualité dans les distributions, je vois surtout des plaintes concernant Debian/Ubuntu et que les Snap/Flatpak vont nous sauver. Je pense clairement pas qu’il faut aller sur ce terrain glissant des paquets uniformisés, je fuirais –comme la peste– les distributions qui mettent par défaut ou en valeurs de tels paquets. Du reste c’est &lt;strong&gt;MA&lt;/strong&gt; raison pour ne pas aller sur Ubuntu malgré que je la trouve pertinente et de qualité, je préfère de loin une openSUSE et une Debian qui, pour le moment, n’ont pas cédé aux chants des sirènes.&lt;/p&gt;
+
+&lt;p&gt;De mon coté, je reste à dire que l’openSUSE est vraiment une superbe distribution, avec une communauté à l’écoute, on peut facilement y participer…, j’ai tout de même un soucis avec, c’est le RPM. Je le dis souvent ici, mais je suis utilisateur Debian convaincu, de loin je préfère le format DEB que son concurrent directe le RPM. Dans l’ensemble c’est équivalent voir le RPM surpasse le DEB dans certain domaine et inversement, mais à la fin je reviens toujours vers Debian. Je n’ai plus d’internet depuis fin Juillet, je ne peux donc faire mes mises à jour, je me sens donc mieux avec Debian qu’autre chose car je sais comment elle fonctionne. Pareil pour faire des paquets que je veux en plus récent, je dépends de personne, je sais faire proprement. C’est pas une question de meilleur ou de moins bien, juste une préférence dû à une habitude et une meilleur connaissance de l’outil, peut être aussi à une sorte de formatage inconscient qui s’opère depuis des lustres. L’autre soucis, qui n’en est pas un réellement, est sa dépendance envers une seule société comme Fedora, de plus SUSE se fait vendre/acheter assez fréquemment.&lt;/p&gt;
+
+&lt;p&gt;Me revoilà donc comme au début, sur une distribution qui m’endort, me dorlote, m’infantilise, me rendant incapable d’être sur autre chose, pourtant j’ai essayé et ce n’est pas que de le dire, j’ai changé mais non, je n’ai “confiance” que dans cette distribution. Là, en ce moment, je suis sur une Ubuntu, pas chez moi mais chez mes parents, pour être plus précis, une Ubuntu LTS 18.04, vraiment bien foutu… Trois trucs me chagrinent, j’étais un ardent utilisateur d’Unity, interface que je trouvais plus pratique et utilisable que GNOME, bien que dans mon cas, j’utilisais ce dernier sur Debian. GNOME version Ubuntu est pas mal, j’aime bien ce dock/dash latérale pour rester dans le visuel et l’ergonomie aussi proche que possible de l’ancienne interface Unity, par contre GNOME reste GNOME et devient vraiment un pachyderme; ce n’est faute d’Ubuntu, j’ai regardé et comparé sur Fedora, openSUSE et Debian SID, ça reste dans une sensation de lourdeur et de lenteur qui s’est accélérée depuis la 3.24 et qui donne des latences et des freezes de mes différents PC. Je pourrais dire que c’est uniquement la faute de mes PC, mais quand même, une dizaine me donnant les mêmes effets, surtout que dedans il y a des PC récents et costauds de marque ASUS,… non, je ne peux pas mettre la faute sur uniquement mes PC. On en vient à se demander si il n’est pas temps de changer, j’aurais du mal car j’ai pris goût à utiliser ce bureau mais il en va de mon calme et du peu de cheveux qui me restent. À moins que Debian arrive à faire un tour de passe passe et nous fournit une version plus rapide/moins lourde de son GNOME.&lt;/p&gt;
+
+&lt;p&gt;Actuellement GNOME 3.22 sous Stretch et 3.20 sous openSUSE Leap 42.3 sont vraiment légers et rapides, on sent la différence, mais à partir de la 3.24, ce fut le début de la fin pour moi. Je me mettrais bien un Xfce ou pourquoi pas un Mate, et ceci alors même que j’ai souvent dit ici que ce bureau est un GNOME pour ceux qui ne savaient pas laisser le passé derrière eux. Plus sérieusement, va falloir que je regarde de plus prés ce que les développeurs de GNOME comptent faire –ou ne pas faire dans leurs environnement–, prendre la décision qui sera la plus conservatrice –car je n’aime pas le changement– et la plus confortable.&lt;/p&gt;
+
+&lt;p&gt;Je papote et m’éloigne du sujet de ce billet, mais quel était au fait ce sujet? Rien, seulement qu’on entends que le libre est mort et les blogs avec. Le libre est mort au profit de l’opensource, mais quelle est la différence, d’un coté les sources sont là pour faire des économies et de l’autre ils sont présent pour le partage, mais dans les deux cas, l’utilisateur final que je suis, il fait comment pour savoir la différence? Oh, je ne suis pas que con, je connais évidement la différence mais dans mon utilisation de tous les jours, quelle est t’elle?&lt;/p&gt;
+
+&lt;p&gt;Bientôt dans mon nouveau chez moi, j’aurais tout le temps pour essayer de dépoussiérer cette question, finit internet pendant plusieurs mois, j’aurais donc d’autres loisirs, je ne taperais que rarement les billets, ne sachant pas si filezilla aimera passer par mon tel comme modem. Je commencerais par embellir le pavillon, puis le jardin, une fois finit je reprendrais mon loisir n°1: le modèle réduit télécommandé.&lt;/p&gt;
+
+&lt;p&gt;Il faut encore que je coince Devil505 pour lui parler de &lt;a href=&quot;https://posativ.org/isso/&quot;&gt;la trouvaille de Gilles&lt;/a&gt; pour se passer de Disqus, pas encore testé, je dois admettre que je suis pour le moment pas mal content de &lt;a href=&quot;https://passiongnulinux.tuxfamily.org/forum/&quot;&gt;ce forum sans &lt;em&gt;BDD&lt;/em&gt;&lt;/a&gt; qui laisse une grande liberté de dialogue. Je pense avoir ce que je cherchais depuis des lustres, le site est en statique, ça risque rien, les commentaires sont via un forum, sans trop de risque puisque pas d’infos privées. Le tout me laissant plus de temps pour ma famille et mes loisirs de base comme jouer à la console, des petites parties, je n’arrive plus à rester enfermé dans une pièce pour être devant la TV.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Aug 2018 11:07:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/08/27/linux-stable.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/08/27/linux-stable.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

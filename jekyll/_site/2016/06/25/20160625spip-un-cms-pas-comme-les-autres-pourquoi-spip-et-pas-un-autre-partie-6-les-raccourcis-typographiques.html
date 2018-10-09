@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SPIP, un cms pas comme les autres... Pourquoi SPIP et pas un autre ? Partie 6, Les raccourcis typographiques</title>
+  <meta name="description" content="Dans l’article “Pourquoi Dotclear et pas SPIP, PluXml ouWordpress?{.ref-post}”, je disais a quel point j’appréciais SPIP et sa typographie spécifique,je lais...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/25/20160625spip-un-cms-pas-comme-les-autres-pourquoi-spip-et-pas-un-autre-partie-6-les-raccourcis-typographiques.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">SPIP, un cms pas comme les autres... Pourquoi SPIP et pas un autre ? Partie 6, Les raccourcis typographiques</h1>
+    <p class="post-meta"><time datetime="2016-06-25T10:40:00+02:00" itemprop="datePublished">Jun 25, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Dans l’article <strong>“<a href="/index.php?post/Pourquoi-Dotclear-et-pas-SPIP%2C-PluXml-ou-Wordpress">Pourquoi Dotclear et pas SPIP, PluXml ou
+Wordpress?</a>{.ref-post}”</strong>
+, je disais a quel point j’appréciais SPIP et sa typographie spécifique,
+je laisse donc un peu de coté la série sur Dotclear pour continuer celle
+de SPIP, et quoi de mieux que de parler de l’un de ses grands points
+forts ?</p>
+
+<p><img src="http://www.spip.net/squelettes/img/spip.png" alt="" /></p>
+
+<p>**Pour faciliter la mise en page des documents publiés avec SPIP, le
+système propose un certain nombre de « raccourcis SPIP » destinés :</p>
+<ul>
+  <li> à simplifier l’utilisation par des utilisateurs ne connaissant pas le
+HTML ;</li>
+  <li> à faciliter le traitement automatique de la mise en page.**</li>
+</ul>
+
+<p>Par conséquent naturellement vous pouvez toujours utiliser le code HTML
+dans vos documents SPIP, mais nous vous conseillons d’utiliser de
+préférence ces quelques raccourcis SPIP (peu nombreux), qui sont
+beaucoup plus faciles à mémoriser et plus particulièrement permettent au
+système certaines opérations automatisées.</p>
+
+<!--more-->
+
+<h3 id="les-raccourcis-typographiques-simples-de-spip-les-raccourcis-typographiques-simples-de-spip-spip">Les raccourcis typographiques simples de SPIP {#les-raccourcis-typographiques-simples-de-spip .spip}</h3>
+
+<p>Dans un premier temps, nous présentons ici les raccourcis typographiques
+les plus courants et les plus simples. Pour les utilisateurs qui
+souhaiteraient affiner encore le contrôle de la mise en forme de leurs
+textes, nous présenterons des versions plus complexes de ces raccourcis.</p>
+
+<p><em>N.B.</em> Les raccourcis simples répondent déjà largement à la grande
+majorité des besoins, et permettent de publier en ligne presque aussi
+simplement que l’on écrit un mail.</p>
+
+<ul>
+  <li> <strong>Typographie française automatique</strong></li>
+</ul>
+
+<p>SPIP respecte automatiquement les principales règles d’espacement de la
+typographie française - ainsi des espaces insécables sont ajoutées
+devant les caractères « :», « ; », « ! », « ? » -, et place des espaces
+insécables avant et après les guillemets « à la française ».</p>
+
+<p>(Note : cette fonctionnalité n’est activée que sur les sites dont la
+langue principale est le français.)</p>
+
+<ul>
+  <li> <strong>Créer des paragraphes</strong></li>
+</ul>
+
+<p>Pour créer des paragraphes, il suffit de laisser une ligne vide, un peu
+comment on sépare les paragraphes dans un email (on « saute » une
+ligne).</p>
+
+<p>Le fait de simplement « revenir à la ligne » (retour-chariot) sans
+séparer les deux paragraphes par une ligne vide ne suffit pas pour
+provoquer un changement de paragraphe (cela ne provoque même pas un
+retour à la ligne).</p>
+
+<p>Vous pouvez laisser plusieurs lignes vides à la suite sans que cela
+modifie la présentation.</p>
+
+<p><a href=""></a></p>
+<ul>
+  <li> <strong>Insérer une puce</strong></li>
+</ul>
+
+<p>On peut insérer une puce en début de ligne dans SPIP : il suffit de
+revenir à la ligne et de commencer la nouvelle ligne avec un tiret
+(« - »).</p>
+
+<p>Notez : ici un simple retour à la ligne suffit (on peut faire des
+énumérations dans le même paragraphe) ; mais si l’on « saute » une ligne
+avant la ligne commençant par un tiret, une ligne vide est affichée
+avant l’énumération.</p>
+
+<p>Par exemple,</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="7">
+- Qu'est-ce que cela peut faire que je lutte pour la mauvaise cause
+puisque je suis de bonne foi? - Et qu'est-ce que ça peut faire que je
+sois de mauvaise foi puisque c'est pour la bonne cause. (Jacques
+Prévert)
+
+</textarea>
+</p>
+<p>sera affiché ainsi :</p>
+
+<blockquote>
+  <ul>
+    <li> Qu’est-ce que cela peut faire que je lutte pour la mauvaise cause
+puisque je suis de bonne foi ?</li>
+    <li> Et qu’est-ce que ça peut faire que je sois de mauvaise foi puisque
+c’est pour la bonne cause. (Jacques Prévert)</li>
+  </ul>
+</blockquote>
+
+<p>On notera qu’il s’agit bien d’insérer une <em>puce</em> et non de créer une
+liste (<a href="http://www.spip.net/aide/?aide=raccourcis#listes">pour créer des listes
+voir</a>{.spip_ancre})</p>
+
+<ul>
+  <li> <strong>Gras et italique</strong></li>
+</ul>
+
+<p>On indique simplement du texte <em>en italique</em> en le plaçant entre des
+accolades simples : « <code class="highlighter-rouge">...du texte {en italique} en...</code> ».</p>
+
+<p>On indique du texte <strong>en gras</strong> en le plaçant entre des accolades
+doubles : « <code class="highlighter-rouge">...du texte  en...</code> ».</p>
+
+<ul>
+  <li> <strong>Intertitres</strong></li>
+</ul>
+
+<p>Les intertitres sont des titres à l’intérieur d’un texte permettant d’en
+indiquer la structure. Dans SPIP, on les indique très simplement en les
+plaçant entre des accolades triples : « <code class="highlighter-rouge">}</code> »
+affichera le texte en gras et centré :</p>
+
+<blockquote>
+  <h3 id="un-titre-de-partie-un-titre-de-partie-spip">Un titre de partie {#un-titre-de-partie .spip}</h3>
+</blockquote>
+
+<ul>
+  <li> <strong>Trait de séparation horizontal</strong></li>
+</ul>
+
+<p>Il est très simple d’insérer un trait de séparation horizontal sur toute
+la largeur du texte : il suffit de placer une ligne ne contenant qu’une
+succession d’au moins quatre tirets, ainsi :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+----
+
+</textarea>
+</p>
+<p>donne :</p>
+
+<blockquote>
+  <hr />
+</blockquote>
+
+<hr />
+
+<ul>
+  <li> <strong>Les liens hypertextes</strong></li>
+</ul>
+
+<p>On fabriquera facilement un lien hypertexte avec le code suivant :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+SPIP est une initiative du \[minirézo-&gt;http://www.minirezo.net/\].
+
+</textarea>
+</p>
+<p>devient :</p>
+
+<blockquote>
+  <p>SPIP est une initiative du
+<a href="http://www.minirezo.net/">minirézo</a>{.spip_out}.</p>
+</blockquote>
+
+<p>(Mnémotechnique : le tiret suivi d’un chevron dessine une sorte de
+flèche qui indique que le texte du lien (avant la flèche) « pointe
+vers » une adresse.)</p>
+
+<p>L’adresse du lien peut être une adresse absolue (commençant, comme ici,
+par <code class="highlighter-rouge">http://</code>{.spip_code dir=”ltr”}), une adresse relative (vers une
+autre page du même site), un lien vers un document utilisant un
+protocole de l’internet (<code class="highlighter-rouge">ftp://</code>{.spip_code dir=”ltr”}…), une adresse
+email (« <code class="highlighter-rouge">[-&gt;minirezo@rezo.net]</code>{.spip_code dir=”ltr”} »)…</p>
+
+<p>Application spécifique : vous pouvez afficher en toutes lettres un lien
+cliquable sous la forme d’une adresse URL, en n’indiquant rien avant la
+« flèche ». Par exemple :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+\[-&gt;http://dmoz.org/World/Deutsch/Kultur/Literatur/Autoren\_und\_Autorinnen/P/Proust,\_Marcel/\]
+
+</textarea>
+</p>
+<p>affiche :</p>
+
+<blockquote>
+  <p><a href="http://dmoz.org/World/Deutsch/Kultur/Literatur/Autoren_und_Autorinnen/P/Proust,_Marcel/">http://dmoz.org/World/Deutsch/Kultu…</a>{.spip_url
+.spip_out}</p>
+</blockquote>
+
+<p>Notez que, dans le cas des URL très longues, l’affichage est tronqué
+(pour éviter de dégrader votre interface graphique), mais le lien
+hypertexte pointe vers la bonne adresse.</p>
+
+<p><a href=""></a></p>
+
+<p>Il est possible de préciser la langue de la page vers laquelle le lien
+pointe, ce que les navigateurs afficheront à leur convenance. Pour cela,
+il faut mettre le code-langue entre accolades.</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+\[Un site en français{fr}-&gt;http:///www.adresse.tld\]
+
+</textarea>
+</p>
+<p>Cela est particulièrement recommandé lorsque la page de destination
+n’est pas dans la même langue que votre texte.</p>
+
+<p>Si l’on veut donner beaucoup d’informations sur le lien sans allonger
+excessivement la zone cliquable, on peut provoquer l’apparition d’une
+info-bulle en plaçant avant la flèche le signe | suivi du texte
+souhaité :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+\[voir ici|Ce lien vous expliquera tout ce qu'il faut
+savoir-&gt;http:///www.adresse.tld\]
+
+</textarea>
+</p>
+<p>affichera <code class="highlighter-rouge">voir ici</code>, le reste du texte n’apparaissant qu’au survol.</p>
+
+<ul>
+  <li> <strong>Liens hypertextes à l’intérieur du site</strong></li>
+</ul>
+
+<p>Ce même système de liens hypertextes facilite, de plus, la création de
+liens à l’intérieur de votre site sous SPIP. La seule subtilité consiste
+à repérer le <em>numéro</em> de l’article, de la rubrique, ou de la brève vers
+laquelle vous voulez mener votre lien hypertexte :
+<img src="http://www.spip.net/local/cache-vignettes/L200xH65/articlenumerca71-4aa1e.gif" alt="NUMERO" />{width=”200”
+height=”65”} lorsque vous « visitez », dans l’espace privé, un article,
+une brève ou une rubrique, la colonne de gauche contient un pavé
+indiquant, en gros caractères, ce numéro.</p>
+
+<p>C’est ce numéro que vous allez indiquer dans le lien hypertexte :</p>
+
+<ul>
+  <li>Lien vers l’article 342 (quatre possibilités) :<br />
+   <code class="highlighter-rouge">lien vers [l'article-&gt;342]     lien vers [l'article-&gt;art342]     lien vers [l'article-&gt;article 342] </code><br />
+   Application spécifique : <code class="highlighter-rouge">[-&gt;art342]</code> (on n’a rien indiqué avant
+la « flèche ») affichera automatiquement le titre de l’article 342
+avec un lien vers cet article.</li>
+</ul>
+
+<!-- -->
+
+<ul>
+  <li>Lien vers la rubrique 12 :<br />
+   <code class="highlighter-rouge">lien vers [la rubrique-&gt;rub12]     lien vers [la rubrique-&gt;rubrique 12] </code></li>
+</ul>
+
+<!-- -->
+
+<ul>
+  <li>Lien vers la brève 65 :<br />
+   <code class="highlighter-rouge">lien vers [la brève-&gt;br65]     lien vers [la brève-&gt;breve 65]     lien vers [la brève-&gt;brève 65] </code></li>
+</ul>
+
+<!-- -->
+
+<ul>
+  <li>Auteurs, mots-clés, sites, images, documents :<br />
+   <code class="highlighter-rouge">lien vers [un auteur-&gt;aut13] ou [le même auteur-&gt;auteur13]     lien vers [un mot-&gt;mot32]     lien vers [un site syndiqué-&gt;site1]     lien vers [un document joint-&gt;doc17] ou [le même document-&gt;document17]     lien vers [une image-&gt;img13] ou [la même image-&gt;image13] </code></li>
+</ul>
+
+<p>Application spécifique : on peut, là aussi, ne rien spécifier avant la
+« flèche » (<code class="highlighter-rouge">[-&gt;aut13]</code>…). SPIP insérera automatiquement les
+informations nécessaires. Dans le cas d’un document joint ou d’une
+image, si l’on a indiqué un titre manuellement, c’est ce titre qui sera
+affiché ; sinon c’est le nom du fichier lui-même qui sera utilisé.</p>
+
+<p>Les raccourcis pour mentionner la langue et créer une info-bulle,
+expliqués pour les liens externes, fonctionnent également pour les liens
+internes.</p>
+
+<div align="right">
+
+en savoir plus : [liens vers un
+glossaire](http://www.spip.net/aide/?aide=raccourcis#glossaire),  
+[ancres
+nommées](http://www.spip.net/aide/?aide=raccourcis#ancres){.spip_ancre}.
+
+</div>
+
+<ul>
+  <li> <strong>Notes de bas de page</strong></li>
+</ul>
+
+<p>Une note de bas de page est, habituellement, signalée par un numéro
+placé à l’intérieur du texte, numéro repris en bas de page et proposant
+un complément d’information.</p>
+
+<p>Dans SPIP, cette fonctionnalité (assez lourde à gérer manuellement en
+HTML) est automatisée : les notes sont numérotées par SPIP, qui gère
+également des liens hypertextes à l’intérieur du document pour passer
+directement de l’appel de note au texte de la note correspondante, et
+vice-versa.</p>
+
+<p>Une note de bas de page est indiquée, dans SPIP, entre doubles
+crochets :
+« <code class="highlighter-rouge">Une note[[Voici un complément d'information.]] de bas de page.</code> »
+sera affiché sous la forme : « Une note<span class="spip_note_ref"> [<a href="http://www.spip.net/aide/?aide=raccourcis#nb1" title="Voici un complément dinformation.">1</a>{#nh1
+.spip_note}]</span> de bas de page. »</p>
+
+<div align="right">
+
+[en savoir plus : des notes non
+automatiques](http://www.spip.net/aide/?aide=raccourcis#notes)
+
+</div>
+
+<ul>
+  <li> <strong>Citer un extrait (de forum)</strong></li>
+</ul>
+
+<p>Il est souvent pratique, dans un forum de discussion, de citer un
+extrait du message auquel on est en train de répondre. Pour homogénéiser
+la présentation de telles citations, SPIP propose le raccourci
+<code class="highlighter-rouge">&lt;quote&gt;...&lt;/quote&gt;</code>.</p>
+
+<p>Par exemple :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="4">
+&lt;quote&gt;C'est drôlement bien, SPIP.&lt;/quote&gt; Kikou, je suis
+bien d'accord :-)
+
+</textarea>
+</p>
+<p>donne :</p>
+
+<blockquote>
+  <blockquote>
+    <p>C’est drôlement bien, SPIP.</p>
+  </blockquote>
+
+  <p>Kikou, je suis bien d’accord :-)</p>
+</blockquote>
+
+<h3 id="fonctionnalits-plus-compltes-fonctionnalits-plus-compltes-spip">Fonctionnalités plus complètes {#fonctionnalités-plus-complètes .spip}</h3>
+
+<p>Les raccourcis qui suivent offrent des fonctionnalités plus puissantes
+et d’un usage plus spécifique. Si cela est votre premier contact avec
+les raccourcis de SPIP, il est sans doute inutile que vous tentiez de
+les apprendre par cœur dès maintenant. Il vous suffit de savoir qu’ils
+existent ; lorsque vous en aurez réellement besoin, revenez sur cette
+page, il sera alors beaucoup plus facile pour vous de mémoriser des
+raccourcis dont vous avez réellement l’utilité.</p>
+
+<ul>
+  <li> <strong>Tableaux</strong></li>
+</ul>
+
+<p>Pour réaliser des tableaux très simples dans SPIP, il suffit de faire
+des lignes dont les « cases » sont séparées par le symbole « | »
+(<em>pipe</em>, un trait vertical), lignes commençant et se terminant par des
+traits verticaux. Il est impératif de laisser des lignes vides avant et
+après ce tableau.</p>
+
+<p>Par exemple, le tableau :</p>
+
+<p>Nom         Prénom     Age
+  ———– ———- ———–
+  Marso       Ben        23 ans
+  Capitaine              non connu
+  Philant     Philippe   46 ans
+  Cadoc       Bébé       4 mois</p>
+
+<p>se code ainsi :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="5">
+|  |  |  | | Marso | Ben | 23 ans | | Capitaine
+| | non connu | | Philant | Philippe | 46 ans | | Cadoc | Bébé | 4 mois
+|
+
+</textarea>
+</p>
+<p>Remarquez que toutes les entrées de la première ligne sont placées en
+gras. SPIP identifie ainsi qu’il s’agit d’une page d’entête, et lui
+attribue une présentation différente des autres lignes (fond de couleur
+différente). La présence d’une telle ligne n’est pas obligatoire.</p>
+
+<p>On peut aussi ajouter une légende et un résumé à la table. Ces deux
+informations sont optionnelles mais sont très importantes pour rendre la
+table accessible aux mal-voyants, le résumé donnant une meilleure idée
+du contenu de la table.<br />
+Ces informations sont spécifiées entre double trait vertical avant la
+table comme ceci :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="6">
+||Légende|Résumé|| |  |  |  | |
+Jacques | 5/10/1970 | Paris | | Claire | 12/2/1975 | Belfort | | Martin
+| 1/31/1957 | Nice | | Marie | 23/12/1948 | Perpignan |
+
+</textarea>
+</p>
+<p>et apparaitront comme cela :</p>
+
+<dl>
+  <dt>Nom       date de naissance   Ville</dt>
+  <dt>  ——— ——————- ———–</dt>
+  <dt>  Jacques   5/10/1970           Paris</dt>
+  <dt>  Claire    12/2/1975           Belfort</dt>
+  <dt>  Martin    1/31/1957           Nice</dt>
+  <dt>  Marie     23/12/1948          Perpignan</dt>
+  <dd>
+    <p>Légende</p>
+  </dd>
+</dl>
+
+<p>On peut ne pas spécifier l’une ou l’autre des informations, mais il faut
+bien penser à mettre un trait vertical simple devant le résumé si vous
+ne spécifiez que celui-ci : <code class="highlighter-rouge">|| | résumé ||</code>{.spip_code dir=”ltr”}</p>
+
+<p>Il est également possible de fusionner une case avec d’autres, en
+réduisant son contenu à <code class="highlighter-rouge">|&lt;|</code>{.spip_code dir=”ltr”} pour la fusionner
+avec la case qui la précède horizontalement ; ou à <code class="highlighter-rouge">|^|</code>{.spip_code
+dir=”ltr”} pour la fusionner avec la case qui la précède verticalement.</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="5">
+||Tableau avec fusion| Raccourci de fusion|| |  |  |  | | Ligne 1 | L1C2 et L1C3 |&lt;| | Ligne 2 | L2C2
+et L3C2|L2C3| | Ligne 3 |\^| L3C3 |
+
+</textarea>
+</p>
+<p>donnera</p>
+
+<table class="spip" summary="Raccourci de fusion">
+<caption>
+Tableau avec fusion
+
+</caption>
+<thead>
+<tr class="row_first">
+<th id="idc6b9_c0">
+Colonne 1
+
+</th>
+<th id="idc6b9_c1">
+Colonne 2
+
+</th>
+<th id="idc6b9_c2">
+Colonne 3
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row_odd odd">
+<td headers="idc6b9_c0">
+Ligne 1
+
+</td>
+<td colspan="2" headers="idc6b9_c1">
+L1C2 et L1C3
+
+</td>
+</tr>
+<tr class="row_even even">
+<td headers="idc6b9_c0">
+Ligne 2
+
+</td>
+<td headers="idc6b9_c1" rowspan="2">
+L2C2 et L3C2
+
+</td>
+<td headers="idc6b9_c2">
+L2C3
+
+</td>
+</tr>
+<tr class="row_odd odd">
+<td headers="idc6b9_c0">
+Ligne 3
+
+</td>
+<td headers="idc6b9_c2">
+L3C3
+
+</td>
+</tr>
+</tbody>
+</table>
+<p><a href=""></a></p>
+
+<h3 id="fabriquer-des-listes-ou-des-numrations-fabriquer-des-listes-ou-des-numrations-spip">Fabriquer des listes ou des énumérations {#fabriquer-des-listes-ou-des-énumérations .spip}</h3>
+
+<ul>
+  <li> Un simple retour à la ligne s’obtient en tapant <code class="highlighter-rouge">_</code> (le trait de
+soulignement ou <em>underscore</em>) au début de la ligne, suivi d’une espace.</li>
+</ul>
+
+<p><em>N.B.</em> En typographie classique, le simple retour à la ligne est très
+rare (limité essentiellement à la poésie). On le confond souvent avec le
+changement de paragraphe tel qu’il est affiché sur les documents
+imprimés (sans espacement vertical entre les paragraphes), alors que,
+par défaut, les butineurs Web insèrent un espacement entre les
+paragraphes. Beaucoup d’utilisateurs cherchent à reproduire cette
+caractéristique de l’imprimé (pas d’espacement vertical) en insérant de
+simples retours à la ligne entre ce qu’ils considèrent être des
+paragraphes ; cela est un erreur qui risque de nuire à la facilité de
+maintenance et d’évolution de leur site. La solution consiste à définir,
+dans les squelettes, une feuille de style (CSS) décrivant le
+comportement des paragraphes (c’est-à-dire, selon les choix, pas
+d’espacement vertical entre les paragraphes, indentation de la première
+ligne…).</p>
+
+<ul>
+  <li> On peut faire des <strong>énumérations imbriquées</strong> en ajoutant des étoiles
+après le tiret d’énumération.</li>
+</ul>
+
+<p>Ainsi :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="8">
+-\* Ton cheval est: -\*\* alezan; -\*\* bai; -\*\* noir; -\* mais mon
+lapin est: -\*\* blanc; -\*\*\* angora; -\*\*\* ou à poil ras.
+
+</textarea>
+</p>
+<p>donne :</p>
+
+<blockquote>
+  <ul>
+    <li>Ton cheval est :
+      <ul>
+        <li>alezan ;</li>
+        <li>bai ;</li>
+        <li>noir ;</li>
+      </ul>
+    </li>
+    <li>mais mon lapin est :
+      <ul>
+        <li>blanc ;
+          <ul>
+            <li>angora ;</li>
+            <li>ou à poil ras.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li> Enfin, on peut faire des <strong>listes numérotées</strong> en utilisant le
+<code class="highlighter-rouge">#</code>{.spip_code dir=”ltr”} à la place de l’étoile :</li>
+</ul>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="3">
+-\# premier -\# deuxieme -\# troisieme
+
+</textarea>
+</p>
+<p>donnera :</p>
+
+<blockquote>
+  <ol>
+    <li>premier</li>
+    <li>deuxième</li>
+    <li>troisième</li>
+  </ol>
+</blockquote>
+
+<p>[</p>
+<ul>
+  <li> <strong>Les liens hypertextes vers un glossaire externe</strong>]()</li>
+</ul>
+
+<p><a href=""></a></p>
+
+<p><a href="">Vous pouvez en outre créer très rapidement un lien hypertexte vers la
+définition d’un terme dans un glossaire externe ; pour un terme donné,
+il suffit d’insérer au sein de votre texte le raccourci
+<code class="highlighter-rouge">[?terme]</code>{.spip_code dir=”ltr”}.</a></p>
+
+<p><a href=""></a></p>
+
+<p><a href="">Ainsi le code suivant :
+« <code class="highlighter-rouge"><span class="p">{</span><span class="err">À</span><span class="w"> </span><span class="err">la</span><span class="w"> </span><span class="err">recherche</span><span class="w"> </span><span class="err">du</span><span class="w"> </span><span class="err">temps</span><span class="w"> </span><span class="err">perdu</span><span class="p">}</span><span class="w"> </span><span class="err">est</span><span class="w"> </span><span class="err">l'uvre</span><span class="w"> </span><span class="err">majeure</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="p">[</span><span class="err">?Marcel</span><span class="w"> </span><span class="err">Proust</span><span class="p">]</span></code>{.spip_code
+dir=”ltr”} » donnera à l’affichage : « <em>À la recherche du temps perdu</em>
+est l’œuvre majeure de</a><a href="http://fr.wikipedia.org/wiki/Marcel_Proust">Marcel
+Proust</a>{.spip_glossaire} ».
+Pensez à cliquer sur le lien pour vérifier que le terme entré (nom
+propre ou nom commun) est correctement orthographié, et qu’il pointe sur
+une destination valide.</p>
+
+<p>Le glossaire externe prédéfini est
+<a href="http://www.wikipedia.org">Wikipedia</a>{.spip_out} qui impose certaines
+<a href="http://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_sur_les_titres">conventions sur les
+titres</a>{.spip_out}.
+Cette encyclopédie multilingue écrite sur un mode coopératif est ouverte
+à tous les contributeurs via Internet ; prenez le temps de la connaître
+et d’y contribuer afin d’enrichir ce fonds de savoir partagé.</p>
+
+<p>Vous pouvez aussi référencer un autre glossaire en plaçant après le
+terme le signe # suivi du nom <em>G</em> du glossaire. SPIP appliquera alors
+la fonction <code class="highlighter-rouge">glossaire_</code><em>G</em> sur le terme pour obtenir le lien à insérer.
+Cette fonction aura été placée dans le fichier <code class="highlighter-rouge">mes_options.php</code>. Si le
+nom <em>G</em> se termine par des chiffres, ceux-ci seront préalablement
+retirés de ce nom, et formeront le deuxième argument de la fonction, ce
+qui est très utile pour un glossaire divisé en sections. On écrira
+donc :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+\[?read\#man2\]
+
+</textarea>
+</p>
+<p>pour indiquer que l’on référence l’explication du terme <code class="highlighter-rouge">read</code> dans la
+section 2 du glossaire nommé <code class="highlighter-rouge">man</code>.</p>
+
+<p>Les raccourcis pour mentionner la langue et créer une info-bulle,
+expliqués pour les liens externes, fonctionnent également pour les
+glossaires.</p>
+
+<p><a href=""></a></p>
+<ul>
+  <li> <strong>Des ancres nommées</strong></li>
+</ul>
+
+<p>Vous pouvez définir des « ancres HTML » afin de pouvoir construire un
+lien direct vers un point donné au milieu d’une page d’un site SPIP. Il
+suffit d’introduire le raccourci :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+\[direct&lt;-\]
+
+</textarea>
+</p>
+<p>et cela créera une ancre de nom <code class="highlighter-rouge">direct</code>{.spip_code dir=”ltr”}. Ainsi,
+s’il s’agit, par exemple, de l’article 3723, l’URL
+<code class="highlighter-rouge">http://monsite/article.php3?id_article=3723#direct</code>{.spip_code
+dir=”ltr”} conduira directement à l’endroit de l’article où est situé
+cette ancre.</p>
+
+<p>Il est à noter que les ancres sont compatibles avec les <a href="http://www.spip.net/aide/?aide=raccourcis#liensite">liens
+hypertexte à l’intérieur du
+site</a>{.spip_ancre}.
+Ainsi, le raccourci « <code class="highlighter-rouge">[ce point précis-&gt;art123#precis]</code>{.spip_code
+dir=”ltr”} » conduira vers l’ancre nommée « <code class="highlighter-rouge">precis</code>{.spip_code
+dir=”ltr”} » défini dans l’article 123.</p>
+
+<p><a href=""></a></p>
+<ul>
+  <li> <strong>Des notes non automatiques</strong></li>
+</ul>
+
+<p>Dans la plupart des cas, le système de notes automatiques indiqué
+ci-dessus suffit amplement. Cependant, vous pouvez gérer les notes d’une
+manière non automatique en « forçant » le choix du numéro ou de la
+mention affichée pour réaliser le lien.</p>
+
+<p>Le principe général consiste à indiquer votre choix de la mention
+utilisée entre chevrons au début de la note :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+Une note «forcée»\[\[&lt;xxx&gt; Le texte de la note.\]\]
+
+</textarea>
+</p>
+<p>Sur ce principe :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="18">
+vous pouvez utiliser les notes numérotées automatiques\[\[En plaçant le
+texte de la note entre crochets.\]\], - mais aussi forcer la
+numérotation de la note\[\[&lt;23&gt; En indiquant le numéro de la note
+entre les symboles «&lt;» et «&gt;».\]\], - utiliser des notes sous
+forme d'astérisques \[\[&lt;\*&gt; En plaçant simplement une astérisque
+entre les symboles «&lt;» et «&gt;».\]\], - fabriquer des notes sans
+références (non numérotées); attention, de telles notes ne présentent
+plus de lien entre la note et l'appel de note\[\[&lt;&gt; En n'indiquant
+rien entre les symboles «&lt;» et «&gt;».\]\], - donner un nom (en
+toutes lettres) à une note; cet usage est très répandu pour les
+références bibliographiques\[\[&lt;Rab&gt; François Rabelais.\]\]; -
+rappeler une note déjà existante\[\[&lt;23&gt;\]\] en indiquant le
+numéro de cette note entre les symboles «&lt;» et «&gt;» et en laissant
+vide le reste de la note.
+
+</textarea>
+</p>
+<p>donne :</p>
+
+<blockquote>
+  <p>vous pouvez utiliser les notes numérotées automatiques<span class="spip_note_ref"> [<a href="http://www.spip.net/aide/?aide=raccourcis#nb2" title="En plaçant le texte de la note entre crochets.">2</a>{#nh2
+.spip_note}]</span>,</p>
+  <ul>
+    <li> mais aussi forcer la numérotation de la note<span class="spip_note_ref"> [<a href="http://www.spip.net/aide/?aide=raccourcis#nb23" title="En indiquant le numéro de la note entre les symboles «  ».">23</a>{#nh23
+.spip_note}]</span>,</li>
+    <li> utiliser des notes sous forme d’astérisques<span class="spip_note_ref"> [<a href="http://www.spip.net/aide/?aide=raccourcis#nb_2A" title="En plaçant simplement une astérisque entre les symboles «  ».">*</a>{#nh_2A
+.spip_note}]</span>,</li>
+    <li> fabriquer des notes sans références (non numérotées) ; attention,
+de telles notes ne présentent plus de lien entre la note et l’appel de
+note,</li>
+    <li> donner un nom (en toutes lettres) à une note ; cet usage est très
+répandu pour les références bibliographiques<span class="spip_note_ref"> [<a href="http://www.spip.net/aide/?aide=raccourcis#nbRab" title="François Rabelais.">Rab</a>{#nhRab
+.spip_note}]</span> ;</li>
+    <li> rappeler une note déjà existante<span class="spip_note_ref"> [<a href="http://www.spip.net/aide/?aide=raccourcis#nb23">23</a>{.spip_note}]</span>
+en indiquant le numéro de cette note entre les symboles « &lt; » et
+« &gt; ». et en laissant vide le reste de la note.</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li> <strong>Court-circuiter les raccourcis SPIP</strong></li>
+</ul>
+
+<p>Dans certains cas, il peut être utile d’indiquer à SPIP que certaines
+parties d’un document ne doivent pas être « traitées » par le filtre des
+raccourcis typographiques : vous ne voulez pas corriger la typographie,
+vous devez afficher du code source (par exemple en PHP,
+JavaScript…)…</p>
+
+<p>Le code de ce raccourci est :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="2">
+&lt;HTML&gt;texte à ne pas transformer; attention!&lt;/HTML&gt;
+
+</textarea>
+</p>
+<p>ce qui donne :</p>
+
+<blockquote>
+  <p>texte à ne pas transformer; attention!</p>
+</blockquote>
+
+<p>(ici, notez l’absence d’espaces avant le point-virgule et le point
+d’exclamation).</p>
+
+<ul>
+  <li> <strong>Afficher du code informatique</strong></li>
+</ul>
+
+<p>Certains utilisateurs de SPIP veulent parfois afficher du code
+informatique dans leurs pages. Le raccourci <code class="highlighter-rouge">&lt;code&gt;...&lt;/code&gt;</code> est là
+pour ça.</p>
+
+<p>Exemple :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="3">
+&lt;code&gt;&lt;?php // ceci est du langage php echo "bonjour";
+?&gt;&lt;/code&gt;
+
+</textarea>
+</p>
+<p>donne</p>
+
+<blockquote>
+  <div class="spip_code" dir="ltr" style="text-align: left;">
+
+`<?php     // ceci est du langage php       echo "bonjour";  ?>`
+
+</div>
+</blockquote>
+
+<p>Il existe un autre raccourci pour publier des extraits de code
+informatique de plusieurs lignes : <code class="highlighter-rouge">&lt;cadre&gt;...&lt;/cadre&gt;</code>. Cela place le
+code dans un « formulaire » (ceci est souvent utilisé sur la présente
+page). L’avantage de cette méthode est de faciliter grandement le
+copier-coller à partir de votre page Web : il suffit de placer le
+curseur à l’intérieur du code, de faire « tout sélectionner » (ctrl-A)
+pour pouvoir copier directement le code. De plus sur de nombreux
+butineurs, ce cadre permet de bien restituer les tabulations en début de
+ligne.</p>
+
+<p>Voici un exemple :</p>
+
+<p>
+<textarea class="spip_cadre" cols="40" dir="ltr" readonly="readonly" rows="19">
+class Texte { var layout = 'texte'; var texte; } class Champ { var layout =
+'champ'; var nom\_champ, id\_champ; var cond\_avant, cond\_apres; //
+tableaux d'objets var fonctions; }
+
+</textarea>
+</p>
+<p><a href="http://www.spip.net/aide/?aide=raccourcis#contenu-aide">Voir en ligne.</a></p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

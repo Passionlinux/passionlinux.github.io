@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ce que je fais après l&#39;installation de ma Debian</title>
+  <meta name="description" content="J’aime bien lire les blogs de mes compatriotes, généralement je lissurtout ce qui touche à linux et le logiciel libre. Je voulais faire cebillet depuis quelq...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/07/10/20160710ce-que-je-fais-apres-linstallation-de-ma-debian.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Ce que je fais après l'installation de ma Debian</h1>
+    <p class="post-meta"><time datetime="2016-07-10T17:03:00+02:00" itemprop="datePublished">Jul 10, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>J’aime bien lire les blogs de mes compatriotes, généralement je lis
+surtout ce qui touche à linux et le logiciel libre. Je voulais faire ce
+billet depuis quelque temps, en faite depuis que <a href="http://www.parigotmanchot.fr/2016/06/07/apres-installation-ubuntu-16-04-lts/">Gilles a posté le sien
+sur son
+blog</a>.
+Il commence par:</p>
+
+<blockquote>
+  <dl>
+    <dt>Comme souvent en ce moment, j’ai installé la dernière version d’Ubuntu</dt>
+    <dd>la 16.04 LTS (Long Term Support), appelée Xenial Xerus. Comme ma
+dernière liste d’installation date un peu et que j’ai changé
+d’ordinateur, je remets ici pour mémoire ce que j’ai fait après
+l’installation de base.</dd>
+  </dl>
+  <p>&lt;/p&gt;</p>
+</blockquote>
+
+<p>Alors avec debian je n’ai pas autant de raison de réinstaller, en effet
+les sorties d’une stable c’est tout les deux ans alors qu’ubuntu c’est
+tout les 6mois, a part si on installe que les LTS d’ubuntu et la ça
+revient au même qu’une debian. Bref, ça n’empêche pas que le temps fait
+que j’oublie certaine pratique, que je dois ensuite regarder sur ce blog
+pour trouver les différents penses bête et ensuite les mettre en
+pratique. Il est peut être temps que je récapitule dans un seul billet
+les principales actions que je fais a chaque nouvelle debian. Pour
+l’installation, je ne change pas, je prend normalement une
+<a href="https://www.debian.org/distrib/netinst#smallcd">net-install</a> ou un <a href="https://www.debian.org/CD/torrent-cd/">DVD
+d’installation</a> si je sais que je
+dois en installer plusieurs. Normalement je ne prend que le Amd64 mais
+j’ai encore deux vieux coucous en i386. Ensuite je <a href="http://passiongnulinux.tuxfamily.org/?p=53">lance
+l’installation</a>, je suis les
+étapes que je connais par cœur depuis le temps. C’est simple, rapide et
+comme Debian nous habitue a ne pas changer pour changer, on est pas
+surpris par cette installation.<br />
+<!--more--><br />
+Au premier démarrage, je change le fichier /etc/apt/source.list avec
+<a href="https://fr.wikipedia.org/wiki/GNU_nano">nano</a> pour rajouter les dépots
+nonfree et contrib ainsi que les depots sources de sid, puis surtout je
+retire (je commente #) la ligne du cd/dvd..
+<code class="highlighter-rouge"># nano /etc/apt/sources.list</code> Le fichier d’origine:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>deb cdrom:[Debian GNU/Linux etc... # Debian Jessie, dépôt principal deb http://httpredir.debian.org/debian/ jessie main # Debian Jessie, mises-à-jour de sécurité deb http://security.debian.org/ jessie/updates main # Debian Jessie, mises-à-jour "volatiles" deb http://httpredir.debian.org/debian/ jessie-updates main
+</code></pre></div>
+
+<p>après:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code># Debian Jessie, dépôt principal + paquets non libres deb http://httpredir.debian.org/debian/ jessie main contrib non-free # Debian Jessie, mises-à-jour de sécurité + paquets non libres deb http://security.debian.org/ jessie/updates main contrib non-free # Debian Jessie, mises-à-jour "volatiles" + paquets non libres deb http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
+</code></pre></div>
+
+<p>je rajoute aussi les <em>backports</em>:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code># Debian Jessie, dépôt de rétroportages ("backports") deb http://httpredir.debian.org/debian jessie-backports main contrib non-free
+</code></pre></div>
+
+<p>Voir le <a href="http://passiongnulinux.tuxfamily.org/?p=17">billet qui en
+parle</a>. J’y reviendrais
+dessus car par la suite j’installe deux ou trois paquets venant de
+backports. Une fois fait, il faut a tout pris lancer une mise a jour des
+dépôts (ils ont changé du coup faut que notre système en soit informé):
+<code class="highlighter-rouge"># apt-get update</code> Suivit d’une mise a jour du système:
+<code class="highlighter-rouge"># apt-get upgrade</code> Bien que dans mon cas j’utilise a tout va
+<code class="highlighter-rouge"># apt-get dist-upgrade</code> Noter qu’on peut tout a fait raccorder les deux
+commandes en une seule a condition de mettre entre elle un <em>&amp;&amp;</em>:
+<code class="highlighter-rouge"># apt-get update &amp;&amp; apt-get dist-upgrade</code> Je fini par accepter les
+mises a jour. Une fois cette étape fini, ce n’est que la première, je
+rajoute les firmwares non-libre qui me sont obligatoire pour profiter de
+mes deux écrans: <code class="highlighter-rouge"># apt-get install firmware-linux-nonfree</code> Je rajout
+aussi un firmware pour mon Ethernet, ce n’est pas obligatoire mais a
+chaque mise a jour du kernel j’ai des messages qui me le demande, je
+l’installe surtout car j’ai aussi le wifi sur un autre pc qui fonctionne
+avec ce driver…: <code class="highlighter-rouge"># apt-get install firmware-realtek</code> Pour le reste
+des firmwares, on peut aller par
+<a href="http://passiongnulinux.tuxfamily.org/?p=22">la</a>. Une bonne chose de
+faite, je me retrouve en face de mes deux écrans qui me donnent chacun
+une bonne résolution. Maintenant, on va s’attaquer au mutiarch, plus
+haut j’ai dis que mon pc est en 64, or pour certaines applications comme
+wine, il nous faut les libs de i368. Pour ce faire, c’est très simple,
+on rajoute a notre système, l’architecture i386, on peut bien sur
+ajouter n’importe quelle architecture disponible sous Debian.
+<code class="highlighter-rouge"># dpkg --add-architecture i386 &amp;&amp; apt-get update</code> Pour en savoir plus,
+c’est par <a href="http://passiongnulinux.tuxfamily.org/?p=23">la</a>. Allez, le
+plus gros est passé, maintenant il reste a installer les paquets. Je
+commence par installer apt-listbugs, qui sert a prévenir des bugs ou
+failles éventuels, des fois je l’installe avant tout chose dès le début,
+et parfois seulement après avoir effectué les actions vu précédemment.
+<code class="highlighter-rouge"># apt-get install mc apt-listbugs devscripts mldonkey-server kde-full icedove-l10n-fr icedove filezilla</code>
+Alors dans l’ordre,</p>
+
+<ul>
+  <li><a href="https://fr.wikipedia.org/wiki/Midnight_Commander"><strong>mc</strong></a> est un
+couteau suisse, il fait gestionnaire de fichier, éditeur et plein
+d’autre chose, c’est un utilitaire qui nous permet d’éviter de
+saisir les commandes dans une console.</li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Midnight_Commander_4.6.1_menu.png/280px-Midnight_Commander_4.6.1_menu.png" alt="" /></p>
+
+<ul>
+  <li><a href="https://packages.debian.org/jessie/devscripts"><strong>Devscripts</strong></a> est
+un ensemble de scripts pour faciliter la vie du mainteneur Debian,
+je m’en sers principalement pour me faire des paquets plus récent.</li>
+  <li><a href="https://fr.wikipedia.org/wiki/MLDonkey"><strong>mldonkey-server</strong></a> est
+une application destinée au partage de fichiers en pair à pair
+multiréseaux et libre. Elle fonctionne comme application backend sur
+de nombreuses plates-formes. Elle peut être contrôlée au moyen d’une
+interface utilisateur fournie par un des nombreux frontaux séparés,
+y compris une interface Web, l’interface Telnet et plus d’une
+douzaine de logiciels clients natifs.</li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Mldonkey.jpg/1280px-Mldonkey.jpg" alt="Interface graphique de MLDonkey
+2.9.5." />{.mw-mmv-final-image
+.jpg .mw-mmv-dialog-is-open width=”1207” height=”556”}</p>
+
+<ul>
+  <li><a href="https://packages.debian.org/jessie/kde-full"><strong>kde-full</strong></a> est
+l’ensemble des logiciel contenu dans kde.</li>
+  <li><a href="https://fr.wikipedia.org/wiki/Renommage_des_applications_de_Mozilla_par_Debian"><strong>icedove</strong></a>
+est la version Debian de
+<a href="https://fr.wikipedia.org/wiki/Mozilla_Thunderbird"><strong>Thunderbird</strong></a>
+et icedove-l10n-fr est la traduction FR.</li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Mozilla_Thunderbird_31.4.0.png/1024px-Mozilla_Thunderbird_31.4.0.png" alt="" />{.transparent}</p>
+
+<ul>
+  <li><strong><a href="https://fr.wikipedia.org/wiki/FileZilla">FileZilla</a></strong> est un
+<a href="https://fr.wikipedia.org/wiki/Client-serveur" title="Client-serveur">client</a>
+<a href="https://fr.wikipedia.org/wiki/File_Transfer_Protocol" title="File Transfer Protocol">FTP</a>,
+<a href="https://fr.wikipedia.org/wiki/File_Transfer_Protocol_over_SSL" title="File Transfer Protocol over SSL">FTPS</a>{.mw-redirect}
+et
+<a href="https://fr.wikipedia.org/wiki/SSH_file_transfer_protocol" title="SSH file transfer protocol">SFTP</a>{.mw-redirect},
+développé sous la <a href="https://fr.wikipedia.org/wiki/Licence_publique_g%C3%A9n%C3%A9rale_GNU" title="Licence publique générale GNU">licence publique générale
+GNU</a>.
+Il existe également un logiciel de
+<a href="https://fr.wikipedia.org/wiki/Client-serveur" title="Client-serveur">serveur</a>
+FTP du nom de <a href="https://fr.wikipedia.org/wiki/FileZilla_Server" title="FileZilla Server">FileZilla
+Server</a>.
+Le logiciel est disponible pour Windows, Mac OS X et Linux.</li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/FileZilla-3.0-fr.png/800px-FileZilla-3.0-fr.png" alt="" />{.shrinkToFit
+.transparent width=”749” height=”642”}</p>
+
+<p>Ensuite, je rajoute mes applications venant de backport, bien sur ils
+sont aussi dans les dépôts standard mais dans une version un peu
+vieillotte…
+<code class="highlighter-rouge"># apt-get -t jessie-backports install 0ad minetest wine32</code></p>
+
+<ul>
+  <li><a href="https://fr.wikipedia.org/wiki/0_A.D."><strong>0ad</strong> - Empires Ascendant</a>
+est un jeu vidéo de stratégie en temps réel (RTS) historique en 3D
+développé et édité par Wildfire Games.</li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/0_A.D._Seleucide.jpg/1024px-0_A.D._Seleucide.jpg" alt="" /></p>
+
+<ul>
+  <li><a href="http://www.minetest.net/"><strong>Minetest</strong></a> est aussi un jeu, cette
+fois de layout bac à sable en multijoueur, le jeu propose au joueur
+d’incarner un personnage se mouvant dans un univers en trois
+dimensions, représenté par des cubes, la représentation du décor
+utilisant le principe des voxels. Il est possible de récupérer des
+ressources en creusant dans ces cubes, et de créer de nouveaux blocs
+avec les ressources ainsi accumulées.</li>
+</ul>
+
+<p><img src="http://www.minetest.net/media/gallery/1.jpg" alt="" /></p>
+
+<ul>
+  <li><a href="https://fr.wikipedia.org/wiki/Wine"><strong>wine</strong></a> est un une
+implémentation libre de l’interface de programmation Windows bâtie
+sur X et UNIX (BSD, Linux), c’est-à-dire qu’il permet d’utiliser sur
+Linux ou Mac OS X des programmes conçus pour fonctionner
+sous Windows. Le logiciel n’a donc pas besoin du système
+d’exploitation Windows pour fonctionner.</li>
+</ul>
+
+<p>Je suis bientôt a la fin, on va récapituler notre installation:</p>
+
+<ul>
+  <li>Installer un <em>client FTP</em> : <strong>filezilla</strong></li>
+  <li>Installer un <em>logiciel de messagerie instantanée</em> : <strong>kopete,
+konversation</strong> contenu dans le paquet <strong><em>kde-full</em></strong></li>
+  <li>Installer un <em>logiciel de téléchargement torrent</em> : <strong>ktorrent</strong>
+contenu dans le paquet <strong><em>kde-full</em></strong></li>
+  <li>Installer <em>un navigateur alternatif</em> à Firefox : <strong>konqueror</strong></li>
+  <li>Installer le support des archives compressées au format <em>7z</em> :
+<strong>p7zip-full</strong></li>
+  <li>Installer <em>mes jeux favoris :</em> <strong>0ad</strong> <em>et</em> <strong>Minetest</strong></li>
+</ul>
+
+<p>J’étofferais petit a petit les paquets car d’autres me viennent en tête.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

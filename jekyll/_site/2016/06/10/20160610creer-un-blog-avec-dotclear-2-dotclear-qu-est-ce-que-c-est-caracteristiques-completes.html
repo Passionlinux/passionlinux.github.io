@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Créer un blog avec Dotclear 2; Dotclear, qu&#39;est ce que c&#39;est? Caractéristiques complètes</title>
+  <meta name="description" content="Dotclear est un logiciel libre de publication web publié en 2003 parOlivier Meunier. Fruit du travail d’une seule personne à l’origine, leprojet s’est rapide...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/10/20160610creer-un-blog-avec-dotclear-2-dotclear-qu-est-ce-que-c-est-caracteristiques-completes.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Créer un blog avec Dotclear 2; Dotclear, qu'est ce que c'est? Caractéristiques complètes</h1>
+    <p class="post-meta"><time datetime="2016-06-10T23:10:00+02:00" itemprop="datePublished">Jun 10, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Dotclear est un logiciel libre de publication web publié en 2003 par
+Olivier Meunier. Fruit du travail d’une seule personne à l’origine, le
+projet s’est rapidement doté d’une équipe constituée de personnalités
+diverses et d’horizons variés.</p>
+
+<p>L’objectif du projet est de fournir un outil simple d’emploi permettant
+à tout un chacun de publier sur le web et ce, quel que soit son niveau
+de connaissances techniques.</p>
+
+<p>Dotclear est un logiciel libre conçu avant tout pour ses utilisateurs et
+recevant des contributions régulières de ceux-ci. N’importe qui peut
+l’utiliser et le modifier selon les termes de la <a href="https://fr.dotclear.org/license">licence
+d’utilisation</a>.</p>
+
+<!--more-->
+
+<div id="part-features" class="multi-part loaded active" style="display: block;" title="">
+
+Comment ça marche ? {#comment-ca-marche .sectionedit1}
+===================
+
+<div class="level1">
+
+ 
+
+</div>
+
+En deux mots... {#en-deux-mots .sectionedit2}
+---------------
+
+<div class="level2">
+
+A chaque fois que vous créez ou modifiez un billet, une catégorie, un
+utilisateur, etc., Dotclear déclenche l'enregistrement de ces
+informations dans une [base de
+données](https://fr.dotclear.org/documentation/glossary#base_de_donnees "glossary"){.wikilink1}
+et les met en relation les unes avec les autres (tel billet est lié à
+telle catégorie par exemple).
+
+A chaque fois qu'un visiteur réclame l'affichage d'une page de votre
+blog^[1)](https://fr.dotclear.org/documentation/2.0/overview/how-does-it#fn__1){#fnt__1
+.fn_top}^, Dotclear va chercher les informations dans la base, les
+traite, les met en forme puis les affiche (ou les fournit).
+
+Le langage utilisé par Dotclear pour mener à bien les opérations de
+traitement s'appelle
+[PHP](https://fr.dotclear.org/documentation/glossary#php "glossary"){.wikilink1}.
+Pour l'affichage/fourniture Dotclear utilise le
+[XHTML](https://fr.dotclear.org/documentation/glossary#xhtml "glossary"){.wikilink1}
+(ou XML), les
+[CSS](https://fr.dotclear.org/documentation/glossary#css "glossary"){.wikilink1}
+et une touche de
+[Javascript](https://fr.dotclear.org/documentation/glossary#javascript "glossary"){.wikilink1}.
+Les fichiers servant au traitement et à l'affichage sont ceux que vous
+avez téléchargé dans votre espace web.
+
+<div class="wikinote noteimportant">
+
+**Important :**
+
+<p>
+C’est pourquoi [sauvegarder son
+blog](https://fr.dotclear.org/documentation/2.0/admin/backup "2.0:admin:backup"){.wikilink1}
+ne consiste pas à simplement récupérer les fichiers personnalisés
+(thèmes, plugins) depuis le
+<abbr title="File Transfer Protocol">FTP</abbr>, mais aussi à faire une
+sauvegarde régulière de la base de données.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+Ou en trois .... {#ou-en-trois .sectionedit3}
+----------------
+
+<div class="level2">
+
+Dotclear utilise notamment pour fonctionner
+[PHP](https://fr.dotclear.org/documentation/glossary#php "glossary"){.wikilink1}
+(version 5) et une [base de
+données](https://fr.dotclear.org/documentation/glossary#base-de-donnees "glossary"){.wikilink1}
+(PostgreSQL, MySQL ou SQLite).
+
+Le PHP est un langage dit « dynamique » de génération de pages web côté
+[serveur](https://fr.dotclear.org/documentation/glossary#serveur "glossary"){.wikilink1}
+(et avec ça vous êtes bien avancés :op). En fait, cela signifie que
+lorsque vous demandez l’affichage d’une page dans votre navigateur, le «
+serveur » (l’ordinateur, à l’autre bout du fil, sur lequel sont stockées
+les pages) va « calculer » le contenu de la page pour envoyer, sur votre
+écran, une page internet au format
+[XHTML](https://fr.dotclear.org/documentation/glossary#xhtml "glossary"){.wikilink1}.
+Ce qui tombe plutôt bien car le navigateur, lui, ne comprend pas le PHP
+mais parfaitement (en théorie, en tout cas) le XHTML.
+
+Ce que vous allez placer sur votre serveur, à travers votre accès
+[FTP](https://fr.dotclear.org/documentation/glossary#ftp "glossary"){.wikilink1},
+contient tout ce qui concerne la mise en forme du blog : **où** se
+placent dans votre page les articles, commentaires et liens divers et
+**comment** tout cela s’affiche dans le navigateur.
+
+Il s’agit donc de fichiers utilisant les technologies PHP et XHTML, bien
+sûr, mais aussi
+[CSS](https://fr.dotclear.org/documentation/glossary#css "glossary"){.wikilink1},
+pour la mise en page graphique et
+[JavaScript](https://fr.dotclear.org/documentation/glossary#javascript "glossary"){.wikilink1},
+pour des comportements dynamiques dans la page web.
+
+Avec tout cela, notre contenu est donc prêt à être bien mis en valeur,
+mais le contenu lui-même – billets, commentaires, organisation des
+informations… – comme la vérité, est ailleurs. Notre ami PHP, en fait,
+va « l’appeler » dans la page depuis la base de données. C’est aussi son
+travail : envoyer des informations à stocker (lorsque vous créez un
+billet, par exemple, ou qu’un visiteur dépose un commentaire) et les y
+récupérer afin qu’elles s’affichent dans la page.
+
+Lors de l’installation du blog, le logiciel va donc créer
+automatiquement des
+[tables](https://fr.dotclear.org/documentation/glossary#table "glossary"){.wikilink1}
+dans une base (existante ou créée pour l’occasion, suivant votre
+hébergement). Les tables en question (au nombre de 16 à l'installation
+initiale, et dont les noms commencent par défaut par dc\_) contiendront
+les informations relatives aux différents blogs de votre installation
+et, bien sûr, l’ensemble des billets et commentaires.
+
+<div class="wikinote noteimportant">
+
+**Important :**
+
+<p>
+C’est pourquoi [sauvegarder son
+blog](https://fr.dotclear.org/documentation/2.0/admin/backup "2.0:admin:backup"){.wikilink1}
+ne consiste pas à simplement récupérer les fichiers personnalisés
+(thèmes, plugins) depuis le
+<abbr title="File Transfer Protocol">FTP</abbr>, mais aussi à faire une
+sauvegarde régulière de la base de données.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+Caractéristiques
+----------------
+
+Dotclear dispose d'une richesse fonctionnelle faisant de lui un outil de
+publication de grande qualité, égalant et parfois allant plus loin que
+d'autres outils du même ordre. Au-delà des fonctionnalités, Dotclear est
+conçu pour apporter le maximum de confort à l'utilisateur.
+
+<div class="two-cols">
+
+<div class="col">
+
+-   **Edition simple des billets** - La rédaction des billets est
+    accompagnée d'un éditeur permettant d'appliquer des règles de
+    formatage à votre contenu. Un éditeur visuel optionnel complète la
+    panoplie d'une édition facilitée vous permettant de vous concentrer
+    sur ce que vous écrivez avant toute chose.
+-   **Un thème complètement configurable** - Vous n'avez aucune
+    connaissance en HTML ou en CSS ? Pas de panique, le thème par défaut
+    est totalement configurable en ligne (couleurs, polices de
+    caractères, image du haut...) sans avoir besoin de toucher une ligne
+    de code. Personnaliser son site n'a jamais été aussi simple.
+-   **Administration intuitive** - Vous devez pouvoir écrire un billet
+    rapidement sans avoir à passer par de nombreuses étapes. Sans
+    sacrifice sur les fonctionnalités, l'interface d'administration est
+    simple à utiliser et se met au service de l'utilisateur, quel que
+    soit son niveau.
+-   **Système de templates flexible** -Inutile de connaître PHP pour
+    modifier l'organisation de votre site, un langage de template assez
+    simple permet d'appliquer les modifications que vous souhaitez à
+    votre site, très facilement. Cependant, si vous le souhaitez, vous
+    pouvez activer l'interprétation du PHP dans vos templates. La
+    personnalisation des templates de votre site est facilitée par un
+    éditeur accessible directement depuis l'interface d'administration.
+-   **Gestion des médias** - Vous pouvez ajouter n'importe quel fichier
+    au gestionnaire de médias. Celui-ci vous permettra de retrouver vos
+    fichiers pour les utiliser dans un billet. Vous pourrez également
+    incorporer des sons et des vidéos provenant de services externes
+    (Youtube, Deezer...) tout simplement en utilisant l'URL de la page
+    où se trouve le média à ajouter.
+-   **Nombreuses méthodes de saisie** - Il est possible de saisir les
+    billets en syntaxe Wiki ou en XHTML. Des plugins peuvent ajouter de
+    nouvelles méthodes de saisie.
+-   **Système de commentaires flexible** - Chaque billet pouvant être
+    commenté, Dotclear offre l'option d'empêcher les commentaires billet
+    par billet ou sur tout le site sur-le-champ ou au terme d'un délai
+    que vous fixerez. Il est bien sûr possible de supprimer ou de
+    corriger des commentaires.
+-   **Antispam intégré** - Afin de lutter contre le spam de commentaires
+    et rétroliens, vous disposez de nombreux filtres en standard et la
+    possibilité d'en ajouter de nouveaux par le biais de plugins.
+-   **Internationalisation** - Chaque utilisateur peut choisir la langue
+    dans laquelle il souhaite voir s'afficher l'interface de gestion
+    du site. Chaque site peut également s'afficher dans la langue de
+    son choix. Un outil de gestion des langues permet d'installer ou
+    mettre à jour très facilement une nouvelle langue sur
+    votre installation.
+-   **Widgets de présentation** - Les éléments de navigation de votre
+    site peuvent être personnalisés grâce aux widgets de présentation,
+    vous permettant ainsi de placer ce que vous voulez où vous voulez
+    afin d'organiser la navigation sur votre site. Vous pouvez également
+    utiliser les widgets pour afficher facilement toutes sortes
+    d'informations (Météo, classements divers...).
+-   **Thèmes et plugins** - Afin d'étendre les fonctionnalités de votre
+    blog, vous pouvez installer des plugins ou en changer l'apparence
+    avec un nouveau thème. Vous trouverez toutes ces ressources sur
+    [Dotaddict](http://dotaddict.org/).
+-   **Pages** - Vous pouvez ajouter des pages en dehors du flux des
+    billet afin, par exemple, d'ajouter des informations à votre propos,
+    des mentions légales ou n'importe quoi d'autre de plus amusant.
+-   **Tags et catégories** - Vous pouvez assigner une catégorie à vos
+    billet et un nombre illimité de tags. Vous pouvez ainsi faciliter la
+    navigation de vos lecteurs.
+
+</div>
+
+<div class="col">
+
+-   **Installation automatisée** - Il ne vous faudra pas plus de deux
+    étapes pour installer Dotclear et pouvoir écrire vos
+    premiers billets.
+-   **Différents layouts de bases de données** - On peut avoir des
+    préférences pour un autre système de gestion de bases de données que
+    MySQL, c'est pourquoi Dotclear peut être installé aussi bien avec
+    MySQL que PostgreSQL ou SQLite.
+-   **Multiblog** - Dotclear permet, sans avoir à recourir à une
+    application tierce, de mettre en ligne autant de blogs que vous le
+    souhaitez, un, cent, dix-mille...
+-   **Multi-utilisateur avec permissions** - Vous ne serez peut-être pas
+    seul à gérer votre ou vos blogs. C'est pourquoi vous pouvez ajouter
+    autant d'utilisateurs que souhaité et leur assigner des droits à
+    l'aide d'un système de permissions fines.
+-   **Conforme** - Nous mettons tout en oeuvre pour que Dotclear soit
+    conforme non seulement aux normes usuelles (HTML, CSS...) mais
+    également à HTTP, ceci afin de garantir une intéropérabilité
+    maximale avec les outils actuels ou à venir.
+-   **Accessible** - Nous garantissons l'accessibilité du contenu pour
+    les visiteurs utilisant des moyens d'accès non conventionnels
+    (téléphones mobiles, plages Braille, lecteurs d'écrans,
+    PDAs connectés).
+-   **Import / export** - Dotclear propose nativement d'importer le
+    contenu de votre ancien blog d'une version précédente ou
+    d'autres logiciels. Nous ajoutons régulièrement de nouveaux
+    modules d'importation. Vous avez également la possibilité d'exporter
+    le contenu d'un blog ou de toute votre installation à des fins
+    de sauvegarde.
+-   **Référencement naturel excellent** - Nous avons conçu les pages
+    servies par Dotclear de telle manière que leur référencement soit
+    optimal et en accord avec le contenu que vous publiez. Vous disposez
+    également d'options permettant d'affiner de quelle manière vous
+    souhaitez que le référencement s'effectue, ou de
+    complètement l'interdire.
+-   **Flux de syndication** - La mise à disposition de fils Atom et RSS
+    permet aux utilisateurs d'agrégateurs de contenu de suivre la mise à
+    jour du blog depuis leur logiciel favori.
+-   **Support complet des trackbacks** - Avec les trackbacks vous pouvez
+    réagir à un billet d'un autre blog et l'alerter de manière quasi
+    automatique de la publication de votre réaction.
+-   **Support complet de l'unicode** - Le support de l'unicode permet de
+    publier des textes en utilisant des alphabets différents du
+    classique latin. Il est ainsi possible de publier en japonais,
+    russe, arabe, etc. ; sans n'avoir rien à régler au préalable.
+-   **Support des clients XML/RPC** - Vous pouvez écrire et modifier des
+    billets depuis un logiciel supportant les protocoles XML-RPC de
+    publication suivants : Blogger, MetaWeblog, MovableType.
+-   **Extensible** - Dotclear est conçu afin qu'il soit simple d'y
+    ajouter des plugins intervenant au coeur de l'application. Vous
+    pouvez ainsi écrire et/ou installer des plugins réalisant tout ce
+    dont vous pourriez avoir besoin.
+-   **Performant et évolutif** - Dotclear est rapide, et il ne l'est pas
+    seulement avec peu de données, il l'est aussi avec des dizaines de
+    milliers de sites et des centaines de milliers de commentaires. Nous
+    avons eu l'occasion de le tester et de l'optimiser sur des
+    plate-formes fortement sollicitées avec un volume de
+    données conséquent.
+-   **Libre et gratuit** - Dotclear est un logiciel distribué
+    gratuitement et libre d'utilisation. [Plus de
+    détails](https://fr.dotclear.org/license).
+
+<div id="part-screenshots" class="multi-part loaded active" style="display: block;" title="">
+
+Captures d'écran
+----------------
+
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/install_wizard.jpg "Assistant d'installation")](https://fr.dotclear.org/screenshots/2.0-fr/s/install_wizard.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/install_index.jpg "Dernière étape de l'installation")](https://fr.dotclear.org/screenshots/2.0-fr/s/install_index.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/login.jpg "Connexion")](https://fr.dotclear.org/screenshots/2.0-fr/s/login.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/dashboard.jpg "Le tableau de bord")](https://fr.dotclear.org/screenshots/2.0-fr/s/dashboard.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/entries.jpg "La liste des billets")](https://fr.dotclear.org/screenshots/2.0-fr/s/entries.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/comments.jpg "La liste des commentaires")](https://fr.dotclear.org/screenshots/2.0-fr/s/comments.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/new_entry.jpg "Nouveau billet")](https://fr.dotclear.org/screenshots/2.0-fr/s/new_entry.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/wysiwyg.jpg "L'éditeur visuel")](https://fr.dotclear.org/screenshots/2.0-fr/s/wysiwyg.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/media.jpg "Le gestionnaire de médias")](https://fr.dotclear.org/screenshots/2.0-fr/s/media.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/media_item.jpg "Un média tel qu'on peut le voir")](https://fr.dotclear.org/screenshots/2.0-fr/s/media_item.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/widgets.jpg "Les widgets")](https://fr.dotclear.org/screenshots/2.0-fr/s/widgets.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/blogs.jpg "Liste des blogs")](https://fr.dotclear.org/screenshots/2.0-fr/s/blogs.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/users.jpg "Liste des utilisateurs")](https://fr.dotclear.org/screenshots/2.0-fr/s/users.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/permissions.jpg "Permissions pour les utilisateurs")](https://fr.dotclear.org/screenshots/2.0-fr/s/permissions.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/langs.jpg "Gestion des langues")](https://fr.dotclear.org/screenshots/2.0-fr/s/langs.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/themes.jpg "Gestion des thèmes")](https://fr.dotclear.org/screenshots/2.0-fr/s/themes.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/blowup.jpg "Configuration du thème par défaut")](https://fr.dotclear.org/screenshots/2.0-fr/s/blowup.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/public_home.jpg "Affichage du blog avec le thème par défaut")](https://fr.dotclear.org/screenshots/2.0-fr/s/public_home.jpg)
+-   [![](https://fr.dotclear.org/screenshots/2.0-fr/t/public_post.jpg "Affichage d'un billet, avec le thème par défaut configuré")](https://fr.dotclear.org/screenshots/2.0-fr/s/public_post.jpg)
+
+[Voir en ligne.](https://fr.dotclear.org/about#features)
+
+</div>
+
+</div>
+
+</div>
+
+&lt;/div&gt;
+</p></div></div></p></div></div></div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

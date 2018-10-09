@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Développer pour Frugalware 2, création de paquets, entraînons nous avec un exemple simple</title>
+  <meta name="description" content="Pourquoi utiliser un environnement chroot pour compiler ses paquets ?Tout simplement parce que le chroot permet de trouver les véritablesdépendances pour vot...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2014/06/10/20140610developper-pour-frugalware-2-creation-de-paquets-entrainons-nous-avec-un-exemple-simple.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Développer pour Frugalware 2, création de paquets, entraînons nous avec un exemple simple</h1>
+    <p class="post-meta"><time datetime="2014-06-10T22:56:00+02:00" itemprop="datePublished">Jun 10, 2014</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><em>Pourquoi utiliser un environnement chroot pour compiler ses paquets ?</em>
+Tout simplement parce que le chroot permet de trouver les véritables
+dépendances pour votre paquet sans pour autant “sacrifier” votre
+système. Le chroot, c’est une sorte de matrice qui joue le rôle de votre
+système dans votre système. Pour créer le chroot, il vous suffira juste
+d’installer les paquets nécessaires en tapant la commande suivante.
+<a href="https://wiki.frugalware.org/index.php/Makepkg_%28Fran%C3%A7ais%29" title="Makepkg (Français)">Makepkg</a>
+s’occupera de télécharger et d’installer ce qu’il faudra lorsque vous
+ferez votre premier FrugalBuild. Par défaut, le chroot se situe dans le
+répertoire /var/chroot. Vous pouvez changer son emplacement en modifiant
+le fichier /etc/makepkg.conf Essayez <a href="https://wiki.frugalware.org/index.php/FrugalBuild_%28exemple_d%C3%A9taill%C3%A9%29" title="FrugalBuild (exemple détaillé)">cette exemple simple et
+détaillé</a>:</p>
+
+<h1 id="exemple-dtaill-dun-frugalbuild">Exemple détaillé d’un FrugalBuild</h1>
+
+<h2 id="notre-exemple">Notre exemple</h2>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  # Compiling Time: 0.06 SBU # Maintainer: VMiklos &lt;vmiklos@frugalware.org&gt; pkgname=cabextract pkgver=1.2 pkgrel=1 pkgdesc="a program to extract Microsoft Cabinet files"  url="http://www.kyz.uklinux.net/cabextract.php"depends=('glibc') groups=('apps')  archs=('i686' 'x86_64') up2date="lynx -dump http://www.kyz.uklinux.net/cabextract.php |grep 'cabextract source code'|tr -s ' '|cut -d ' ' -f 6"  source=(http://www.kyz.uklinux.net/downloads/$pkgname-$pkgver.tar.gz)  sha1sums=('871b3db4bc2629eb5726659c147aecea1af6a6d0')  # optimization OK
+</code></pre></div>
+
+<h2 id="dtaillons-chaque-lment">Détaillons chaque élément…</h2>
+
+<h3 id="compiling-time-sbu"># Compiling Time: SBU</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  # Compiling Time:  SBU
+</code></pre></div>
+
+<p>Cette ligne signifie le temps de compilation, elle se rajoute
+automatiquement lors de la compilation ou par vérification via la
+commande fblint.</p>
+
+<h3 id="maintainer-et-contributor">Maintainer et Contributor</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  # Maintainer: VMiklos &lt;vmiklos@frugalware.org&gt;
+</code></pre></div>
+
+<p>Cette ligne indique le nom de mainteneur de paquet, si vous n’allez pas
+maintenir indiquez ceci:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  # Contributor: votrepseudo &lt;votreemail@blabla.com&gt;
+</code></pre></div>
+
+<h3 id="pkgname">pkgname</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  pkgname=cabextract
+</code></pre></div>
+
+<p>Cette ligne indique le nom de paquet. Ce sera le nom utilisé dans vos
+commandes pacman une fois le paquet au dépôt.</p>
+
+<h3 id="pkgver">pkgver</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  pkgver=1.2
+</code></pre></div>
+
+<p>Cette ligne indique la version du programme cabextract, faîtes bien
+attention certains programmes ont des manières différentes de nommer ces
+numéros de version.</p>
+
+<h3 id="pkgrel">pkgrel</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  pkgrel=1
+</code></pre></div>
+
+<p>Cette ligne indique la version du paquet. Si vous avez recompilé le
+paquet afin de corriger des choses…etc vous devez alors changer le 1 par
+2 (et ainsi de suite).</p>
+
+<h3 id="pkgdesc">pkgdesc</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  pkgdesc="a program to extract Microsoft Cabinet files"
+</code></pre></div>
+
+<p>Cette ligne indique une courte description du programme en question.</p>
+
+<h3 id="url">url</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  url="http://www.kyz.uklinux.net/cabextract.php"
+</code></pre></div>
+
+<p>Cette ligne indique la page web du programme.</p>
+
+<h3 id="depends-dpendances">depends (dépendances)</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  depends=('glibc')
+</code></pre></div>
+
+<p>Cette ligne est très importante, elle indique les dépendances
+nécessaires au paquet. Dans cet exemple, glibc est nécessaire au
+fonctionnement de cabextract. Si votre paquet nécessite plusieurs
+dépendances il vous faudra toutes les indiquer entre guillemets et
+espacées par un espace. Pour trouver les dépendances d’un paquet
+utilisez la commande makepkg -a.</p>
+
+<h3 id="le-groupe">Le Groupe</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  groups=('apps')
+</code></pre></div>
+
+<p>Cette ligne indique le groupe auquel appartient le paquet. Ne placez pas
+votre paquet dans les groupes apps, base, devel, lib, multimedia ou
+network, vous devez utiliser un groupe adéquat avec le suffixe -extra.
+Par exemple si vous faîtes un paquet d’un programme pour Gnome, prenez
+le groupe gnome-extra.</p>
+
+<h3 id="architectures">Architectures</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  archs=('i686' 'x86_64')
+</code></pre></div>
+
+<p>Cette ligne indique l’architecture pour laquelle se destine votre
+paquet. Dans cet exemple les architectures sont i686 et x86_64.</p>
+
+<h3 id="lup2date">L’up2date</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  up2date="lynx -dump http://www.kyz.uklinux.net/cabextract.php |grep 'cabextract        source code'|tr -s ' '|cut -d ' ' -f 6"
+</code></pre></div>
+
+<p>Cette ligne est destinée au serveur de frugalware.org pour signaler aux
+mainteneurs la présence d’une nouvelle version du fichier source. Elle
+n’est pas toujours facile à faire, voici quelque exemples: Pour une page
+comportant le lien vers le tarball en tar.gz, l’up2date devrait
+ressembler à ceci:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  up2date="lynx -dump http://adressedelapage/page.php |grep tar.gz | Flasttar"
+</code></pre></div>
+
+<p>Note: S’il y a plusieurs liens pour des tar.gz, pour que l’up2date
+sélectionne le premier lien, mettez grep -m1 tar.gz. S’il n’y a pas de
+page mais juste un espace avec des tarball en tar.bz2,</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  up2date="lynx -dump http://adressedelapage/ | Flasttarbz2"
+</code></pre></div>
+
+<p>Si vraiment vous n’y arrivez pas, vous pouvez bloquer l’up2date et
+indiquez aux développeurs de Frugalware qu’ils devront corriger la
+ligne, voilà ce qu’il faut mettre:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  up2date=$pkgver #need to be fixed
+</code></pre></div>
+
+<h3 id="source">Source</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  source=(http://www.kyz.uklinux.net/downloads/$pkgname-$pkgver.tar.gz)
+</code></pre></div>
+
+<p>Cette ligne indique l’URL de la source du programme. Ce fichier tar.gz
+sera téléchargé pour la compilation du paquet.</p>
+
+<h3 id="sha1sums">SHA1SUMS</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  sha1sums=('094e3afb2fe8dfe82f63731cdcd3b999f4856cff')
+</code></pre></div>
+
+<p>Cette ligne indique le SHA1SUM du fichier source de la précédente ligne.
+Avec la commande makepkg -g vous aurez le SHA1SUM du fichier source.
+Ensuite arrive la partie build, dans l’exemple il n’y en a pas. Allez
+voir la section plus bas pour les détails.</p>
+
+<h3 id="optimization-ok"># optimization OK</h3>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  # optimization OK
+</code></pre></div>
+
+<p>Cette ligne est rajouté automatiquement lors de la compilation ou par la
+commande fblint. Elle indique que la compilation a été faite par votre
+$CFLAGS ou $CXXFLAGS.</p>
+
+<h2 id="build">build</h2>
+
+<p>Dans l’exemple plus haut il n’y avait pas de partie build, tout
+simplement car par défaut si vous ne mettez rien, le build correspond à
+ceci:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  build() {          Fpatchall          Fmake "$@"            Fmakeinstall          if echo ${source[@]}|grep -q README.Frugalware; then          Fdoc README.Frugalware          fi  }
+</code></pre></div>
+
+<p>Les commandes sont indiquées entre { }. Si votre paquet se compile avec
+les banales:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>  ./configure  make  make install
+</code></pre></div>
+
+<p>alors, là aussi, il n’est pas nécessaire de mettre un build, que c’est
+pratique… :-D Nous avons vu sur cette page les fonctions classiques que
+comporte un FrugalBuild mais il en existe d’autres suivant les cas
+particuliers:</p>
+
+<ul>
+  <li><a href="https://wiki.frugalware.org/index.php/FrugalBuild_%28autre_fonctions%29" title="FrugalBuild (autre fonctions)">Autres fonctions possibles dans un
+FrugalBuild</a></li>
+</ul>
+
+<p>puis placez-vous dans le répertoire où se trouve le FrugalBuild. Et
+lancez la commande:</p>
+
+<div style="text-align: left;">
+
+<div style="float: left;">
+
+[![User terminal
+48px.png](https://wiki.frugalware.org/images/4/43/User_terminal_48px.png)](https://wiki.frugalware.org/index.php/File:User_terminal_48px.png){.image}
+
+</div>
+
+<div>
+
+\$ sudo makepkg -H
+
+</div>
+
+</div>
+
+<p>Ce n’est pas conseillé car vous risquez de passer à coté de certaines
+dépendances. Il est recommandé de consulter toutes les commandes
+possibles avec
+<a href="https://wiki.frugalware.org/index.php/Makepkg_%28Fran%C3%A7ais%29" title="Makepkg (Français)">Makepkg</a>.</p>
+
+<h2 id="allez-plus-loin">Allez plus loin</h2>
+
+<h3 id="frugalbuild">FrugalBuild</h3>
+
+<p>Un <a href="https://wiki.frugalware.org/index.php/FrugalBuild_%28exemple_vierge%29" title="FrugalBuild (exemple vierge)">exemple
+vierge</a>
+est disponible. Si vous avez des difficultés avec votre FrugalBuild,
+n’hésitez pas à demander de l’aide sur ircou sur le forum. Pour plus
+d’informations sur les FrugalBuild, n’oubliez pas le manuel en tapant :</p>
+
+<div style="text-align: left;">
+
+<div style="float: left;">
+
+[![User terminal
+48px.png](https://wiki.frugalware.org/images/4/43/User_terminal_48px.png)](https://wiki.frugalware.org/index.php/File:User_terminal_48px.png){.image}
+
+</div>
+
+<div>
+
+\$ man FrugalBuild
+
+</div>
+
+</div>
+
+<h3 id="composition-dun-frugalbuild">Composition d’un FrugalBuild</h3>
+
+<p>Avant d’aller plus loin, il vous faut déjà connaitre l’outil de base de
+la création de paquet. C’est-à-dire, le FrugalBuild. C’est grâce à lui
+que vous donnerez les “instructions” à makepkg pour qu’il puisse
+accomplir sa tâche. Voici un FrugalBuild vierge :</p>
+
+<ul>
+  <li>Exemple de <a href="https://wiki.frugalware.org/index.php/FrugalBuild_%28exemple_vierge%29" title="FrugalBuild (exemple vierge)">FrugalBuild
+vierge</a></li>
+</ul>
+
+<p>Les explications</p>
+
+<ul>
+  <li><a href="https://wiki.frugalware.org/index.php/FrugalBuild_%28documentation_g%C3%A9n%C3%A9rale%29" title="FrugalBuild (documentation générale)">La documentation générale sur le
+FrugalBuild</a></li>
+</ul>
+
+<p>Les fonctions</p>
+
+<ul>
+  <li><a href="https://wiki.frugalware.org/index.php/FrugalBuild_%28autre_fonctions%29" title="FrugalBuild (autre fonctions)">Autres fonctions possibles dans un
+FrugalBuild</a></li>
+</ul>
+
+<h2 id="prt--contribuer">Prêt à contribuer ?</h2>
+
+<p>Ne gardez pas vos paquets fpm que pour vous, vous pouvez les partager en
+les proposant aux développeurs. Il suffit pour çà de vous inscrire sur
+la mailing list anglophone frugalware-devel:</p>
+
+<ul>
+  <li><a href="http://frugalware.org/mailman/listinfo/frugalware-devel">http://frugalware.org/mailman/listinfo/frugalware-devel</a></li>
+</ul>
+
+<p>Même si l’anglais vous rebutte, n’ayez crainte. Une fois souscris à la
+liste envoyez votre mail à</p>
+
+<ul>
+  <li><strong>frugalware-devel AT frugalware POINT org</strong></li>
+</ul>
+
+<p>Avec votre FrugalBuild (et patches si besoin) attaché au mail en demande
+une “review”. L’équipe de développement se fera un plaisir de vous
+répondre et vous aider si votre FrugalBuild comporte des erreurs. Par la
+suite, il est préférable de <a href="https://wiki.frugalware.org/index.php/Cloner_le_d%C3%A9p%C3%B4t_git" title="Cloner le dépôt git">cloner le dépôt
+git</a>
+pour des raisons pratiques. Une fois le FrugalBuild sans fautes, on vous
+demandera de <a href="http://passiongnulinux.tuxfamily.org/?p=33">faire un patch
+git</a></p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

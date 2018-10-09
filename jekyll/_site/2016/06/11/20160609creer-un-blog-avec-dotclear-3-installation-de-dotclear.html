@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Créer un blog avec Dotclear 3; Installation de Dotclear</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/11/20160609creer-un-blog-avec-dotclear-3-installation-de-dotclear.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Créer un blog avec Dotclear 3; Installation de Dotclear</h1>
+    <p class="post-meta"><time datetime="2016-06-11T23:14:00+02:00" itemprop="datePublished">Jun 11, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="level1">
+
+Cette page présente la procédure d’installation standard. Quelques
+tutoriels pas à pas propres à chaque hébergeur sont disponibles [sur
+cette
+page](https://fr.dotclear.org/documentation/2.0/hosting "2.0:hosting"){.wikilink1}.
+
+<span style="color:#800000;">**Attention !**</span> Si vous avez
+installé Dotclear chez un hébergeur pour lequel aucun tutoriel pas à pas
+n’est disponible, n’hésitez pas à contribuer au projet en envoyant votre
+tutoriel sur le modèle des autres à documentation (at) dotclear.net.
+
+</div>
+
+<!--more-->
+
+<div class="level1">
+
+Prérequis {#prerequis .sectionedit2}
+---------
+
+<div class="level2">
+
+Avant d’installer Dotclear 2, vous devez vous assurer de disposer des
+éléments techniques suivants :
+
+-   <div class="li">
+
+    PHP 5.2 ou supérieur avec le support des extensions suivantes :
+
+    </div>
+
+    -   <div class="li">
+
+        mbstring
+
+        </div>
+
+    -   <div class="li">
+
+        iconv
+
+        </div>
+
+    -   <div class="li">
+
+        le support des fonctions ob\_
+
+        </div>
+
+    -   <div class="li">
+
+        le support utf8 sur les fonctions preg\_
+
+        </div>
+
+    -   <div class="li">
+
+        simplexml et domxml
+
+        </div>
+
+    -   <div class="li">
+
+        SPL
+
+        </div>
+
+-   <div class="li">
+
+    Une base de données supportée (au choix) :
+
+    </div>
+
+    -   <div class="li">
+
+        PostgreSQL 8.0 minimum
+
+        </div>
+
+    -   <div class="li">
+
+        MySQL 4.1 minimum avec InnoDB
+
+        </div>
+
+    -   <div class="li">
+
+        SQLite
+
+        </div>
+
+<div class="wikinote noteclassic">
+
+**Note :**
+
+La base de données doit avoir été créée préalablement à l'installation
+de Dotclear.
+
+</div>
+
+Assurez-vous en outre d'avoir le paramétrage php suivant :
+
+-   <div class="li">
+
+    Safe\_Mode positionné à Off
+
+    </div>
+
+-   <div class="li">
+
+    Paramètres magic\_quotes\_gpc et magic\_quotes\_runtime positionnés
+    à Off
+
+    </div>
+
+-   <div class="li">
+
+    Extension MySQL, PostgreSQL ou SQLite activée (selon la
+    base choisie)
+
+    </div>
+
+<div class="wikinote noteclassic">
+
+**Note :**
+
+La présence de l’extension php GD2 est un plus mais n’est pas
+indispensable pour le bon fonctionnement de l’application. Si elle n’est
+pas présente, vous ne disposerez pas des aperçus des images dans le
+gestionnaire de médias.
+
+</div>
+
+<div class="wikinote notetip">
+
+**Astuce :**
+
+<p>
+Un script disponible dans la section
+[Hébergeurs](https://fr.dotclear.org/documentation/2.0/hosting#tester-votre-hebergeur "2.0:hosting"){.wikilink1}
+vous permet de vérifier que ce dernier permet d’installer Dotclear.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+Installation automatique {#installation-automatique .sectionedit3}
+------------------------
+
+<div class="level2">
+
+L’installation automatique de Dotclear 2 est la méthode la plus simple
+et la plus sûre. Elle va se charger de vérifier que PHP 5 est activé et,
+éventuellement, l’activer à votre place. Ensuite, seront téléchargés les
+fichiers nécessaires à l’installation de Dotclear. Cette étape réalisée,
+vous serez conduits vers l’installation classique.
+
+Pour installer Dotclear 2 de cette manière :
+
+-   <div class="li">
+
+    Connectez-vous en <abbr title="File Transfer Protocol">FTP</abbr>
+    sur votre serveur.
+
+    </div>
+
+-   <div class="li">
+
+    Téléchargez le fichier
+    [dotclear2-loader.php](http://download.dotclear.net/loader/dotclear2-loader.php "http://download.dotclear.net/loader/dotclear2-loader.php"){.urlextern}
+    sur votre disque dur puis transférez-le sur votre serveur.
+
+    </div>
+
+-   <div class="li">
+
+    Rendez-vous sur ce fichier avec votre navigateur (par
+    exemple www.mon\_site/dotclear2-loader.php).
+
+    </div>
+
+-   <div class="li">
+
+    Vous pouvez changer le dossier de destination ou laisser ce champ
+    rempli par défaut si vous ne savez pas ce que c’est.
+
+    </div>
+
+-   <div class="li">
+
+    Cliquez sur le bouton.
+
+    </div>
+
+Si tout se passe bien, vous n’aurez plus qu’à cliquer sur le bouton
+suivant pour accéder directement à l’[assistant
+d’installation](https://fr.dotclear.org/documentation/2.0/admin/install#assistant-d-installation "2.0:admin:install ?"){.wikilink1}.
+Dans le cas contraire, il vous faudra utiliser la méthode « classique »
+décrite ci-dessous.
+
+</div>
+
+Installation « classique » {#installation-classique .sectionedit4}
+--------------------------
+
+<div class="level2">
+
+<div class="wikinote noteclassic">
+
+**Note :**
+
+<p>
+Sautez cette étape si vous avez utilisé l’installation automatique. ?
+[Etapes
+suivantes](https://fr.dotclear.org/documentation/2.0/admin/install#etapes-suivantes "2.0:admin:install ?"){.wikilink1}
+
+&lt;/div&gt;
+
+Il faut télécharger l’archive de Dotclear 2, la décompresser, et envoyer
+les fichiers sur votre espace web à l’aide d’un logiciel de
+<abbr title="File Transfer Protocol">FTP</abbr>.
+
+<div class="wikinote noteimportant">
+
+**Important :**
+
+<p>
+Si vous souhaitez profiter de la mise à jour automatique, paramétrez
+votre client <abbr title="File Transfer Protocol">FTP</abbr> afin qu'il
+transfère les fichiers en **mode binaire** qui garantit que les fichiers
+ne seront pas modifiés lors du transfert.
+
+&lt;/div&gt;
+
+Vérifiez ensuite que les permissions sont bien réglées en lecture,
+écriture et exécution sur les dossiers et fichiers suivants :
+
+-   <div class="li">
+
+    le répertoire cache/
+
+    </div>
+
+-   <div class="li">
+
+    le répertoire public/
+
+    </div>
+
+<div class="wikinote notetip">
+
+**Astuce :**
+
+Si vous êtes sur un système UNIX, comme Linux ou Mac, vous pouvez
+ajuster les droits à 775, soit lecture, écriture et exécution pour
+l'utilisateur et le groupe et lecture et exécution pour les autres.
+
+Cette solution fonctionnera mais ne sera peut être pas la meilleure en
+matière de sécurité. Si vous voulez améliorer les droits sur vos
+dossiers et fichiers, sachez que seuls votre utilisateur et le processus
+du serveur web doivent avoir les droits en lecture, écriture et
+exécution sur ces dossiers (pour plus d’infos voir cette documentation :
+[Droits d’accès sous Linux : gérer les accès aux
+fichiers](http://doc.ubuntu-fr.org/droits "http://doc.ubuntu-fr.org/droits"){.urlextern}).
+
+</div>
+
+&lt;/div&gt;
+
+Assistant d’installation {#assistant-d-installation .sectionedit5}
+------------------------
+
+<div class="level2">
+
+Il suffit de vous rendre sur **http://url-mon-dotclear/admin/install/**.
+Un message vous avertit que vous n’avez pas de fichier de configuration
+et vous propose de vous rendre sur l’assistant wizard. Cliquez sur le
+lien.
+
+Un formulaire apparaît et vous demande certains renseignement de
+configuration :
+
+-   <div class="li">
+
+    **Type de base de données**
+
+    </div>
+
+-   <div class="li">
+
+    **Nom d’hôte de la base de données** : nom de l’hôte de la
+    base^[1)](https://fr.dotclear.org/documentation/2.0/admin/install#fn__1){#fnt__1
+    .fn_top}^
+
+    </div>
+
+-   <div class="li">
+
+    **Nom de la base de données**
+
+    </div>
+
+-   <div class="li">
+
+    **Nom d’utilisateur de la base de données**
+
+    </div>
+
+-   <div class="li">
+
+    **Mot de passe de la base de données**
+
+    </div>
+
+-   <div class="li">
+
+    **Préfixe des tables de la base de données**
+
+    </div>
+
+Validez le formulaire, le programme va vérifier que les conditions
+d’installation de Dotclear sont remplies et, le cas échéant, vous amener
+directement à la [fin de
+l’installation](https://fr.dotclear.org/documentation/2.0/admin/install#fin-de-l-installation "2.0:admin:install ?"){.wikilink1}.
+
+Si pour une raison quelconque l’installation échoue, il faut faire une
+mise en place manuelle du fichier config.php.
+
+</div>
+
+Mise en place manuelle du fichier config.php {#mise-en-place-manuelle-du-fichier-configphp .sectionedit6}
+--------------------------------------------
+
+<div class="level2">
+
+Faites une copie du fichier **inc/config.php.in** que vous nommerez
+**inc/config.php** et renseignez les valeurs des constantes en suivant
+les indications suivantes :
+
+-   <div class="li">
+
+    **DC\_DBDRIVER** : layout de base de données ('mysql', 'pgsql'
+    ou 'sqlite')
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_DBHOST** : nom de l'hôte de la
+    base^[2)](https://fr.dotclear.org/documentation/2.0/admin/install#fn__2){#fnt__2
+    .fn_top}^
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_DBUSER** : nom de l’utilisateur de la base
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_DBPASSWORD** : mot de passe pour la base de données
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_DBNAME** : nom de la base de données
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_DBPREFIX** : préfixe de nommage des tables dotclear
+
+    </div>
+
+Dans le cas de SQLite, ne renseignez que la valeur de DC\_DBNAME avec le
+chemin vers le fichier de la base SQLite.
+
+-   <div class="li">
+
+    **DC\_MASTER\_KEY** : insérez une chaîne de caractères assez longue
+    de votre composition **sans apostrophe**. N’en changez plus jamais.
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_ADMIN\_<abbr title="Uniform Resource Locator">URL</abbr>** :
+    <abbr title="Uniform Resource Locator">URL</abbr> complète vers
+    l’interface d’administration. Ce n’est pas obligatoire mais il est
+    préférable de l’indiquer.
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_ADMIN\_MAILFROM** : indiquez l'email à utiliser comme émetteur
+    pour l'envoi des mails de récupération de mot de passe.
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_SESSION\_NAME** : nom du cookie de session pour l’interface
+    d’administration
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_PLUGINS\_ROOT** : chemin(s) vers l’emplacement des plugins
+
+    </div>
+
+-   <div class="li">
+
+    **DC\_TPL\_CACHE** : emplacement du répertoire de cache (doit
+    absolument être accessible en écriture)
+
+    </div>
+
+Consultez la page concernant le [fichier de
+configuration](https://fr.dotclear.org/documentation/2.0/admin/config "2.0:admin:config"){.wikilink1}
+pour plus de détails.
+
+</div>
+
+Fin de l’installation {#fin-de-l-installation .sectionedit7}
+---------------------
+
+<div class="level2">
+
+Une fois le fichier **inc/config.php** créé, il ne vous reste plus qu’à
+vous rendre sur **http://url-mon-dotclear/admin/install/** et répondre
+aux quelques questions posées. L’installation se termine et vous pouvez
+vous connecter.
+
+<div class="wikinote noteimportant">
+
+**Important :**
+
+Un message peut vous indiquer que le répertoire de cache n’est pas
+accessible en écriture. Dans ce cas, changer la valeur de DC\_TPL\_CACHE
+dans votre fichier de configuration ou donnez les permissions nécessaire
+au répertoire en question.
+
+</div>
+
+<div class="wikinote noteclassic">
+
+**Note :**
+
+<p>
+L’installation propre à certains hébergeurs est détaillée dans la
+section
+[Hébergeurs](https://fr.dotclear.org/documentation/2.0/hosting "2.0:hosting"){.wikilink1}
+de ce guide.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+Étapes suivantes {#etapes-suivantes .sectionedit8}
+----------------
+
+<div class="level2">
+
+ 
+
+</div>
+
+### Facilitez-vous la mise à jour {#facilitez-vous-la-mise-a-jour .sectionedit9}
+
+<div class="level3">
+
+Il est conseillé de ne pas laisser les fichiers « personnels » (le
+répertoire **public**) ou personnalisés (les thèmes et les plugins
+additionnels) dans le dossier de Dotclear. En cas de [mise à
+jour](https://fr.dotclear.org/documentation/2.0/admin/upgrade "2.0:admin:upgrade"){.wikilink1},
+cela permet de ne pas avoir à recopier l’ensemble du contenu (qui peut
+être conséquent) de l’ancien au nouveau dossier.
+
+Nous recommandons donc de procéder à une [installation
+optimisée](https://fr.dotclear.org/documentation/2.0/admin/clean-install "2.0:admin:clean-install"){.wikilink1}
+de vos fichiers personnels, que ce soit dans la perspective d'un blog
+unique ou d'un multiblog. Vous y lirez aussi comment avoir votre blog
+sur l'<abbr title="Uniform Resource Locator">URL</abbr> racine.
+
+</div>
+
+### Paramètres du blog {#parametres-du-blog .sectionedit10}
+
+<div class="level3">
+
+Après avoir achevé la procédure d’installation, pensez à aller
+[configurer les paramètres de votre
+blog](https://fr.dotclear.org/documentation/2.0/usage/blog-parameters "2.0:usage:blog-parameters"){.wikilink1}.
+
+</div>
+
+Multiblog {#multiblog .sectionedit11}
+---------
+
+<div class="level2">
+
+Si vous souhaitez abriter plusieurs blogs sur cette installation,
+consultez la documentation [Installation
+optimisée](https://fr.dotclear.org/documentation/2.0/admin/clean-install "2.0:admin:clean-install"){.wikilink1}.
+
+</div>
+
+### Plate-forme de blogs {#plate-forme-de-blogs .sectionedit12}
+
+<div class="level3">
+
+Si avoir plusieurs blogs sur son installation ne pose pas de difficulté
+majeure, monter une plate-forme de blogs avec des inscriptions et des
+créations de blogs automatiques demande des vraies compétences pour
+héberger et sécuriser une telle installation. Aucun support n'est assuré
+pour ce layout d'utilisation.
+
+<div class="wikinote noterelated">
+
+**Liens connexes :**
+
+-   <div class="li">
+
+    [Faire
+    l'inventaire (ABC)](http://tips.dotaddict.org/fiche/Faire-linventaire "http://tips.dotaddict.org/fiche/Faire-linventaire"){.urlextern}
+
+    </div>
+
+-   <div class="li">
+
+    [Ce dont vous aurez besoin avant de télécharger Dotclear
+    (Tips DotAddict)](http://tips.dotaddict.org/fiche/Ce-dont-vous-aurez-besoin-avant-de-telecharger-Dotclear "http://tips.dotaddict.org/fiche/Ce-dont-vous-aurez-besoin-avant-de-telecharger-Dotclear"){.urlextern}
+
+    </div>
+
+-   <div class="li">
+
+    [Installer
+    Dotclear (ABC)](http://abc.dotaddict.org/post/2009/04/27/7-Installer-Dotclear "http://abc.dotaddict.org/post/2009/04/27/7-Installer-Dotclear"){.urlextern}
+
+    </div>
+
+-   <div class="li">
+
+    [Installer Dotclear
+    manuellement (ABC)](http://abc.dotaddict.org/post/2009/04/28/7-bis-Installer-Dotclear-manuellement "http://abc.dotaddict.org/post/2009/04/28/7-bis-Installer-Dotclear-manuellement"){.urlextern}
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="footnotes">
+
+<div class="fn">
+
+^[1)](https://fr.dotclear.org/documentation/2.0/admin/install#fnt__1){#fn__1
+.fn_bot}^ ,
+^[2)](https://fr.dotclear.org/documentation/2.0/admin/install#fnt__2){#fn__2
+.fn_bot}^ Vous pouvez éventuellement le laisser vide si la base est sur
+localhost
+
+</div>
+
+<div class="fn">
+
+ 
+
+</div>
+
+<div class="fn">
+
+[Voir en
+ligne.](https://fr.dotclear.org/documentation/2.0/admin/install)
+
+</div>
+
+</div>
+
+&lt;/div&gt;
+</p></div></div></p></div></p></div></div></p></div></div></div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

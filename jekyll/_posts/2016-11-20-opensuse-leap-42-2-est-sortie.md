@@ -1,0 +1,316 @@
+---
+title: OpenSuse Leap 42.2 est sortie
+date: 2016-11-20 13:18
+layout: post
+---
+
+Antoine a fait une annonce sur
+[Alionet](https://www.alionet.org/content.php?756-openSUSE-Leap-42-2-est-sortie-!),
+je la reprend ici:  
+
+<div id="yui-gen0" class="article cms_clear restore postcontainer">
+
+**Les membres du projet openSUSE ont le plaisir de vous annoncer la
+publication de la dernière version mineure de Leap : openSUSE Leap 42.2
+! Leap est destiné aux utilisateurs soucieux de stabilité. openSUSE Leap
+42.2, muni du noyau Linux 4.4 LTS, est un système d'exploitation sûr,
+stable et fiable*.***  
+<!--more-->
+</p>
+La deuxième version de la série 42
+----------------------------------
+
+[![](https://www.alionet.org/attachment.php?attachmentid=3571&d=1446242698){.align_left
+.size_thumbnail}](https://www.alionet.org/attachment.php?attachmentid=3571&d=1479241116){#attachment3571}openSUSE
+Leap 42.2 est la deuxième version de la série 42. Cette série est prise
+en charge durant 3 ans, en comptant à partir de la première version de
+la série, la 42.1, donc jusqu'en novembre 2018 au moins. Les
+contributions de la communauté sont impressionnantes avec plus de 1400
+nouveaux paquets incorporés dans cette nouvelle version de Leap. La
+version 42.2 propose ainsi 17% de paquets en plus par rapport à la
+version 42.1. La grande nouveauté pour les utilisateurs est Plasma 5.8,
+le nouveau bureau KDE estampillé LTS (*Long-Term-Support*). [Une belle
+collaboration entre KDE et
+openSUSE](https://www.alionet.org/content.php?741-Plasma-5-8-pour-openSUSE-Leap-42-2)
+pour arriver à ce résultat, super timing.
+
+<div>
+
+<div class="size_fullsize">
+
+![](https://www.alionet.org/attachment.php?attachmentid=3573&d=1479278612 "Bureau Plasma 5.8 sur openSUSE Leap 42.2"){.align_center}
+
+</div>
+
+</div>
+
+Pour les amateurs de Btrfs, on peut noter l'utilisation des quotas par
+[la nouvelle version de
+snapper](https://www.alionet.org/content.php?731-Sortie-de-snapper-0-3).  
+
+Téléchargez Leap 42.2 !
+-----------------------
+
+Pour télécharger l'image DVD (toujours pas d'image LiveCD…), rendez-vous
+sur
+[https://software.opensuse.org/422](https://software.opensuse.org/422/fr).
+Vous voulez aller vite ? Utilisez le metalink avec aria2 pour
+télécharger plus rapidement :
+![](https://www.alionet.org/attachment.php?attachmentid=3572&d=1431709203){.align_right
+.size_thumbnail}
+
+<div class="bbcode_container">
+
+<div class="bbcode_description">
+
+Code:
+
+</div>
+
+``` {.bbcode_code}
+# Téléchargement de l'image et de la somme de contrôle aria2c http://download.opensuse.org/distribution/leap/42.2/iso/openSUSE-Leap-42.2-DVD-x86_64.iso aria2c http://download.opensuse.org/distribution/leap/42.2/iso/openSUSE-Leap-42.2-DVD-x86_64.iso.sha256 # Vérification de l'authenticité et de l'intégrité de l'image gpg --recv-keys B88B2FD43DBDC284 gpg --verify openSUSE-Leap-42.2-DVD-x86_64.iso sha256sum --check openSUSE-Leap-42.2-DVD-x86_64.iso.sha256
+```
+
+</div>
+
+Il est bien sûr également possible de [mettre à
+niveau](https://fr.opensuse.org/SDB:System_upgrade) une installation
+existante de Leap 42.1 vers la version 42.2.  
+
+openSUSE Leap 42.2 est…
+-----------------------
+
+### Plus orientée entreprise
+
+![](https://www.alionet.org/attachment.php?attachmentid=3560&d=1479239304){.align_left}C'est
+vrai. openSUSE Leap est basée sur SLE (SUSE Linux Enterprise) et la
+version 42.2 reçoit encore plus de code source provenant de [SLE
+12](https://www.suse.com/promo/sle/) (Service Pack 2 en l'occurrence).
+De nouvelles technologies comme NVDIMM, OmniPATH et le *Data Plane
+Development Kit* avec Open vSwitch sont maintenant disponibles. Xen ne
+requiert plus son propre noyau et est pris en charge avec le noyau par
+défaut. En même temps que la base de code de SLE, openSUSE Leap 42.2
+reçoit les paquets, la maintenance et les correctifs de la communauté
+openSUSE et des ingénieurs de SUSE. La série 42 de Leap est
+officiellement prise en charge pour au moins 36 mois, en comptant depuis
+la version 42.1, c'est-à-dire jusqu'en novembre 2018. Cela inclut des
+mises à jour de maintenance et de sécurité.  
+
+### Prête pour les serveurs
+
+![](https://www.alionet.org/attachment.php?attachmentid=3561&d=1414974939){.align_left}openSUSE
+Leap 42.2 est la première version de Leap à offrir un profil « Serveur »
+durant l'installation. Sans environnement graphique, une installation
+serveur est prête à faire tout ce dont vous avez besoin. Lancer une
+plate-forme web ou mail est plus facile que jamais, tout comme des
+projets complexes utilisant la virtualisation ou des technologies à base
+de conteneurs. Il est aussi bon de rappeler que Leap et toutes les
+autres distributions openSUSE proposent un installateur complet en mode
+texte, donnant les mêmes fonctionnalités que l'installateur graphique
+sans utiliser X. Notre installateur est aussi capable de faire des
+[installations à
+distance](https://fr.opensuse.org/SDB:Remote_installation) en utilisant
+VNC ou SSH, vous permettant de mettre en place openSUSE Leap sur votre
+serveur sans accès physique.  
+
+### Folle de Konqi !
+
+![](https://www.alionet.org/attachment.php?attachmentid=3562&d=1414974750){.align_left}Konqi,
+le petit dragon vert de KDE est de retour et en pleine forme ! Plasma
+5.8 apporte un nouvelle composante à openSUSE Leap. Plasma 5.8, première
+version LTS du bureau KDE, devrait plaire aux utilisateurs soucieux de
+stabilité. Combiné avec [Qt 5.6](https://www.qt.io/qt5-6/) et KDE
+Frameworks 5.26, Plasma 5.8 apportera aux utilisateurs de Leap 42.2
+stabilité et fiabilité.  
+
+### Amatrice de noyau LTS
+
+![](https://www.alionet.org/attachment.php?attachmentid=3563&d=1414974813){.align_left}Le
+noyau Linux 4.4 LTS pour openSUSE Leap 42.2 améliore les performances et
+les fonctionnalités du systèmes de fichiers Btrfs, avec notamment un
+nouveau filtre d'équilibrage (*balance filter*). La paravirtualisation
+est activée dans le noyau par défaut. Ce noyau améliore la cryptographie
+ainsi que le support pour le standard TPM (*Trusted Platform Module*)
+version 2.0 et la virtualisation imbriquée via KVM. Les services réseaux
+ont été considérablement améliorés au niveau du serveur Virtuel IP ainsi
+que d'IPv6.  
+
+Les détails
+-----------
+
+### Pour les développeurs
+
+#### Conteneurs
+
+![](https://www.alionet.org/attachment.php?attachmentid=3561&d=1414974939){.align_left}openSUSE
+Leap 42.2 embarque [Docker
+1.12](https://blog.docker.com/2016/06/docker-1-12-built-in-orchestration/)
+et apporte les dernières fonctionnalités d'orchestration, telles que
+Docker Swarm.  
+
+#### EDI et outillage
+
+![](https://www.alionet.org/attachment.php?attachmentid=3564&d=1414975003){.align_left}Une
+version mûre de Qt 5 GUI Toolkit, la 5.6, est incluse dans Leap 42.2. On
+recense plus de 800 améliorations depuis la version incluse dans
+openSUSE Leap 42.1. Qt 5.6 est une version LTS et apporte des
+corrections de sécurité dans le framework Qt ainsi que dans des
+bibliothèques tierces. GTK 3.20, partagé avec SLE 12 SP2, fournit un
+toolkit solide et stable pour construire des applications. GNOME Builder
+est disponible en tant qu'EDI et permet non seulement de coder des
+applications GTK en C, C++ et Vala mais aussi de réaliser des projets
+dans de nombreux autres langages. Pour tous vos besoin en compilation,
+Leap 42.2 contient GCC 4.8.5, 5.3.1 et 6.1.1. LLVM/Clang 3.8.0 est
+également disponible. CMake 3.5 est aussi de la partie, en fournissant
+un environnement de construction puissant et multi-plateforme pour les
+développeurs de projets Open-Source. Enfin, niveau cryptographie, la
+version d'OpenSSL que l'on retrouve dans Leap 42.2 est la 1.0.2h, qui
+modifie le comportement d'ALPN et empêche ASN.1 BIO de faire des
+allocations mémoire excessives. OpenSSH est à la version 7.2p2 et
+assainit les informations d'identification pour X11.  
+
+#### Langages et bibliothèques
+
+![](https://www.alionet.org/attachment.php?attachmentid=3565&d=1414975028){.align_left}Parmi
+les langages de programmation présents dans openSUSE Leap 42.2, on
+retrouve notamment Python 2.7, Ruby 2.1 et Perl 5.18. Cette version de
+Leap fournit également de nouvelles versions majeures pour libvirt (2.0)
+et libzypp (16.2). Leap dispose également d'une glibc 2.22 bien établie
+ainsi que de libsigc++ 2.8.  
+
+### Pour les administrateurs système
+
+#### Virtualisation
+
+![](https://www.alionet.org/attachment.php?attachmentid=3561&d=1414974939){.align_left}openSUSE
+est une plateforme complète pour faire de la virtualisation. QEMU 2.6.1,
+VirtualBox 5.0 et GNOME Boxes 3.20 font d'openSUSE Leap 42.2 une
+plateforme idéale pour distribuer des applications. La configuration
+peut se faire avec YaST, vous permettant de déployer des solutions
+rapidement et facilement. Sous le capot, on retrouve Xen et KVM ainsi
+que des solutions à base de conteneurs comme Docker et LXC.  
+
+#### Les bienfaits de YaST
+
+![](https://www.alionet.org/attachment.php?attachmentid=3566&d=1414974976){.align_left}Les
+[sprints](https://fr.wikipedia.org/wiki/Scrum_%28m%C3%A9thode%29#Sprint)
+de YaST menés jusqu'à la sortie de Leap 42.2 ont apporté des tonnes de
+bienfaits et ont rendu YaST plus intuitif. La communauté YaST a remodelé
+l'interface utilisateur pour améliorer l'utilisabilité et continue
+d'ajouter de nouveaux outils et modules, après qu'ils ont fait leurs
+preuves dans Tumbleweed. yast2-alternatives est un nouveau module, créé
+lors du [GSoC 2016](https://summerofcode.withgoogle.com/archive/), pour
+gérer [le système
+d'alternatives](https://wiki.debian.org/DebianAlternatives%20)
+d'openSUSE (issu de Debian). Un autre module, yast2-vpn, permet de
+configurer des passerelles et des clients VPN. yast2-auth-client, qui
+permet de configurer un système d'authentification centralisé, a été
+presque complètement réécrit. La gestion du chargeur d'amorçage a été
+améliorée pour élargir le support de Trusted Boot et la configuration de
+la protection du mot de passe a été refaite au propre. yast2-firewall
+supporte maintenant [firewalld](http://www.firewalld.org/), en plus du
+vénérable SuSEFirewall2. En cas d’incident lors de l'installation, il
+est maintenant possible de lancer un débogueur. Les utilisateurs ayant
+une connaissance Ruby peuvent l'utiliser pour tracer ce qui s’est passé
+et trouver une solution voire un contournement. En termes
+d'améliorations, l'impact sur la mémoire vive a été considérablement
+réduit, et la configuration du clavier et des polices de caractère de la
+console a été adaptée pour une meilleure compatibilité avec systemd.  
+
+#### Gestion des systèmes
+
+![](https://www.alionet.org/attachment.php?attachmentid=3562&d=1414974750){.align_left}openSUSE
+Leap dispose de Samba 4.4.2, qui fonctionne mieux avec les domaines
+Windows 2003. systemd 228 apporte un changement notable au niveau des
+[fichiers
+temporaires](https://www.freedesktop.org/software/systemd/man/systemd-tmpfiles.html)
+: les attributs "v", "q" et "Q" créeront désormais de simples
+répertoires même sous Btrfs (pas de sous-volume), si le répertoire
+racine est un simple répertoire. Cela devrait simplifier les choses avec
+certains environnements chroot() qui ne connaissent pas le concept de
+sous-volume Btrfs. La version d'AppStream améliore l'interaction avec
+les dépôts de logiciels. La version de MariaDB ne bouge pas par rapport
+à la 42.1 et la petite mise à jour de MySQL vers la version 5.1.35
+résout plusieurs soucis touchant le basculement vers un système de
+secours (*failover*). Rappelons qu'openSUSE Leap utilise des Delta RPM
+pour les mises à jour de maintenance, ce qui permet un impact minimal
+sur la bande-passante.  
+
+### Pour les utilisateurs
+
+#### KDE
+
+![](https://www.alionet.org/attachment.php?attachmentid=3567&d=1414974847){.align_left}openSUSE
+Leap 42.2 est la première distribution à offrir le support LTS du projet
+KDE sur son logiciel phare, le bureau Plasma. L’environnement par défaut
+est en effet [Plasma 5.8
+LTS](https://www.kde.org/announcements/plasma-5.8.1.php), riche en
+fonctionnalités et offrant d'excellentes performances. Les utilisateurs
+de KDE qui étaient passés à autre chose devraient réévaluer cette
+version qui apporte des améliorations majeures en terme de stabilité et
+de fonctionnalités. KRunner n'ouvre pas seulement des applications ; il
+peut aussi lancer certaines actions quand l’application démarre : ce
+sont les *Jump List Actions*. La prise en charge du glisser-déposer a
+été ajouté pour apporter des résultats de recherche à n'importe quelle
+application. Les administrateurs système apprécieront le support de
+[Kiosk](https://userbase.kde.org/KDE_System_Administration/Kiosk/Introduction).
+Les utilisateurs de smartphones sous Android peuvent obtenir
+l’intégration de leur appareil avec l'application KDE Connect disponible
+sur Google Play ; il suffit d'autoriser le service KDE Connect dans le
+module pare-feu de YaST. En utilisant KDE Connect, les utilisateurs
+peuvent recevoir des SMS sur leur poste de travail ou transférer des
+fichiers vers leur téléphone.  
+
+#### GNOME
+
+[![](https://www.alionet.org/attachment.php?attachmentid=3568&d=1414974876){.align_left}GNOME
+3.20](https://www.gnome.org/news/2016/03/gnome-3-20-released/) offre aux
+utilisateurs de nouveaux contrôles de vie privée, notamment la
+possibilité d'autoriser la géolocalisation par application, un accès aux
+contrôles multimédia directement depuis le shell et une nouvelle fenêtre
+listant les différents raccourcis clavier et gestes disponibles. Cette
+dernière peut être ouverte dans la plupart des applications GNOME,
+depuis le menu ou en utilisant le raccourci Ctrl+? ou Ctrl+F1. GNOME
+peut maintenant accéder à Google Drive directement depuis l’application
+Fichiers. Grâce à près de 870 contributeurs, plus de 28000 changements
+ont eu lieu depuis la version précédente. Tous les détails dans [les
+notes de version de GNOME
+3.20](https://help.gnome.org/misc/release-notes/3.20/).  
+
+#### Autres environnements de bureau
+
+![](https://www.alionet.org/attachment.php?attachmentid=3569&d=1414974916){.align_left}openSUSE
+Leap 42.2 offre à ses utilisateurs la possibilité de choisir d'autres
+bureaux. Vous pouvez essayer par exemple MATE, Xfce, Enlightenment ou
+Cinnamon. LXQt 0.11.0, dont l'expérience utilisateur a été grandement
+améliorée grâce à la correction de nombreux bogues, n'est pas disponible
+au moment de l’installation, mais est inclus dans les paquets d'openSUSE
+Leap 42.2. Ce bureau introduit pavucontrol-Qt, le port Qt de
+pavucontrol, le mixer PulseAudio basé sur GTK.  
+
+#### Traduction
+
+![](https://www.alionet.org/attachment.php?attachmentid=3560&d=1479239304){.align_left}Cette
+version d'openSUSE est la première à utiliser
+[Weblate](https://l10n.opensuse.org/) pour gérer la traduction
+d'openSUSE dans plus de 50 langues. L'interface Weblate permet à
+n'importe qui, du traducteur professionnel au contributeur occasionnel,
+de prendre part au processus et rend possible la fusion des traductions
+d'openSUSE avec celles de SLE.  
+
+Merci !
+-------
+
+<p>
+openSUSE Leap 42.2 représente l'effort combiné de milliers d'humains qui
+participent à nos distributions et aux projets livrés avec elle. Les
+contributeurs, internes et externes au projet openSUSE, devraient être
+fiers de cette version, et méritent un grand « merci » pour tout le
+travail et les soins qui ont été consacrés à celle-ci. Nous croyons que
+Leap est une excellente distribution GNU/Linux pour les développeurs,
+les administrateurs et les utilisateurs. Nous espérons que vous aurez
+tous beaucoup de plaisir lors de son utilisation, et nous sommes
+impatients de travailler avec vous sur la prochaine version ! <span
+style="font-size: medium;">***Have a lot of fun!***</span>
+
+</div>

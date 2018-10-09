@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Upgrade Debian</title>
+  <meta name="description" content="Je vais vous parler aujourd’hui de Debian, chose rare sur ce blog, mais surtout de ce qu’on appel un dist-upgrade ou saut de version. On entend souvent comme...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/12/02/archive-upgrade-debian.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Upgrade Debian</h1>
+    <p class="post-meta"><time datetime="2017-12-02T19:47:12+01:00" itemprop="datePublished">Dec 2, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Je vais vous parler aujourd’hui de Debian, chose rare sur ce blog, mais 
+surtout de ce qu’on appel un dist-upgrade ou saut de version. On entend 
+souvent comme défauts des distributions de layout version fixed release 
+qu’elles sont obsolètes et qu’il faut se taper une réinstallation tous 
+les 6 mois, 2 ans ou plus pour certaines.</p>
+
+<p>Pour le coté obsolète, j’en ai longuement parlé ici même, comme quoi on 
+est pas tous fanatique de la course à la version, cette course à la plus
+ grosse; et que certains préféraient être plus tranquille en étant sur 
+des distributions stables et bougeant peu, c’est le cas de Debian. Aussi
+ car on peu le souligner, Debian a un dépôt backport (rétro-portage) qui
+ est un peu particulier puisque il ne suffit pas de l’activer mais il 
+faut implicitement ordonner à APT d’utiliser la version dans backport 
+pour installer un logiciel, ensuite seulement ce paquet sera mis à jour 
+depuis ce même dépôt et ne suivra plus la version des dépôts classiques.
+ On installera un paquet depuis backport de la façon suivante:</p>
+<pre><span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="apt-get">apt-get</span> -t <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="jessie-backports">jessie-backports</span> <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="install">install</span> <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="libreoffice">libreoffice
+</span></pre>
+<p>J’en avais parlé <a href="http://passiongnulinux.tuxfamily.org/2016/06/03/20160603les-retroportages-depot-backports/">ici</a>.&lt;hr&gt;</p>
+
+<p>Pour le coté chiant de la grosse réinstallation tous les 6 mois, 2ans ou
+ plus, c’est simplement faux! Bien sur que l’on peut si on le souhaite, 
+mais Debian a été pendant longtemps la seule à proposer et a être 
+capable de faire un saut de version +1 de chaque release, par exemple 
+passer de Etch (Debian 4) à lenny (Debian 5), aussi simplement qu’en 
+faisant une mise à jour classique. Encore un avantage que les 
+détracteurs des fixeds releases oublient facilement planqué derrière 
+leurs saintes rollings releases…</p>
+
+<p>J’exprime un avis personnel, de mon point de vue, c’est plus facile de 
+gérer des systèmes fixes et de migrer une fois tous les deux ans comme 
+je fais avec ma Debian depuis 2007 que de gérer des rollings et leurs 
+conséquentes mises a jour. Quand c’est notre système, il y a pas de 
+soucis, surtout que l’on trouve facilement des distributions rollings 
+qui sont calme coté mises a jour, comme Calculate linux qui tourne entre
+ 20 et + de 50 mises a jour par semaine mais quand c’est un système ou 
+on joue le rôle du technicien, de l’informaticien de service ou de 
+réparateur, c’est autre chose. J’ai vraiment pensé que Calculate chez 
+mes parents allait être la perle rare, celle qui allait gentiment se 
+mettre a jour en continu mais en suivant un flux gérable et pas devoir 
+me taper la mise a jour de 400 paquets, je me suis trompé.</p>
+
+<p>Je me suis trompé et le réseau de chez mes parents a fini par me 
+démoraliser, je peux dire merci a SFR pour cela. Mais bon, je leur ai 
+remis une Ubuntu comme ils aiment, en attendant la sortie de la Debian</p>
+<ol>
+  <li>De mon coté je me suis remis à un full Debian, fini l’époque où je 
+voulais être indépendant du format de paquets, ne plus être formaté par 
+Debian, toucher à autre chose, bref fini cette époque.</li>
+</ol>
+
+<p>Debian et moi c’est une longue aventure, je l’ai connu en 2006 avec une 
+Sarge que j’ai vite abandonné pour ma Mandriva 2006, à ce moment je 
+n’aurais jamais cru faire de Debian ma distribution personnel. C’est 
+avec Etch que tout a réellement commencé, elle était de très bonne 
+qualité et bien fini, c’était aussi un bond pour debian qui annonça le 
+début d’une longue série de simplifications aussi bien dans 
+l’installateur que dans la maintenance de cette distribution. J’en ai 
+installé à tout va, par ci par là, chez des amis, des parents, des 
+oncles, partout, sur du vieux matos et sur du plus récents.</p>
+
+<p>J’ai suivi les différentes versions de deux méthodes, sur certaines 
+machines c’était la méthode classique qui consiste à une réinstallation 
+de la nouvelle version tous les deux ans, c’était souvent la méthode que
+ j’utilisais quand la connexion internet était pourris comme en pleine 
+campagne. Généralement je prenais la deuxième méthode qui consiste a 
+faire une grosse mise a jour en changeant le nom de version dans le 
+fichier “sources.list”. La seule fois où j’ai pas utilisé cette manière,
+ c’est pour le passage de Wheezy vers Jessie à cause de systemd, cétait
+ fonctionnel mais pas propre au niveau de l’init, on restait sur 
+l’ancien init, ou sinon il demandait quel init utiliser lors de la mise à
+ jour, je me souviens pas trop.</p>
+
+<p>Il y a des versions de Debian que j’ai gardé longtemps, comme Etch, 
+Lenny et Squeeze. Etch a été ma porte d’entrée pour m’habituer et donc 
+je l’ai gardé jusquà son remplacement par Lenny, j’ai ensuite gardé 
+cette dernière longtemps puisque ce fut la dernière a proposer KDE3 au 
+lieu de KDE4. J’ai ensuite migré vers Squeeze et Gnome2 car KDE4 dans sa
+ version Squeeze était castré de fonctions. Pour ce qui est de Wheezy, 
+je n’en garde pas beaucoup de trace, je ne l’ai pas gardé longtemps, ni 
+Gnome-shell ni KDE4 était satisfaisant pour moi et je suis vite passé à 
+Testing puis à SID. Voila comment on arrive à Jessie, une révélation, 
+juste la meilleur de toute, je l’ai gardé longtemps, jusquà hier en 
+somme. Première Debian a mettre en avant la simplification absolue, 
+l’ergonomie, c’est avant tout grâce à Gnome et son bureau spécial, 
+certes, mais tellement centré sur l’utilisation et non sur la manière de
+ faire.</p>
+
+<p>J’aurais pu garder encore longtemps ma Jessie, j’avais tout ce qu’il me 
+fallait et même des jeux que je joue dans leurs dernières versions comme
+ 0AD (backport). Je me suis décidé à sauter le pas vu le peu de temps 
+qu’il reste avant que Stretch devienne la Stable, c’est l’histoire de 
+deux a quatre mois, je ne pense pas plus, de mon coté je mise sur Mai.</p>
+
+<p>Alors voila la partie qui va faire hurler les accros des rollings, la 
+partie où j’explique comment passer proprement d’une version à une 
+autre, pourquoi vont-ils râler, simplement qu’une fois de plus je met 
+leur théorie sur les distributions fixed release à mal, ils disent que 
+c’est chiant et qu’il faut faire une réinstallation tous les deux ans, 
+mais je leur montre que non, ils vont alors dire que je passe par une 
+très grosse mise à jour peu fiable, je leur répondrais ceci: calculez 
+vos mises à jour sur deux ans, je suis sur que vous faite plus de mises à
+ jour que moi et ma debian stable. Là je pars sur de lhypothétique, si 
+ma debian Jessie a eu 1000 mises a jour sur deux ans (c’est énorme, je 
+pense plutôt qu’on est a la moitié seulement) + les 1719 du saut de 
+version que je fais, la sommes tourne dans les 2719 mises à jour pour 
+deux ans, à titre de comparaison, sur Calculate en trois mois j’avais 
+allégrement dépassé les 1000 mises a jour rien qu’avec ceux de Plasma5.</p>
+
+<p>Faut quand même que je mette entre parenthèse la procédure pour 
+expliquer deux ou trois choses. Tout d’abord cette procédure est 
+officiellement supporté par Debian, qui garantie le passage entre chaque
+ version. Autre chose qui n’est pas des moindres, cette procédure est 
+réalisable à condition de rester avec les paquets venant des dépôts 
+officiels, on oublie donc les dépôts externes du layout de ceux de Google,
+ les PPA qui sont normalement pour Ubuntu, les deb-multimédia et autres 
+dépôts. Pour finir cette méthode est exactement la même que pour passer 
+de stable a testing ou sid.</p>
+
+<p>Donc pour commencer avant toute chose, il faut ajouter les dépôts de la 
+stretch, donc je reprend mon sources.list:</p>
+<pre># Debian Jessie, dépôt principal + paquets non libres 
+deb http://httpredir.debian.org/debian/ jessie main contrib non-free 
+
+
+# Debian Jessie, mises-à-jour de sécurité + paquets non libres 
+deb http://security.debian.org/ jessie/updates main contrib non-free 
+
+
+# Debian Jessie, mises-à-jour "volatiles" + paquets non libres 
+deb http://httpredir.debian.org/debian/ jessie-updates main contrib non-free
+
+# Debian Jessie, dépôt de rétroportages ("backports") 
+deb http://httpredir.debian.org/debian jessie-backports main contrib non-free
+
+# depots sources
+deb-src http://ftp.fr.debian.org/debian/ jessie main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://ftp.fr.debian.org/debian/ jessie-updates main contrib non-free
+deb-src http://ftp.fr.debian.org/debian/ testing main contrib non-free
+deb-src http://security.debian.org/ testing/updates main contrib non-free
+deb-src http://ftp.fr.debian.org/debian/ sid main contrib non-free
+
+# testing
+#deb http://ftp.fr.debian.org/debian/ testing main contrib non-free
+#deb http://security.debian.org/ testing/updates main contrib non-free
+
+
+# unstable
+#deb http://ftp.fr.debian.org/debian/ unstable main contrib non-free
+
+
+# experimental
+#deb http://ftp.fr.debian.org/debian/ experimental main contrib non-free</pre>
+<p>Et je rajoute donc ceux de Stretch qui sont du même exemple que ceux de Jessie:</p>
+<pre>deb http://ftp.fr.debian.org/debian/ stretch main contrib non-free
+deb-src http://ftp.fr.debian.org/debian/ stretch main contrib non-free
+
+deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates main contrib non-free
+
+# Stretch-updates, previously known as 'volatile'
+deb http://ftp.fr.debian.org/debian/ stretch-updates main contrib non-free
+deb-src http://ftp.fr.debian.org/debian/ stretch-updates main contrib non-free
+
+# Debian Stretch, dépôt de rétroportages ("backports")
+deb http://ftp.fr.debian.org/debian stretch-backports main contrib non-free</pre>
+<p>En gros vous l’auriez compris, il suffit de changer jessie par stretch dans les mêmes lignes. Voila ce que ça donne dans nano:</p>
+
+<p>Ensuite c’est de la logique, on ouvre un TTY diffèrent de celui qu’on a notre session et on lance la commande de mise a jour:</p>
+<pre>#apt update &amp;&amp; apt dist-upgrade</pre>
+<p>On ne lance surtout pas la commande dans sa propre session graphique 
+sans ça c’est sur qu’il y aura des soucis!!! Dans l’exemple ci-dessous 
+je lance la mise à jour dans un terminal de ma session graphique Gnome, 
+juste pour voir ce que donnait la mise à jour mais je ne la fait 
+réellement qu’en dehors de celle-ci.</p>
+
+<p>On redémarre la machine et on aura une Debian 9 fonctionnelle. Est ce si difficile?]]&gt;</p>
+
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

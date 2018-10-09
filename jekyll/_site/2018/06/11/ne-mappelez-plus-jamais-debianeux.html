@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ne m&#39;appelez plus jamais Debianeux</title>
+  <meta name="description" content="C’est fait, pour de bon ou du moins jusqu’à la prochaine Debian 10 (et encore), je ne veux plus en effet ni être sous Plasma 5.8 qui est encore castré de cer...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2018/06/11/ne-mappelez-plus-jamais-debianeux.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Ne m'appelez plus jamais Debianeux</h1>
+    <p class="post-meta"><time datetime="2018-06-11T21:34:18+02:00" itemprop="datePublished">Jun 11, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>C’est fait, pour de bon ou du moins jusqu’à la prochaine Debian 10 (et encore), je ne veux plus en effet ni être sous Plasma 5.8 qui est encore castré de certaines fonctions ou options, comme le choix de la qualité d’impression dans kde, et en même temps je veux participer plus souvent dans la communauté du libre. Debian est magnifique, elle a tout pour elle, mais clairement quand il s’agit de contribuer, c’est tout sauf facile et évident!</p>
+
+<p>Je parlais de participer dans Debian, en faite je voudrais contribuer en faisant des paquets, je comprends qu’on met en doute le premier venu, qu’on le teste, qu’on surveille deux fois plus sa contribution, mais je comprends moins le jeu de piste chez Debian. Et si il n’y avait que ça, je ne comprends pas le “je suis Dieu” pour mon paquet des mainteneurs, ne voyez rien de mal, comprenez bien que je suis toujours convaincu de Debian mais un peu moins de son fonctionnement interne d’un autre temps…</p>
+
+<p>J’explique donc, sous Debian j’ai fais une demande par <a href="https://packages.debian.org/search?keywords=reportbug&amp;searchon=names&amp;exact=1&amp;suite=all&amp;section=main">reportbug</a> pour <a href="http://wereturtle.github.io/ghostwriter/">Ghostwriter</a>, un simple éditeur Markdown comme il en existe plein, rien de folichon donc, je fais le paquet via debuild, je me créé un compte sur <a href="https://mentors.debian.net/">Debian-Mentor</a> et je l’envoie <a href="https://mentors.debian.net/package/ghostwriter">là-bas</a>. Je fais ensuite un second rapport pour signaler que le paquet est bien fait mais qu’il me faut un sponsor pour qu’il soit sur les dépôts officiels. Ça c’était en avril, depuis rien.</p>
+
+<p>Je ne suis pas grand fan de faire un paquet depuis zéro, je voulais surtout faire du backport et c’est là que ça se complique encore plus et qu’on voit les limites de “moi mainteneur, je suis Dieu pour mon paquet!”. Il faut avant tout demander au mainteneur du paquet son autorisation par mail, si si… Ensuite faut demander toujours par mail, au dernier rétroporteur si différent du mainteneur habituelle, si il y en a plusieurs, faudra alors en faire la demande aux autres du moins à ceux qui ont souvent tendance à le rétroporter… Ensuite faut faire son annonce comme quoi on veut faire un backport de tel paquet sur la mailing-list, enfin on fait le paquet. De là, on recommence avec la connerie plus haute pour trouver un sponsor. Mais entre temps, pour faire le paquet, il faut récupérer les changelogs du dernier rétroporté ainsi que de la nouvelle version, fusionner le tout dans notre changelog.</p>
+
+<p>Dans mon cas, ce sont des jeux, notamment 0ad, j’ai fait des mails et personne m’a répondu, vu le peu d’intérêt pour le paquet Ghostwriter plus haut et au vu du peu d’utilisateurs connaissant réellement l’utilisation du dépôt backport sous Debian (fonctionnant totalement différemment des autres distributions), je fini par le faire que pour ma gueule et c’est con. J’en ai fais quelques uns, 0ad 0.23,  Wenoth 1.14, minetest, rock’s’diamonds, … on arrive facilement par dépasser les 8 GO de paquets créés, j’en oublis aussi Mate que je m’étais fait pour tester la dernière version.</p>
+
+<p>Je me dis que ce n’est pas la peine de garder ça pour moi, c’est une perte, je pourrais me faire un dépôt privé mais je ne suis pas connu dans le monde Debian, j’ai pensé qu’un site et forum francophone sur Debian bien populaire pourrait faire, non pardon, mettre en place ça et non, je me suis encore trompé. Ça n’intéresse personne d’avoir un backport bien vivant et complet, donc je passe à autre chose.</p>
+
+<p>L’autre raison, c’est qu’avant Debian était la distribution ayant le plus de paquets, pardon, le plus de choix d’applications, ce n’est plus le cas, openSUSE a vraiment bien rattrapé son retard, et si aujourd’hui on ne trouve pas son bonheur dans les dépôts officiels livrés par défaut ce qui peut être le cas, il suffit souvent d’ajouter un dépôt officiel (expérimentale) ou un home perso (comme un peu les PPA et/ou AUR).</p>
+
+<p>Vous l’aurez compris, je passe pour de bon à openSUSE et abandonne Debian. Pourquoi openSUSE et rien d’autre, c’est simple, j’ai de nombreuses bonnes raisons:</p>
+
+<ul>
+  <li>c’est simple d’utilisation, on installe et on a aucuns soucis de pilotes libres ou non,</li>
+  <li>vraiment multiarch et ce par défaut,</li>
+  <li>mon bureau KDE a vraiment une bonne finition dessus,</li>
+  <li>beaucoup de choix pour les applications,</li>
+  <li>simplicité extrême pour contribuer au projet, notamment pour packager,</li>
+  <li>des outils vraiment solides et stables,</li>
+  <li>grande communauté sans idéologie extrémiste du tout-libre qu’on peut voir chez debian,</li>
+  <li>bonne finition pour PLasma mais pas que, Gnome est de grande qualité ainsi que les autres bureaux…</li>
+  <li>saut de versions sans soucis,</li>
+  <li>mise à jour qui ne casse pas l’OS,</li>
+  <li>…</li>
+</ul>
+
+<p>J’en oublis certainement mais je veux revenir sur certains points. Quand je parle <em>simple d’utilisation et pas de soucis de pilotes libres ou non</em>, je pense au fait que Debian par défaut, sans <strong>contrib</strong> et <strong>nonfree</strong>, castre les pilotes du noyau linux. Dans mon cas, je dois aussitôt après avoir installé une Debian, rajouter les dépôts <strong>contrib</strong> et <strong>nonfree</strong> pour ensuite installer le firmware-linux-nonfree sinon j’ai une résolution vraiment bas de gamme. Le <em>vraiment multiarch</em> est aussi une boutade envers Debian, en effet sur celle-ci il faut <a href="https://wiki.debian.org/fr/Multiarch/HOWTO">ajouter manuellement l’architecture 32 bits pour être multiarch</a>, sinon on se prive de tous les programmes uniquement 32 bits, en gros dans mon cas, quelques émulateurs de consoles (Dgen pour n’en citer qu’un) ou le populaire Wine32 pour émuler Windows en 32 bits.</p>
+
+<p>Pour la finition des bureaux, faut bien le dire, Debian comme la plupart des distributions “Mères” ne vise pas la finition, je pourrais en dire autant de Slackware, de Gentoo ou de Archlinux, c’est aussi souvent une question de goût. Dans le cas de openSUSE, c’est pour ma part, très bien, avec une excellente intégration des outils de cette distribution dans les différents bureaux.</p>
+
+<p>En parlant de bureau, cette distribution a été historiquement lié à KDE, c’est le bureau par défaut bien que SUSE depuis Novell (peut être même avant) est sous GNOME pour ses versions professionnels. Du reste, KDE chez openSUSE est l’œuvre de la communauté.</p>
+
+<p>Je parlerais aussi d’une méconnaissance du projet par ceux qui disent que openSUSE est compliqué au niveau des dépôts, certains disent que la distribution souffre d’un manque d’applications, par défaut oui c’est certain comme Fedora, car comme celle-ci il faut ajouter un dépôt du nom de <a href="http://packman.links2linux.org/">PackMan</a> pour tout ce qui est application non “correctes”. Aussi, la distribution fonctionne sur un concept de multi-dépôts facilement ajoutable en un clic, les fameux OneClick, ces dépôts sont par thème, il y a de tout et c’est à l’utilisateur de savoir si oui ou non il préfère ce contenter de la version qui est disponible dans les dépôts par défaut ou si il veut plus récent. Dans le même ordre d’idée, on peut ajouter un dépôt pour une application qui ne se trouve pas dans les dépôts par défaut. Ça revient un peu comme le principe de Layman pour les <em>overlays</em> sous Gentoo ou des <em>PPA</em> sous Ubuntu ou encore le <em>AUR</em> de Archlinux sauf que dans le cas d’openSUSE, ce sont des dépôts officiels et personnels pour les “Homes”.</p>
+
+<p>Comment parler de cette distribution sans parler de ses outils? <strong>Yast</strong> tant décrié par ceux qui ne le connaissent pas, par ceux qui ne pensent que par la ligne de commande, qui pensent que l’un et l’autre sont incompatible, une hérésie, je fais énormément de choses en ligne de commande mais par moment je suis bien content de trouver Yast pour soulager et me faire gagner du temps. N’avez-vous jamais recherché dans quel fichier fallait ajouter telle ligne? Bien dans mon cas, je dois l’avouer, oui ça m’est arrivé et Yast me permet de ne pas chercher, alors je vois et j’entends certains dire que j’apprendrais jamais, dans le cas actuel, dans ce que je fais à l’heure d’aujourd’hui, je n’ai plus grand chose à apprendre, c’est de la répétition. Et comme dit plus haut contrairement aux idées reçus, l’un n’empêche pas l’autre, je jongle entre les deux pour faire ce que j’ai à faire.</p>
+
+<p>Bien sur que openSUSE ne se résume pas à Yast, il y a tant d’outils autre que celui-ci, mais je coupe pour parler de <strong>OBS</strong> et de son penchant ligne de commande <strong>OSC</strong>. J’en ai parlé sur ce blog, c’est un outil formidable qui facilite grandement la mise en paquet des applications et pas seulement pour la distribution mais pour tout un tas d’autres comme Debian, Ubuntu, Fedora, Mageia, …</p>
+
+<p>Comment quitter Debian sans parler de sa solidité lors des mises-à-jour ou des sauts de versions? On me la demandé, comment moi qui aime la solidité de Debian, peut quitter celle-ci? Au vu, en plus, de ce qui se passe chez certaine où les mises-à-jour pourtant simplistes cassent tout et on te réponds on s’en fou de ton soucis mais c’est ça <a href="http://dictionnaire.sensagent.leparisien.fr/amateurisme/fr-fr/">l’amateurisme</a> et non être amateur (prochain billet en cours), au vu de ce qui se passe chez Windows lors de certaines mises-à-jour, j’avais hésité mais je connaissais depuis de longue date, n’est-ce pas en 2005 que ma SUSE 9.3 fut mon premier linux? N’ai-je pas eu toutes les versions entre mes mains? N’ai-je pas testé le saut de versions justement avec Leap, chose qui pour moi est primordiale? Oui à toutes ces choses, Zypp est un outils magnifique, sûrement le meilleur malgré qu’il ne sait pas prendre tout seul les bonnes décisions et qu’il demande ce qui doit être fait, un peu perturbant pour quelqu’un venant d’une autre distribution, par contre il se tire toujours avec les honneurs. Pour expliquer un peu, je fais toujours la même chose avec openSUSE, j’active tout un tas de dépôts, donc souvent sur une openSUSE “fixed” je suis autant à jour dans les applications et les bureaux que sous Archlinux, puis il faut passer à la suivante, je désactive les dépôts, donc à la prochaine mise-à-jour c’est rétrogradage des applications, puis changement des dépôts avec version+1 pour passer à la nouvelle version et ça passe sans soucis. En 24 heure, je suis passé sur ma Leap 42.3 d’un Plasma 5.12 grâce aux dépôts KDE d’activé à une version 5.8 (originelle) puis de nouveau 5.12 en faisant l’upgrade vers la Leap 15.</p>
+
+<p>Je finirais par “communauté sans idéologie extrémiste qu’on peut voir chez Debian”, oui il ne faut pas avoir peur de le dire, allez sur les forums Debian, vous verrez l’idéologie du tout libre, rien de mal en soit mais poussé à l’extrême ce n’est pas bon, quand je vois certain (au singulier car ils sont vraiment peu) balancer que les dépôts contrib et nonfree sont une honte, qu’on devrait les retirer, quand je vois de plus en plus des débats politiques,…  qu’est ce que ce genre de choses viennent faire sur un forum d’entraide… Je ne peux pas être dans une communauté qui se sectarise et se durcie. Encore une fois, toute la communauté n’est pas ainsi, c’est juste une toute minuscule portion mais c’est celle qu’on voit le plus.</p>
+
+<p>Dans la communauté openSUSE, en tout cas la francophone, on ne parle pas de politique, déjà ça évite pas mal de choses, ensuite libre ou pas, il faut que l’utilisateur soit content et c’est tout ce qui importe, si le gars à besoin d’un truc non libre, comme des pilotes c’est son besoin, qui sommes nous pour lui dire le contraire?</p>
+
+<p>Vous l’aurez compris, c’est un ensemble de petites choses qui font que je préfère m’éclipser et passer à autre chose, alors comme je l’ai dis avant, Debian reste la plus importante distribution, c’est une des meilleurs si ce n’est la meilleur, mais par endroit elle souffre de méthodes d’un autre temps.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

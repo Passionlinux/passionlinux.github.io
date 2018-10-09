@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Comparaison des environnements Xfce, Cinnamon, Mate et KDE 2, Le cas KDE</title>
+  <meta name="description" content="Dans les commentaires du billetprécédent,celui qui porte le même titre à quelques mots près, j’ai eu des avisintéressants et surtout des questions sur pourqu...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/08/13/comparaison-des-environnements-xfce-cinnamon-mate-et-kde-2-le-cas-kde.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Comparaison des environnements Xfce, Cinnamon, Mate et KDE 2, Le cas KDE</h1>
+    <p class="post-meta"><time datetime="2017-08-13T10:20:00+02:00" itemprop="datePublished">Aug 13, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Dans les commentaires du <a href="http://passiongnulinux.tuxfamily.org/2017/08/05/comparaison-des-environnements-xfce-cinnamon-mate-et-kde/">billet
+précédent</a>,
+celui qui porte le même titre à quelques mots près, j’ai eu des avis
+intéressants et surtout des questions sur pourquoi KDE-full
+<a href="http://passiongnulinux.tuxfamily.org/2017/08/05/comparaison-des-environnements-xfce-cinnamon-mate-et-kde/#comment-1330">ICI</a>
+et
+<a href="http://passiongnulinux.tuxfamily.org/2017/08/05/comparaison-des-environnements-xfce-cinnamon-mate-et-kde/#comment-1336">LÀ, </a>sont
+notamment intéressant car m’ont dévoilé un souci que je répétais depuis
+des lustres, à savoir installer KDE avec le méta-paquet
+<a href="https://packages.debian.org/stretch/kde-full">kde-full</a>, paquet ultra
+complet qui installe l’intégralité ou presque de ce bureau! Je tente
+donc de donner la raison de cette manière de faire, mauvaise du coup
+pour l’utilisation que j’en fais et aussi les résultats d’un KDE
+installé avec seulement le “<a href="https://wiki.debian.org/tasksel">taskel</a>”.<br />
+<!--more--><br />
+Pour commencer, il faut virer kde-full avec un:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt remove kde-full
+</code></pre></div>
+
+<p>Ce qui aura pour conséquence de supprimer au prochain “apt-autoremove”
+les paquets suivants:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>Les paquets suivants ont été installés automatiquement et ne sont plus nécessaires :  advancecomp akonadiconsole analitza-common artikulate astrometry.net avogadro-data blinken blogilo bomber bovo cantor  cantor-backend-qalculate cervisia cvs cvsservice edict filelight fonts-dustin freerdp-x11 gnugo granatier indi-bin kajongg kalarm  kalgebra kalgebra-common kalzium kalzium-data kanagram kanjidic kapman kapptemplate katomic kblackbox kblocks kbounce kbreakout  kbruch kcachegrind kcharselect kcolorchooser kde-config-cron kde-games-core-declarative kdeadmin kdeartwork kdeartwork-wallpapers  kdeedu kdeedu-data kdeedu-kvtml-data kdegames kdegames-card-data kdegames-card-data-kf5 kdegames-mahjongg-data  kdegames-mahjongg-data-kf5 kdegraphics kdegraphics-mobipocket kdegraphics-thumbnailers kdemultimedia kdenetwork  kdenetwork-filesharing kdepim kdepimlibs-kio-plugins kdesdk kdesdk-kio-plugins kdesdk-misc kdesdk-scripts kdesdk-thumbnailers  kdetoys kdeutils kdewebdev kdf kdiamond kfilereplace kfourinline kgeography kgeography-data kget kgoldrunner kgpg khangman  khelpcenter4 kig kigo killbots kimagemapeditor kiriki kiten kjumpingcube klettres klettres-data klickety klines klinkstatus  kmahjongg kmines kmplot kmtrace knavalbattle knetwalk kolf kollision kolourpaint4 kommander kompare konquest konsolekalendar  kontact kpart5-kompare kpartloader kpat kppp krdc kremotecontrol kreversi krfb kruler ksaneplugin kscd kshisen ksirk ksnakeduel  kspaceduel ksquares kstars kstars-data ksudoku ksystemlog kteatime ktimer ktouch ktouch-data ktuberling kturtle kubrick kuiviewer  kuser kwordquiz libakonadi-contact4 libakonadi-kde4 libakonadi-kmime4 libakonadiprotocolinternals1 libanalitza7 libanalitzagui7  libanalitzaplot7 libanalitzawidgets7 libastrometry0 libavogadro1 libc6-dbg libcfitsio-bin libcfitsio5 libdiscid0 libdmtx0a  liberfa1 libfreerdp-cache1.1 libfreerdp-client1.1 libfreerdp-codec1.1 libfreerdp-common1.1.0 libfreerdp-core1.1  libfreerdp-crypto1.1 libfreerdp-gdi1.1 libfreerdp-locale1.1 libfreerdp-plugins-standard libfreerdp-primitives1.1  libfreerdp-rail1.1 libfreerdp-utils1.1 libgettextpo0 libindi-data libindi-plugins libindi1 libindialignmentdriver1 libindidriver1  libjs-jquery-datatables libjs-mootools libkasten3controllers3 libkasten3core3 libkasten3gui3 libkasten3okteta1controllers1  libkasten3okteta1core1 libkasten3okteta1gui1 libkcalcore4 libkdegames6abi1 libkdegamesprivate1abi1 libkeduvocdocument5  libkf5blog5 libkf5composereditorng5 libkf5gapiblogger5 libkf5kdegames7 libkf5kdegamesprivate1 libkf5kexiv2-15.0.0  libkf5kmahjongglib5 libkf5plotting5 libkidletime4 libkimap4 libkiten5 libkomparediff2-5 libkompareinterface5 libkrossui4  libksane0 libkunitconversion4 libmailtransport4 libnova-0.16-0 libokteta2core2 libokteta2gui2 libopenbabel4v5 libprison0  libqhull7 libqrencode3 libserf-1-1 libsvn1 libwcs5 libwinpr-crt0.1 libwinpr-crypto0.1 libwinpr-dsparse0.1 libwinpr-environment0.1  libwinpr-file0.1 libwinpr-handle0.1 libwinpr-heap0.1 libwinpr-input0.1 libwinpr-interlocked0.1 libwinpr-library0.1  libwinpr-path0.1 libwinpr-pool0.1 libwinpr-registry0.1 libwinpr-rpc0.1 libwinpr-sspi0.1 libwinpr-synch0.1 libwinpr-sysinfo0.1  libwinpr-thread0.1 libwinpr-utils0.1 libxfreerdp-client1.1 lokalize lskat marble okteta optipng palapeli palapeli-data parley  parley-data picmi pkg-kde-tools poxml print-manager python-astrometry python-astropy python-attr python-avogadro python-babel  python-babel-localedata python-cffi-backend python-click python-colorama python-constantly python-cryptography python-dbus  python-diff-match-patch python-enchant python-enum34 python-gi python-idna python-incremental python-iniparse python-ipaddress  python-kde4 python-l20n python-levenshtein python-openssl python-pam python-py python-pyasn1 python-pyasn1-modules python-pytest  python-qt4-sql python-serial python-service-identity python-simplejson python-translate python-twisted-bin python-twisted-core  python-utidylib python-vobject python-xapian python-yaml python-zope.interface qhull-bin qml-module-org-kde-analitza  qml-module-org-kde-games-core qtdeclarative4-kqtquickcharts-1 rocs sextractor step subversion svgpart translate-toolkit  translate-toolkit-doc ttf-sjfonts umbrello valgrind valgrind-dbg xplanet xplanet-images
+</code></pre></div>
+
+<p>C’est sur que cela fait du monde. Je redémarre la bête, c’est à dire le
+PC et non uniquement le bureau et effectivement c’est le jour et la
+nuit, je vous montre les captures de mes écrans:
+<a href="http://download.tuxfamily.org/passionlinux//2017/08/Screenshot_20170810_163745.png"><img src="http://download.tuxfamily.org/passionlinux//2017/08/Screenshot_20170810_163745-1024x337.png" alt="" />{.aligncenter
+.wp-image-1462 .size-large width=”840”
+height=”276”}</a>
+<a href="http://download.tuxfamily.org/passionlinux//2017/08/Screenshot_20170810_163915.png"><img src="http://download.tuxfamily.org/passionlinux//2017/08/Screenshot_20170810_163915-1024x576.png" alt="" />{.aligncenter
+.wp-image-1463 .size-large width=”840”
+height=”473”}</a>
+<a href="http://download.tuxfamily.org/passionlinux//2017/08/Screenshot_20170810_174131.png"><img src="http://download.tuxfamily.org/passionlinux//2017/08/Screenshot_20170810_174131-1024x337.png" alt="" />{.aligncenter
+.wp-image-1464 .size-large width=”840”
+height=”276”}</a>Oui
+vous voyez bien, je gagne  facilement la moitié précédemment consommée,
+avec 421 Mo au démarrage puis une fois que j’ai lancé ma liste de
+programmes, je passais à 761 Mo après une heure d’amusement. Donc oui,
+il est préférable de n’installer le minimum, dans mon cas le
+kde-standard et d’installer et de rajouter les programmes qu’on aime
+avoir. J’ai aussi pensé à cocher la case pour démarrer une session
+vierge. Pour les processeurs, je note une diminution, moins d’activités
+et surtout moins de pointes. Les seules pointes que je note c’est
+Firefox et Thunderbird qui me bouffent de plus en plus de RAM, je suis
+actuellement à 360 Mo pour le navigateur de Mozilla (avec un seul onglet
+d’ouvert) et 213 Mo pour le courrielleur. Il va falloir que je regarde
+pourquoi ces deux produits pompent autant.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Les tests des distributions de FRlinux 9, Frugalware 0.6 (Terminus)</title>
+  <meta name="description" content="Dernière mise à jour : 20/04/2007">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2007/06/12/20070612les-tests-des-distributions-de-frlinux-9-frugalware-0-6-terminus.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Les tests des distributions de FRlinux 9, Frugalware 0.6 (Terminus)</h1>
+    <p class="post-meta"><time datetime="2007-06-12T10:17:00+02:00" itemprop="datePublished">Jun 12, 2007</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><em>Dernière mise à jour : 20/04/2007</em></p>
+
+<p><a href="http://frugalware.org/">Frugalware</a> est une distribution d’origine
+Hongroise créée par un jeune étudiant. Elle est issue de Slackware, la
+différence principale se trouvant dans le gestionnaire de paquets sur
+lequel je reviendrais plus tard. Cette version de Frugalware contenait
+plein de bonnes choses lors de sa sortie : glibc 2.5, binutils
+2.17.50.0.6 avec support DT_GNU_HASH, DBUS 1.0, Python 2.5, KDE 3.5.6,
+Xfce 4.4, Beryl 0.2.0, OpenOffice.org 2.1, Firefox 2.0.0.2 et Gnome
+2.18. Bon rien que ca, ca fait saliver, si en plus je vous dit noyau
+2.6.20, on ne peux pas vraiment se plaindre. La version finale de la 0.6
+est sortie le 22/03/2007 en architectures x86 et x86_64. J’ai testé
+cette distribution sur mon portable IBM t42 et ma station AMD X2 4800+
+sur laquelle j’ai tenté d’installer la version 64 bits de Frugalware,
+chose que je n’ai pas réussi à faire, j’ai donc fait un tour sur le site
+officiel, les documentations et finalement l’IRC (sur Freenode,
+#frugalware en Anglais et #fr.frugalware en Francais). J’ai trouvé une
+communauté enthousiaste et sympathique. Après les règles d’usage pour
+s’assurer que je n’était pas un mec qui ne savait pas de quoi je
+parlais, on m’a gentiment dirigé vers le <a href="http://bugs.frugalware.org/">système de
+bugs</a> pour lequel j’ai rentré un bug sur
+lequel je n’arrive plus à mettre la main. Globalement, le DVD
+d’installation 64 bits ne trouvait pas les même dépendances de modules
+et m’insultait même à coup de formats invalides quand j’essayais de
+régler cela à la main … J’ai donc finalement installé la version 32
+bits sur la station principale également. Mon premier problème fut le
+support pour mon écran (un Samsung 22’ 16/10 tout neuf), vu que la
+version de X.org présente ne comprenait pas la résolution de 1680x1050
+avec le pilote nv. J’ai du résoudre cela avec l’installation des pilotes
+propriétaires Nvidia (9755) qui ont marchés sans encombre. Comme je vous
+le disais précédemment, KDE 3.5.6 est livré de base avec la distribution
+avec un petit noyau 2.6.20 (au moment de sa sortie, une des premières
+distributions à le proposer). Au niveau de l’installateur, vous pouvez à
+présent faire des installations par tftp et clés USB.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/frugalware06_01.png"><img src="http://frlinux.net/pictures/linux/frugalware06_01s.png" alt="" /></a></p>
+
+<p>    Comme je l’ai évoqué un peu plus haut, Frugalware est basée sur
+Slackware mais n’utilise pas pour autant pkgtool ou swaret pour gérer
+ses paquets. Elle
+utilise <a href="http://physics.bu.edu/~youssef/pacman/">pacman</a>. Cela vous dit
+quelque chose ? Eh bien à moi aussi, et pour cause, le même gestionnaire
+est utilisé dans Arch Linux (testé dans cette section). Enfin le même
+c’est beaucoup dire, en fait au début il s’agissait de la même version
+puis au fil du temps, l’équipe de Frugalware a ajouté pas mal de
+fonctionnalités tout en fournissant les patches au projet officiel mais
+le projet officiel étant un peu statique, nous avons à présent deux
+versions de pacman dont la plus riche se trouve dans Frugalware. Notez
+que vous pouvez aussi utiliser un gestionnaire graphique (Frugalware
+Package Manager) pour installer des paquets de manière conviviale. Ceci
+dit, j’aurais tendance à conseiller pacman directement en lignes de
+commandes qui avoine en terme de performances.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/frugalware06_02.png"><img src="http://frlinux.net/pictures/linux/frugalware06_02s.png" alt="" /></a></p>
+
+<p>    J’ai aussi joué à mon fameux jeux : “quel périphérique ne sera pas
+détecté sur cette distribution” et j’ai perdu … Tout ce que j’ai testé
+(nokia n95, scanner usb, appareil photo, etc …) a été détecté et
+installé correctement. pacman étant très intelligent (jusqu’à un certain
+point), il sait gérer les conflits et dépendances. Pour installer un
+nouveau logiciel, un petit <strong>pacman -S sane</strong> par exemple suffit à vous
+installer ce que vous recherchez (c’est bien de connaître le nom du
+paquet tout de même).</p>
+
+<p><a href="http://frlinux.net/pictures/linux/frugalware06_03.png"><img src="http://frlinux.net/pictures/linux/frugalware06_03s.png" alt="" /></a></p>
+
+<p>    Un problème gênant dans les toutes premières versions de Frugalware
+concernait les mises à jour de sécurité des paquets, j’ai donc tout
+naturellement testé cela dans cette nouvelle version. Après avoir scandé
+un <strong>pacman -Sy</strong> pour mettre à jour ma base, il m’a suffi de faire
+un <strong>pacman -Su </strong>pour mettre à jour les paquets vulnérables. On est ici
+arrivé à la même simplicité que la plupart des grosses distributions. Ne
+reste plus qu’un utilitaire de notification automatique de mises à jour
+et cette partie sera sans failles (ayant un parc d’utilisateurs ayant
+comme philosophie “si ça marche, pourquoi mettre à jour”, c’est
+important).</p>
+
+<p><a href="http://frlinux.net/pictures/linux/frugalware06_04.png"><img src="http://frlinux.net/pictures/linux/frugalware06_04s.png" alt="" /></a></p>
+
+<p>    Frugalware est très rapide à proposer des paquets récents pour sa
+distribution et c’est super appréciable. Ainsi wireshark (ex ethereal)
+était non seulement présent dans les paquets mais dans sa dernière
+version lors de mon test. C’est une des raisons de mon attachement a
+Gentoo, si on veut la dernière version Y du projet Z, une petite
+commande plus tard, c’est réglé. Frugalware propose à peu près la même
+chose, avec tout autant de simplicité. J’ai aussi testé pour vous le
+streaming audio (radio internet) sur lequel j’ai enlevé le plugin
+firefox pour installer kaffeine qui sous KDE représente mon lecteur
+favori pour les médias internet. Ici encore aucun souci à signaler. Il
+en va de même pour la lecture de DVDs protégés, libdvdcss2 faisant
+partie des paquets, j’ai pu lire tous mes DVDs.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/frugalware06_05.png"><img src="http://frlinux.net/pictures/linux/frugalware06_05s.png" alt="" /></a></p>
+
+<p>    J’ai joué rapidement avec les autres gestionnaires et environnements
+de bureau présents comme Gnome qui n’a pas voulu se lancer correctement,
+j’avoue ne pas vraiment avoir cherché où se situait le problème et je
+présume juste un problème avec mon installation plutôt qu’un problème de
+distribution. XFCE est également disponible et en version 4.4, oui
+monsieur ! Cela marche très bien, ici encore rien à redire. A conseiller
+pour ceux qui veulent un environnement réactif.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/frugalware06_06.png"><img src="http://frlinux.net/pictures/linux/frugalware06_06s.png" alt="" /></a></p>
+
+<p>    On en vient à la fin de cette reconnaissance de la 0.6, qui est une
+distribution léchée et facile à installer en 32bits. J’aurais bien sûr
+des réserves sur la version 64 bits étant donné que je n’ai juste pas
+réussi à l’installer et ce même en tentant un CD netinstall de la
+version 0.5 qui doit récupérer la dernière version des paquets stables
+lors de l’installation. Pour ce qui est de l’utilisation et des paquets
+disponibles, j’ai trouvé le tout simple à utiliser mais les développeurs
+de frugalware précisent bien que leur distribution est axée utilisateurs
+intermédiaires plutôt que débutant, donc il ne faut pas avoir peur de la
+ligne de commande au cas où :) Si vous cherchez une alternative à
+Slackware, recompilée en 686 avec un gestionnaire de paquets plus
+puissant, cette distribution est faite pour vous.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

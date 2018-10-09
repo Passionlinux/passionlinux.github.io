@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Debian; Cycle de vie d&#39;une release</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/04/01/20160401debian-cycle-de-vie-dune-release.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Debian; Cycle de vie d'une release</h1>
+    <p class="post-meta"><time datetime="2016-04-01T19:42:00+02:00" itemprop="datePublished">Apr 1, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div>
+
+<div>
+
+Le projet dispose à tout instant de trois à six versions différentes de
+chaque logiciel, nommées Experimental, Unstable, Testing, Stable,
+Oldstable, et même Oldoldstable. Chacune correspond à un stade différent
+du développement. Pour bien les comprendre, suivons le parcours d'un
+programme, de sa première mise en paquet à son intégration dans une
+version stable de Debian.
+
+</div>
+
+<div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+VOCABULAIRE Release Le terme « release » désigne chez Debian une version
+particulière d'une distribution (ex : « the unstable release » signifie
+« la version instable »). Il désigne aussi l'annonce publique de toute
+nouvelle version (stable).
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+![](http://download.tuxfamily.org/passionlinux/images/infographic_debian-v2.1.en.png){width="919"
+height="642"}  
+<!--more-->
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+### 1.6.1. Le statut Experimental
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Traitons d'abord le cas particulier de la distribution Experimental :
+c'est un ensemble de paquets Debian correspondant à des logiciels en
+cours de développement et pas forcément finalisés — d'où son nom. Tout
+ne transite pas par cette étape ; certains développeurs y créent des
+paquets pour obtenir un premier retour des utilisateurs les plus
+expérimentés (ou les plus courageux).
+
+</div>
+
+<div>
+
+Par ailleurs, cette distribution abrite fréquemment des modifications
+importantes portant sur des paquets de base et dont l'intégration dans
+Unstable avec des bogues gênants aurait des répercussions trop
+importantes et bloquantes. C'est donc une distribution totalement
+isolée, dont les paquets ne migrent jamais vers une autre (sauf
+intervention expresse du mainteneur ou des ftpmasters). Elle n'est
+également pas utilisable de manière indépendante : seul un sous-ensemble
+des paquets existants est présent dans Experimental et elle ne contient
+généralement pas le système de base. Cette distribution est donc
+exploitable seulement en combinaison avec une autre distribution
+indépendante, comme Unstable.
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+### 1.6.2. Le statut Unstable
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Revenons au cas d'un paquet layout. Le mainteneur crée un premier paquet,
+qu'il compile pour Unstable et place sur le serveur
+ftp-master.debian.org. Cette première manifestation implique inspection
+et validation par les ftpmasters. Le logiciel est alors disponible dans
+Unstable, la distribution la plus à jour choisie par des utilisateurs
+préférant le dernier cri à l'assurance de l'absence de bogues graves.
+Ceux-ci découvrent alors le programme et le testent.
+
+</div>
+
+<div>
+
+S'ils y découvrent des bogues, ils les décrivent à son mainteneur. Ce
+dernier prépare alors régulièrement des versions corrigées, qu'il place
+sur le serveur.
+
+</div>
+
+<div>
+
+Toute nouvelle mise en ligne est répercutée sur tous les miroirs Debian
+du monde dans les 6 heures. Les utilisateurs valident alors la
+correction et cherchent d'autres problèmes, consécutifs aux
+modifications. Plusieurs mises à jour peuvent ainsi s'enchaîner
+rapidement. Pendant ce temps, les robots autobuilders sont entrés en
+action. Le plus souvent, le mainteneur ne dispose que d'un PC
+traditionnel et aura compilé son paquet pour architecture amd64 (ou
+i386) ; les autobuilders ont donc pris le relais et compilé
+automatiquement des versions pour toutes les autres architectures.
+Certaines compilations pourront échouer ; le mainteneur recevra alors un
+rapport de bogue signalant le problème, à corriger dans les prochaines
+versions. Lorsque le bogue est découvert par un spécialiste de
+l'architecture concernée, il arrive que ce rapport soit accompagné d'un
+correctif prêt à l'emploi.
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+![Compilation d'un paquet par les
+autobuilders](https://debian-handbook.info/browse/fr-FR/stable/images/autobuilder.png)
+
+</div>
+
+</div>
+
+Figure 1.2. Compilation d'un paquet par les autobuilders
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+DÉCOUVERTE buildd, le recompilateur de paquet Debian
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+buildd est l'abréviation de build daemon. Ce logiciel recompile
+automatiquement les nouvelles versions des paquets Debian sur
+l'architecture qui l'accueille (la compilation croisée — crosscompiling
+— est évitée dans la mesure du possible).
+
+</div>
+
+<div>
+
+Ainsi, pour produire des binaires destinés à l'architecture arm64, le
+projet dispose de machines arm64. Le programme buildd y fonctionne en
+permanence afin de créer des paquets binaires pour arm64 à partir des
+paquets sources expédiés par les développeurs Debian.
+
+</div>
+
+<div>
+
+Ce logiciel est employé sur tous les ordinateurs servant d'autobuilders
+à Debian. Par extension, le terme buildd désigne souvent ces machines,
+en général réservées à cet usage.
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+### 1.6.3. La migration vers Testing
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Un peu plus tard, le paquet aura mûri ; compilé sur toutes les
+architectures, il n'aura pas connu de modifications récentes. C'est
+alors un candidat pour l'intégration dans la distribution Testing —
+ensemble de paquets Unstable sélectionnés sur quelques critères
+quantifiables. Chaque jour, un programme choisit automatiquement les
+paquets à intégrer à Testing, selon des éléments garantissant une
+certaine qualité :
+
+</div>
+
+<div>
+
+1.  <div>
+
+    absence de bogues critiques, ou tout du moins nombre inférieur à
+    celui de la version actuellement intégrée dans Testing ;
+
+    </div>
+
+2.  <div>
+
+    villégiature minimale de 10 jours dans Unstable, ce qui laisse assez
+    de temps pour trouver et signaler les problèmes graves ;
+
+    </div>
+
+3.  <div>
+
+    compilation réussie sur toutes les architectures officiellement
+    prises en charge ;
+
+    </div>
+
+4.  <div>
+
+    dépendances pouvant toutes être satisfaites dans Testing, ou qui
+    peuvent du moins y progresser de concert avec le paquet.
+
+    </div>
+
+</div>
+
+<div>
+
+Ce système n'est évidemment pas infaillible ; on trouve régulièrement
+des bogues critiques dans un paquet intégré à Testing. Il est pourtant
+globalement efficace et Testing pose beaucoup moins de problèmes
+qu'Unstable, représentant pour beaucoup un bon compromis entre la
+stabilité et la soif de nouveauté.
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+NOTE Limitations de Testing
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Bien que très intéressante dans son principe, Testing rencontre quelques
+problèmes pratiques : l'enchevêtrement des dépendances croisées entre
+paquets est tel qu'un paquet ne peut que rarement y progresser tout
+seul. Les paquets dépendant tous les uns des autres, il est parfois
+nécessaire d'y faire progresser simultanément un grand nombre d'entre
+eux, ce qui est impossible tant que certains subissent des mises à jour
+régulières. Par ailleurs, le script identifiant les familles de paquets
+ainsi solidarisés peine beaucoup à les constituer (il s'agirait d'un
+problème NP-complet, pour lequel nous connaissons heureusement quelques
+bonnes heuristiques). C'est pourquoi on peut intervenir manuellement et
+conseiller ce script en lui suggérant des ensembles de paquets ou en
+imposant l'inclusion de certains d'entre eux — quitte à casser
+temporairement quelques dépendances. Cette fonctionnalité est accessible
+aux Release Managers et à leurs assistants.
+
+</div>
+
+<div>
+
+Rappelons qu'un problème NP-complet est de complexité algorithmique
+exponentielle en fonction de la taille des données, c'est-à-dire la
+longueur du codage (le nombre de chiffres) des éléments concernés. La
+seule manière de le résoudre est souvent d'examiner toutes les
+configurations possibles, ce qui requiert parfois d'énormes moyens. Une
+heuristique en est une solution approchée et satisfaisante.
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+COMMUNAUTÉ Le Release Manager
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Release Manager (gestionnaire de versions) est un titre important,
+associé à de lourdes responsabilités. Son porteur doit en effet gérer la
+sortie de la nouvelle version stable de Debian et définir le processus
+d'évolution de Testing tant qu'elle ne répond pas aux critères de
+qualité de Stable. Il définit également un calendrier prévisionnel (pas
+toujours respecté).
+
+</div>
+
+<div>
+
+On trouve aussi des Stable Release Managers (gestionnaires de la version
+stable), souvent abrégé SRM, qui gèrent et sélectionnent les mises à
+jour de la version stable de Debian. Ils y incluent systématiquement les
+correctifs de sécurité et examinent au cas par cas toutes les autres
+propositions d'inclusion émises par des développeurs Debian soucieux de
+mettre à jour un de leurs paquets dans la version stable.
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+### 1.6.4. La promotion de Testing en Stable
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Supposons notre paquet désormais intégré à Testing. Tant qu'il est
+perfectible, son responsable doit persister à l'améliorer et recommencer
+le processus depuis Unstable (mais ces inclusions ultérieures dans
+Testing sont en général plus rapides : à moins d'avoir changé de manière
+significative, toutes les dépendances sont déjà présentes). Quand il
+atteint la perfection, son mainteneur a fini son travail et la prochaine
+étape est l'inclusion dans la distribution Stable, en réalité une simple
+copie de Testing à un moment choisi par le Release Manager. L'idéal est
+de prendre cette décision quand l'installateur est prêt et quand plus
+aucun programme de Testing n'a de bogue critique répertorié.
+
+</div>
+
+<div>
+
+Étant donné que ce moment ne survient jamais dans la pratique, Debian
+doit faire des compromis : supprimer des paquets dont le mainteneur n'a
+pas réussi à corriger les bogues à temps ou accepter de livrer une
+distribution comptant quelques bogues pour des milliers de logiciels. Le
+Release Manager aura préalablement prononcé une période de freeze (gel),
+où il devra approuver chaque mise à jour de Testing. Le but est
+d'empêcher toute nouvelle version (et ses nouveaux bogues) et de
+n'approuver que des mises à jours correctives.
+
+</div>
+
+<div>
+
+<div>
+
+![Parcours d'un paquet au sein des différentes versions de
+Debian](https://debian-handbook.info/browse/fr-FR/stable/images/release-cycle.png)
+
+</div>
+
+Figure 1.3. Parcours d'un paquet au sein des différentes versions de
+Debian
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+VOCABULAIRE Freeze : la dernière ligne droite
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Pendant la période de freeze, l'évolution du contenu de la distribution
+Testing est bloquée : plus aucune mise à jour automatique n'a lieu.
+Seuls les Release Managers sont alors habilités à y changer des paquets,
+selon leurs propres critères. L'objectif est d'éviter l'apparition de
+nouveaux bogues par l'introduction de nouvelles versions ; seules les
+mises à jour bien examinées sont acceptées lorsqu'elles corrigent des
+bogues importants.
+
+</div>
+
+</div>
+
+<div>
+
+Après la sortie de la nouvelle version stable, le Stable Release Manager
+en gère les évolutions ultérieures (appelées « révisions », par ex. :
+7.1, 7.2, 7.3 pour la version 7). Ces mises à jour intègrent
+systématiquement tous les correctifs de sécurité. On y trouve également
+les corrections les plus importantes (le mainteneur du paquet doit
+prouver la gravité du problème qu'il souhaite corriger pour faire
+intégrer sa mise à jour).
+
+</div>
+
+<div>
+
+À la fin du voyage, notre hypothétique paquet est désormais intégré à la
+distribution stable. Ce trajet, non dépourvu de difficultés, explique
+les délais importants séparant les versions stables de Debian. Il
+contribue surtout à sa réputation de qualité. De plus, la majorité des
+utilisateurs est satisfaite par l'emploi de l'une des trois
+distributions disponibles en parallèle. Les administrateurs systèmes,
+soucieux avant tout de la stabilité de leurs serveurs, se moquent de la
+dernière version de GNOME ; ils opteront pour Debian Stable et en seront
+satisfaits. Les utilisateurs finaux, plus intéressés par la dernière
+version de GNOME ou de KDE que par une stabilité irréprochable,
+trouveront en Debian Testing un bon compromis entre absence de problèmes
+graves et logiciels relativement à jour. Enfin, les développeurs et
+utilisateurs les plus expérimentés pourront ouvrir la voie en testant
+toutes les nouveautés de Debian Unstable dès leur sortie, au risque de
+subir les affres et bogues inhérents à toute nouvelle version de
+logiciel. À chaque public sa Debian !
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+CULTURE GNOME et KDE, les bureaux graphiques
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+GNOME (GNU Network Object Model Environment, ou environnement réseau de
+modèle objet de GNU) et KDE (K Desktop Environment, ou environnement de
+bureau K) sont les deux « bureaux graphiques » les plus populaires dans
+le milieu du logiciel libre. On entend par là un ensemble de logiciels
+de bureautique permettant d'effectuer aisément les opérations les plus
+courantes au travers d'une interface graphique. Ils comportent notamment
+un gestionnaire de fichiers, une suite bureautique, un navigateur web,
+un logiciel de courrier électronique, des accessoires multimédias, etc.
+Leur différence la plus visible réside dans le choix de la bibliothèque
+graphique employée : GNOME a choisi GTK+ (logiciel libre sous licence
+LGPL) et KDE a opté pour Qt (un logiciel libre appartenant à une
+entreprise, disponible sous licence GPL et sous licence commerciale).
+<div>
+
+? &lt;http://www.gnome.org/&gt;
+
+</div>
+
+<div>
+
+? &lt;http://www.kde.org/&gt;
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+![Parcours chronologique d'un paquet logiciel empaqueté par
+Debian](https://debian-handbook.info/browse/fr-FR/stable/images/package-lifecycle.png)
+
+</div>
+
+</div>
+
+Figure 1.4. Parcours chronologique d'un paquet logiciel empaqueté par
+Debian
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+### 1.6.5. Le statut de Oldstable et Oldoldstable
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Chaque version Stable a une durée de vie prévue d'environ 5 ans ; étant
+donné que les versions stables se succèdent au rythme approximatif d'une
+tous les 2 ans, il peut y avoir jusqu'à 3 versions supportées à un
+instant donné. Lorsqu'une nouvelle version stable est publiée, la
+précédente devient Oldstable et celle d'encore avant devient
+Oldoldstable.
+
+</div>
+
+<div>
+
+Le support à long terme (Long Term Support, LTS) des versions de Debian
+est une initiative récente : des contributeurs individuels et des
+sociétés joignent leurs forces pour créer l'équipe Debian LTS. Les
+anciennes versions qui ne sont plus officiellement supportées par
+l'équipe de sécurité de Debian deviennent la responsabilité de cette
+nouvelle équipe.
+
+</div>
+
+<div>
+
+L'équipe de sécurité de Debian s'occupe du support de sécurité de la
+version actuellement Stable ; elle s'occupe aussi de Oldstable, mais
+seulement pendant la durée nécessaire pour assurer qu'il y a au moins un
+an de chevauchement avec la version actuellement stable. Cela correspond
+approximativement à trois ans de support effectif pour chaque version.
+L'équipe Debian LTS prend alors la main pour assurer les deux dernières
+années de support de sécurité, de sorte que chaque version bénéficie
+d'au moins 5 ans de support et que les utilisateurs puissent migrer
+d'une version N à la version N+2.
+<div>
+
+? &lt;https://wiki.debian.org/LTS&gt;
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+COMMUNITY Les sociétés qui parrainent l'effort LTS
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+Le support à long terme est une lourde responsabilité, parce que les
+volontaires ont tendance à éviter le travail perçu comme non
+enthousiasmant. Or, la fourniture de support de sécurité pour des
+logiciels vieux de 5 ans est, pour de nombreux contributeurs, nettement
+moins enthousiasmant que la mise en paquet de nouvelles versions amont
+ou le développement de nouvelles fonctionnalités.
+
+</div>
+
+<div>
+
+Pour que ce projet prenne vie, il a donc fallu compter sur le fait que
+le support à long terme est particulièrement important pour les
+sociétés, et qu'elles seraient d'accord pour mutualiser le coût de ce
+support de sécurité.
+
+</div>
+
+<div>
+
+Le projet a commencé en juin 2014 : certaines organisations ont permis à
+leurs employés de contribuer à temps partiel à Debian LTS, et d'autres
+ont préféré apporter leur soutien financier afin que des contributeurs
+Debian puissent être payés pour faire le travail qu'ils ne feraient pas
+gratuitement. La plupart des contributeurs Debian qui se sont impliqués
+dans le projet LTS se sont rejoints pour mettre en place une offre de
+financement claire gérée par Freexian (la société de Raphaël Hertzog) :
+<div>
+
+? &lt;http://www.freexian.com/services/debian-lts.html&gt;
+
+</div>
+
+</div>
+
+<div>
+
+L'équipe LTS n'est pas encore en mesure de supporter correctement tous
+les paquets de Debian, de sorte que les volontaires travaillent sur les
+paquets qui les intéressent alors que les contributeurs payés donnent la
+priorité aux paquets qui intéressent particulièrement leurs parrains.
+
+</div>
+
+<div>
+
+Le projet est toujours à la recherche de nouveaux parrains : et si
+c'était votre société ? Pouvez-vous libérer une partie du temps d'un
+employé pour travailler sur le support à long terme ? Pouvez-vous
+allouer un petit budget pour le support de sécurité ?
+<div>
+
+? &lt;https://wiki.debian.org/LTS/Funding&gt;
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+ 
+
+<div>
+
+<div>
+
+<div>
+
+<div>
+
+Voir en ligne : [1.6. Cycle de vie d’une
+release](https://debian-handbook.info/browse/fr-FR/stable/sect.release-lifecycle.html)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<p> </p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

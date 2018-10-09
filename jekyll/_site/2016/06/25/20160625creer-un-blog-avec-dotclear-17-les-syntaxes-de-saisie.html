@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Créer un blog avec Dotclear</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/25/20160625creer-un-blog-avec-dotclear-17-les-syntaxes-de-saisie.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Créer un blog avec Dotclear</h1>
+    <p class="post-meta"><time datetime="2016-06-25T01:26:00+02:00" itemprop="datePublished">Jun 25, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="level1">
+
+Vous pouvez rédiger vos billets à l'aide de la syntaxe wiki ou xhtml.
+Dans les [Préférences
+utilisateur](https://fr.dotclear.org/documentation/2.0/usage/user-preferences "2.0:usage:user-preferences"){.wikilink1}
+vous déterminerez la syntaxe utilisée par défaut. Celle-ci peut être
+différente pour un billet particulier en [choisissant la
+syntaxe](https://fr.dotclear.org/documentation/2.0/usage/entries#choisir-le-layout-de-saisie "2.0:usage:entries"){.wikilink1}
+depuis le petit menu déroulant figurant dans le menu d'édition du
+billet.
+
+Une présentation synthétique de la description ci-dessous est disponible
+dans l'aide de l'éditeur de billets.
+
+</div>
+
+<!--more-->
+
+<h2 id="syntaxe-wiki-et-correspondances-xhtml-syntaxe-wiki-et-correspondances-xhtml-sectionedit2">Syntaxe wiki et correspondances xhtml {#syntaxe-wiki-et-correspondances-xhtml .sectionedit2}</h2>
+
+<div class="level2">
+
+**Présentation :** A l'aide de balises simples, la syntaxe wiki permet
+d'enrichir la présentation sans connaissances particulières. Ces balises
+sont ensuite interprétées par le moteur du blog et converties en xhtml.
+Si vous ne maîtrisez pas parfaitement le xhtml et n'utilisez pas le mode
+[wysiwyg](https://fr.dotclear.org/documentation/glossary#wysiwyg "glossary"){.wikilink1}
+il est fortement recommandé d'utiliser le wiki pour éviter ainsi tout
+risque d'erreur qui risquerait de générer des dysfonctionnement de
+l'affichage du blog.
+
+</div>
+
+<h3 id="lments-de-bloc-elements-de-bloc-sectionedit3">Éléments de bloc {#elements-de-bloc .sectionedit3}</h3>
+
+<div class="level3">
+
+ 
+
+</div>
+
+<h4 id="blocs">Blocs</h4>
+
+<div class="level4">
+
+**wiki :** Laissez une ligne vide entre chaque bloc de même nature.
+
+</div>
+
+<h4 id="paragraphes">Paragraphes</h4>
+
+<div class="level4">
+
+**wiki :** texte libre, terminé par une ligne vide si suivi d'un second
+paragraphe.
+
+**Correspondance xhtml :**
+`<p>Le premier paragraphe.</p><p>Le deuxième paragraphe.</p>`
+
+</div>
+
+<h4 id="titres">Titres</h4>
+
+<div class="level4">
+
+**wiki :** !!! titre, !! titre ou ! titre pour des titres plus ou moins
+importants
+
+**Correspondance xhtml :**
+
+-   <div class="li">
+
+    !!!!!Titre ? `<h1>Titre</h1>`
+
+    </div>
+
+-   <div class="li">
+
+    !!!!Titre ? `<h2>Titre</h2>`
+
+    </div>
+
+-   <div class="li">
+
+    !!!Titre ? `<h3>Titre</h3>`
+
+    </div>
+
+-   <div class="li">
+
+    !!Titre ? `<h4>Titre</h4>`
+
+    </div>
+
+-   <div class="li">
+
+    !Titre ? `<h5>Titre</h5>`
+
+    </div>
+
+<div class="wikinote noteclassic">
+
+**Note :**
+
+le niveau &lt;h1&gt; étant déjà utilisé pour le titre du blog et le
+niveau &lt;h2&gt; pour le titre des billets, il est recommandé de
+n'utiliser que les niveaux h3 et inférieurs au sein des billets.
+
+</div>
+
+</div>
+
+<h4 id="trait-horizontal">Trait horizontal</h4>
+
+<div class="level4">
+
+**wiki :** —- (quatre traits d'union isolés sur une ligne)
+
+**Correspondance xhtml :** `<hr />`
+
+</div>
+
+<h4 id="listes">Listes</h4>
+
+<div class="level4">
+
+**wiki :** lignes débutant par \* pour des listes à puce ou \# pour des
+listes numérotées
+
+Vous pouvez faire des listes imbriquées en mélangeant les codes de
+liste. Par exemple :
+
+``` {.code}
+   * item 1   ** item 1.1   ** item 1.2   * item 2   * item 3   *# item 3.1   ...
+```
+
+**Correspondance xhtml** de l'exemple ci-dessus :
+
+``` {.code}
+ <ul>   <li>item 1   <ul>     <li>item 1.1</li>     <li>item 1.1</li>   </ul></li>   <li>item 2</li>   <li>item 3   <ol>     <li>item 3.1</li>   </ol></li> </ul>
+```
+
+</div>
+
+<h4 id="texte-preformate">Texte préformaté</h4>
+
+<div class="level4">
+
+**wiki :** espace avant chaque ligne de texte.
+
+**Correspondance xhtml :** `<pre>lignes de texte préformaté</pre>`
+
+</div>
+
+<h4 id="bloc-de-citation-">Bloc de citation :</h4>
+
+<div class="level4">
+
+**wiki :** `&gt;` devant chaque ligne de texte.
+
+**Correspondance xhtml :**
+`<blockquote><p>Les paragraphes de la citation.</p></blockquote>`
+
+</div>
+
+<h3 id="lments-de-formatage-elements-de-formatage-sectionedit4">Éléments de formatage {#elements-de-formatage .sectionedit4}</h3>
+
+<div class="level3">
+
+ 
+
+</div>
+
+<h4 id="emphase">Emphase</h4>
+
+<div class="level4">
+
+**wiki :** deux apostrophes
+
+``` {.code}
+ ''texte''
+```
+
+**Correspondance xhtml :** `<em>texte</em>`
+
+</div>
+
+<h4 id="forte-emphase-">Forte emphase :</h4>
+
+<div class="level4">
+
+**wiki :** deux soulignés
+
+``` {.code}
+ __texte__
+```
+
+**Correspondance xhtml :** `<strong>texte</strong>`
+
+</div>
+
+<h4 id="retour-force-a-la-ligne">Retour forcé à la ligne</h4>
+
+<div class="level4">
+
+**wiki :**
+
+``` {.code}
+ texte.%%%
+```
+
+**Correspondance xhtml :** `<br />`
+
+</div>
+
+<h4 id="insertion">Insertion</h4>
+
+<div class="level4">
+
+**wiki :** deux plus
+
+``` {.code}
+ ++texte++
+```
+
+**Correspondance xhtml :** `<ins>texte</ins>`
+
+</div>
+
+<h4 id="suppression">Suppression</h4>
+
+<div class="level4">
+
+**wiki :** deux traits d'union
+
+``` {.code}
+ --texte--
+```
+
+**Correspondance xhtml :** `<del>texte</del>`
+
+</div>
+
+<h4 id="liens">Liens</h4>
+
+<div class="level4">
+
+**wiki :**
+
+-   <div class="li">
+
+    \[url\]
+
+    </div>
+
+-   <div class="li">
+
+    \[nom|url\]
+
+    </div>
+
+-   <div class="li">
+
+    \[nom|url|langue\]
+
+    </div>
+
+-   <div class="li">
+
+    \[nom|url|langue|titre\]
+
+    </div>
+
+**Correspondance xhtml :**
+
+-   <div class="li">
+
+    `<a href="url-cible">url-cible</a>`
+
+    </div>
+
+-   <div class="li">
+
+    `<a href="url-cible">nom</a>`
+
+    </div>
+
+-   <div class="li">
+
+    `<a href="url-cible" hreflang="fr">nom</a>`
+
+    </div>
+
+-   <div class="li">
+
+    `<a href="url-cible" hreflang="fr" title="titre">nom</a>`
+
+    </div>
+
+</div>
+
+<h4 id="images">Images</h4>
+
+<div class="level4">
+
+**wiki** :
+
+-   <div class="li">
+
+    ``` {.code}
+     ((url|texte alternatif))
+    ```
+
+    </div>
+
+-   <div class="li">
+
+    ``` {.code}
+     ((url|texte alternatif|position))
+    ```
+
+    </div>
+
+-   <div class="li">
+
+    ``` {.code}
+     ((url|texte alternatif|position|description longue))
+    ```
+
+    </div>
+
+La position peut prendre les valeurs L ou G (gauche), R ou D (droite) ou
+C (centré).
+
+**Correspondance xhtml :**
+
+-   <div class="li">
+
+    `<img src="url" alt="texte alternatif" />`
+
+    </div>
+
+-   <div class="li">
+
+    `<img src="url" alt="texte alternatif" style="display:block; float:left; margin:0 1em 1em 0" />`
+    (si position : L ou G)
+
+    </div>
+
+-   <div class="li">
+
+    `<img src="url" alt="texte alternatif" style="display:block; float:right; margin:0 0 1em 1em" longdesc="description longue" />`
+    (si position : R ou D)
+
+    </div>
+
+</div>
+
+<h4 id="ancre">Ancre</h4>
+
+<div class="level4">
+
+**wiki :** \~ancre\~
+
+**Correspondance xhtml :** `<a name="ancre"></a>`
+
+</div>
+
+<h4 id="acronyme">Acronyme</h4>
+
+<div class="level4">
+
+**wiki :** ??acronyme|titre??
+
+**Correspondance xhtml :** `<acronym title="titre">acronyme</acronym>`
+
+</div>
+
+<h4 id="citation-en-ligne">Citation en ligne</h4>
+
+<div class="level4">
+
+**wiki :**
+
+-   <div class="li">
+
+    ``` {.code}
+     
+    ```
+
+    </div>
+
+-   <div class="li">
+
+    ``` {.code}
+     
+    ```
+
+    </div>
+
+-   <div class="li">
+
+    ``` {.code}
+     
+    ```
+
+    </div>
+
+**Correspondance xhtml :**
+
+-   <div class="li">
+
+    `<q>citation</q>`
+
+    </div>
+
+-   <div class="li">
+
+    `<q lang="fr">citation</q>`
+
+    </div>
+
+-   <div class="li">
+
+    `<q lang="fr" cite="url">citation</q>`
+
+    </div>
+
+</div>
+
+<h4 id="code">Code</h4>
+
+<div class="level4">
+
+**wiki :** @@code ici@@
+
+**correspondance xhtml :** `<code>code ici</code>`
+
+</div>
+
+<h4 id="note-de-bas-de-page">Note de bas de page</h4>
+
+<div class="level4">
+
+**wiki :** texte\$\$Corps de la note\$\$
+
+**Correspondance xhtml :**
+
+``` {.code}
+ texte<sup>[<a href="url-blog#pnote-xxx-x" id="rev-pnote-xxx-x">x</a>]</sup> (...) <div class="footnotes"><h4>Notes</h4> <p>[<a href="url-blog/#rev-pnote-xxx-x" id="pnote-xxx-x">x</a>] Corps de la note</p></div>
+```
+
+</div>
+
+<h3 id="complments-complements-sectionedit5">Compléments {#complements .sectionedit5}</h3>
+
+<div class="level3">
+
+ 
+
+</div>
+
+<h4 id="empecher-le-formatage-du-texte">Empêcher le formatage du texte</h4>
+
+<div class="level4">
+
+Pour insérer un caractère sans que celui-ci soit reconnu comme un
+caractère de formatage, ajoutez le caractère avant celui-ci. Par exemple
+:
+
+``` {.code}
+   [texte entre crochet qui n'est pas un lien]
+```
+
+</div>
+
+<h4 id="inserer-du-code-html-au-sein-de-la-syntaxe-wiki">Insérer du code HTML au sein de la syntaxe wiki</h4>
+
+<div class="level4">
+
+Vous pouvez ponctuellement avoir besoin d'insérer du code
+<abbr title="HyperText Markup Language">HTML</abbr> dans votre texte au
+format Wiki. Pour cela, utilisez le code suivant en laissant une ligne
+vide avant et après cette insertion :
+
+``` {.code}
+   ///html   <p style="color:red;">mon texte en rouge</p>   ///
+```
+
+Pour insérer du code <abbr title="HyperText Markup Language">HTML</abbr>
+dans le courant d'un paragraphe en Wiki (inline), il faut utiliser la
+syntaxe suivante :
+
+``` {.code}
+   Début du paragraphe, ``<span style="color:blue;">Plop</span>``, fin du paragraphe
+```
+
+</div>
+
+<h2 id="aller-plus-loin-aller-plus-loin-sectionedit6">Aller plus loin {#aller-plus-loin .sectionedit6}</h2>
+
+<div class="level2">
+
+-   <div class="li">
+
+    [Toutes les balises
+    xhtml](http://giminik.developpez.com/xhtml/ "http://giminik.developpez.com/xhtml/"){.urlextern}
+
+    </div>
+
+-   <div class="li">
+
+    [Contrôle de validité
+    xhtml](http://validator.w3.org/ "http://validator.w3.org/"){.urlextern}
+    (en anglais)
+
+    </div>
+
+<p>
+[Voir en
+ligne.](https://fr.dotclear.org/documentation/2.0/usage/syntaxes)
+
+&lt;/div&gt;
+</p></div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

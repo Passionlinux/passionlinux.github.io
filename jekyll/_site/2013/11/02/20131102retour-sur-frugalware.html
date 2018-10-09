@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Retour sur Frugalware</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2013/11/02/20131102retour-sur-frugalware.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Retour sur Frugalware</h1>
+    <p class="post-meta"><time datetime="2013-11-02T20:08:00+01:00" itemprop="datePublished">Nov 2, 2013</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="main">
+
+<div class="chapo surlignable">
+
+Comme souvent je l'ai dis, j'ai trois distributions importantes et a qui
+je suis resté fidele, la regrétté Mandriva, la vénérable Debian et
+openSuse, puis une que j'ai accroché et dont je pense le plus grand
+bien : Frugalware. Frugalware est une distribution différente des autres
+habitués des podiums, elle n'a pas une base debian ni RPM, mais a
+l'origine elle est basé sur Slackware, avec une version amélioré du
+gestionnaire Pacman d'Archlinux. Pacman-G2 est un fork de pacman,
+l'équipe de frug ayant apporté des améliorations jamais pris en compte
+par celle d'arch, ont décidé de le forker. Il est rapide comme son aîné,
+et peu le différe vraiment a premiere vue ! il est simple a prendre en
+main :
+-   mettre a jour le depot de logiciel suivit de la mise a jour systeme
+    revient a faire un pacman -Syu ce qui vaut sur Debian a apt-get
+    update &amp;&amp; apt-get dist-upgrade.
+-   Installer un logiciel (par exemple mldonkey) se fait avec un pacman
+    -S mldonkey = apt-get install mldonkey sur debian.
+-   supprimer un paquet avec ses dependances se fait avec pacman -Rc
+    mldonkey
+
+Il est rapide et le peu qu'il dit suffit, j'ai toujours trouvé apt et
+aptitude trop bavard, pacman dit autant mais de maniere plus propre, un
+peu comme zypper (openSuse) pour ceux qui le connaisse. On pourrait
+comparer Frugalware a une archlinux, comme elle c'est une rolling
+release c'est a dire que les logiciels sont mis a jours de façon
+continue sans version de Frugalware. En gros comme sous Arch, Debian
+testing/sid, gentoo, une personne qui fait ses mises a jour une fois
+dans l'année(c'est pas a faire) va se retrouver au même niveau que celui
+qui les fait tout les jours et dans les deux cas c'est pacman -Syu !
+Comme Arch et vu qu'elle uilise pacman(version amélioré), la fabrication
+de paquets est tres simple par rapport a des rpm ou des deb, un simple
+fichier appelé simplement frugalbuild est a renseigner, cette partie de
+frugalware sera vue plus en détail dans un prochain article, mais en
+gros on rempli les champs mainteneur, nom du paquet, source, dependance
+et si le paquet n'a pas besoin de "build" spéciale, on n'a pas a
+renseigner cette partie ! Bon j'admet volontier que j'ai cherché a bien
+assimiler la doc, donc avec l'exemple du wiki, j'ai cherché la petite
+bete pour tout comprendre et un exemple tres simple, m'a demandé presque
+une heure le temps que je comprenne tout plus ou moins grace une
+communautée vraiment tres patient, sympa et acceuillante, le tout dans
+la bonne humeur ! La ou elle change de sa copine Archlinux, c'est
+qu'elle est bien plus facile a prendre en main, en tout cas la ou on
+peut voir une difficulté de passer de Debian a Archlinux, avec
+Frugalware ça passe tout seul ! Pour commencer, contrairement a Arch qui
+avait un installateur pas du tout automatisé et pas evident pour la
+partie configuration mais avec lequel on se débrouillait grace a la
+documentation de leur wiki (tres bonne au passage !), et qui s'est vu
+remplacé dans les dernieres versions par des scripts (ce qu'on ne peut
+pas qualifié de plus facile pour une installation !), sous Frug, c'est
+différent, jusqu'à la version 1.8, il y avait un installateur tres
+simple a prendre en main bien qu'etant non graphique (en gros comme sur
+debian, on remplit et suivant), la partie délicate se résumant au
+partitionnement. Cette etape est de toute façon jamais a prendre avec
+des pincettes, et de mon coté je regarde bien ce qui est dit même sur
+ubuntu ou mandriva, une erreur d'inattention et c'est des centaines de
+go de données qui seront perdus, et ça arrive tres vite (d'ou les
+fenêtre de confirmation). Cette partie la aurait pu être facilité en
+proposant un partionnement automatique comme sur debian, mais bon une
+fois cela fait on doit choisir les groupes de paquets que l'on veut et
+c'etait la ou ça merdait pour moi. Beaucoup trop de groupe coché par
+défaut, kde, gnome, xfce, base, lib, dev, multimedia, xmultimedia...
+presque tout les groupes etaient deja coché. Bon c'est pas compliqué, il
+suffit de décoché mais pour le nouveau, qui généralement, veut avoir le
+bureau par defaut de sa distribution c'est moins simple, et frug lui en
+colle 3... Du coup l'installation prenait du temps, j'ai été jusqu'à
+50minutes par DVD, et oui 3 bureau(kde, gnome, xfce), plusieurs
+naviguateur web(firefox, konqueror, epiphany...), gestionnaire de
+fichiers..., tout a chaque fois multiplier par 3 au moins, ça fait
+beaucoup de paquets a télécharger, a installer, ça prend donc du temps
+et de l'espace disque dur. Une version graphique existe, mais vu que je
+ne suis pas fan des version graphique, je préfére un bon ncurse fiable
+qu'une interface graphique bugué, je ne m'en suis jamais servit, comme
+la version live, je ne suis pas fan des lives. Dans cette nouvelle
+version 1.9, tout ça a changé, et c'est la cause principale du retard de
+cette version, l'installateur est peaufiner a son paroxisme, et le gars
+qui y travail, le fait avec amour ! Enfin la ou Frug differe totalement
+de sa rivale, c'est qu'elle possede une version stable, qui sort tous
+les 6 mois mais supporté 6 mois. Un simple pacman -Syu suffit pour
+passer a la nouvelle stable et sans rien changer dans la liste des
+depots, vu que seule deux dépôts sont la par défaut, un current qui est
+la version rolling release et l'autres est stable, cette partie la ne
+m'interesse pas trop, mais ça permet d'avoir un serveur par exemple dont
+on ferait une grosse mise a jour tout les 6 mois. A savoir que par la
+suite, je parle de la version 1.9 qui devrait pas tarder a sortir, mais
+je suis sur current c'est a dire la version rolling release.
+
+</div>
+
+<div class="texte surlignable">
+
+1. Installation
+---------------
+
+Donc comme je le disais, l'installateur a changé avec cette 1.9, et n'a
+plus rien avoir avec l'ancien sauf qu'il est toujours en version ncurse
+(et tant mieux). Mon reseau ethernet a été detecté comme toujours mais
+cette fois avec le nom du matériel au lieu de l'eternel "eth0", pour moi
+c'est pareil, mais pour certain ça sera bien plus pratique. ensuite on
+rentre le nom de la machine entiere avec le nom de domaine puis juste le
+nom de machine simple, on demande le passe root puis c'est au tour de
+l'utilisateur, nom et passe. On arrive a la liste des groupes de paquets
+et cette fois c'est a nous de cocher les groupes qu'on veut, ce qui
+contrairement a l'ancien installeur, est une amelioration, comme quoi
+l'equipe de frug a beau être restreinte elle en reste pas moins tres a
+l'ecoute de ses utilisateurs ! Une fois fait, l'installation des paquets
+se lance, une barre de progression est présente mais reste longtemps a
+zero, en faite l'installation va si vite que j'ai pas trop fait gaffe,
+je suis partie m'assoire sur le canapé moins de dix minutes et a mon
+retour c'etait deja fini ! A titre d'exemple, debian m'aurait mis cinq
+bonnes minutes de plus au bas mot pour s'installer sans bureau, et je
+parle pas des openSuse ou Ubuntu ! En tout moins de 15 minutes pour
+m'installer les groupes kde, multimedia, xmultimedia, base, xserver,
+plus d'autres que je n'ai plus en tete, ce qui me donne un pc avec tout
+les codec et outils que je me sers ! Quand je parle de 15minutes pour
+l'installation, faut comprendre du debut ou on tape dans le grub pour
+lancer l'installation jusqu'à l'ejection du cd, et je dis 15min mais
+quand suis revenu c'etait deja finit sauf que je n'etais pas devant
+l'écran... Le seul soucis c'est que malgré le mesage qui nous dit
+"installation fini" on doit rebooter via le bouton du pc(un enter ne
+suffit pas chez moi...), ceci etant dit c'est pas la mort non plus !  
+
+2. Post-installation et Utilisation
+-----------------------------------
+
+La bécane redemarre, on vois un jolie grub, ça change du theme debian
+c'est plus frais, puis grub disparait et a peine 15 secondes plus tard
+je suis sur kde, la ou debian me met 30secondes, la difference c'est
+systemd qui le fait, je suis pas fan de ce fait tout, mais il est
+efficace et j'aurais certainement moins de soucis que sur opensuse avec
+yast qui se battait avec systemd pour savoir quels services lancer. En
+parlant de boot et de temps de boot, frugalware se positionne tres bien
+et est dans les même temps que opensuse, mais pour moi c'est pas
+essentiel, je préfére un truc a la debian qui met plus de temps mais que
+je sais ce qu'il fait, que systemd qui fait tout et bientot le café,
+surtout que je fais partie de ceux qui redémarre le pc rarement, ça peut
+être une semaine comme plusieurs mois, donc suis pas a 30 secondes par
+semaine. Bon j'ai dis le mal que je pensais de systemd passons a autre
+chose, frugalware etait tres a jour quand je l'ai connu c'etait les
+versions de paquet les plus a jour avec arch, c'est presque toujours le
+cas mais vu le peu de dev on peut comprendre certain retard et puis
+c'est peut être du a la sortie de la 1.9 dans les jours a venir ! C'est
+peut être un mini gel de current le temps que stable sorte. Kde est tres
+vivace, deja bien plus vivace que sur debian, qui etait elle même bien
+plus vivace que sous opensuse ! J'ai pu remarquer aussi que je gagne
+encore en consommation cpu et processeurs, ce qui n'est pas négligeable,
+le tout étant plus du peut être a la version de kde, 4.11 sous
+frugalware contre 4.10 sous debian sid ! J'ai commencé par changer
+l'ordre des mirroires pour mettre ceux d'Irelande en tete, plus rapide
+et plus fiable, suivit d'une mise a jour des depots et des paquets via
+pacman -Syu. J'ai installé ensuite mes paquets habituelle, c'est a dire
+kde-extra, mlnet, et quelques autres,... Ensuite, et au vu de l'accueil
+des gars présents sur le irc fr, \#frugalware.fr, j'ai commencé a
+regarder la documentation pour faire des paquets, pour le moment ça
+roule, et suis bien content d'être de nouveau sur cette ditribution qui
+m'a marqué en 2007. Prochaine étape sera de faire quelques paquets et
+pourquoi pas en maintenir ; mais ça sera dans un prochain article !
+
+</div>
+
+</div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

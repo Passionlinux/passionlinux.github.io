@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hugo, Jekyll et Pelican sont testés</title>
+  <meta name="description" content="Je voulais avant m’arrêter sur un seul, tester les 3 principaux, du moins les plus populaires que sont Jekyll, Hugo et Pelican, pour ce dernier, je ne suis p...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/12/30/Hugo-Jekyll-Pelican-sont-testes.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Hugo, Jekyll et Pelican sont testés</h1>
+    <p class="post-meta"><time datetime="2017-12-30T15:02:28+01:00" itemprop="datePublished">Dec 30, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Je voulais avant m’arrêter sur un seul, tester les 3 principaux, du moins les plus populaires que sont Jekyll, Hugo et Pelican, pour ce dernier, je ne suis pas sûr qu’il soit parmi les trois plus populaires des générateurs de sites statiques mais il est dans mon top 3 pour sa simplicité…</p>
+
+<p>Jekyll, je l’abandonne directement, il faut des fichiers <em>md</em> avec des infos <em>YAML</em>, puis nommer ce fichier dans le format <em>jj/mm/aa-nom-du-billet.md</em>, moi je n’aime pas quand on m’impose un truc, sinon il faut me donner les moyens d’automatiser la chose comme ce que Hugo propose!</p>
+
+<p>Il reste Hugo et Pelican, les deux sont simples, j’ai tout de même une préférence sur Pelican, plus logique, les fichiers qui sont des billets comme sous n’importe quels générateurs, peuvent être placés dans des dossiers qui seront du coup leurs catégories, plus logique pour moi que Hugo où il faut l’indiquer dans le fichier en question. Hugo est vraiment plus rapide pour “<em>sortir</em>” le site et Pelican met presque le double:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>$ hugo
+Started building sites ...
+
+Built site for language en:
+0 of 6 drafts rendered
+0 future content
+0 expired content
+11 regular pages created
+8 other pages created
+2 non-page files copied
+1 paginator pages created
+0 tags created
+0 topics created
+total in 34 ms
+</code></pre></div>
+
+<p>et voila avec Pelican:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>$ pelican content -s publishconf.py
+Done: Processed 7 articles, 0 drafts, 4 pages and 0 hidden pages in 0.75 seconds
+</code></pre></div>
+
+<p>Bon, ce n’est pas essentiel car en faite le temps perdu, je le gagne avec le script qui envoi tout seul le site chez mon hébergeur via <em>SSH</em>, <em>FTP</em> ou autre. De ce que je vois, Hugo permet facilement de le faire aussi, si j’en crois cette documentation</p>
+
+<ul>
+  <li>https://gohugo.io/getting-started/usage/</li>
+  <li>https://gohugo.io/hosting-and-deployment/deployment-with-rsync/</li>
+</ul>
+
+<p>Ce que j’aime avec Pelican et que je ne trouve pas chez Hugo, c’est sa configuration, elle tient principalement dans deux fichiers alors que Hugo est dans un seul qui vient avec la <em>config.toml</em> du thème. Peut être aussi que je m’y prends mal, mais je trouve plus simple la manière de faire de Pelican en séparant le tout.</p>
+
+<p>Voila, maintenant parlons des plugins, Hugo en est dépourvu, c’est dû à sa conception et surtout son langage, le <a href="https://fr.wikipedia.org/wiki/Go_(langage)">Go</a> est un langage de programmation compilé donc pas de dépendances quand on installe Hugo mais par contre pas moyen de l’étendre par la suite contrairement à Pelican et <a href="https://fr.wikipedia.org/wiki/Python_(langage)">Python</a>. Comme je l’ai dit, j’ai pas trop envie de me faire des commentaires via Disqus, à la limite GOOGLE+ mais en même temps je ne me vois pas me faire chier avec les Spams, donc je dois me baser sur un trucs externe (obligation avec le statique) et qui permet de filtrer les commentaires, enfin c’est ce que je suppose, n’ayant jamais utilisé l’un ou l’autre. Pour les plugins de Pelican c’est par <a href="https://github.com/getpelican/pelican-plugins">là</a>.</p>
+
+<p>J’aime aussi la hiérarchie du site publié, c’est simple, on a des billets directement à la racine du site, là où Hugo fait un dossier <em>/Post</em> puis autant de sous-dossiers que de billets avec leurs noms, dedans le <em>index.html</em> du billet.</p>
+
+<p>Je teste un peu les deux, pour le moment c’est Pelican et on verra par la suite mais de mon coté ça ne change en rien, les fichiers des billets sont compatibles puisque dans le même langage (markdown) sans aucunes manipulations d’importations.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

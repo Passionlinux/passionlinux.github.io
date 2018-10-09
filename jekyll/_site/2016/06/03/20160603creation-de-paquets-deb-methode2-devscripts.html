@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Création de paquets DEB (méthode2 devscripts)</title>
+  <meta name="description" content="    Cette fois ci, on va se simplifier la vie:">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/03/20160603creation-de-paquets-deb-methode2-devscripts.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Création de paquets DEB (méthode2 devscripts)</h1>
+    <p class="post-meta"><time datetime="2016-06-03T12:19:00+02:00" itemprop="datePublished">Jun 3, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>    Cette fois ci, on va se simplifier la vie:</p>
+
+<p>1/ Pour commencer, nous faisons un dossier avec le nom du paquet, par
+exemple pour playonlinux:<br />
+<code class="highlighter-rouge">$ mkdir /home/sebastien/packaging/playonlinux  $ cd /home/sebastien/packaging/playonlinux</code></p>
+
+<p>2/ On télécharge les sources debian du paquet:<br />
+<code class="highlighter-rouge">$ apt-get source playonlinux</code></p>
+
+<p><small><code class="highlighter-rouge">Lecture des listes de paquets... Fait  Construction de l'arbre des dépendances         Lecture des informations d'état... Fait  Note : la maintenance du paquet de « playonlinux » est réalisée dans le système de suivi de versions « Svn » à l'adresse :  svn://anonscm.debian.org/pkg-games/packages/trunk/playonlinux/  Nécessité de prendre 3 211 ko dans les sources.  Réception de : 1 http://ftp.fr.debian.org/debian/ testing/contrib playonlinux 4.2.6-1 (dsc) [1 978 B]  Réception de : 2 http://ftp.fr.debian.org/debian/ testing/contrib playonlinux 4.2.6-1 (tar) [3 203 kB]  Réception de : 3 http://ftp.fr.debian.org/debian/ testing/contrib playonlinux 4.2.6-1 (diff) [6 684 B]  3 211 ko réceptionnés en 4s (780 ko/s)    dpkg-source: info: extraction de playonlinux dans playonlinux-4.2.6  dpkg-source: info: extraction de playonlinux_4.2.6.orig.tar.gz  dpkg-source: info: extraction de playonlinux_4.2.6-1.debian.tar.xz  dpkg-source: info: mise en place de set_debian_env.diff  dpkg-source: info: mise en place de remove_binary_plugin.diff</code></small></p>
+
+<p>3/ On télécharge en ROOT, les paquets nécessaire pour construire ce
+paquet:<br />
+<code class="highlighter-rouge"># apt-get build-dep playonlinux</code></p>
+
+<p>4/ On se remet en simple utilisateur, puis on rentre dans le dossier des
+sources debian:<br />
+<code class="highlighter-rouge">$ cd '/home/sebastien/packaging/playonlinux/playonlinux-4.2.6'</code></p>
+
+<p>5/ On va dans voir le fichier /debian/watch qui permet, si bien fait, de
+faire tout automatiquement avec la commande uscan. Les sources mises à
+jour seront automatiquement recherchées, téléchargées, et la commande
+uupdate sera exécutée.<br />
+<code class="highlighter-rouge">$ uscan</code></p>
+
+<p><small><code class="highlighter-rouge">playonlinux: Newer version (4.2.8) available on remote site:    https://www.playonlinux.com/script_files/PlayOnLinux/4.2.8/PlayOnLinux_4.2.8.tar.gz    (local version is 4.2.6)  Successfully downloaded updated package PlayOnLinux_4.2.8.tar.gz  Successfully symlinked ../PlayOnLinux_4.2.8.tar.gz to ../playonlinux_4.2.8.orig.tar.gz.  New Release will be 4.2.8-1.  -- Untarring the new sourcecode archive ../playonlinux_4.2.8.orig.tar.gz  Unpacking the debian/ directory from version 4.2.6-1 worked fine.  Remember: Your current directory is the OLD sourcearchive!  Do a "cd ../playonlinux-4.2.8" to see the new package</code></small></p>
+
+<p>Si la commande uscan télécharge les sources mises à jour mais n’exécute
+pas la commande uupdate, vous devriez corriger le fichier debian/watch
+pour avoir debian uupdate après l’URL.</p>
+
+<p>6/ Normalement tout a été fait si le fichier watch est bien fait, du
+coup reste plus qu’a fabriquer le deb:<br />
+<code class="highlighter-rouge">$ cd '/home/sebastien/packaging/playonlinux/playonlinux-4.2.8'  $ debuild</code></p>
+
+<p><small><code class="highlighter-rouge">dpkg-buildpackage -rfakeroot -D -us -uc  dpkg-buildpackage: paquet source playonlinux  dpkg-buildpackage: version source 4.2.8-1  dpkg-buildpackage: distribution source UNRELEASED  dpkg-buildpackage: source changé par Sebastien CHAVAUX &lt;sebastien@debianlinux.schavfr&gt;   dpkg-source --before-build playonlinux-4.2.8  dpkg-buildpackage: architecture hôte amd64  dpkg-source: info: mise en place de set_debian_env.diff  dpkg-source: info: mise en place de remove_binary_plugin.diff   fakeroot debian/rules clean  dh clean --with python2     dh_testdir     dh_auto_clean     dh_clean   dpkg-source -b playonlinux-4.2.8  dpkg-source: info: utilisation du format source « 3.0 (quilt) »  dpkg-source: info: construction de playonlinux en utilisant le ./playonlinux_4.2.8.orig.tar.gz existant  dpkg-source: info: construction de playonlinux dans playonlinux_4.2.8-1.debian.tar.xz  dpkg-source: info: construction de playonlinux dans playonlinux_4.2.8-1.dsc   debian/rules build  dh build --with python2     dh_testdir     dh_auto_configure     debian/rules override_dh_auto_build-indep  make[1]: Entering directory '/home/sebastien/packaging/playonlinux/playonlinux-4.2.8'  convert -monitor -resize 32x32 /home/sebastien/packaging/playonlinux/playonlinux-4.2.8/etc/playonlinux.png /home/sebastien/packaging/playonlinux/playonlinux-4.2.8/playonlinux.xpm  Load/Image//home/sebastien/packaging/playonlinux/playonlinux-4.2.8/etc[playonlinux.png]: 0 of 128, 00% cLoad/Image//home/sebastien/packaging/playonlinux/playonlinux-4.2.8/etc[playonlinux.png]: 1 of 128, 00% cLoad/Image//home/sebastien/packaging/playonlinux/playonlinux-4.2.8/etc[playonlinux.png]: 2 of 128, 01% cLoad/Image//home/sebastien/packaging/playonlinux/playonlinux-4.2.8/etc[playonlinux.png]: 3 of 128, 02% cLoad/Image//home/sebastien/packaging/playonlinux/playonlinux-4.2.8/etc[playonlinux.png]: 4 of 128, 03% c......  Save/Image//home/sebastien/packaging/playonlinux/playonlinux-4.2.8[playonlinux.xpm]: 30 of 32, 96% complSave/Image//home/sebastien/packaging/playonlinux/playonlinux-4.2.8[playonlinux.xpm]: 31 of 32, 100% complete  make[1]: Leaving directory '/home/sebastien/packaging/playonlinux/playonlinux-4.2.8'     dh_auto_test   fakeroot debian/rules binary  dh binary --with python2     dh_testroot     dh_prep     dh_auto_install     debian/rules override_dh_install  make[1]: Entering directory '/home/sebastien/packaging/playonlinux/playonlinux-4.2.8'  dh_install  chmod +x debian/playonlinux/usr/share/playonlinux/bash/startup_after_server  chmod +x debian/playonlinux/usr/share/playonlinux/bash/read_pc_cd  chmod +x debian/playonlinux/usr/share/playonlinux/bash/find_python  make[1]: Leaving directory '/home/sebastien/packaging/playonlinux/playonlinux-4.2.8'     dh_installdocs     dh_installchangelogs     dh_installman     dh_python2  W: dh_python2:479: Please add dh-python package to Build-Depends     dh_installmenu     dh_perl     dh_link     dh_compress     dh_fixperms     dh_installdeb     dh_gencontrol  dpkg-gencontrol: avertissement: champ Depends du paquet playonlinux : variable de substitution inconnue ${shlibs:Depends}     dh_md5sums     dh_builddeb  dpkg-deb : construction du paquet « playonlinux » dans « ../playonlinux_4.2.8-1_all.deb ».   dpkg-genchanges  &gt;../playonlinux_4.2.8-1_amd64.changes  dpkg-genchanges: inclusion du code source original dans l'envoi (« upload »)   dpkg-source --after-build playonlinux-4.2.8  dpkg-source: info: retrait de remove_binary_plugin.diff  dpkg-source: info: retrait de set_debian_env.diff  dpkg-buildpackage: envoi complet (inclusion du code source d'origine)  Now running lintian...  W: playonlinux source: changelog-should-mention-nmu  W: playonlinux source: source-nmu-has-incorrect-version-number 4.2.8-1  Finished running lintian.  Now signing changes and any dsc files...   signfile playonlinux_4.2.8-1.dsc 0x100F502F</code></small></p>
+
+<p><small><code class="highlighter-rouge">You need a passphrase to unlock the secret key for  user: "Sebastien XXXX (seb95) &lt;xxxxx@xxx.xx&gt;"  2048-bit RSA key, ID 100F502F, created 2015-05-19</code></small></p>
+
+<p><small><code class="highlighter-rouge">                     signfile playonlinux_4.2.8-1_amd64.changes 0x100F502F</code></small></p>
+
+<p><small><code class="highlighter-rouge">You need a passphrase to unlock the secret key for  user: "Sebastien XXXXXX (seb95) &lt;xxxx.xxx@xx.xx&gt;"  2048-bit RSA key, ID 100F502F, created 2015-05-19</code></small></p>
+
+<p><small><code class="highlighter-rouge">                    Successfully signed dsc and changes files</code></small></p>
+
+<p>On aura de jolies paquets deb, et pour finir un coup de <code class="highlighter-rouge">debuild clean</code>.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
