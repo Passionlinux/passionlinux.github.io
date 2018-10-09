@@ -1,1 +1,0 @@
-/home/sebastien/git/blog-generate/_site
