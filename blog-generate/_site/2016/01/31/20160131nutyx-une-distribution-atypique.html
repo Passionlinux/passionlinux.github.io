@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NuTyX , une distribution atypique</title>
+  <meta name="description" content="  ">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/01/31/20160131nutyx-une-distribution-atypique.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">NuTyX , une distribution atypique</h1>
+    <p class="post-meta"><time datetime="2016-01-31T20:22:00+01:00" itemprop="datePublished">Jan 31, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <ul>
+  <li><img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6e757479782e6f72672f67726170686963732f6c6f676f5f6e757479782e706e67/logo_nutyx.png" alt="LogoNuTyX" title="Source : http://www.nutyx.org/graphics/logo_nutyx.png" /></li>
+</ul>
+
+<p>NuTyX est une distribution binaire véritablement optimisée pour les
+architectures i686 et x86_64. Vous pouvez utiliser le système de ports
+et installer vos propres paquets depuis les sources, ils seront intégrés
+nativement au système, leur gestion sera transparente.
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f436f70696573456372616e732f7468756d626e61696c732f313431353231323434352e706e67/1415212445.png" alt="capture1" title="Source : http://downloads.nutyx.org/CopiesEcrans/thumbnails/1415212445.png" />
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f436f70696573456372616e732f7468756d626e61696c732f313338333037393330322e706e67/1383079302.png" alt="capture2" title="Source : http://downloads.nutyx.org/CopiesEcrans/thumbnails/1383079302.png" />
+NuTyX est une distribution GNU/Linux basée sur LFS et ses recettes sont
+très proches de celles de la distribution suèdoise CRUX. NuTyX est
+maintenue par Thierry Nuttens alias Tnut. C’est certainement la
+distribution la plus rapide et la plus simple à installer que j’ai pu
+avoir entre les mains. Pour commencer, il n’y a pas systemd, mais un
+init a l’ancienne du layout bsd. Tout aussi rapide et CARDS est le
+gestionnaire de paquets utilisé par cette distribution. Il est très
+vivace! Mais commençons par le début, c’est a dire l’installation!</p>
+
+<ol>
+  <li>
+    <h2 id="installation-1-installation">Installation: {#1-installation}</h2>
+  </li>
+</ol>
+
+<p>Comme dit plus haut, c’est du rapide, on télécharge <a href="http://downloads.nutyx.org/">la grosse
+iso</a> (je plaisante, elle fait moins de
+200mo…), puis on la grave sur un cd ou mieux on la met sur une clef usb.
+Je ne vais pas détailler l’installation, <a href="http://www.nutyx.org/fr/install.html">un article détaillé existe sur
+le site</a> et Frederic Bezies a
+réalisé <img src="https://img.linuxfr.org/img/68747470733a2f2f7777772e796f75747562652e636f6d2f77617463683f763d7169647a3150566f767130/watch?v=qidz1PVovq0" alt="une excellente vidéo montrant une installation depuis
+zéro." title="Source : https://www.youtube.com/watch?v=qidz1PVovq0" />
+En gros, il suffit de choisir l’option “installer” dans le menu
+principal:
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f696d672f7361726176616e652f696e7374616c6c2f66722f496e7374616c6c4e755479582e706e67/InstallNuTyX.png" alt="installation1" title="Source : http://downloads.nutyx.org/img/saravane/install/fr/InstallNuTyX.png" />
+L’installation commence instantanément, le système de base est transféré
+sur la partition de destination. L’opération dure moins de 30 secondes.
+Aucun téléchargement ne sera effectué, donc pas besoin de connexion
+réseau.
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f696d672f7361726176616e652f696e7374616c6c2f66722f496e7374616c6c496e50726f67726573732e706e67/InstallInProgress.png" alt="installation2" title="Source : http://downloads.nutyx.org/img/saravane/install/fr/InstallInProgress.png" />
+Ensuite l’installateur nous demande si l’on souhaite installer la
+procédure d’amorçage GRUB:
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f696d672f7361726176616e652f696e7374616c6c2f66722f436f6e666967757265426f6f744166746572496e7374616c6c2e706e67/ConfigureBootAfterInstall.png" alt="installation3" title="Source : http://downloads.nutyx.org/img/saravane/install/fr/ConfigureBootAfterInstall.png" />
+L’installation du système de base est terminée. NuTyX se lance sans
+redémarrage de la machine. La configuration du système d’exploitation
+peut commencer, réglage du clavier, de la carte réseau, de la date et de
+l’heure et enfin la modification du mot de passe par défaut du compte
+administrateur.
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f696d672f7361726176616e652f696e7374616c6c2f66722f436f6e666967757265457468302e706e67/ConfigureEth0.png" alt="installation4" title="Source : http://downloads.nutyx.org/img/saravane/install/fr/ConfigureEth0.png" />
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f696d672f7361726176616e652f696e7374616c6c2f66722f436f6e6669677572655554432e706e67/ConfigureUTC.png" alt="installation5" title="Source : http://downloads.nutyx.org/img/saravane/install/fr/ConfigureUTC.png" />
+Cette fois c’est a vous de jouer et comme on peut le voir sur la
+prochaine image, l’installateur vous laisse la main SANS REDEMARRER!!!
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f696d672f7361726176616e652f696e7374616c6c2f66722f52657175697265644368616e676550617373776f726441744669727374526f6f744c6f67696e2e706e67/RequiredChangePasswordAtFirstRootLogin.png" alt="installation6" title="Source : http://downloads.nutyx.org/img/saravane/install/fr/RequiredChangePasswordAtFirstRootLogin.png" />
+Le mot de passe par défaut est nutyx. Dès que vous aurez entrez ce mot
+de passe. On vous demandera de le changer immédiatement.</p>
+
+<ol>
+  <li>
+    <h2 id="premire-prise-en-main-2-premire-prise-en-main">Première prise en main: {#2-première-prise-en-main}</h2>
+  </li>
+</ol>
+
+<p>NuTyX arrive avec le gestionnaire de paquets <strong>cards</strong>, tout à fait
+unique écrit spécialement pour les besoins de NuTyX. <strong>Un de ses points
+fort est certainement la possibilité de trouver automatiquement les
+dépendances pour le fonctionnement d’un paquet.</strong> Pour moi il dépasse
+tout ce que j’ai vu en rapidité, bien que jeune, il est très stable. Il
+n’y a pas encore d’interface graphique, mais il est très simple à
+prendre en main
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e74757866616d696c792e6f72672f6e757479782f61726368697665732f63617264735f302e31302e38322e39362e6a7067/cards_0.10.82.96.jpg" alt="cards" title="Source : http://downloads.tuxfamily.org/nutyx/archives/cards_0.10.82.96.jpg" />
+En plus d’une prise en main simple, des alias sont définis pour nous
+simplifier la vie. Par exemple pour vérifier si il y a des mises à jour
+disponible: <strong>cards sync</strong> -&gt; permet d’obtenir le dernier état des
+mises à jour disponibles sur votre système. <strong>cards diff</strong> -&gt; affiche
+une liste de paquets pouvant être mis à jour. Grâce aux alias mis en
+place, la commande devient:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>check
+</code></pre></div>
+
+<p>Ce qui affiche une liste de paquets à mettre à jour: Synchronizing
+/var/lib/pkg/saravane/desktop from http://..
+/var/lib/pkg/saravane/desktop//MD5SUM .. Differences between installed
+packages and the depot of binaries:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>Package                        Installed                 Available in the depot of binaries gcc                             4.9.1                     4.9.2 glibc                           2.20                      2.21 
+</code></pre></div>
+
+<p>Ensuite, on mettra les paquets à jour (un par un), en faisant:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>cards install -u gcc
+</code></pre></div>
+
+<p>ou</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>up gcc
+</code></pre></div>
+
+<p>On installe firefox avec:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>get firefox
+</code></pre></div>
+
+<p>Mais bon je vous laisse lire la <a href="http://www.nutyx.org/fr/saravane-man.html">documentation très claire de
+NuTyX</a> ou
+<a href="http://www.nutyx.org/fr/base-commands.html">là</a>.</p>
+
+<ol>
+  <li>
+    <h2 id="nutyx-en-action-3-nutyx-en-action">NuTyX en action: {#3-nutyx-en-action}</h2>
+  </li>
+</ol>
+
+<p>Donc comme on a vu, on commence par faire les mises a jour:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>check
+</code></pre></div>
+
+<p>et</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>up nom-du-paquet
+</code></pre></div>
+
+<p>Ensuite on installe son bureau. Pour chercher et installer xfce:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>search xfce
+
+get xfce4
+</code></pre></div>
+
+<p>Environ 7 minutes plus tard (tout dépendra de votre connexion), xorg, le
+bureau et les applications de xfce, ainsi que claws-mail seront
+installés pour moins de 2go. J’en profite pour installer les programmes
+dont j’ai besoin:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>get firefox
+
+get thunderbird
+
+get vlc
+
+get transmission
+
+get libreoffice
+</code></pre></div>
+
+<p>Ce qui me fait une distribution passe partout pour 3.8 go… C’est très
+léger. Le tout en moins de 15 minutes j’ai un ensemble complet (12
+minutes a peine). On peut rajouter kde avec un simple:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>get kde
+</code></pre></div>
+
+<p>A partir de là, on a une grosse partie de kde quelques paquets manquent
+comme amarok par exemple. L’ensemble (kde + firefox + vlc +
+libreoffice+…) fait dans les 5.1 go. Le top du top, c’est qu’une simple
+commande permet de revenir sur un système de base. Cela permet de
+changer complètement son environnement graphique par exemple. On peut
+donc passer de KDE vers XFCE sans devoir tout réinstaller et sans devoir
+tout re-télécharger. Les paquets déjà téléchargés (et à jour) seront
+simplement réinstallés.</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>cards base -r
+</code></pre></div>
+
+<p>Vous donnera une NuTyX toute propre c’est à dire la base seule. Pour
+ajouter un paquet, la commande <strong>cards install</strong> suivi du nom du paquet
+à installer sera utilisée:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>cards install xfce4
+</code></pre></div>
+
+<p>Le téléchargement de l’application <strong>xfce4</strong> commence imnmédiatement,
+une fois le paquet téléchargé, ses dépendances seront à leurs tours
+téléchargées. Quand le téléchargement est terminé, tous les paquets
+seront installés dans le bon ordre. Dans cet exemple, une fois la
+commande terminée, vous aurez un bureau <a href="http://www.xfce.org/">xfce4</a>
+installé sur votre NuTyX.</p>
+
+<ol>
+  <li>
+    <h2 id="ajout-dun-utilisateur-4-ajout-dun-utilisateur">Ajout d’un utilisateur {#4-ajout-dun-utilisateur}</h2>
+  </li>
+</ol>
+
+<p>Pour ajouter un utilisateur sous NuTyX, c’est également très simple, la
+commande :</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>nu
+</code></pre></div>
+
+<p>permet d’ajouter un utilisateur, elle peut être utilisée sous 2 formes
+avec et sans options, si elle est utilisée sans options, 2 questions
+vous seront demandées:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>Nom de l'utilisateur: francois Description de l'utilisateur: François Perrin
+</code></pre></div>
+
+<p>Vous devez bien noter que le nom d’utilisateur ne peut pas contenir
+certains caractères et ne peut pas contenir d’espace ni de majuscule. Si
+par contre vous souhaitez utiliser la commande avec ses options, ces
+derniers sont dans l’ordre la description de l’utilisateur suivi du nom
+de l’utilisateur:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>nu "François Perrin" francois
+</code></pre></div>
+
+<ol>
+  <li>
+    <h2 id="une-nutyx-ressemble--quoi-5-une-nutyx-ressemble--quoi">Une NuTyX ressemble à quoi? {#5-une-nutyx-ressemble-à-quoi}</h2>
+  </li>
+</ol>
+
+<p><img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f436f70696573456372616e732f323031352d30332d32325f31342d32302d30332e706e67/2015-03-22_14-20-03.png" alt="bureaux
+utilisateurs1" title="Source : http://downloads.nutyx.org/CopiesEcrans/2015-03-22_14-20-03.png" />
+<img src="https://img.linuxfr.org/img/687474703a2f2f646f776e6c6f6164732e6e757479782e6f72672f436f70696573456372616e732f4361707475726573456372616e732e6a7067/CapturesEcrans.jpg" alt="bureaux
+utilisateurs2" title="Source : http://downloads.nutyx.org/CopiesEcrans/CapturesEcrans.jpg" /></p>
+
+<ul>
+  <li><a href="http://www.nutyx.org/fr/">Site officiel de NuTyX</a></li>
+  <li><a href="http://www.nutyx.org/fr/documentation.html">Documentation de NuTyX</a></li>
+  <li><a href="http://forum.nutyx.org/index.php">Forum De NuTyX</a></li>
+</ul>
+
+<div>
+
+P.S : Je tiens a remercier Tnut, pour sa patience et sa relecture.
+
+</div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

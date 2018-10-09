@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Créer un blog avec Dotclear</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/14/20160614creer-un-blog-avec-dotclear-6-configuration-avancee.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Créer un blog avec Dotclear</h1>
+    <p class="post-meta"><time datetime="2016-06-14T23:53:00+02:00" itemprop="datePublished">Jun 14, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="level1">
+
+En suivant depuis l'interface d'administration le lien **about:config**
+on a accès aux paramètres de configuration avancée.
+
+<div class="wikinote noteclassic">
+
+**Note :**
+
+<p>
+Cette page présente deux onglets : **Paramètres globaux** et
+**Paramètres du blog**. Par défaut tout nouveau blog de l'installation
+adoptera les indications données dans Paramètre globaux. Si l'on ne veut
+modifier certains paramètres que pour un blog précis on les modifiera
+dans l'onglet Paramètres du blog.
+
+&lt;/div&gt;
+
+Notez que la plupart des paramètres peuvent être renseignés depuis le
+tableau de bord du blog puis **Préférences du blog**.
+
+&lt;/div&gt;
+
+<!--more-->
+
+### Revue de détail {#revue-de-detail .sectionedit2}
+
+<div class="level3">
+
+ 
+
+</div>
+
+#### allow\_comments et allow\_trackbacks
+
+<div class="level4">
+
+Ces deux paramètres autorisent ou interdisent les commentaires et les
+trackbacks pour tout le blog.
+
+</div>
+
+#### blog\_timezone
+
+<div class="level4">
+
+Fuseau horaire du blog.
+
+</div>
+
+#### comments\_nofollow
+
+<div class="level4">
+
+Ajoute au lien laissé par les commentateurs vers leur site la propriété
+*rel="no-follow"* qui indiquent aux robots d'indexation des moteurs de
+recherche de ne pas « suivre » ce lien.
+
+</div>
+
+#### comments\_pub
+
+<div class="level4">
+
+Active ou désactive la publication immédiate des commentaires. Si
+l'option choisie est « non » les commentaires sont placés hors ligne en
+attente de votre mise en ligne ou suppression.
+
+</div>
+
+#### comments\_ttl
+
+<div class="level4">
+
+Durée d'ouverture des commentaires après publication du billet. Cette
+valeur doit s'exprimer en nombre de jours. La valeur 0 correspond à
+l'absence de limite.
+
+</div>
+
+#### copyright\_notice
+
+<div class="level4">
+
+Ce champ (qui n'accepte pas d'enrichissement html) permet d'afficher une
+note de copyright dans les flux de syndication. Si vous souhaitez
+l'afficher également dans vos pages vous pouvez utiliser la fonction
+template :
+
+``` {.code}
+ 
+```
+
+</div>
+
+#### date\_format
+
+<div class="level4">
+
+Mise en forme de la présentation des dates. Les paramètres disponibles
+sont listés dans le [Manuel
+PHP](http://fr.php.net/manual/fr/function.strftime.php "http://fr.php.net/manual/fr/function.strftime.php"){.urlextern}.
+
+</div>
+
+#### editor
+
+<div class="level4">
+
+Ce champ permet d'indiquer le nom de la personne responsable du contenu
+du blog. Cette information sera affichée dans les informations du flux
+de syndication.
+
+</div>
+
+#### enable\_html\_filter
+
+<div class="level4">
+
+Active ou désactive le filtrage des balises xhtml. Lorsque cette option
+est activée les balises non conformes saisies dans le billet ne sont pas
+interprétées.
+
+</div>
+
+#### enable\_xmlrpc
+
+<div class="level4">
+
+Active ou désactive l'interface
+[XML/RPC](http://www.xmlrpc.com/ "http://www.xmlrpc.com/"){.urlextern}.
+
+</div>
+
+#### lang
+
+<div class="level4">
+
+Langue du blog.
+
+</div>
+
+#### media\_exclusion
+
+<div class="level4">
+
+Exclure des fichiers du gestionnaire de médias. Par exemple, pour
+exclure les fichiers \*.php et \*.py :
+
+``` {.code}
+ /.(php|py)$/i
+```
+
+</div>
+
+#### media\_img\_m\_size, media\_img\_s\_size et media\_img\_t\_size
+
+<div class="level4">
+
+Détermine les tailles en pixels des miniatures m (medium), s (small) et
+t (thumbnail) créées par le gestionnaire de médias. Cette valeur
+détermine la taille en pixels du plus grand côté, que ce soit la
+longueur ou la largeur.
+
+</div>
+
+#### media\_img\_title\_pattern
+
+<div class="level4">
+
+Motif du titre des images utilisé lors de l'insertion d'une image dans
+un billet.
+
+</div>
+
+#### nb\_comment\_per\_feed
+
+<div class="level4">
+
+Détermine le nombre de commentaires affichés dans le flux RSS et Atom
+des commentaires.
+
+</div>
+
+#### nb\_post\_per\_feed
+
+<div class="level4">
+
+Détermine le nombre de billets affichés dans le flux et Atom des
+billets.
+
+</div>
+
+#### nb\_post\_per\_page
+
+<div class="level4">
+
+Détermine le nombre de billets par page.
+
+</div>
+
+#### post\_url\_format
+
+<div class="level4">
+
+Modèle de formatage des
+<abbr title="Uniform Resource Locator">URL</abbr> spécifiques des
+billets.
+
+</div>
+
+#### public\_path
+
+<div class="level4">
+
+Emplacement du répertoire des médias depuis le fichier index.php du
+répertoire où est installée l'application Dotclear. Le slash final n'est
+pas nécessaire.
+
+</div>
+
+#### public\_url
+
+<div class="level4">
+
+<abbr title="Uniform Resource Locator">URL</abbr> du répertoire des
+médias. Le slash final n'est pas nécessaire.
+
+<div class="wikinote notetip">
+
+**Astuce :**
+
+<p>
+Vous pouvez utiliser une
+<abbr title="Uniform Resource Locator">URL</abbr> absolue commençant par
+`http://`, pour servir les médias depuis un sous-domaine par exemple.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+#### robots\_policy
+
+<div class="level4">
+
+Police des robots des moteurs de recherche.
+
+</div>
+
+#### short\_feed\_items
+
+<div class="level4">
+
+Active ou désactive la troncature des flux RSS et Atom. Lorsque cette
+option est activée les flux contiennent seulement le début des billets.
+
+</div>
+
+#### theme
+
+<div class="level4">
+
+Thème choisi pour l'affichage du blog.
+
+</div>
+
+#### themes\_path
+
+<div class="level4">
+
+Emplacement du répertoire des thèmes depuis le fichier index.php du
+répertoire où est installée l'application Dotclear. Le slash final n'est
+pas nécessaire.
+
+</div>
+
+#### themes\_url
+
+<div class="level4">
+
+<abbr title="Uniform Resource Locator">URL</abbr> du répertoire des
+thèmes. Le slash final n'est pas nécessaire.
+
+<div class="wikinote notetip">
+
+**Astuce :**
+
+<p>
+Vous pouvez utiliser une
+<abbr title="Uniform Resource Locator">URL</abbr> absolue commençant par
+`http://`, pour servir les thèmes depuis un sous-domaine par exemple.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+#### time format
+
+<div class="level4">
+
+Mise en forme de l'affichage des heures. Les paramètres disponibles sont
+listés dans le [Manuel
+PHP](http://fr.php.net/manual/fr/function.strftime.php "http://fr.php.net/manual/fr/function.strftime.php"){.urlextern}.
+
+</div>
+
+#### tpl\_allow\_php
+
+<div class="level4">
+
+Si ce paramètre a pour valeur "oui", permet d'insérer du code PHP dans
+ses templates (tout simplement en utilisant les tags &lt;?php, ?&gt;).
+
+</div>
+
+#### tpl\_use\_cache
+
+<div class="level4">
+
+Active ou désactive le cache des templates.
+
+</div>
+
+#### trackbacks\_pub
+
+<div class="level4">
+
+Active ou désactive la publication immédiate des trackbacks. Si l'option
+choisie est « non » les trackbacks sont placés hors ligne en attente de
+votre mise en ligne ou suppression.
+
+</div>
+
+#### trackbacks\_ttl
+
+<div class="level4">
+
+Durée d'ouverture des trackbacks après publication du billet. Cette
+valeur doit s'exprimer en nombre de jours. La valeur 0 correspond à
+l'absence de limite.
+
+</div>
+
+#### url\_scan
+
+<div class="level4">
+
+Méthode de lecture des <abbr title="Uniform Resource Locator">URL</abbr>
+(path\_info ou query\_string). Si vous souhaitez adopter le path\_info,
+assurez-vous que votre hébergeur le supporte.
+
+</div>
+
+#### use\_smilies
+
+<div class="level4">
+
+Active ou désactive l'affichage des smileys dans les billets et les
+commentaires.
+
+</div>
+
+#### wiki\_comments
+
+<div class="level4">
+
+Autorise ou interdit l'emploi de la syntaxe wiki dans les commentaires.
+
+[Voir en
+ligne.](https://fr.dotclear.org/documentation/2.0/admin/aboutconfig)
+
+</div>
+</p></div></div></p></div></div></p></div></div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

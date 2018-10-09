@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Comment participer à openSUSE pour faire des paquets avec OBS</title>
+  <meta name="description" content="Pour empaqueter et surtout participer à openSUSE, on doit passer par OBS d’openSUSE qui vient avec un client web et par son client en ligne de commande OSC.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2018/04/11/comment-participer-a-opensuse-OBS.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Comment participer à openSUSE pour faire des paquets avec OBS</h1>
+    <p class="post-meta"><time datetime="2018-04-11T13:45:58+02:00" itemprop="datePublished">Apr 11, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Pour empaqueter et surtout participer à openSUSE, on doit passer par OBS d’openSUSE qui vient avec un client web et par son client en ligne de commande OSC.</p>
+
+<p>La doc, un grand merci à <a href="https://www.alionet.org/showthread.php?33627-packaging-S-aider-pour-faire-des-RPM-de-qualit%E9-pour-notre-openSUSE">Sogal</a> est en anglais, je vais donc m’efforcer à faire un tuto simple, clair et qui va à l’essentiel.</p>
+
+<p>On commence par ce faire un compte chez <a href="https://build.opensuse.org/">openSUSE Build Service</a>, et ensuite on s’installe <em>OSC</em> sur notre distribution, alors vu que openSUSE font tout pour partager leurs connaissances, acquis et progrès, nous trouverons un paquet pour la plupart des grosses écuries comme Archlinux, Debian, Fedora, Mageia… Dans mon cas je ferais seulement pour openSUSE et peut être Debian par la suite.</p>
+
+<p>Une fois qu’on a son compte sur le <a href="https://build.opensuse.org/">openSUSE Build Service</a>, on se met dans une console (terminal, konsole, ect…) et on va suivre <a href="https://en.opensuse.org/openSUSE:Build_Service_Tutorial">cette page</a> que je retransmets sur cette page la méthode.</p>
+
+<ol>
+  <li>
+    <p>On configure sudo pour qu’on ait les droits d’utiliser les différents programmes:</p>
+
+    <p>sudo /usr/sbin/visudo</p>
+  </li>
+  <li>
+    <p>Ajoutez la ligne suivante et remplacez l’espace réservé LOGIN avec votre nom de connexion:</p>
+
+    <p>LOGIN    ALL = NOPASSWD: /usr/bin/build
+ LOGIN    ALL = NOPASSWD: /usr/bin/osc</p>
+  </li>
+</ol>
+
+<h3 id="connexion-et-configuration-ponctuelle-du-projet-local">Connexion et configuration ponctuelle du projet local</h3>
+
+<p>Au début, vous devez installer le client en ligne de commande sur votre machine. Vous pouvez trouver des paquets <em>osc</em> pour différentes distributions dans le dépôt de téléchargement de logiciels openSUSE-Tools (oui: il s’agit également d’un projet Build Service). Utilisez votre gestionnaire de paquets favori pour installer le paquet <em>osc</em>.</p>
+
+<p>En supposant que vous utilisez openSUSE Leap, l’installation du paquet <em>osc</em> ressemble à:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>zypper in osc
+</code></pre></div>
+
+<p>Ou si vous préférer une version plus récente:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code> zypper ar -r http://download.opensuse.org/repositories/openSUSE:/Tools/openSUSE_42.3/openSUSE:Tools.repo
+ zypper in osc
+</code></pre></div>
+
+<p>Ensuite on va aller avec l’aide de <code class="highlighter-rouge">cd</code> dans le répertoire que vous souhaitez utiliser pour vos fichiers de projet. Ça sera votre <em>racine</em> de votre projet.</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>cd &lt;directory_to_contain_project_root&gt;
+osc checkout home:&lt;username&gt;
+cd home:&lt;username&gt; 
+</code></pre></div>
+
+<p>Remplacez juste <em>username</em> par votre login.</p>
+
+<ul>
+  <li>Vous serez invité à saisir votre nom d’utilisateur et votre mot de passe - ensuite, osc essaiera de récupérer les paquets dans votre projet home et de créer un nouveau répertoire appelé home: &lt;nom d’utilisateur&gt;.</li>
+  <li>Vous pouvez éditer vos paramètres dans le fichier ~/.oscrc ou ~/.config/osc/oscrc.</li>
+  <li>Si vous entrez un mauvais mot de passe, vous devez supprimer toute la section api pour le service avec un mot de passe erroné pour osc pour demander à nouveau le mot de passe.</li>
+  <li>Si vous définissez plaintext_passwd = 0 et supprimez la section api, osc demande de nouveau le nom d’utilisateur et le mot de passe et stocke le mot de passe encodé en base64. Il peut être décodé facilement mais n’est pas vu en un coup d’œil.</li>
+  <li>Si vous souhaitez utiliser plusieurs services de build (ou un service autre que https://api.opensuse.org), utilisez l’option -A. Vous pouvez raccourcir l’argument -A en définissant l’option aliases dans la section api. Vous pouvez également écrire un script my_buildservice en disant quelque chose comme exec osc -A https://api.my.build.server “$ @”</li>
+</ul>
+
+<h3 id="crer-et-tlcharger-des-paquets">Créer et télécharger des paquets</h3>
+
+<p>Vous pouvez utiliser votre projet home comme un “terrain de jeu” pour tester des paquets qui seront transférés à d’autres projets plus visibles si tout va bien.</p>
+
+<p>Client Web: Sur le côté droit, cliquez sur “Home Project” pour ouvrir votre projet home, puis cliquez sur “Users” puis sur “Add user” pour vous ajouter en tant que responsable. Après cela, cliquez sur “créer un nouveau paquet” dans l’onglet des paquets. Vous devez remplir les trois champs de texte suivants: “Nom” (obligatoire), “Titre” et “Description”. Utilisez simplement le nom du paquet comme “Nom”, le résumé du paquet comme “Titre” et la description du paquet comme “Description”.</p>
+
+<p>Une fois le package créé, accédez à l’onglet “Sources” pour ajouter les fichiers de votre package. Vous devez télécharger le code source de votre package et au moins un fichier spec (voir également les instructions d’emballage).</p>
+
+<p>Avec le client <em>OSC</em>, on lance une simple commande:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc meta pkg -e home:&lt;utilisateur&gt; &lt;nomDuPaquet&gt;
+</code></pre></div>
+
+<p>osc ouvre un modèle de fichier xml dans votre éditeur favori (basé sur la variable d’environnement EDITOR, mais traditionnellement “vi”) et vous pouvez simplement ajouter les même renseignements (Nom, Titre, Description) décrits plus haut.</p>
+
+<p>Maintenant tapez</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc up
+</code></pre></div>
+
+<p>et vous obtiendrez un nouveau répertoire du nom de votre paquet. Pour ajouter des fichiers via la ligne de commande, ‘cd’ dans le nouveau répertoire, copiez les fichiers concernés (typiquement un fichier .tar.gz et les fichiers de support) et layoutz</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc add *
+</code></pre></div>
+
+<p>cela va marquer les fichiers dans le répertoire pour le prochain envoi (submit). Pour envoyer les fichiers, tapez</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc commit
+</code></pre></div>
+
+<h3 id="compiler-votre-paquet">compiler votre paquet</h3>
+
+<p>Normalement votre paquet est programmé pour être compilé après qu’il soit envoyé ou que des fichiers aient changé. Si un paquet requis est recompilé, votre paquet est automatiquement recompilé, cela va de soit. Vous pouvez aussi enclencher manuellement une recompilation si vous en avez le besoin (mais s’il-vous-plaît ne le faites pas trop souvent au risque de consommer de l’énergie à d’autres paquets):</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc rebuildpac &lt;project&gt; &lt;package&gt; [&lt;repo&gt; [&lt;arch&gt;]]
+</code></pre></div>
+
+<h3 id="compiler-votre-paquet-localement">Compiler votre paquet localement</h3>
+
+<p>Parfois il peut être plus rapide de compiler votre paquet sur votre machine locale que d’attendre les résultat de Build Service. osc supporte les compilations locales de votre paquet, pour autant que votre matériel le supporte (sur x86_64 on peut compiler pour i586 et x86_64, mais sur i586 seul i586 est possible).</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc build &lt;platform&gt; &lt;arch&gt; &lt;specfile&gt; [--clean|--noinit]
+</code></pre></div>
+
+<p>Si vous démarrez la compilation en tant qu’utilisateur normal (bonne idée !), il vous sera demandé votre mot de passe root de la machine locale. Vous pouvez éviter cela si vous ajoutez votre utilisateur à ‘/etc/sudoers (voir plus haut).</p>
+
+<p>pour exemple:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>~/obs/home:user/project # osc build openSUSE_Leap_42.1 x86_64 project.spec
+</code></pre></div>
+
+<p>osc se connecte au serveur de référentiel OBS et télécharge tous les RPM nécessaires dans /var/tmp/osbuild-packagecache/plattform/repository/arch en tant que répertoire cache. Si vous voulez éviter le trafic réseau, il est possible de remplir préalablement le cache avec rpms à partir d’un DVD ou d’un iso. Pour cela, copiez le fichier rpms du DVD dans le répertoire cache.</p>
+
+<p>osc créera un environnement chroot dans /var/tmp/build-root/ et démarrera la construction de votre paquet. Si vous n’avez que des modifications mineures, vous pouvez éviter la recréation de l’environnement de construction avec l’option –noinit. Si vous pensez que votre environnement chroot est endommagé, vous pouvez déclencher une reconstruction complète avec l’option –clean. Vous pouvez configurer le répertoire chroot; voir les commentaires dans votre fichier ~/.oscrc ou ~/.config/osc/oscrc.</p>
+
+<p>osc refusera d’installer des paquets de projets sur lesquels votre système ne fait pas confiance. Cela peut se produire lorsque votre package est lié à un projet de développement et que votre système n’est pas configuré pour utiliser ce référentiel. Vous pouvez obtenir la clé GPG nécessaire en exécutant:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>sudo rpm --import - &lt;&lt;_END_KEY
+$(osc signkey offending-project)
+_END_KEY
+</code></pre></div>
+
+<p>Une fois que vos paquets sont construits dans cet environnement chroot, vous pouvez trouver les paquets résultants dans /var/tmp/build-root/home/abuild/rpmbuild/RPMS/ (anciennes versions de rpmbuild /usr/src/packages/RPMS/.</p>
+
+<p>Si votre package utilise un service de téléchargement d’URL, vous devrez peut-être exécuter la commande suivante en premier:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>zypper ar -r http://download.opensuse.org/repositories/openSUSE:/Tools/openSUSE_42.3/openSUSE:Tools.repo
+</code></pre></div>
+
+<p>Le fichier journal complet de votre build local est stocké dans /var/tmp/build-root/.build.log.</p>
+
+<h3 id="corriger-les-erreurs-dans-le-processus-de-construction-local">Corriger les erreurs dans le processus de construction local</h3>
+
+<h4 id="dpendances">Dépendances</h4>
+
+<p>Si vous obtenez une erreur de dépendance pendant votre construction, ajoutez une ligne contenant les dépendances de construction, comme:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>BuildRequires: cmake libkde4-devel
+</code></pre></div>
+
+<p>Dans ce cas, cmake et libkde4-devel seront installés avant la construction de votre paquet.</p>
+
+<h4 id="installer-les-privilges">Installer les privilèges</h4>
+
+<p>Si vous obtenez un message d’erreur comme celui-ci:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>error: Bad exit status from /var/tmp/rpm-tmp.qrRAn2 (%install)
+</code></pre></div>
+
+<p>cela signifie que votre étape% d’installation a échoué (et que tous les autres se sont bien passés). Cela peut être dû à des privilèges d’écriture manquants si vous essayez d’installer au mauvais endroit (ce qui m’arrive fréquemment). Dans ce cas, ajoutez la commande make install suivante à votre fichier spec:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>make install DESTDIR=%buildroot
+</code></pre></div>
+
+<h3 id="soumettez-votre-travail--obs">Soumettez votre travail à OBS</h3>
+
+<p>Une fois que vous avez votre répertoire <package> comme vous le souhaitez, utilisez les commandes ci-dessous pour soumettre votre travail à OBS.</package></p>
+
+<p>ajouter un nouveau fichier au package:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc add
+</code></pre></div>
+
+<p>retirer un fichier du paquet:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc rm
+</code></pre></div>
+
+<p>mettre à jour le journal des modifications (par exemple. * .changes):</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc vc
+</code></pre></div>
+
+<p>envoyez vos fichiers mis à jour à OBS:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>osc commit
+</code></pre></div>
+
+<p>Sources: https://fr.opensuse.org/Build_Service/Tutoriel
+https://en.opensuse.org/openSUSE:Build_Service_Tutorial
+https://www.alionet.org/showthread.php?33627-packaging-S-aider-pour-faire-des-RPM-de-qualit%E9-pour-notre-openSUSE</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

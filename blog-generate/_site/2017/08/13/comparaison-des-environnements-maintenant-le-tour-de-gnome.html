@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Comparaison des environnements, maintenant le tour de GNOME.</title>
+  <meta name="description" content="{.aligncenter.wp-image-1473 .size-medium width=”247” height=”300”} Je ne voulais pasfaire GNOME dans mes petits tests de consommation, en fin de compte, jepr...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/08/13/comparaison-des-environnements-maintenant-le-tour-de-gnome.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Comparaison des environnements, maintenant le tour de GNOME.</h1>
+    <p class="post-meta"><time datetime="2017-08-13T18:58:00+02:00" itemprop="datePublished">Aug 13, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="http://download.tuxfamily.org/passionlinux//2017/08/Gnomelogo.svg_-247x300.png" alt="" />{.aligncenter
+.wp-image-1473 .size-medium width=”247” height=”300”} Je ne voulais pas
+faire GNOME dans mes petits tests de consommation, en fin de compte, je
+profite d’avoir chassé jusqu’au dernier paquet et librairie de mon KDE
+pour changer de bureau. Ce qui m’a un peu décidé c’est ce petit
+désagréable soucis d’artefacts qui revient régulièrement même si moins
+présent depuis <a href="http://passiongnulinux.tuxfamily.org/2017/07/27/xfce-ou-kde-plasma-5-2/">le changement dans les
+configurations</a>
+du rendu de la composition. Ce qui m’aide aussi à faire ce passage,
+c’est un peu le raz le bol des programmes certes complets mais complexes
+avec des configurations dans tous les sens, j’aime au contraire ce côté
+propre de l’interface de GNOME, surtout avec une extension
+<a href="https://extensions.gnome.org/extension/495/topicons/">Topicons</a> qui me
+permet de parer à cette drôle d’idée de trouver pratique d’avoir les
+icônes des applications ouvertes à l’opposé des icônes du réseau et du
+son… et déplace les indicateurs (Deluge, Transmission, HexChat, …) du
+tiroir de messagerie situé en bas à gauche, vers la barre supérieure.
+<a href="http://download.tuxfamily.org/passionlinux//2017/08/topicons.png"><img src="http://download.tuxfamily.org/passionlinux//2017/08/topicons.png" alt="" />{.aligncenter
+.size-full .wp-image-1472 width=”217”
+height=”104”}</a><br />
+<!--more--><br />
+Alors l’installation est faite via un simple:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt install task-gnome-desktop
+</code></pre></div>
+
+<p>Ce qui m’installe l’ensemble du bureau GNOME, avec des logiciels choisis
+comme Firefox ou Libreoffice.</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>root@debiacerlinux:/home/sebastien# apt install task-gnome-desktop Lecture des listes de paquets... Fait Construction de l'arbre des dépendances Lecture des informations d'état... Fait Les NOUVEAUX paquets suivants seront installés :  apg argyll argyll-ref baobab brasero brasero-cdrkit brasero-common chrome-gnome-shell dleyna-server eog evolution  evolution-common evolution-data-server evolution-data-server-common evolution-plugins file-roller five-or-more folks-common  four-in-a-row gdm3 gedit gedit-common gedit-plugins gir1.2-accountsservice-1.0 gir1.2-champlain-0.12 gir1.2-clutter-gst-3.0  gir1.2-evince-3.0 gir1.2-gdata-0.0 gir1.2-gdesktopenums-3.0 gir1.2-gdm-1.0 gir1.2-geoclue-2.0 gir1.2-geocodeglib-1.0  gir1.2-gepub-0.4 gir1.2-gfbgraph-0.2 gir1.2-git2-glib-1.0 gir1.2-gmenu-3.0 gir1.2-gnomebluetooth-1.0 gir1.2-gnomedesktop-3.0  gir1.2-gnomekeyring-1.0 gir1.2-goa-1.0 gir1.2-grilo-0.3 gir1.2-gtkchamplain-0.12 gir1.2-gtkclutter-1.0 gir1.2-gtksource-3.0  gir1.2-gucharmap-2.90 gir1.2-gweather-3.0 gir1.2-javascriptcoregtk-4.0 gir1.2-lokdocview-0.1 gir1.2-mediaart-2.0  gir1.2-mutter-3.0 gir1.2-networkmanager-1.0 gir1.2-nmgtk-1.0 gir1.2-peas-1.0 gir1.2-polkit-1.0 gir1.2-rb-3.0 gir1.2-rest-0.7  gir1.2-secret-1 gir1.2-telepathyglib-0.12 gir1.2-telepathylogger-0.2 gir1.2-totem-1.0 gir1.2-totem-plparser-1.0  gir1.2-tracker-1.0 gir1.2-upowerglib-1.0 gir1.2-webkit2-4.0 gir1.2-zpj-0.0 gjs gkbd-capplet gnome gnome-accessibility-themes  gnome-backgrounds gnome-bluetooth gnome-calculator gnome-calendar gnome-characters gnome-chess gnome-clocks gnome-color-manager  gnome-contacts gnome-control-center gnome-control-center-data gnome-core gnome-dictionary gnome-disk-utility gnome-documents  gnome-font-viewer gnome-games gnome-getting-started-docs gnome-keyring gnome-klotski gnome-logs gnome-mahjongg gnome-maps  gnome-menus gnome-mines gnome-music gnome-nibbles gnome-online-accounts gnome-online-miners gnome-robots gnome-screenshot  gnome-session gnome-session-bin gnome-session-common gnome-settings-daemon gnome-shell gnome-shell-common gnome-shell-extensions  gnome-software gnome-software-common gnome-sound-recorder gnome-sudoku gnome-sushi gnome-system-monitor gnome-taquin  gnome-terminal gnome-terminal-data gnome-tetravex gnome-themes-standard gnome-themes-standard-data gnome-tweak-tool  gnome-user-share gnome-weather grilo-plugins-0.3 gvfs-backends hitori hoichess iagno libapache2-mod-dnssd libappstream-glib8  libavahi-gobject0 libavahi-ui-gtk3-0 libbrasero-media3-1 libburn4 libcacard0 libcamel-1.2-59 libchamplain-0.12-0  libchamplain-gtk-0.12-0 libcolord-gtk1 libcryptui0a libdleyna-connector-dbus-1.0-1 libdleyna-core-1.0-3 libdmapsharing-3.0-2  libebackend-1.2-10 libebook-1.2-16 libebook-contacts-1.2-2 libecal-1.2-19 libedata-book-1.2-25 libedata-cal-1.2-28  libedataserver-1.2-22 libedataserverui-1.2-1 libevolution libexempi3 libfolks-eds25 libfolks-telepathy25 libfolks25  libfreerdp-cache1.1 libfreerdp-codec1.1 libfreerdp-common1.1.0 libfreerdp-core1.1 libfreerdp-crypto1.1 libfreerdp-gdi1.1  libfreerdp-locale1.1 libfreerdp-primitives1.1 libfreerdp-utils1.1 libfwupd1 libgail-3-0 libgcab-1.0-0 libgdata-common libgdata22  libgdict-1.0-10 libgdict-common libgdm1 libgeocode-glib0 libgepub0 libgexiv2-2 libgfbgraph-0.2-0 libgit2-glib-1.0-0 libgjs0e  libgmime-2.6-0 libgnome-autoar-0-0 libgnome-autoar-common libgnome-autoar-gtk-0-0 libgnome-bluetooth13 libgnome-games-support-1-2  libgnome-games-support-common libgnome-keyring-common libgnome-keyring0 libgnome-menu-3-0 libgnomekbd-common libgnomekbd8  libgoa-1.0-0b libgoa-1.0-common libgoa-backend-1.0-1 libgom-1.0-0 libgom-1.0-common libgrilo-0.3-0 libgsf-1-114 libgsf-1-common  libgsf-bin libgsound0 libgspell-1-1 libgspell-1-common libgtk-vnc-2.0-0 libgtksourceview-3.0-1 libgtksourceview-3.0-common  libgtkspell3-3-0 libgucharmap-2-90-7 libgupnp-av-1.0-2 libgupnp-dlna-2.0-3 libgvnc-1.0-0 libgweather-3-6 libgweather-common  libiptcdata0 libisofs6 libjte1 liblibreofficekitgtk liblua5.3-0 libmediaart-2.0-0 libmission-control-plugins0 libmozjs-24-0  libmusicbrainz5-2 libmutter0i libnatpmp1 libnm-glib4 libnm-gtk0 libnm-util2 libnma0 libnss-myhostname liboauth0 libosinfo-1.0-0  libpam-gnome-keyring libpeas-1.0-0 libpeas-common libphodav-2.0-0 libphodav-2.0-common libphonenumber7 libpst4 libqqwing2v5  libquvi-0.9-0.9.3 libquvi-scripts-0.9 libreoffice-evolution libreoffice-gnome libreoffice-gtk3 libreofficekit-data  librhythmbox-core10 librygel-core-2.6-2 librygel-db-2.6-2 librygel-renderer-2.6-2 librygel-renderer-gst-2.6-2  librygel-server-2.6-2 libspice-client-glib-2.0-8 libspice-client-gtk-3.0-5 libtelepathy-glib0 libtelepathy-logger3  libtotem-plparser-common libtotem-plparser18 libtotem0 libtracker-control-1.0-0 libtracker-miner-1.0-0 libtracker-sparql-1.0-0  libusbredirhost1 libusbredirparser1 libwinpr-crt0.1 libwinpr-crypto0.1 libwinpr-dsparse0.1 libwinpr-environment0.1  libwinpr-file0.1 libwinpr-handle0.1 libwinpr-heap0.1 libwinpr-input0.1 libwinpr-interlocked0.1 libwinpr-library0.1  libwinpr-path0.1 libwinpr-pool0.1 libwinpr-registry0.1 libwinpr-rpc0.1 libwinpr-sspi0.1 libwinpr-synch0.1 libwinpr-sysinfo0.1  libwinpr-thread0.1 libwinpr-utils0.1 libxcb-res0 libytnef0 libzapojit-0.0-0 lightsoff lua-bitop lua-expat lua-json lua-lpeg  lua-socket mousetweaks mutter mutter-common nautilus nautilus-data nautilus-sendto network-manager-gnome osinfo-db p11-kit  p11-kit-modules polari python-cffi-backend python-cryptography python-enum34 python-gi python-idna python-ipaddress  python-openssl python-pyasn1 python-requests python-urllib3 python3-mako python3-markupsafe quadrapassel realmd rhythmbox  rhythmbox-data rhythmbox-plugin-cdrecorder rhythmbox-plugins rygel rygel-playbin rygel-tracker seahorse seahorse-daemon shotwell  shotwell-common spice-client-glib-usb-acl-helper swell-foop tali task-gnome-desktop telepathy-idle telepathy-logger  telepathy-mission-control-5 totem totem-common totem-plugins tracker tracker-extract tracker-gui tracker-miner-fs  transmission-common transmission-gtk unoconv vinagre vino xdg-user-dirs-gtk xwayland 0 mis à jour, 347 nouvellement installés, 0 à enlever et 1 non mis à jour. Il est nécessaire de prendre 298 Mo dans les archives. Après cette opération, 876 Mo d'espace disque supplémentaires seront utilisés.
+</code></pre></div>
+
+<p>Un bon paquet de programmes:), je poursuis avec mon éternel feuille sur
+les consommations des applications:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>htop démarrage: 0.728 Go htop avec le gestionnaire de fichiers, 2 consoles (terminal GNOME), Amule, Deluge, Hexchat et Thunderbird de lancé: 1.4 Go gestionnaire système de gnome: 1.0 -&gt; 1.6 Go moniteur système xfce: 0.870 -&gt; 1.4 Go gnome-shell (442+61) 503 Mo gnome-setting-daemon (33+25) 58 Mo gnome-session (9+11) 20 Mo gedit 47 Mo moniteur-systeme 46 Mo nautilus 55 Mo terminal 34 Mo amule 43 Mo deluge 90 Mo hexchat 50 Mo thunderbird 206 Mo
+</code></pre></div>
+
+<p><a href="http://download.tuxfamily.org/passionlinux//2017/08/Capture-décran-de-2017-08-12-17-27-00.png"><img src="http://download.tuxfamily.org/passionlinux//2017/08/Capture-décran-de-2017-08-12-17-27-00-1024x337.png" alt="" />{.aligncenter
+.size-large .wp-image-1475 width=”840”
+height=”276”}</a>
+<a href="http://download.tuxfamily.org/passionlinux//2017/08/Capture-décran-de-2017-08-12-17-27-40.png"><img src="http://download.tuxfamily.org/passionlinux//2017/08/Capture-décran-de-2017-08-12-17-27-40-1024x337.png" alt="" />{.aligncenter
+.size-large .wp-image-1477 width=”840”
+height=”276”}</a>
+<a href="http://download.tuxfamily.org/passionlinux//2017/08/Capture-décran-de-2017-08-12-17-39-13.png"><img src="http://download.tuxfamily.org/passionlinux//2017/08/Capture-décran-de-2017-08-12-17-39-13-1024x337.png" alt="" />{.aligncenter
+.size-large .wp-image-1478 width=”840”
+height=”276”}</a>
+Résultats: GNOME est de mon point de vue le plus lourd des bureaux
+testés au même titre que Cinnamon, il est à la limite de faire pire que
+KDE mais parait plus vivace dans le lancement des applications, ces
+dernières se lancent bien plus rapidement que sous KDE, où j’attends
+plusieurs secondes pour la moindre petite application alors que là c’est
+instantané! C’est de la sensation mais après tout c’est ce qui compte.
+Ça fait un moment que je pense être sur la distribution qui me va comme
+un gant, allant même à vouloir en changer pour ne pas tomber dans la
+routine ou ne plus savoir utiliser autre chose, sous entendre utiliser
+autre chose qu’une distribution à base Debian. Je ne me pose plus la
+question, j’ai un autre soucis qui permet de ne plus m’occuper de cette
+question, c’est celui du bureau, lequel me correspond le mieux?
+Autrement dit, après autant d’années passées sur KDE, est-ce vraiment le
+choix qui me correspond vu le passif de ce bureau, c’est-à-dire
+changement pour changer et limite casser les habitudes? Manque de
+continuité entre les versions, configuration qui casse ou n’est plus
+compatible avec la version suivante ou dans une même version avec
+changements mineurs… La complexité de KDE ne me convient plus, je suis
+dans une optique d’avoir juste un truc bien fini et/ou du moins qui est
+pensé pour être simple à l’utilisation, dans ce cas Xfce mais surtout
+GNOME correspondent mieux à ce besoin.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

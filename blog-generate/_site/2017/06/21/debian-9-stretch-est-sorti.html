@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Debian 9 &quot;Stretch&quot; est sorti</title>
+  <meta name="description" content="Vous avez dû le voir un peu partout, parfois en avance comme la vidéod’Adrien.D,qui au passage est superbe car contrairement à beaucoup de vidéos, lasienne n...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/06/21/debian-9-stretch-est-sorti.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Debian 9 "Stretch" est sorti</h1>
+    <p class="post-meta"><time datetime="2017-06-21T20:14:00+02:00" itemprop="datePublished">Jun 21, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Vous avez dû le voir un peu partout, parfois en avance comme <a href="https://www.linuxtricks.fr/news/10-logiciels-libres/344-debian-9-dit-stretch-est-la/">la vidéo
+d’Adrien.D</a>,
+qui au passage est superbe car contrairement à beaucoup de vidéos, la
+sienne nous montre un saut de version. J’ai été un peu étonné du reste
+que notre ami avait déjà réussi à trouver une image officiel alors que
+celle-ci était encore du nom de stretch-release donc la version non
+finit :) Bref, j’entends déjà certaines personnes crier au loup, cette
+Stretch est pourrie car ne contient pas Virtualbox, c’est honteux et
+autre chose… Entre temps je vois aussi le niveau des mecs sur
+<a href="https://linuxfr.org/news/debian-9-stretch-deploie-ses-tentacules">certains
+commentaires</a>
+qui volent pas très haut, juste au dessus de la merde en faite, qui pour
+la plupart ont soit pas compris le concept de Debian Stable soit veulent
+simplement jouer à celui qui fait le plus gros troll… Notamment un
+débat inutile sur la version Gcc présente dans Debian, puis un autre
+toujours lié sur la difficulté d’installer depuis backport  et un autre
+sur l’absence de virtualbox… Bref ça vole pas très haut surtout venant
+de gens qui font souvent des retours sur Windows en crachant sur linux
+au passage et qui reviennent toujours sous linux…<br />
+<!--more--><br />
+Je vais répondre ici à certain commentaire, pourquoi ici sur mon blog et
+pas sur <a href="https://linuxfr.org/">linuxfr</a>? D’abord car c’est mon blog et
+je peux dire ce que je veux dessus, d’un autre coté répondre la bas
+serait seulement entretenir un troll qui ne cesse de grossir et qui
+commence à faire pourrir ce fabuleux site qu’est linux.fr, de plus on
+finirait par oublier la dépêche de qualité qui a été faite sur ce site
+pour cette sortie. Pour Gcc &gt; 7 je pense qu’il sera dans les backport
+d’ici peu, attendons donc que Sid soit bien rodé et totalement remis sur
+les rails pour y voir apparaître ce Gcc et sûrement le voir descendre
+dans les backport! La soi-disant difficulté d’utiliser backport sous
+Debian, premièrement c’est du passé et deuxièmement c’est ajouter une
+ligne dans son sources.list, en l’occurrence celle-ci:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>deb http://ftp.fr.debian.org/debian stretch-backports main contrib non-free
+</code></pre></div>
+
+<p>Puis d’installer le paquet en indiquant à Apt qu’on veut la version du
+dépôt backport:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code> apt-get -t stretch-backports install nom-du-paquet 
+</code></pre></div>
+
+<p>Et c’est tout, compliqué? Je ne comprend pas qu’une personne qui
+développe un programme a autant de mal à utiliser backport… Il a juste
+voulu faire un troll de plus. Pour ce que Debian entend par stabilité
+c’est simple, cela veut dire ou sous-entend:</p>
+
+<ul>
+  <li>stabilité du logiciel, le moins de bugs possible(comme toute
+distribution de qualité normalement)</li>
+  <li>stabilité des fonctionnalités, pas d’ajouts ni de pertes de
+fonctions, tel programme doit être en mesure de faire les mêmes
+choses au début de la version stable et jusqu’à la fin de cette
+stable</li>
+  <li>stabilité de l’archive, pas d’ajout ni de perte de programmes, les
+dépôts debian doivent contenir le même nombre de paquets à la sortie
+de la stable(etch admettons) et jusqu’à la fin de sa vie.</li>
+  <li>aucun changement dans les fichiers de configuration</li>
+</ul>
+
+<p>De ce fait, on n’est pas « surpris » de ne plus trouver tel paquet, de
+voir tel programme perdre telle fonction… Et surtout une mise à jour
+debian ne change rien et ne touche à rien, elle corrige seulement… Voila
+ce qui est attendu  par les utilisateurs de Debian stable et ce que
+sous-entend stable pour les développeurs. Fermons ce sacs à merde, qui a
+été ouvert à la base pour un gars qui développe un programme serveur si
+j’ai bien suivi… Concentrons nous sur Virtualbox. Alors Virtualbox,
+comme vous le savez maintenant, n’est pas dans cette Debian9. La raison
+est simple et ne dépend pas de Debian, ou plutôt pas que, en faite
+Oracle qui entre nous a tué OpenOffice, OpenSolaris et Mysql (peut être
+que celui-ci vit encore mais est remplacé sur la plupart des
+distributions), a décidé qu’il ne fournirait plus les patchs des
+anciennes versions de son logiciel de virtualisation, que le seul moyen
+d’être avec une version corrigé des failles et bugs connus est
+d’utiliser la dernière version de ce programme. Donc en résumant, Debian
+avait seulement trois choix:</p>
+
+<ol>
+  <li>le développeur/mainteneur Debian fournit la dernière version</li>
+  <li>il maintenait lui-même la version choisie pour Debian et patchait
+la-dite version</li>
+  <li>virtualbox quitte les dépôts de Debian stable</li>
+</ol>
+
+<p>Ce qui a été choisi est la dernière possibilité,  il est inconcevable
+que dans les dépôts de stable un programme bouge et évolue, ça peut
+incorporé des bugs, des failles ou simplement un comportement non voulu
+car non testé. Le mainteneur se sentant pas capable (d’après ses dires)
+de corriger et de patcher virtualbox lui-même a préféré le retirer des
+dépôts de stable. Je vais être sincère, pour moi utilisateur de
+virtualbox c’est pas très important, je m’explique, si je veux vraiment
+l’avoir j’ai plusieurs solutions, tout d’abord récupérer les sources
+debian  venant de Sid car oui il sera disponible pour Sid, et le
+retroporter donc en faire un paquet maison. J’en ai déjà parlé à
+plusieurs reprises sur ce blog. L’autre possibilité est d’utiliser le
+<a href="https://www.virtualbox.org/wiki/Linux_Downloads">Deb fournit sur le site de
+virtualbox</a>. Enfin et
+je pense que c’est celle qui sera utilisé par moi dès sa mise en place,
+c’est utiliser les backports de Debian, si le paquet est dans Sid, il y
+a de bonne chance pour qu’il soit dans backport par la suite. Maintenant
+que tout ça est derrière nous, regardons de plus prés la vidéo d’Adrien,
+il a fait une mise a jour de Jessie vers Stretch, il a eu des soucis
+avec systemd et mate, honnêtement en ayant fait pas loin de “dix sauts
+de version” depuis la release de la 9, je peux assez facilement et
+sûrement jeter la faute sur mate. En faite ce bureau sous Debian a été
+incorporé  que depuis la Debian 8 et pas mal de soucis se sont avérés et
+du reste corrigés depuis. De mon coté pas eu le moindre soucis que ce
+soit sous Gnome, Kde ou Xfce ou bien simplement des
+multi-environnements. Par exemple chez mes parents c’est Gnome et Xfce,
+et a la maison c’est Kde et Xfce. Pour le reste, j’ai vraiment apprécié
+sa vidéo. Que dire de cette version? Cette publication inclut un nombre
+important de paquets logiciels mis à niveau, tels que :</p>
+
+<ul>
+  <li>Apache 2.4.25 ;</li>
+  <li>Asterisk 13.14.1 ;</li>
+  <li>Chromium 59.0.3071.86 ;</li>
+  <li>Firefox 45.9 (dans le paquet firefox-esr) ;</li>
+  <li>GIMP 2.8.18 ;</li>
+  <li>une version mise à jour de l’environnement de bureau GNOME 3.22 ;</li>
+  <li>l’ensemble de compilateurs GNU, GCC 6.3 ;</li>
+  <li>GnuPG 2.1 ;</li>
+  <li>Golang 1.7 ;</li>
+  <li>KDE Frameworks 5.28, KDE Plasma 5.8 et les applications KDE 16.08
+et 16.04 pour les composants PIM ;</li>
+  <li>LibreOffice 5.2 ;</li>
+  <li>Linux 4.9 ;</li>
+  <li>MariaDB 10.1 ;</li>
+  <li>MATE 1.16 ;</li>
+  <li>OpenJDK 8 ;</li>
+  <li>Perl 5.24 ;</li>
+  <li>PHP 7.0 ;</li>
+  <li>PostgreSQL 9.6 ;</li>
+  <li>Python 2.7.13 et 3.5.3 ;</li>
+  <li>Ruby 2.3 ;</li>
+  <li>Samba 4.5 ;</li>
+  <li>systemd 232 ;</li>
+  <li>Thunderbird 45.8 ;</li>
+  <li>Tomcat 8.5 ;</li>
+  <li>Xen Hypervisor ;</li>
+  <li>l’environnement de bureau Xfce 4.12 ;</li>
+  <li>plus de 51 000 autres paquets prêts à l’emploi, construits à partir
+de près de 25 000 paquets source.</li>
+</ul>
+
+<p>On apprend aussi via la
+<a href="https://www.debian.org/News/2017/20170617">dépêche</a> que cette version
+est
+<a href="http://ftp.debian.org/debian/doc/dedication/dedication-9.0.txt">dédiée</a>
+à Ian Murdock fondateur du projet, disparu le 28 décembre 2015 et sera
+gérée pendant les cinq prochaines années grâce à l’effort combiné de
+<a href="https://security-team.debian.org/">l’équipe de sécurité de Debian</a>
+ainsi qu’à celui de <a href="https://wiki.debian.org/LTS">l’équipe de gestion à long terme de
+Debian</a>. Dans “Stretch”, la variante par
+défaut de MySQL est maintenant MariaDB. Le remplacement des paquets de
+MySQL 5.5 ou 5.6 par la variante MariaDB 10.1 se produira
+automatiquement lors de la mise à niveau. Firefox et Thunderbird sont de
+retour dans Debian avec la publication de “Stretch”, et remplacent leurs
+versions sans marque Iceweasel et Icedove présentes dans l’archive
+pendant plus de 10 ans. Un truc qui me parait important et assez
+novateur est les constructions reproductibles, plus de 90 % des paquets
+source fournis dans Debian 9 construiront des paquets binaires
+identiques au bit près. Cette propriété de vérifiabilité protège les
+utilisateurs des tentatives malveillantes pour altérer les compilateurs
+et les réseaux de construction. Les versions futures de Debian incluront
+des outils et des métadonnées de manière à ce que les utilisateurs
+finaux puissent valider la provenance des paquets dans l’archive. J’ai
+aussi subi les “je sais tout” qui m’ont dit que <a href="https://www.youtube.com/watch?v=yuQTP6YcGTM">c’était le mal absolu
+de mettre “stable” dans son
+sources.list</a> au lieu du
+nom de la version, ce que je sais pertinent mais oh combien utile quand
+tous annoncent la sortie d’une distribution avec de l’avance… Du reste
+on m’a dit que c’était encore peu stable et pas totalement au point le
+passage de version en version, de mon coté ça fait dix ans que je la
+pratique sans soucis et d’après Debian pour cette version , des efforts
+additionnels d’assurance qualité tels que des tests automatiques
+d’installation et de mise à niveau pour tous les paquets de l’archive
+Debian garantissent que “Stretch” répond aux fortes attentes de nos
+utilisateurs lors d’une publication stable de Debian.  La mise à niveau
+vers Debian 9 à partir de la version précédente, Debian 8, (nom de code
+“Jessie”) est gérée automatiquement par l’outil de gestion de paquets
+apt-get pour la plupart des configurations. Comme toujours, les systèmes
+Debian peuvent être mis à niveau sans douleur, sur place, et sans
+période d’indisponibilité forcée, mais il est fortement recommandé de
+lire les <a href="https://www.debian.org/releases/stretch/releasenotes">notes de
+publication</a> ainsi
+que le <a href="https://www.debian.org/releases/stretch/installmanual">guide
+d’installation</a>
+pour d’éventuels problèmes et pour des instructions détaillées sur
+l’installation et la mise à niveau. Les notes de publications seront
+améliorées et traduites dans les semaines suivant la publication. Bref,
+je retourne vite fait sur les commentaires de Linuxfr, sur celui qui
+demande assez stupidement si il y a vraiment des utilisateurs qui
+utilisent stable pour leurs bureaux, je lui répond seulement, que oui on
+est vraiment nombreux, d’abord tout ceux qui veulent du stable et qui ne
+change pas un matin sans rien dire, ceux qui ne se sentent pas capable
+d’utiliser autre chose car ils savent pertinemment pour l’avoir vécu
+qu’une mise à jour sur une distribution qui se veut récente peut péter
+le serveur X, comme Ubuntu LTS qui un jour sans vraiment crier garde a
+décidé de virer le pilote proprio de certaines cartes Ati et qui m’a
+obligé à intervenir sur quatre machines dont les utilisateurs m’ont
+appelé en panique… Ceux qui veulent juste que ça marche et se foutent
+de la dernière mode… Bref, il y en a… De mon coté, elle marche
+vraiment bien cette Stretch, depuis un mois chez mes parents et chez
+d’autres, je n’ai rien à dire dessus.    </p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

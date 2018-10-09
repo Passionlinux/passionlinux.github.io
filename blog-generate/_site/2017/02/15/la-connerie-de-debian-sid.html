@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>La connerie de Debian Sid</title>
+  <meta name="description" content="Aujourd’hui je vais parler du gros point faible selon moi de Debian: saversion SID… Cette version de Debian qui est censé être instable etqui ne mérite pas d...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/02/15/la-connerie-de-debian-sid.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">La connerie de Debian Sid</h1>
+    <p class="post-meta"><time datetime="2017-02-15T12:08:00+01:00" itemprop="datePublished">Feb 15, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Aujourd’hui je vais parler du gros point faible selon moi de Debian: sa
+version SID… Cette version de Debian qui est censé être instable et
+qui ne mérite pas du tout sa réputation. Pour moi le gros soucis est la
+période de gèle, je comprend qu’on gèle testing mais Sid devrait garder
+sa fraîcheur, Sid devrait être une version totalement a  part, autonome
+et qui soit a coté de la version stable la seconde version officiel. Si
+on regarde les distributions a succès, on remarque quelque chose qui
+frappe, ce sont les distributions a publications continues comme Arch ,
+Manjaro, Tumbleweed et autres qui prennent de plus en plus de parts de
+marché. Il y a un désintérêt de plus en plus flagrant envers les
+distributions a sorties fixes surtout celles qui ont des sorties
+rapprochées, seule les distributions dites LTS arrivent a sortir leurs
+épingles du jeu.<br />
+<!--more--><br />
+Debian avec sa version Stable est déjà dans la course des distributions
+LTS, sa stabilité, la tranquillité de gestion d’une Stable, les rapides
+corrections de failles, bref, tout est fait pour que Debian Stable soit
+une distribution populaire parmi ceux qui veulent du LTS. Maintenant
+pour ceux qui veulent du Debian en publication continue, il y a Testing
+qui est souvent préconisé et Sid sur laquelle je ne vais pas cacher ma
+préférence pour de nombreuses raisons que je citerais une par une dans
+ce qui va suivre. Tout d’abord, testing n’est pas considéré comme une
+distribution autonome, pour une simple raison: elle peut a tout moment
+être incomplète avec la danse des paquets venant de Sid qui quant a
+elle, est toujours complète. Une autre raison,  très simple celle-ci,
+est que les corrections de failles ou de bugs arrivent d’abord dans Sid
+par de nouveaux paquets qui corrigent et dans stable par des patchs,
+testing quant a elle doit attendre plusieurs jours ou semaines pour voir
+arriver de Sid les fameuses corrections, ce qui peut être bloquant avec
+des gros bugs ou meme pour la sécurité . Enfin testing n’est pas si
+vieille, elle est arrivé bien après pour augmenté la qualité de
+l’ensemble, c’est une étape intermédiaire entre Sid qui voit arriver des
+nouveaux paquets constamment et Stable. Le soucis c’est que Sid a le
+doux nom de Unstable, ce qui est pour le moins explicite: instable =
+développement. Ce qui est déjà une première erreur de communication, la
+Sid ne comporte aucuns logiciels en version bêta ou autre, seul des
+logiciels stable y sont acceptés. Unstable n’est là que pour signaler
+que cette version de Debian n’est pas de même qualité que la Stable,
+c’est la version où vont les nouveaux paquets venant des développeurs
+Debian, il peut y avoir des bugs résultant de l’ajout du logiciel, de
+bugs de ce logiciels qui n’est pas suffisamment testé ou même des soucis
+dans l’empaquetage Debian. Au bout de plusieurs jours, le logiciel va
+migrer dans testing a condition qu’il n’y a pas de bugs pire que ceux de
+la version actuellement dans testing. Comme un programme a des
+dépendances, il se peut que le paquet ne puisse pas être installé car
+ses dépendances ne sont pas encore arrivé dans testing et sont bloqué
+dans Sid. C’est la où on arrive a ce qui est pour moi une erreur, un
+moment donné, tous les deux ans, Sid est gelé pour que les développeurs
+se concentrent sur la correction de bugs, les paquets sont donc a peu
+près identique entre Sid et testing, puis après une période plus ou
+moins longue, testing ou plutôt la nouvelle Stable sort et on dégel Sid,
+a ce moment là, notre Sid est un peu instable car des milliers de
+paquets sont mis a jour très rapidement. Alors c’est là que se situe le
+soucis, Debian Sid ne devrait pas être gelé, elle devrait garder sa
+fraîcheur, testing étant gelé et surtout une version de la futur stable
+portant son nom est déjà disponible avec ses dépôts utilisable. Alors je
+sais qu’il y a des “y a qu’a faire” mais oui, c’est simple, on ne touche
+pas a Sid qui reste une rolling, on gel testing avec laquelle on fait en
+plus une version “future stable”, ce qui ferait que testing prend la
+place actuelle de Sid pendant les périodes de gel, “future stable” celle
+de testing et tout le monde y gagne. En effet, on garde le coté pure
+rolling de Sid et surtout on évite ce moment délicat, un peu archlinux,
+de la période post-gel…. Il me semblait que c’était en cour de
+discussion pour justement faire ce qui a été dit, mais je ne trouve pas
+plus d’information dans les différentes listes de discussions que sur le
+site du projet. Dommage, j’espère vraiment que ça sera fait dans les
+prochaines versions.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

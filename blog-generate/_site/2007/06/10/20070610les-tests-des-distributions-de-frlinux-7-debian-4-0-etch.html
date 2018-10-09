@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Les tests des distributions de FRlinux 7, Debian 4.0 (Etch)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2007/06/10/20070610les-tests-des-distributions-de-frlinux-7-debian-4-0-etch.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Les tests des distributions de FRlinux 7, Debian 4.0 (Etch)</h1>
+    <p class="post-meta"><time datetime="2007-06-10T02:05:00+02:00" itemprop="datePublished">Jun 10, 2007</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div>
+
+**Ma premiere debian...**
+
+</div>
+
+<div style="text-align: center;">
+
+</div>
+
+<p><em>Dernière mise à jour : 27/05/2007</em></p>
+
+<p>Debian 4.0 (Etch) a remplacée la 3.1 (Sarge) 21 mois après la sortie de
+la version précédente. Elle contient un bon lot de nouveautés parmi
+lesquelles : noyau 2.6.18, GNOME 2.14, KDE 3.5, Xfce 4.4, OpenOffice.org
+2.0.4a, Xorg 7.1, iceweasel (Firefox) 2.0, Apache 2.2, MySQL 5.0, Gaim
+2.0 et aussi Xen 3 avec les bons noyaux qui vont bien (tm). J’utilise
+Debian depuis déjà quelques années et j’ai donc pu comparer les
+procédures de mises à jour, différentes nouvelles installations ainsi
+que le mode station de travail ou bien encore serveur simple ou avec Xen
+(dont je parlerais plus bas). Ces tests ont été effectués autant sur du
+x86_64 (mon X2 amd64 4800+ dont les captures d’écran ci-dessous sont
+tirées) ainsi que des plateformes x86 standard. Il faut aussi noter que
+cette version officialise le support amd64 dans la branche stable de
+Debian. Je n’ai rencontré aucun souci au niveau de l’installation. Cette
+nouvelle version comporte également un nouvel installateur en mode
+graphique que j’ai eu l’occasion d’utiliser une seule fois et qui marche
+relativement bien (en tout cas, pour moi, vu que l’installation était
+d’une simplicité déconcertante). J’avoue être toujours aussi fan de la
+version curses que l’ont peux lancer de partout (j’ai quelques serveurs
+en KVM par IP). J’ai rencontré un seul problème (et pas qu’avec cette
+distribution) lié à Xorg 7.1 concernant mon nouveau moniteur Samsung
+226bw. Celui-ci est en effet automatiquement configuré en 1280x1024 lors
+de l’installation. J’ai ensuite tenté de passer en 1680x1050 toujours
+avec le pilote libre nv ce qui n’a pas fonctionné. J’ai du me rabattre
+sur le pilote propriétaire nvidia (1.0-9755-x86_64) qui se sont très
+bien comportés. J’ai fait mon premier démarrage graphique sous Gnome
+2.14 (qui contient tout de même quelques paquets 2.16). C’est très
+fonctionnel et relativement plus propre que Sarge au niveau de la
+détection périphérique avec udev. D’ailleurs, pour ceux migrant d’une
+version précédente, lisez bien les <a href="http://www.us.debian.org/releases/stable/i386/release-notes/ch-upgrading.fr.html">notes de mise à
+jour</a>.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/debian40_01.png"><img src="http://frlinux.net/pictures/linux/debian40_01s.png" alt="" /></a></p>
+
+<p>    Debian vient également avec les belles améliorations graphiques
+telles que beryl et le composite pour Xorg mais je n’ai pas vraiment
+trouvé l’intérêt de jouer avec. Sachez néanmoins que c’est disponible et
+qu’il existe plusieurs guides si vous voulez stresser votre carte
+graphique. KDE 3.5 est fourni également dans une version suffisamment
+récente pour mon utilisation. Vous trouverez également IceWeasel
+également connu sous le nom de Firefox. Pour des raisons légales, Debian
+a décidé de renommer la bête afin d’éviter tout problème juridique. Pour
+plus d’info sur le sujet, consultez la <a href="http://www.debian.org/News/weekly/2006/40/index.fr.html">nouvelle hebdomadaire du
+31/10/06</a>.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/debian40_02.png"><img src="http://frlinux.net/pictures/linux/debian40_02s.png" alt="" /></a></p>
+
+<p>XFCE 4 (4.4 rc2) est également disponible. Vous pouvez demander lors du
+login graphique de l’intégrer avec Gnome, KDE ou tout autre
+environnement. A noter que lors de l’installation de base qui ne pose
+plus de questions si on fait une installation de bureau classique, les
+polices Bitstream Vera ne sont pas installées, vous devez les
+télécharger par la suite. J’ai pu tester pour vous les noyaux à base de
+Xen, les tutoriaux sur le web sont nombreux, je compte d’ailleurs
+bientôt publier le miens vu que j’ai eu quelques demandes et que
+j’utilise Xen depuis quelques années à présent. Toujours est-il qu’une
+fois tous les bons paquets installés, j’ai pu faire tourner plusieurs
+domaines invités qui tournaient tous avec des adresses publiques et
+privées selon les environnements. Les performances sont similaires que
+sur les autres distributions que j’ai pu tester.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/debian40_03.png"><img src="http://frlinux.net/pictures/linux/debian40_03s.png" alt="" /></a></p>
+
+<p>Venons à une partie intéressante de cette distribution : le multimédia.
+Comme tous les noyaux 2.6, ALSA règne en maître lorsqu’on en vient à la
+gestion sonore. J’ai du sélectionner la sortie numérique de ma carte son
+(Creative Audigy 2) afin de pouvoir entendre quelque chose, ensuite un
+: <strong>alsactl store 0</strong> plus tard pour garder l’état, j’ai du aussi éditer
+le <strong>/etc/group</strong> afin de m’ajouter dans les bons groupes. Une fois ce
+détail réglé, kaffeine et mplayer ont gentiment joués mes fichiers
+multimédia y compris toute la partie vidéo (DVD, DivX, etc …).</p>
+
+<p><a href="http://frlinux.net/pictures/linux/debian40_04.png"><img src="http://frlinux.net/pictures/linux/debian40_04s.png" alt="" /></a></p>
+
+<p>J’ai voulu voir quelle version de Enlightenment était disponible sous
+cette distribution. Debian étant conservatrice, vous trouverez donc la
+branche 0.16 dans les paquets, j’ai trouvé quelques références de la
+0.17 pour Debian et Ubuntu mais vu que c’est toujours un travail en
+cours, cela ne semble pas très actif. 0.16 reste encore pour moi une
+version stable et rapide pour votre bureau, cela faisait un bon moment
+que je ne l’avais pas utilisée. J’ai également testé le streaming radio
+par internet et c’est l’une des premières fois que je vois Totem
+m’accepter et m’ouvrir une stream sans m’insulter. Bref, content.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/debian40_05.png"><img src="http://frlinux.net/pictures/linux/debian40_05s.png" alt="" /></a></p>
+
+<p>J’ai rencontré quelques soucis avec mon scanner. Ceci dit dans le bon
+environnement de bureau (KDE) et une fois que je me suis rajouté dans le
+groupe scanner, KDE a été très content de me dire que kooka avait bien
+trouvé un scanner millénaire sur mon système et était prêt à l’utiliser
+si j’étais psychologiquement prêt. Pour revenir rapidement sur les
+passages de sarge vers etch, pensez bien à lire le guide de mise à jour
+en lien en début de cet article, j’ai passé pas mal de serveurs de mon
+travail de sarge vers etch et le soft raid m’a posé problème (soft raid
+sur du LVM) que j’aurais pu résoudre si j’avais lu plus en avant, j’ai
+donc perdu 1.5To de données, qu’il m’a fallu quelques heures pour
+récupérer (enfin le soft raid lui était mort, j’ai du reprendre d’un
+autre système), donc pas la faute à Debian mais bien une faute
+utilisateur vu que je n’ai pas tout lu.</p>
+
+<p><a href="http://frlinux.net/pictures/linux/debian40_06.png"><img src="http://frlinux.net/pictures/linux/debian40_06s.png" alt="" /></a></p>
+
+<p>Debian prouve encore ici sa grande stabilité malgré le dernier point que
+je viens de souligner. Elle est de plus enfin disponible en version
+stable pour les plateformes x86_64 donc que du bonheur. Le passage en
+Xorg était attendu pour les utilisateurs de la version stable. La liste
+des paquets est assez importante pour satisfaire tout le monde.
+L’installation est pour sa part bien plus simple en mode graphique
+(attention, le mode par défaut est toujours curses, vous devez
+sélectionner l’installateur graphique au démarrage du CD/DVD) pour les
+débutants, les vétérans comme moi préféreront le bon vieux mode texte.
+Enfin, Debian se comporte toujours aussi bien en mode serveur (85% de
+mon parc serveurs est Debian et j’en ai mis à jour environ 70% vers
+Etch) et la station est un peu moins simple à configurer qu’ubuntu mais
+vous avez l’original ici, pas la copie.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

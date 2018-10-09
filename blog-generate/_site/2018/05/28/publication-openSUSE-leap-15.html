@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Publication d&#39;openSUSE Leap 15.0</title>
+  <meta name="description" content="Le vendredi 25 mai, lors de leur conférence annuelle, les membres du projet openSUSE ont annoncé la publication de la dernière version de Leap : openSUSE Lea...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2018/05/28/publication-openSUSE-leap-15.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Publication d'openSUSE Leap 15.0</h1>
+    <p class="post-meta"><time datetime="2018-05-28T14:57:03+02:00" itemprop="datePublished">May 28, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Le vendredi 25 mai, lors de leur <a href="https://events.opensuse.org/conference/oSC18">conférence annuelle</a>, les membres du projet openSUSE ont annoncé la publication de la dernière version de Leap : <a href="https://news.opensuse.org/2018/05/25/based-on-enterprise-code-tested-millions-of-times-opensuse-leap-15-released/">openSUSE Leap 15</a> ! Leap est destiné aux utilisateurs soucieux de stabilité. openSUSE Leap 15, muni du noyau Linux 4.12, est un système d’exploitation sûr, stable et fiable. De la même manière que la série 42.x, des versions mineures seront publiées chaque année pendant 3 ans.</p>
+
+<p>openSUSE Leap 15.0 est le successeur annoncé d’openSUSE Leap 42.3. Ce changement de numérotation étonnant trouve son origine dans <a href="https://lists.opensuse.org/opensuse-announce/2017-04/msg00000.html">le saut de version de la distribution SLE</a> sur laquelle Leap s’appuie.</p>
+
+<h2 id="nouveauts">Nouveautés</h2>
+
+<p>Cette nouvelle version majeure apporte un grand nombre de nouveautés au rang desquelles on note :</p>
+
+<ul>
+  <li>un installeur et un outil de partitionnement (<a href="https://github.com/openSUSE/libstorage-ng">libstorage-ng</a>) largement remaniés ;</li>
+  <li>un nouveau rôle de serveur transactionnel permettant des mises à jour atomiques ;</li>
+  <li>des images ISO Live pour tester encore plus facilement ;</li>
+  <li>utilisation de Wayland par défaut (mais Xorg reste disponible) ;</li>
+  <li>un <a href="https://www.alionet.org/content.php?801-openSUSE-change-son-%AB-partitionnement-%BB-Btrfs">nouveau partitionnement Btrfs</a> ;</li>
+  <li>firewalld remplace SuSEFirewall ;</li>
+  <li>un nouveau look ;</li>
+  <li>une base de code encore plus proche de la version Enterprise (SLE) et la possibilité de mettre à jour facilement vers celle-ci.</li>
+  <li>le gestionnaire de paquets RPM, qui est mis-à-jour vers la version 4.14.</li>
+</ul>
+
+<h3 id="le-retour-des-lives">Le retour des Lives.</h3>
+
+<p>Après la sortie des images de Leap 15 Beta en mars, le développement de la future version d’openSUSE Leap, numérotée 15, s’est poursuivi en mode <em>rolling release</em> testé par <a href="https://openqa.opensuse.org/">openQA</a>. Le projet a régulièrement publié des images vous permettant de les tester et, grosse surprise, des versions live GNOME et KDE étaient disponibles pour pouvoir tester encore plus facilement !</p>
+
+<h3 id="mise--jour-des-bureaux-et-changement-de-look">Mise à jour des bureaux et changement de look</h3>
+
+<p>Visuellement, le plus gros changement est un nouveau thème, conçu par un certain Stasiek alias <a href="https://lcp.world/">LCP</a>, ainsi que le bureau KDE Plasma 5.12 qui est une version au support étendu (LTS).</p>
+
+<p><img src="https://www.alionet.org/attachment.php?attachmentid=3982&amp;d=1517344581" alt="theme-plasma5.12" /></p>
+
+<p>Gnome Shell, quant à lui, passe en version 3.26.</p>
+
+<h3 id="serveur-transactionnel">Serveur transactionnel</h3>
+
+<p>Ce rôle système inclut un nouveau système de mise à jour qui est capable d’appliquer les mises à jour de manière atomique (en une seule opération) et qui permet de facilement les annuler si cela devient nécessaire.</p>
+
+<p>Réalisé dans le cadre du <a href="https://kubic.opensuse.org/">projet Kubic</a>, ce nouveau système s’appuie sur les snapshots Btrfs et se présente comme une alternative possible au <a href="https://www.projectatomic.io/">projet Atomic</a> (qui s’appuie sur <a href="https://en.wikipedia.org/wiki/OSTree">OSTree</a>).</p>
+
+<h3 id="opensuse-dit-adieu--susefirewall2">openSUSE dit adieu à SuSEfirewall2</h3>
+
+<p><img src="https://www.alionet.org/attachment.php?attachmentid=3989&amp;d=1466361250" alt="firewall" /></p>
+
+<p>La vénérable et historique interface d’openSUSE à iptables laisse sa place à firewalld, un semblable plus moderne. Mais si les installateurs de Tumbleweed et de Leap 15 activent maintenant firewalld par défaut, la transition ne se fait pas automatiquement sur les installations existantes.</p>
+
+<h4 id="susefirewall2-vs-firewalld--quelles-diffrences-">SuSEfirewall2 vs. firewalld : quelles différences ?</h4>
+
+<p>Pas tant de choses que ça dans le principe : ce sont tous les deux des moyens de configurer facilement les fonctions de pare-feu fournies par le noyau Linux. Tous deux créent des règles <a href="https://fr.wikipedia.org/wiki/Iptables">iptables</a>, à partir d’une configuration modifiable via une interface graphique.</p>
+
+<p><img src="https://www.alionet.org/attachment.php?attachmentid=3990&amp;d=1425815173" alt="SuSEfirewall2" /></p>
+
+<p>Firewalld a cependant l’avantage d’offrir une interface <a href="https://fr.wikipedia.org/wiki/D-Bus">D-Bus,</a> permettant l’interaction avec d’autres applications – par exemple <a href="https://fr.wikipedia.org/wiki/NetworkManager">NetworkManager</a> – ainsi qu’une vraie interface en ligne de commande.</p>
+
+<p>En outre, il est utilisé – du moins disponible – sur d’autres distributions GNU/Linux, notamment Fedora, alors que SuSEfirewall2 n’était utilisé, à ma connaissance, qu’au sein de la famille SUSE.</p>
+
+<p>Source: https://www.alionet.org/content.php?808-openSUSE-dit-adieu-%E0-SuSEfirewall2</p>
+
+<h3 id="autour-de-la-distrisution">Autour de la distrisution.</h3>
+
+<h4 id="un-nouveau-look-pour-le-site">Un nouveau look pour le site.</h4>
+
+<p>Le <a href="https://software.opensuse.org/">site de téléchargement</a> bénéficie également d’un rafraîchissement esthétique avec un thème qui se rapproche du thème par défaut de cette future nouvelle version.</p>
+
+<h4 id="open-build-service-obshttpsbuildopensuseorg"><a href="https://build.opensuse.org/">Open Build Service (OBS)</a></h4>
+
+<p>Notre outil de construction qui crée tous nos paquets ainsi que des paquets pour SUSE Linux Enterprise, Arch, Debian, Fedora, Scientific Linux, RHEL, CentOS, Ubuntu et bien plus encore.</p>
+
+<h4 id="openqahttpopenqaopensuseorg"><a href="http://openqa.opensuse.org/">openQA</a></h4>
+
+<p>Outil de test automatisé pour <em>tout</em> système d’exploitation, qui est capable de lire un écran et de contrôler la machine de test de la même manière qu’un utilisateur le ferait.</p>
+
+<h4 id="yasthttpyastopensuseorg"><a href="http://yast.opensuse.org/">YaST</a></h4>
+
+<p><img src="http://yast.opensuse.org/assets/images/yast-logo.png" alt="Yast-logo" />
+Le seul et unique outil complet d’installation et de configuration d’un système Linux prédominant depuis 1996.</p>
+
+<p>YaST est l’outil d’installation et de configuration pour openSUSE et les distributions SUSE Linux Enterprise. Il dispose d’une interface facile à utiliser et de puissantes capacités de configuration.</p>
+
+<p><strong>De l’installation à l’optimisation</strong></p>
+
+<p>YaST est à la fois un installateur extrêmement flexible et un centre de contrôle puissant. C’est un outil polyvalent pour l’informatique.</p>
+
+<p><img src="http://yast.opensuse.org/assets/images/screenshots/screenshot_1.png" alt="Yast installateur" /></p>
+
+<p><strong>Configure tout</strong></p>
+
+<p>YaST inclut des modules pour configurer presque tous les aspects d’un système Linux et fournit un cadre solide pour un développement ultérieur.</p>
+
+<p><img src="http://yast.opensuse.org/assets/images/screenshots/screenshot_2.png" alt="Yast2" /></p>
+
+<p><strong>Une interface complètes et multilibs</strong></p>
+
+<p>YaST propose une interface graphique basée sur <a href="https://en.opensuse.org/SDB:YaST_tricks">libyui</a> c’est à dire, que si vous avez un environnement Qt du layout KDE, vous aurez un Yast en Qt, si vous êtes sur un environnement GTK comme GNOME, Xfce ou Mate, ça sera alors un Yast en GTK. Aussi si vous êtes sans environnement graphique (serveur par exemple), Yast aura une interface <a href="https://fr.wikipedia.org/wiki/Ncurses">Ncurse</a> basée sur un terminal, parfaite pour l’administration à distance.</p>
+
+<p><img src="http://yast.opensuse.org/assets/images/screenshots/screenshot_3.png" alt="Yast-interface" /></p>
+
+<p><strong>Installation sans surveillance</strong></p>
+
+<p>AutoYaST vous permet d’exporter les paramètres de configuration du système et de les installer automatiquement sur des milliers d’autres systèmes.</p>
+
+<p><img src="http://yast.opensuse.org/assets/images/screenshots/screenshot_5.png" alt="Autoyast" /></p>
+
+<h4 id="kiwihttpopensusegithubiokiwi"><a href="http://opensuse.github.io/kiwi/">Kiwi</a></h4>
+
+<p>Créez des images de systèmes Linux pour du déploiement sur du matériel réel, de la virtualisation ou des systèmes de conteneurs comme Docker. Kiwi est notamment utilisé dans <a href="https://studioexpress.opensuse.org/">SUSE Studio Express</a>.</p>
+
+<p>Have fun !</p>
+
+<hr />
+
+<p><a href="https://www.alionet.org/">Communauté francophone openSUSE</a>
+<a href="https://en.opensuse.org/Portal:15.0">Portail openSUSE 15.0 sur opensuse.org</a>
+<a href="https://doc.opensuse.org/release-notes/x86_64/openSUSE/Leap/15.0/">Release notes openSUSE 15.0</a>
+<a href="https://software.opensuse.org/distributions/leap">Obtenir openSUSE Leap 15</a></p>
+
+<hr />
+
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

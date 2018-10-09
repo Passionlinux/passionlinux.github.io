@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Utilisation de MLdonkey</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/03/20160603utilisation-de-mldonkey.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Utilisation de MLdonkey</h1>
+    <p class="post-meta"><time datetime="2016-06-03T09:48:00+02:00" itemprop="datePublished">Jun 3, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="main">
+
+<div class="chapo surlignable">
+
+Mldonkey est un client P2P multi-plateforme, pour le réseau edonkey2000
+mais aussi bittorrent, fasttrack et bien d’autres. Mldonkey est pour moi
+le meilleur client donkey sous linux. Bien moins gourmand que amule, il
+ne nécessite pas d’interface graphique pour continuer à télécharger, et
+il existe de très beaux clients graphique notamment sancho (voir plus
+bas).
+
+</div>
+
+<div class="texte surlignable">
+
+### Installer mldonkey {#outil_sommaire_0 .spip}
+
+Installez le paquet **mldonkey-server** (activez auparavant les dépôts
+universe et multiverse sous Ubuntu, pour debian il n’y a rien a
+faire...) Lors de l’installation une série de questions vous sera posée.
+Répondez tout simplement aux questions en utilisant les choix par
+défauts. Nous configurerons par la suite le démon de façon manuelle.
+NB : En effet lorsque j’ai essayé de configurer mldonkey en utilisant le
+script d’installation du paquet, il semble que mes choix n’aient pas été
+enregistrés. Je préfère donc vous expliquer comment configurer le démon
+manuellement.  
+
+### [ ](http://passiongnulinux.tuxfamily.org/spip/spip.php?article32#outil_sommaire "Sommaire"){.sommaire_ancre}Premier lancement {#outil_sommaire_1 .spip}
+
+Nous venons d’installer mldonkey. Vous ne trouverez pas d’entrée dans le
+menu applications concernant mldonkey puisque c’est un démon qui démarre
+au boot de votre ordinateur. Ensuite vous utiliserez un client graphique
+qui permettra de contrôler ce démon. Pour lancer le démon tapez :
+`sudo /etc/init.d/mldonkey-server restart`{.spip_code dir="ltr"}  
+
+### Lancement automatique {#outil_sommaire_2 .spip}
+
+Afin de ne pas à avoir à lancer le démon à chaque démarrage, il vous
+faut éditer le fichier */etc/default/mldonkey-server* et mettre le
+paramètre **LAUNCH\_AT\_STARTUP** à **true**. Si pour une raison ou pour
+une autre vous voulez couper ou rallumer le démon mldonkey faites :
+**Sous Feisty (en mode utilisateur) :** Pour le démarrer :
+`mlnet &gt; /dev/null 2&gt;&amp;1 &amp;`{.spip_code dir="ltr"} Pour le stopper :
+`sudo killall mlnet`{.spip_code dir="ltr"} **En mode démon :** Pour le
+démarrer : `sudo /etc/init.d/mldonkey-server start`{.spip_code
+dir="ltr"} Pour le stopper : code&gt;sudo /etc/init.d/mldonkey-server
+stop  
+
+### Configuration du démon mldonkey {#outil_sommaire_3 .spip}
+
+### Configuration des répertoires {#outil_sommaire_4 .spip}
+
+Comme tout bon logiciel de P2P, mldonkey a besoin de deux répertoires
+pour fonctionner : \* Un répertoire **temp** dans lequel il stockera les
+fichiers en cours de téléchargement. \* Un répertoire **incoming** dans
+lequel il placera les fichiers téléchargés. Par défaut ces deux
+répertoires se situent dans */var/lib/mldonkey*, ce qui n’est pas très
+pratique. Nous allons donc modifier le démon afin qu’il place ces
+répertoires dans votre dossier personnel. Avant de toucher au fichier de
+configuration du démon nous devons éteindre celui ci :
+`sudo /etc/init.d/mldonkey-server stop`{.spip_code dir="ltr"} Maintenant
+nous allons éditer le fichier */var/lib/mldonkey/downloads.ini*  
+Il faut trouver la ligne contenant les paramètres
+**incoming\_directory** et **temp\_directory**, puis les remplacer par
+les répertoires de votre choix : Ce qui donne par exemple :
+
+<div class="spip_code" dir="ltr">
+
+`temp_directory = "/home/mondossierpersonnel/.mldonkey/temp" (* The directory where downloaded files should be moved after commit *) incoming_directory = "/home/mondossierpersonnel/.mldonkey/fini"`
+
+</div>
+
+Bien sûr nous devons créer ces deux répertoires. **Sous Feisty (en mode
+utilisateur)** Les dossiers se trouve dans
+*/home/mondossierpersonnel/.mldonkey*, le fichier à éditer est alors
+*/home/mondossierpersonnel/.mldonkey/downloads.ini  
+*  
+Trouvez la section pour les fichiers temporaires :
+`temp_directory = "/home/mondossierpersonnel/.mldonkey/temp"`{.spip_code
+dir="ltr"} Puis la section pour les répertoires de partage et de
+classement :
+
+<div class="spip_code" dir="ltr">
+
+` shared_directories = [ {     dirname = "/home/mondossierpersonnel/.mldonkey/shared"    ## dossier partagé strategy = only_directory priority = 0 }; {     dirname = shared strategy = all_files priority = 0 }; {     dirname = "/home/mondossierpersonnel/.mldonkey/incoming"    ## dossier fichiers finis edonkey strategy = incoming_files priority = 0 }; {     dirname = "/home/mondossierpersonnel/.mldonkey/incoming"    ## dossier fichiers finis bittorrent strategy = incoming_directories priority = 0 };] `
+
+</div>
+
+### Configuration des droits {#outil_sommaire_5 .spip}
+
+Pour des raisons de sécurité, le démon *mldonkey* est lancé par
+l’utilisateur *mldonkey* appartenant au groupe *mldonkey*. Pour que ce
+dernier puisse aller écrire dans nos deux répertoires fraîchement crées,
+il faut modifier les droits : On attribue les dossiers de *mldonkey* au
+groupe *mldonkey* :
+`sudo chgrp -R mldonkey /home/mondossierpersonnel/.mldonkey/*`{.spip_code
+dir="ltr"} Enfin on autorise seulement les utilsateurs du groupe
+*mldonkey* à lire et modifier ces répertoires :
+`sudo chmod 660 -R /home/mondossierpersonnel/.mldonkey/*`{.spip_code
+dir="ltr"} Comme l’utilisateur *mldonkey*, appartient également au
+groupe *mldonkey* et que le démon est lancé par l’utilisateur
+*mldonkey*, ce dernier pourra donc lire et écrire dans les répertoires
+définis. **Sous Feisty (en mode utilisateur) cette étape n’est plus
+obligatoire.** Une commande se révèle utile pour vérifier le bon
+positionnement des droits :
+`sudo -u mldonkey /usr/bin/mlnet.`{.spip_code dir="ltr"} Un message
+d’erreur explicite *« check rights »* apparaît si les droits ne
+permettent pas à mldonkey d’écrire dans son répertoire.  
+
+### Installation d’un client graphique {#outil_sommaire_6 .spip}
+
+Comme je l’ai dis mldonkey n’est que le cœur du système de
+téléchargement. Pour pouvoir le piloter facilement il vous faut un
+client graphique qui se connectera au démon et lui enverra des
+commandes. L’avantage est que vous pouvez fermer le client graphique, le
+démon lui, continue à télécharger. Donc vous pouvez fermer votre session
+gnome, et continuer à télécharger. Un autre avantage est que vous pouvez
+configurer un PC dédié uniquement au téléchargement sur lequel tourne le
+démon, et piloter le téléchargement depuis un autre PC, ou même du
+bureau. Donc en résumé par exemple, un PC dans le salon qui fait du
+bruit et qui télécharge, un pc dans la chambre depuis lequel on lance
+les téléchargements et qu’on peut éteindre la nuit. A ce propos,
+mldonkey fourni nativement une **interface web** pour piloter le démon.
+Elle est accessible par défaut sur le port 4080 (vous pouvez le changer
+dans la configuration de mldonkey) de la machine qui héberge le démon
+(vous pouvez donc accéder à votre interface web à l’adresse
+*&lt;http://localhost:4080/&gt;*). Si vous avez défini un mot de passe à
+l’installation, un identifiant/mot de passe vous sera demandé à la
+connexion. L’identifiant est **admin** et le mot de passe est celui que
+vous avez rentré. Si vous voulez l’utilisez à l’extérieur, vous pouvez
+facilement définir un reverse proxy dans apache qui pointera par exemple
+sur le dossier *&lt;http://monsite/mldonkey&gt;*. Comme ca, depuis internet,
+vous pouvez lancer des téléchargements.  
+
+### mlgui {#outil_sommaire_7 .spip}
+
+Le premier client graphique que je vous présente est le plus simple à
+installer.  
+Il suffit d’installer le paquet **mldonkey-gui** Puis lancez le client
+avec la commande : `mlgui`{.spip_code dir="ltr"}  
+
+### Sancho {#outil_sommaire_8 .spip}
+
+Il existe plusieurs interfaces graphiques, ma préférée est
+**[sancho](http://sancho-gui.sourceforge.net/){.spip_out}** Ce dernier
+devrait devenir le futur client graphique officiel à mldonkey. C’est une
+interface gtk2 avec un icône dans le systray. **Installation** Récupérez
+l’archive de **sancho**
+[ici](http://sancho-gui.sourceforge.net/download.phtml#linux-gtk){.spip_out}
+Choisissez la dernière version, aujourd’hui (27/04/2008) c’est :
+**sancho-0.9.4-58-linux-gtk.sh**. Cette version fonctionne sur Hardy
+i386 et x86\_64. Nous supposerons que l’archive est téléchargée dans
+votre dossier personnel. Créez le répertoire d’installation :
+`sudo mkdir /usr/local/sancho`{.spip_code dir="ltr"} Maintenant
+exécutons le script d’installation :
+`sudo sh ~/sancho-0.9.4-58-linux-gtk.sh`{.spip_code dir="ltr"} Le script
+vous demande où le logiciel doit être installé :
+`Extract to directory [<sancho-0.9.4-58-linux-gtk>]:`{.spip_code
+dir="ltr"} Taper donc */usr/local/sancho* Sancho est installé. Nous
+allons lui créer une entrée dans le menu **Applications ? internet.**
+Créez le fichier */usr/share/applications/sancho.desktop* et mettez-y
+les lignes suivantes :
+
+<div class="spip_code" dir="ltr">
+
+`[Desktop Entry] Name=Sancho Comment=Sancho Exec=/usr/local/sancho/sancho Icon=/usr/local/sancho/distrib/sancho-32.xpm Terminal=false Type=Application StartupNotify=false Categories=Application;Network;`
+
+</div>
+
+Les fichiers de configuration de sancho dans votre dossier personnel
+appartiennent à **root** (car vous avez lancé l’installation en tant
+qu’administrateur). Nous allons donc remettre le bon propriétaire
+(vous !) à ces fichiers :
+`sudo chown -R utilisateur:utilsateur ~/.sancho|`{.spip_code dir="ltr"}
+(remplacez utilisateur par votre **login** bien sûr) Vous pouvez
+maintenant démarrer sancho depuis le menu **applications ? internet.**
+**Mettre sancho en français** Récupérer le fichier de traduction
+**sancho\_fr\_FR.properties** et copiez ce fichier dans le répertoire
+*.sancho/* situé dans votre dossier personnel Si vous êtes sous Feisty,
+le fichier est déjà présent après l’installation. Démarrez sancho, allez
+dans **Tools ? Preferences**. Dans la section **sancho:main**, dans
+l’onglet **General**, là où il y a écrit **« Locale specific
+sancho\*.properties file »**, choisissez **fr\_FR** dans le menu
+déroulant puis redémarrez l’application. Vous pouvez d’ailleurs
+supprimer les autres fichiers de langue que vous n’utilisez pas du
+répertoire * /.sancho*  
+Les fichiers de langues sont du layout *sancho\_xx\_XX.properties*  
+par exemple : *sancho\_pl\_PL.properties* pour le polonais **Dernière
+étape : se connecter à un serveur** La dernière étape et de se connecter
+à un serveur pour pouvoir lancer une recherche. Cliquez sur l’onglet
+**serveur**. En haut a droite cliquez sur la planète avec une croix
+verte intitulé **« ajouter un fichier serveur.met »** entrez-y l’adresse
+d’un fichier de serveur .met que vous récupèrerez sur des sites comme
+*&lt;http://ed2k.2x4u.de&gt;* Il devrait aussi récupérer une liste d’autre
+serveurs. **NB** : Il est plus sûr de désactiver les options de
+récupération automatique des serveurs afin d’éviter de recevoir des
+serveurs espions. Dans ce cas une liste de serveurs sûrs doit être
+récupérée en téléchargeant un des fichiers « .met » ci-dessus. Une fois
+connecté lancez une recherche. **Lancement du démon avec l’interface
+graphique Sancho sous Feisty** Pour lancer le démon automatiquement au
+démarrage de Sancho et le couper à la fermeture de Sancho (a la manière
+de Amule) :
+`mlnet -start_gui true -mldonkey_gui /usr/local/sancho/sancho`{.spip_code
+dir="ltr"} Puis vous pouvez simplement lancer **mlnet**, le serveur
+lancera toujours Sancho N’oubliez pas d’autorisez Sancho a couper le
+serveur mldonkey lorsque vous quittez : **outils / préférences** : \*
+optional core executable : mlnet  
+\* cocher Kill spawned core when exiting sancho Pour revenir a la
+configuration par defaut, éditez le fichier
+*/home/mondossierpersonnel/.mldonkey/download.ini* et cherchez la ligne
+**mldonkey\_gui** **Filtrage des IP** Pour Feisty : Vous pouvez vous
+servir d’un **ipfilter.dat** en le placant dans le dossier* /.mldonkey*
+Pour la compatibilité d’un fichier ipfilter.dat : \* récupérer un
+fichier :Ipfilter.dat ;  
+\* éditez ce fichier et supprimer toutes les lignes (avec les \#) avant
+la série de chiffre . Vous pouvez aussi utiliser grep pour filtrer les
+lignes commentées (avec les \#) :
+`grep -v ^# ipfilter.dat &gt; ipfilter.p2p`{.spip_code dir="ltr"} **Ports
+utilisés** Si vous avez installé Sancho, cliquer sur l’onglet console et
+rentrer la commande **portinfo**, le résultat donne pour moi :  
+
+<table class="spip">
+<tbody>
+<tr class="row_odd odd">
+<td>
+Portinfo
+</td>
+</tr>
+<tr class="row_even even">
+<td>
+Network
+</td>
+<td>
+Port
+</td>
+<td>
+Type
+</td>
+</tr>
+<tr class="row_odd odd">
+<td>
+----
+</td>
+</tr>
+<tr class="row_even even">
+<td>
+BitTorrent
+</td>
+<td>
+6882
+</td>
+<td>
+client\_port TCP
+</td>
+</tr>
+<tr class="row_odd odd">
+<td>
+BitTorrent
+</td>
+<td>
+6881
+</td>
+<td>
+tracker\_port TCP
+</td>
+</tr>
+<tr class="row_even even">
+<td>
+Core
+</td>
+<td>
+4080
+</td>
+<td>
+http\_port
+</td>
+</tr>
+<tr class="row_odd odd">
+<td>
+Core
+</td>
+<td>
+4000
+</td>
+<td>
+telnet\_port
+</td>
+</tr>
+<tr class="row_even even">
+<td>
+Core
+</td>
+<td>
+4001
+</td>
+<td>
+gui\_port
+</td>
+</tr>
+<tr class="row_odd odd">
+<td>
+Donkey
+</td>
+<td>
+4662
+</td>
+<td>
+client\_port TCP
+</td>
+</tr>
+<tr class="row_even even">
+<td>
+Donkey
+</td>
+<td>
+4666
+</td>
+<td>
+client\_port UDP
+</td>
+</tr>
+<tr class="row_odd odd">
+<td>
+Donkey
+</td>
+<td>
+14934
+</td>
+<td>
+overnet\_port TCP UDP
+</td>
+</tr>
+<tr class="row_even even">
+<td>
+Donkey
+</td>
+<td>
+4672
+</td>
+<td>
+kademlia\_port UDP
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+Pour changer les ports sous Feisty : ATTENTION : N’éditer pas ces
+fichiers si le démon est lancé. éditez le
+fichier* /.mldonkey/nomduprotocole.ini  
+*  
+avec nomduprotocole : \* Pour Edonkey, Overnet, Kademlia : éditer le
+fichier /home/mondossierpersonnel/.mldonkey/donkey.ini. \* Pour
+Bittorrent : éditer le fichier
+/home/mondossierpersonnel/.mldonkey/bittorent.ini. (?bittorrent.ini)
+etc... **Integration à Firefox** L’extension pour la prise en charge
+directe est disponible pour le protocole edonkey et bittorrent dans ce
+dossier :
+*/usr/share/doc/mldonkey-server/distrib/ed2k\_mozilla/mldonkey\_protocol\_handler-1.8.xpi
+.*  
+
+### Un système d’analyse anti-virus et d’alerte {#outil_sommaire_9 .spip}
+
+Dernier raffinement, vous pouvez vous créer un script (shell, php, perl,
+...) qui sera lancé au démarrage et à la récupération d’un fichier. Cela
+permet d’avertir l’utilisateur, de scanner avec un anti-virus le fichier
+récupéré, et même de le sortir de l’incoming, pour éviter les problèmes
+d’upload. Allez voir dans downloads.ini, jusqu’a la commande
+file\_completed. Finalement, bon téléchargements. Mais n’oubliez pas de
+ne pas télécharger d’oeuvres soumises au droit d’auteur. Il existe des
+millions d’oeuvres libres de droits alors autant en profiter.
+
+&lt;/div&gt;
+
+Voir en ligne : [Documentation
+UBUNTU.FR](http://doc.ubuntu-fr.org/mldonkey){.spip_out}
+
+&lt;/div&gt;
+
+<footer>
+<div class="ps surlignable">
+
+P.-S.
+-----
+
+Attention : Nous vous rappelons qu’il est interdit d’utiliser ce
+logiciel à des fins illégales (piratage, contrefaçon ou toute autre
+activité étant considérée hors-la-loi par les lois en vigueur dans votre
+pays de résidence).
+
+</div>
+
+</footer>
+
+</sancho-0.9.4-58-linux-gtk></div></div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

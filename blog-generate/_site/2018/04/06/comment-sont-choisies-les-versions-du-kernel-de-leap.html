@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Comment sont choisies les versions du kernel de Leap?</title>
+  <meta name="description" content="Je me posais un peu la question dernièrement puisque je trouvait étrange que la future Leap se coltine une version 4.12 du kernel, Sogal nous a fait parvenir...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2018/04/06/comment-sont-choisies-les-versions-du-kernel-de-leap.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Comment sont choisies les versions du kernel de Leap?</h1>
+    <p class="post-meta"><time datetime="2018-04-06T18:41:18+02:00" itemprop="datePublished">Apr 6, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Je me posais un peu la question dernièrement puisque je trouvait étrange que la future Leap se coltine une version 4.12 du kernel, Sogal nous a fait parvenir une superbe explication directement de l’intéressé:</p>
+
+<p><img src="https://www.alionet.org/attachment.php?attachmentid=4019&amp;d=1521209313" alt="1521209313" /></p>
+
+<p>La prochaine version d’openSUSE Leap, numérotée 15, pointe son nez et on sait d’ores et déjà qu’elle bénéficiera du noyau Linux en version 4.12.
+Cela pourrait en étonner plus d’un et on serait en droit de se demander pourquoi un tel choix alors que la version courante du noyau est 4.15 ou si, au court de sa vie, le noyau de Leap 15 pourra être mis à jour afin de ne pas rester avec un noyau jugé trop ancien.</p>
+
+<p>Cette question a été posée sur la liste de diffusion <a href="https://lists.opensuse.org/opensuse-factory/2018-03/msg00133.html">opensuse-factory</a> et un des participants très informé à bien voulu prendre le temps de donner une réponse claire et complète qu’il paraît important de retransmettre. Le texte qui suit en est donc une traduction et une adaptation au format « article » libres.</p>
+
+<h2 id="pourquoi-leap-15-aura-le-noyau-412-au-lieu-de-la-version-414-ou-ultrieure--par-peter-linnell">Pourquoi Leap 15 aura le noyau 4.12 au lieu de la version 4.14 (ou ultérieure) ? (par Peter Linnell)</h2>
+
+<p>Il faut tout d’abord rappeler que la distribution openSUSE Leap bénéficie d’une base de code partagée avec la version professionnelle SLE (Suse Linux Enterprise), base dont le noyau fait partie. À cet égard, il faut beaucoup de temps pour que le noyau obtienne les certifications requises pour fonctionner sur les matériels des clients de Suse et avec les logiciels d’autres éditeurs professionnels. Toutes les étapes permettant une telle certification pour le noyau 4.12 auraient dû être retardées ou bien recommencées pour la version 4.14 si celle-ci avait été choisie en finalité.
+Le travail à fournir afin d’obtenir une telle certification est colossal et coûteux, il nécessite la mobilisation de nombreux ingénieurs et requiert d’avoir à disposition les différents matériels pour lesquels la distribution doit être certifiée.</p>
+
+<p>L’auteur de la réponse initiale rapporte l’exemple du processus de certification d’un serveur layout « lame » et d’une armoire de stockage. Il a fallu pour cela mobiliser 3 ingénieurs durant plusieurs jours, assurer le déplacement au travers des États-Unis de 2 experts SUSE (dont l’auteur) pour un total estimé à plus de 10 000 $. Le tout pour certifier un seul layout de matériel !</p>
+
+<p>Les membres de la communauté openSUSE ne sont sûrement pas tous conscients du genre de matériel pour lequel est certifiée la SLE (SUSE Linux Enterprise) (ndt: et donc le noyau de la Leap) mais il s’en trouve parmi eux de très exotiques et très chers.
+On peut citer deux exemples :</p>
+
+<ol>
+  <li>
+    <p>Les serveurs SAP HANA qui tournent quasi exclusivement sous SLES (SUSE Linux Enterprise Server). Une image système de 32 To peut absorber jusqu’à 5 ou 6 fois ce volume de données compressées et les contenir en mémoire. Nous parlons là de 150 à 180 To de données disponibles en RAM afin de réaliser des analyses en temps réel !
+Pratiquer des tests sur ce genre de monstres nécessite d’une part des semaines d’ingénierie et d’autre part que le fabriquant mette à disposition une machine de plusieurs millions de dollars.
+https://www.hpe.com/us/en/solutions/sap-hana.html</p>
+  </li>
+  <li>
+    <p>Les systèmes SGI, une entreprise rachetée par HPE. Il s’agît de systèmes NUMA (« non uniform memory architecture » ou architecture mémoire non uniforme) pouvant théoriquement gérer jusqu’à 64 To de RAM avec un seul noyau Linux.
+https://www.hpcwire.com/2016/05/11/t…life-sciences/</p>
+  </li>
+</ol>
+
+<p>En ce qui concerne les logiciels, certaines piles logicielles éditées par les fabricants peuvent prendre des semaines pour être certifiées. Les fabricants eux-mêmes peuvent réaliser des tests de résistance ou des contrôles qualité afin de s’assurer que tout est conforme. Après tout, les éditeurs de logiciels fournissent un certain niveau de garantie à leurs clients en ce qui concerne la compatibilité et la stabilité qu’ils se doivent de maintenir. Un problème dans leurs logiciels pourrait entraîner un manque à gagner considérable pour leurs clients.</p>
+
+<p>Donc, du point de vue de l’entreprise, la décision que telle version du noyau sera utilisée met en branle une machinerie complexe, requérant une grande coordination, en interne mais aussi avec les clients et partenaires. Ce genre de décision n’est donc pas pris à la légère.</p>
+
+<p>En tant que membres de la communauté openSUSE, nous avons donc de la chance de bénéficier d’une telle ingénierie. Ce sont littéralement des millions de dollars d’investissement qui, non seulement sont mis à disposition dans Leap, mais qui démontre bien la volonté affirmée de SUSE de voir openSUSE réussir et de l’intérêt que l’entreprise porte à notre communauté.</p>
+
+<p>Pour conclure, il faut rappeler, si besoin, que le noyau, bien qu’en version 4.12 bénéficiera des rétro-portages (« backports ») tout au long de sa durée de vie en vue d’apporter des correctifs et d’améliorer la prise en charge matérielle et logicielle.</p>
+
+<p>Source: https://www.alionet.org/content.php?813-Comment-sont-choisies-les-versions-du-kernel-de-Leap</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

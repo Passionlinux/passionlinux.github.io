@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Handylinux; Debian plus simple qu&#39;Ubuntu ! L&#39;installation d&#39;HandyLinux.</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/05/01/20160501handylinux-debian-plus-simple-quubuntu-partie-2-linstallation-dhandylinux.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Handylinux; Debian plus simple qu'Ubuntu ! L'installation d'HandyLinux.</h1>
+    <p class="post-meta"><time datetime="2016-05-01T20:03:00+02:00" itemprop="datePublished">May 1, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="chapo surlignable">
+
+Dans le [précédent
+article](http://passiongnulinux.tuxfamily.org/?p=13){.ref-post}, je
+découvrais avec vous une distribution, la Handylinux, qui favorise
+**l’accessibilité** pour tous et la **liberté** pour chacun
+**d’évoluer** à son gré. Basée sur **Debian GNU/Linux** avec **XFCE**,
+un environnement de bureau rapide, léger et stable. Aujourd’hui, nous
+verrons ensemble son installation. Une grosse partie si ce n’est la
+totalité est pompé directement dans la documentation de cette
+distribution.  
+<!--more-->
+&lt;/p&gt;
+<div class="texte surlignable">
+
+### Installateur Live comme la cousine Ubuntu {#outil_sommaire_0 .spip}
+
+Le dvd d’installation de cette distribution est un live dvd, qui permet
+d’utiliser/tester une distribution sur un ordinateur sans risques pour
+vos données personnelles et qui permet aussi de tester la compatibilité
+de votre matériel. HandyLinux est “compressée” dans un fichier spécial
+(le squashfs.filesystem) et intégrée dans l’image ISO que vous avez
+téléchargée. C’est ce fichier spécial qui est “décompressé” lors de
+l’utilisation en Live qui sera copié sur votre disque dur lors de
+l’installation. C’est au boot du dvd que l’on peut choisir entre tester
+et installer Handylinux :
+
+![](http://passiongnulinux.tuxfamily.org/spip/local/cache-vignettes/L640xH480/syslinux_liv013e-9dc0a.png?1465243402){width="640"
+height="480"}
+
+Si on décide de lancer le live, notez que HandyLinux fonctionne plus
+lentement en session Live qu’après installation. Que ce soit en live ou
+apres installation nous avons droit a un joli accueil :
+
+![](http://passiongnulinux.tuxfamily.org/spip/local/cache-vignettes/L500xH375/welcomepngw5d56f-b99cc.png?1465243402){width="500"
+height="375"}
+
+Peu importe, on verra ça plus tard, parlons plutôt de son installation,
+pas grand-chose a dire, c’est du connue, c’est simple et efficace.  
+
+### Installer HandyLinux en single-boot {#outil_sommaire_1 .spip}
+
+<div>
+
+Une [vidéo complète
+d’installation](https://player.vimeo.com/video/122423367){.spip_out} est
+disponible pour un aperçu d’une installation de base d’HandyLinux, ** 1
+– Lorsque vous lancez handylinux depuis un DVD ou une clé USB,
+choisissez “Installer Handylinux” depuis le menu d'accueil** :
+<div>
+
+[![menu de démarrage
+handylinux](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/syslinux_install.png?w=600&amp;tok=36a27b "menu de démarrage handylinux"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/syslinux_install.png?id=fr%3Ainstall "fr:install:syslinux_install.png"){.media}
+**2 – L'installation démarre avec le choix du clavier, la détection du
+support et du matériel. Vous n'avez rien à faire jusqu'à l'écran de
+choix du nom de votre ordinateur** : [![choix du
+clavier](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-01-clavier.png?w=600&amp;tok=e343c3 "choix du clavier"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-01-clavier.png?id=fr%3Ainstall "fr:install:handy_install-01-clavier.png"){.media}
+[![détection du
+matériel](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-02-composants.png?w=600&amp;tok=ebea80 "détection du matériel"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-02-composants.png?id=fr%3Ainstall "fr:install:handy_install-02-composants.png"){.media}
+[![choix du nom
+d'hôte](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-03-hostname.png?w=600&amp;tok=ea779d "choix du nom d'hôte"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-03-hostname.png?id=fr%3Ainstall "fr:install:handy_install-03-hostname.png"){.media}
+**3 – Puis renseignez votre nom complet et votre identifiant** (le nom
+que vous utilisez pour vous connecter à votre système) : [![nom complet
+de votre
+utilisateur](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-04-username.png?w=600&amp;tok=b35ab8 "nom complet de votre utilisateur"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-04-username.png?id=fr%3Ainstall "fr:install:handy_install-04-username.png"){.media}
+[![identifiant utilisé pour vous
+connecter](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-05-login.png?w=600&amp;tok=ce23a2 "identifiant utilisé pour vous connecter"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-05-login.png?id=fr%3Ainstall "fr:install:handy_install-05-login.png"){.media}
+**4 – Et votre mot de passe** (deux fois pour confirmer) : [![mot de
+passe](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-06-password.png?w=600&amp;tok=f2295a "mot de passe"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-06-password.png?id=fr%3Ainstall "fr:install:handy_install-06-password.png"){.media}
+**5 – Démarrent ensuite la détection des disques durs et la phase de
+partitionnement. Si vous débutez, je vous conseille le “*partitionnement
+assisté*” qui va automatiquement utiliser la totalité de votre disque.
+Si vous désirez préserver une partition de données ou utiliser plusieurs
+systèmes d'exploitation, choisissez “*manuel*” et suivez la procédure
+décrite dans le chapitre <span class="curid">[multi-boot](https://handylinux.org/wiki/doku.php/fr/install#installer_handylinux_en_multi-boot "fr:install"){.wikilink1}</span>**
+: [![schéma de
+partitionnement](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-07-partition-methode.png?w=600&amp;tok=8028a3 "schéma de partitionnement"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-07-partition-methode.png?id=fr%3Ainstall "fr:install:handy_install-07-partition-methode.png"){.media}
+**6 – L'installeur vous demande de choisir le disque dur sur lequel sera
+installé HandyLinux** : [![choix du disque
+interne](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-08-partition-disque.png?w=600&amp;tok=03dde6 "choix du disque interne"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-08-partition-disque.png?id=fr%3Ainstall "fr:install:handy_install-08-partition-disque.png"){.media}
+**7 – L'écran de vérification des partitions s'affiche alors, vous
+offrant la chance de modifier le partitionnement assisté** :
+[![vérification des
+partitions](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-09-partition-schema.png?w=600&amp;tok=d63cf0 "vérification des partitions"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-09-partition-schema.png?id=fr%3Ainstall "fr:install:handy_install-09-partition-schema.png"){.media}
+**8 – Puis s'affiche le dernier écran de confirmation avant le
+partitionnement du disque sélectionné. <span class="wrap_em">*ATTENTION*
+!! après cette étape, les données présentes sur le disque seront
+effacées !!</span>** **Si vous souhaitez poursuivre l'installation, clic
+sur “Oui” puis “Continuer”** : [![confirmation du
+partitionnement](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-10-partition-confirm.png?w=600&amp;tok=9c7d78 "confirmation du partitionnement"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-10-partition-confirm.png?id=fr%3Ainstall "fr:install:handy_install-10-partition-confirm.png"){.media}
+**9 – Si vous avez confirmé l'étape précédente, le partitionnement est
+appliqué et le système s'installe sur le disque** : [![installation -
+copie des
+données](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-11-copie_datas.png?w=600&amp;tok=12851d "installation - copie des données"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-11-copie_datas.png?id=fr%3Ainstall "fr:install:handy_install-11-copie_datas.png"){.media}
+**10 – Configuration du système après la copie des données. Vous n'avez
+rien à faire** : [![gestion des
+paquets](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-12-config.png?w=600&amp;tok=baeacf "gestion des paquets"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-12-config.png?id=fr%3Ainstall "fr:install:handy_install-12-config.png"){.media}
+**11 – L'installation de GRUB : choisissez le périphérique
+d'installation** : [![installation de
+GRUB](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-13-grub.png?w=600&amp;tok=971b4c "installation de GRUB"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-13-grub.png?id=fr%3Ainstall "fr:install:handy_install-13-grub.png"){.media}
+**12 – C'est alors la fin de l'installation avec la mise en place des
+utilisateurs, des mots de passe et l'exécution du script de
+post-installation** : [![message de fin
+d'installation](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-14-finish.png?w=600&amp;tok=b1186e "message de fin d'installation"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-14-finish.png?id=fr%3Ainstall "fr:install:handy_install-14-finish.png"){.media}
+[![fin de
+l'installation](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/handy_install-15-end.png?w=600&amp;tok=680037 "fin de l'installation"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/handy_install-15-end.png?id=fr%3Ainstall "fr:install:handy_install-15-end.png"){.media}
+**13 – Une fois l'installation terminée, votre ordinateur redémarre
+automatiquement sur votre nouveau système HandyLinux et l'écran de GRUB
+s'affiche** : [![redémarrage et
+GRUB](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/grub.png?w=600&amp;tok=35d05a "redémarrage et GRUB"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/grub.png?id=fr%3Ainstall "fr:install:grub.png"){.media}
+**14 – HandyLinux se lance alors et vous parvenez à l'écran de connexion
+géré par LightDM. Entrez votre identifiant et votre mot de passe** :
+[![identifiant de
+connexion](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/lightdm-identifiant.png?w=600&amp;tok=da9460 "identifiant de connexion"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/lightdm-identifiant.png?id=fr%3Ainstall "fr:install:lightdm-identifiant.png"){.media}
+[![mot de
+passe](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/lightdm-password.png?w=600&amp;tok=95e5f6 "mot de passe"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/lightdm-password.png?id=fr%3Ainstall "fr:install:lightdm-password.png"){.media}
+<div class="wrap_center wrap_centeralign wrap_info plugin_wrap" style="width: 90%;">
+
+Avant la version 2.3 , la connexion était gérée par **slim** et
+ressemblait à ça :
+
+</div>
+
+[![identifiant de
+connexion](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/slim-identifiant.png?w=600&amp;tok=2f0638 "identifiant de connexion"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/slim-identifiant.png?id=fr%3Ainstall "fr:install:slim-identifiant.png"){.media}
+[![mot de
+passe](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/slim-password.png?w=600&amp;tok=d94273 "mot de passe"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/slim-password.png?id=fr%3Ainstall "fr:install:slim-password.png"){.media}
+**15 – Et c'est parti pour votre aventure sur GNU/Linux !** :
+[![Bienvenue sur
+HandyLinux](https://handylinux.org/wiki/lib/exe/fetch.php/fr/install/welcome.png?w=600&amp;tok=ac3a0d "Bienvenue sur HandyLinux"){.mediacenter
+width="600"}](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/welcome.png?id=fr%3Ainstall "fr:install:welcome.png"){.media}
+[Une fois authentifié, votre bureau s’affiche et la fenêtre de
+présentation se
+lance](https://handylinux.org/wiki/lib/exe/detail.php/fr/install/welcome.png?id=fr%3Abegin){.spip_out}.
+
+-   **Si vous êtes débutant**, prenez dix secondes pour la lire car elle
+    liste les principaux outils d’HandyLinux.
+-   **Si vous êtes un grand débutant**, cliquez sur le bouton “je
+    débute...” situé en bas de la fenêtre, en pressant le bouton gauche
+    de votre souris. Votre navigateur internet ira ouvrir [une page
+    d’initiation](https://handylinux.org/wiki/doku.php/fr/initiation){.spip_out}
+    depuis votre système (pas besoin d’internet). Laissez-lui quelques
+    secondes au premier lancement
+    ![:)](http://passiongnulinux.tuxfamily.org/plugins/auto/couteau_suisse/v1.9.10/img/smileys/sourire.png ":)"){.no_image_filtrer
+    .format_png width="19" height="19"} .
+
+<div>
+
+<div class="texte surlignable">
+
+ Comme on peut voire, Handylinux est très simple et bien documenté. De
+plus tout est fait pour aider le débutant comme des documents en ligne,
+une documentation disponible dans le dossier documents de l’utilisateur,
+un forum avec un fonctionnement inédit et aussi un développement
+collégiale c’est a dire ce n’est pas uniquement les développeurs qui
+décident mais tous les utilisateurs décident et votent pour
+l’intégration d’une fonctionnalité. [Dans le prochain
+article](http://passiongnulinux.tuxfamily.org/?p=59){.ref-post}, je
+parlerais du pourquoi et du comment j’ai découvert ou plutôt j’ai décidé
+de mettre une handylinux.  
+Il y aura d’autres articles sur cette distribution.
+
+</div>
+
+Voir en ligne :
+[install](https://handylinux.org/wiki/doku.php/fr/install){.spip_out}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<p> </p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Activer le Multiarch sous debian</title>
+  <meta name="description" content="Qu’est ce que Multi-arch ? {#Qu.27est_ce_que_Multi-arch_.3F}">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/06/03/20160603activer-le-multiarch-sous-debian.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Activer le Multiarch sous debian</h1>
+    <p class="post-meta"><time datetime="2016-06-03T12:38:00+02:00" itemprop="datePublished">Jun 3, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="quest-ce-que-multi-arch--qu27estcequemulti-arch3f">Qu’est ce que Multi-arch ? {#Qu.27est_ce_que_Multi-arch_.3F}</h1>
+
+<p><span id="line-8" class="anchor"></span><span id="line-9" class="anchor"></span></p>
+
+<p>Multi-arch vous permet d’installer des bibliothèque de paquets venant de
+différentes architectures sur un même système. C’est très utile dans
+beaucoup de cas, cela permet le plus souvent d’installer à la fois des
+logiciels 32 et 64 bits sur la même machine, tout en conservant une
+résolution des dépendances automatique correcte. Notez que cela ne
+permet pas d’installer simultanément plusieurs versions d’une même
+« application » dans de multiples architectures. <span id="line-10" class="anchor"></span><span id="line-11" class="anchor"></span></p>
+
+<h1 id="Concepts">Concepts</h1>
+
+<p><span id="line-12" class="anchor"></span><span id="line-13" class="anchor"></span></p>
+
+<p>Il y a une architecture dite architecture courante, et affichée par la
+commande <code class="highlighter-rouge">dpkg --print-architecture</code>. Elle est définie dans le paquet
+dpkg actuellement installé. <span id="line-14" class="anchor"></span><span id="line-15" class="anchor"></span></p>
+
+<p>(Notez qu’ici « architecture » désigne une Interface Binaire-Programme
+(ABI, Application Binary Interface), et non une Architecture de Jeu
+d’Instruction (ISA, Instruction Set Architecture). Ainsi, par exemple, «
+armel » et « armhf » sont bien des « architectures » différentes car,
+bien qu’elles utilisent (presque) le même jeu d’instruction, elles se
+reposent sur des ABI différentes pour l’appel de fonctions depuis les
+bibliothèques. <span id="line-16" class="anchor"></span><span id="line-17" class="anchor"></span></p>
+
+<p>Il est maintenant possible de se référer à un paquet via
+« paquet:architecture » à peu près partout où il était possible de le
+faire avant avec « paquet » — nous avons donc libc:i386 et libc:amd64 —
+malheureusement, les sémantiques comprises par dpkg et apt étant
+légèrement différentes, les résultats obtenus via ces deux interfaces
+peuvent être légèrement différents. Cependant, préciser l’architecture
+d’un paquet devrait toujours être sûr et sans ambigüité, quant au nom
+« paquet » sans précision, il se réfère au paquet dans l’architecture
+courante d’apt. <span id="line-18" class="anchor"></span><span id="line-19" class="anchor"></span></p>
+
+<p>Les autres architectures disponibles sont visibles grâce à la commande
+<code class="highlighter-rouge">dpkg --print-foreign-architectures</code>. Dpkg gèrera les paquets de ces
+architectures ainsi que ceux de l’architecture de la machine. <span id="line-20" class="anchor"></span><span id="line-21" class="anchor"></span></p>
+
+<p>Il y a un entête « Multi-Arch » inscrit dans les méta-données pour
+chaque paquet multi-architectures concerné. <span id="line-22" class="anchor"></span><span id="line-23" class="anchor"></span></p>
+
+<p>Les paquets existants fonctionnent très bien dans un environnement
+multi-architectures, mais pour bénéficier d’une co-installation ou d’un
+arbre de dépendances multi-architectures, beaucoup de paquets ont besoin
+d’être rendus compatibles en multi-architectures. <span id="line-24" class="anchor"></span><span id="line-25" class="anchor"></span></p>
+
+<ul>
+  <li>Pour un paquet inchangé vous pouvez choisir quelle version
+d’architecture du paquet vous souhaitez installer (par exemple, «
+amd64 » ou « i386 »). <span id="line-26" class="anchor"></span><span id="line-27" class="anchor"></span></li>
+  <li>Si un paquet est étiqueté « Multi-Arch: foreign », alors il peut
+satisfaire la dépendance d’un paquet d’une architecture différente
+(par exemple, « make:amd64 » permettra de satisfaire une dépendance
+faite pour un paquet de n’importe quelle architecture). <span id="line-28" class="anchor"></span><span id="line-29" class="anchor"></span></li>
+  <li>Pour activer plus d’une version d’architecture d’un paquet en même
+temps (généralement les librairies et les paquets dev-) les fichiers
+ont besoin d’être déplacés pour ne pas avoir de conflit. Ces paquets
+sont eux aussi tagués « Multi-Arch: same ». <span id="line-30" class="anchor"></span><span id="line-31" class="anchor"></span></li>
+</ul>
+
+<p>Des paquets étiquetés « Multi-Arch : allowed » existent aussi. Ils
+peuvent être traités à la fois comme « :same » ou comme « :foreign » en
+fonction des paquets dont ils dépendent. <span id="line-32" class="anchor"></span><span id="line-33" class="anchor"></span></p>
+
+<p>Le plus souvent, les responsables des paquets travaillent sur leur
+distribution en commençant par installer les paquets les plus utiles
+pour la rendre multi-architectures. Voir <a href="https://wiki.ubuntu.com/MultiarchSpec" title="UbuntuWiki">multiarch
+spec</a>{.interwiki} et
+<a href="https://wiki.debian.org/Multiarch/Implementation">howto implementation</a>
+pour avoir des détails sur le fonctionnement actuel et pour savoir
+comment mettre à jour les paquets et tirer avantage de cette
+fonctionnalité. <span id="line-34" class="anchor"></span><span id="line-35" class="anchor"></span></p>
+
+<!--more-->
+
+<h2 id="prrequis-pr2baok-requis">Prérequis {#Pr.2BAOk-requis}</h2>
+
+<p><span id="line-36" class="anchor"></span><span id="line-37" class="anchor"></span></p>
+
+<p>Vous avez besoin d’un dpkg et d’un apt compatible multi-architectures.
+<span id="line-38" class="anchor"></span><span id="line-39" class="anchor"></span></p>
+
+<p>Pour dpkg de Debian cela est présent depuis la version 1.16.2. Dans
+Ubuntu cela est possible depuis natty (v1.15.8.10ubuntu1). Vérifiez en
+regardant si la commande <code class="highlighter-rouge">dpkg --print-foreign-architectures</code> est
+comprise. <span id="line-40" class="anchor"></span><span id="line-41" class="anchor"></span></p>
+
+<p>Apt est compatible multi-architectures s’il supporte
+<code class="highlighter-rouge">-o APT::Architectures</code>. Cette prise en charge est disponible depuis la
+version 0.8.13 comprise. Cependant, il y a eu de nombreuses
+améliorations à la prise en charge de la multi-architecture et de
+nombreuses corrections de bugs dans les versions suivantes de apt
+(certaines requises par Debian dpkg 1.16.2 pour activer le
+multi-architecture), comme la prise en charge de apt-get build-dep -a
+cross-dependency. Par conséquent, le plus récent est le plus performant
+en général, au moins jusqu’à la version 0.9.4. <span id="line-42" class="anchor"></span><span id="line-43" class="anchor"></span></p>
+
+<p>Avant apt 0.9 dans Debian, dpkg peut ne pas fonctionner (mais seulement
+si le multi-architecture est activé) pendant les mises à jour lorsqu’on
+ne lui indique pas l’architecture du paquet qu’apt doit configurer.
+(« dpkg: error: –configure needs a valid package name but
+‘gcc-4.7-base’ is not: ambiguous package name ‘gcc-4.7-base’ with more
+than one installed instance »). <code class="highlighter-rouge">dpkg --configure -a</code> devrait débloquer
+cela. <span id="line-44" class="anchor"></span><span id="line-45" class="anchor"></span></p>
+
+<h1 id="Utilisation">Utilisation</h1>
+
+<p><span id="line-46" class="anchor"></span><span id="line-47" class="anchor"></span></p>
+
+<h2 id="Configurer_les_architectures">Configurer les architectures</h2>
+
+<p><span id="line-48" class="anchor"></span><span id="line-49" class="anchor"></span></p>
+
+<p>Pour ajouter une architecture supplémentaire (dans Debian depuis dpkg
+1.16.2) : <span id="line-50" class="anchor"></span><span id="line-51" class="anchor"></span><span id="line-52" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>dpkg --add-architecture &lt;arch&gt;
+</code></pre></div>
+
+<p><span id="line-53" class="anchor"></span>Par exemple : <span id="line-54" class="anchor"></span><span id="line-55" class="anchor"></span><span id="line-56" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>dpkg --add-architecture armhf
+</code></pre></div>
+
+<p><span id="line-57" class="anchor"></span><span id="line-58" class="anchor"></span></p>
+
+<p>Notez que rien ne va réellement changer avant que vous fassiez <span id="line-59" class="anchor"></span><span id="line-60" class="anchor"></span><span id="line-61" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get update
+</code></pre></div>
+
+<p>pour mettre à jour la liste des paquets disponibles.<span id="line-62" class="anchor"></span><span id="line-63" class="anchor"></span></p>
+
+<p>Pour supprimer une architecture <span id="line-64" class="anchor"></span><span id="line-65" class="anchor"></span><span id="line-66" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>dpkg --remove-architecture &lt;arch&gt;
+</code></pre></div>
+
+<p><span id="line-67" class="anchor"></span><span id="line-68" class="anchor"></span></p>
+
+<p>Les architectures disponibles pour dpkg sont stockées dans
+<code class="highlighter-rouge">/var/lib/dpkg/arch</code>. <span id="line-69" class="anchor"></span><span id="line-70" class="anchor"></span></p>
+
+<p>Notez qu’avant d’effacer une architecture, vous devez en effacer tous
+les paquets correspondants : <span id="line-71" class="anchor"></span><span id="line-72" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get purge ".*:&lt;arch&gt;"
+</code></pre></div>
+
+<p><span id="line-75" class="anchor"></span><span id="line-76" class="anchor"></span></p>
+
+<p>Notez que le dpkg d’Ubuntu dans Natty (1.16.0~ubuntu7 (reports
+1.15.8.10)), Oneiric et Precise (1.16.1.2ubuntu7) utilise une syntaxe
+différente : <span id="line-77" class="anchor"></span><span id="line-78" class="anchor"></span><span id="line-79" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>echo "foreign-architecture armhf" &gt;&gt; /etc/dpkg/dpkg.cfg.d/architectures
+</code></pre></div>
+
+<p><span id="line-80" class="anchor"></span><span id="line-81" class="anchor"></span></p>
+
+<h2 id="Configurez_les_sources_apt">Configurez les sources apt</h2>
+
+<p><span id="line-82" class="anchor"></span><span id="line-83" class="anchor"></span></p>
+
+<p>Par défaut, apt utilise le jeu d’architectures remonté par dpkg, et
+toutes architectures non qualifiées présentes dans les lignes du fichier
+<code class="highlighter-rouge">/etc/apt/sources.list</code>, qui représente souvent ce que vous souhaitez.
+Cela peut être modifié en utilisant APT::Architecture=&lt;arch&gt; pour
+forcer l’architecture par défaut ou avec
+APT::Architectures=”&lt;arch&gt; &lt;arch&gt;”. <span id="line-84" class="anchor"></span><span id="line-85" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>deb [arch=amd64,i386] http://uk.archive.ubuntu.com/ubuntu/ quantal main universe deb [arch=armel,armhf] http://ports.ubuntu.com/ubuntu-ports quantal main universe
+</code></pre></div>
+
+<p><span id="line-89" class="anchor"></span><span id="line-90" class="anchor"></span></p>
+
+<p>Identifier les lignes deb-src avec une architecture n’aurait aucun sens.
+<span id="line-91" class="anchor"></span><span id="line-92" class="anchor"></span></p>
+
+<p>Notez : Il y a un bug dans la version de apt &gt;=0.9.7 et &lt;0.9.7.2,
+ce qui signifie que mettre « arch=armel,armhf » sur une seule ligne ne
+fonctionne pas ; vous avez besoin de 2 entrées différentes. <span id="line-93" class="anchor"></span><span id="line-94" class="anchor"></span></p>
+
+<p>N’oubliez pas d’exécuter <span id="line-95" class="anchor"></span><span id="line-96" class="anchor"></span><span id="line-97" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get update
+</code></pre></div>
+
+<p><span id="line-98" class="anchor"></span></p>
+
+<p>après avoir ajouté une architecture. <span id="line-99" class="anchor"></span><span id="line-100" class="anchor"></span></p>
+
+<h1 id="installerdsinstaller-des-paquets-installer2fd2baok-sinstallerdespaquets">Installer/désinstaller des paquets {#Installer.2Fd.2BAOk-sinstaller_des_paquets}</h1>
+
+<p><span id="line-101" class="anchor"></span><span id="line-102" class="anchor"></span></p>
+
+<p>Pour installer un paquet ne provenant pas de l’architecture par défaut,
+spécifiez juste cette architecture dans la ligne de commande : <span id="line-103" class="anchor"></span><span id="line-104" class="anchor"></span><span id="line-105" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get install package:architecture
+</code></pre></div>
+
+<p><span id="line-106" class="anchor"></span><span id="line-107" class="anchor"></span></p>
+
+<p>Les dépendances de ce paquet s’installeront automatiquement pour les
+bonnes architectures (même architecture pour les bibliothèques,
+architecture de la machine pour les autres dépendances) <span id="line-108" class="anchor"></span>exemple : <span id="line-109" class="anchor"></span><span id="line-110" class="anchor"></span><span id="line-111" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get install links:i386
+</code></pre></div>
+
+<p><span id="line-112" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>dpkg -i package_version_architecture.deb dpkg -r package:architecture
+</code></pre></div>
+
+<p><span id="line-116" class="anchor"></span><span id="line-117" class="anchor"></span></p>
+
+<h2 id="installation-de-larbre-des-dpendances-croises-installationdel27arbredesd2baok-pendancescrois2baok-es">Installation de l’arbre des dépendances croisées {#Installation_de_l.27arbre_des_d.2BAOk-pendances_crois.2BAOk-es}</h2>
+
+<p><span id="line-118" class="anchor"></span><span id="line-119" class="anchor"></span></p>
+
+<p>Pour installer les dépendances à la construction d’un paquet avant une
+compilation croisée <span id="line-120" class="anchor"></span><span id="line-121" class="anchor"></span><span id="line-122" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get build-dep -a &lt;arch&gt; &lt;package&gt;
+</code></pre></div>
+
+<p><span id="line-123" class="anchor"></span><span id="line-124" class="anchor"></span></p>
+
+<p>Cela fonctionne lorsque tous les « outils » dont le paquet dépend sont
+étiquetés <code class="highlighter-rouge">Multi-Arch: foreign</code>, que toutes les dépendances qui sont
+nécessaires sur la machine de compilation, et que les paquets de
+développement qui sont nécessaires à la fois sur l’architecture CIBLE et
+sur l’architecture de COMPILATION sont coinstallable (« Multi-Arch: same
+»), et que toutes les exceptions aux règles par défaut sont étiquetées
+<code class="highlighter-rouge">package:any</code> ou <code class="highlighter-rouge">package:native</code> dans le paquet source. Ce processus
+est indirect. <span id="line-125" class="anchor"></span><span id="line-126" class="anchor"></span></p>
+
+<p>Lorsque cela ne fonctionne pas, vous pouvez souvent obtenir les
+dépendances avec une commande manuelle de apt-get : <span id="line-127" class="anchor"></span>Par exemple, à la place de <span id="line-128" class="anchor"></span><span id="line-129" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get build-dep -a armhf acl
+</code></pre></div>
+
+<p>, faites<span id="line-130" class="anchor"></span><span id="line-131" class="anchor"></span><span id="line-132" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get install autoconf automake debhelper gettext libtool libattr1-dev:armhf
+</code></pre></div>
+
+<p><span id="line-133" class="anchor"></span><span id="line-134" class="anchor"></span></p>
+
+<p>Les détails de la résolution des dépendances sont sur
+<a href="https://wiki.ubuntu.com/MultiarchCross" title="UbuntuWiki">MultiarchCross</a>{.interwiki}.
+<span id="line-135" class="anchor"></span><span id="line-136" class="anchor"></span></p>
+
+<h2 id="installer-les-bibliothques-de-compatibilit-android-sdk-installerlesbiblioth2baog-quesdecompatibilit2baokandroidsdk">Installer les bibliothèques de compatibilité Android SDK {#Installer_les_biblioth.2BAOg-ques_de_compatibilit.2BAOk_Android_SDK}</h2>
+
+<p><span id="line-137" class="anchor"></span><span id="line-138" class="anchor"></span></p>
+
+<p>Certains utilisateurs utilisant le SDK Android pourraient rencontrer des
+problèmes en essayant de lancer build-tools ou platform-tools sur une
+plateforme amd64. Comme substitut pour <code class="highlighter-rouge">ia32-libs</code>, les utilisateurs
+devraient s’en sortir en installant simplement les bibliothèques
+suivantes : <span id="line-139" class="anchor"></span><span id="line-140" class="anchor"></span></p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>dpkg --add-architecture i386 apt-get update apt-get install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+
+Voir en ligne : Multiarch
+</code></pre></div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

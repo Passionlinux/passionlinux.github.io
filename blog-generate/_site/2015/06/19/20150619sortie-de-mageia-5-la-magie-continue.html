@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sortie de Mageia 5, la magie continue !</title>
+  <meta name="description" content="Mageia est un système d’exploitation libre basé sur GNU/Linux, et portéen tant que projet communautaire par l’association loi 1901Mageia.Org, cettedernière é...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2015/06/19/20150619sortie-de-mageia-5-la-magie-continue.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Sortie de Mageia 5, la magie continue !</h1>
+    <p class="post-meta"><time datetime="2015-06-19T19:25:00+02:00" itemprop="datePublished">Jun 19, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Mageia est un système d’exploitation libre basé sur GNU/Linux, et porté
+en tant que projet communautaire par l’association loi 1901
+<a href="https://www.mageia.org/fr/about/constitution/">Mageia.Org</a>, cette
+dernière étant constituée de contributeurs élus. Le cinquième tour de
+Mageia est sortie le <strong>vendredi 19 juin 2015</strong>, proposant les dernières
+évolutions techniques, de nouvelles versions des bureaux et logiciels,
+tout en préservant la stabilité d’usage, et en conservant ses outils
+spécifiques de contrôle du système. Chaque version de Mageia est
+supportée 18 mois. Les mises à niveau entre versions sont supportées et
+aisées. Mageia a démarré en septembre 2010 comme un <a href="https://linuxfr.org/news/mandriva-linux-et-apr%C3%A8s-mageia">fork de Mandriva
+Linux</a>.
+Elle a réuni des centaines de passionnés et plusieurs sociétés à travers
+le monde, qui coproduisent l’infrastructure, la distribution Mageia
+elle-même, sa documentation, sa diffusion et son assistance, à l’aide de
+logiciels libres. Depuis son lancement, elle a publié quatre versions
+majeures stables en <a href="https://linuxfr.org/news/sortie-de-mageia-1">juin
+2011</a>, <a href="https://linuxfr.org/news/la-magie-est-de-nouveau-la-mageia-2-est-disponible">mai
+2012</a>,
+<a href="https://linuxfr.org/news/sortie-de-mageia-3">mai 2013</a> et <a href="https://linuxfr.org/news/sortie-de-la-mageia-4">février
+2014</a>. Mageia est et
+reste référencée parmi les dix distributions les plus consultées sur
+<a href="http://distrowatch.com/">Distrowatch</a>. <img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569612e6f72672f672f6d656469612f6c6f676f2f6d61676569612d323031332e706e67/mageia-2013.png" alt="logo
+mageia" /></p>
+
+<h2 id="quoi-de-neuf">Quoi de neuf ?</h2>
+
+<h3 id="base-du-systme">Base du système</h3>
+
+<h4 id="architectures">Architectures</h4>
+
+<p>Le code non utilisé gérant les architectures Alpha/IA64/PPC/SPARC a été
+retiré. Mageia se concentre sur l’architecture Intel, en 64 bits, et
+continue de fournir des compilations pour la version 32bits.</p>
+
+<h4 id="bios--efi-amorage-bios--efi-amorage">BIOS &amp; EFI, amorçage {#bios–efi-amorçage}</h4>
+
+<p>L’intégration de la gestion des BIOS EFI est opérationnelle via les
+<em>media</em> Live64 ou DVD64. L’intégration a été semée d’embûches, retardant
+la sortie de cette version. Grub2 (qui est optionnel) fonctionne mieux
+maintenant, et détecte les autres systèmes d’exploitation afin de les
+ajouter.</p>
+
+<h4 id="noyau-linux">Noyau Linux</h4>
+
+<p>Mageia 5 embarque le noyau Linux 3.19 qui dispose dans cette version du
+support du DMA-BUF et de la gestion “fences” (nécessaire pour une bonne
+prise en charge
+d’<a href="http://fr.wikipedia.org/wiki/Optimus_%28NVIDIA%29">Optimus</a> &amp;
+powerplay). Tout le matériel géré par ce noyau est fonctionnel et
+utilisable, notamment côté portables Toshiba. De gros progrès ont été
+reportés, ainsi que pour les écrans tactiles utilisant <em>atmel_mxt_ts</em>.
+Les tablettes Wacom et les pavés tactiles Synaptics fonctionnent
+maintenant mieux au cours de l’installation (<a href="https://bugs.mageia.org/show_bug.cgi?id=11524">bogue
+11524</a>).</p>
+
+<h4 id="nouveaux-pilotes-nvidia">Nouveaux pilotes NVIDIA</h4>
+
+<p>NVIDIA a abandonné la prise en charge pour son pilote le plus récent de
+la gamme suivante de puces : GeForce 8xxx, 9xxx et 100 à 415. En
+conséquence, un nouveau paquet NVIDIA a été créé pour ces cartes,
+maintenant appelé nvidia340. L’intégration pour ces cartes a été ajoutée
+à drakx11/XFdrake permettant une détection automatique du pilote
+approprié à votre matériel. De plus, si vous réalisez une mise à niveau,
+la configuration X.Org sera automatiquement ajustée par le service
+harddrake au premier démarrage.</p>
+
+<h4 id="partitions--systmes-de-fichiers-partitions--systmes-de-fichiers">Partitions &amp; systèmes de fichiers {#partitions–systèmes-de-fichiers}</h4>
+
+<p>Le partitionnement GPT est maintenant utilisé par défaut, au lieu du
+disque complet LVM pour les disques supérieurs à 4 To. Btrfs est
+désormais pris en charge comme système de fichiers (mais ext4 reste
+celui par défaut). En le sélectionnant pour la partition <code class="highlighter-rouge">/boot</code> (ou <code class="highlighter-rouge">/</code>
+sans partition boot séparée), Grub2 sera automatiquement sélectionné et
+configuré.</p>
+
+<h4 id="systme-dinitialisation">Système d’initialisation</h4>
+
+<p>Systemd est fourni dans sa version
+<a href="http://lists.freedesktop.org/archives/systemd-devel/2014-October/024662.html">217</a>
+qui signe l’abandon des derniers outils sysvinit historiques.</p>
+
+<h3 id="rpm-urpm--gestion-de-paquets">RPM, URPM &amp; Gestion de paquets</h3>
+
+<p>RPM a été mis à niveau en version
+<a href="http://rpm.org/wiki/Releases/4.12.0">4.12.0.1</a>.</p>
+
+<h4 id="nouvelle-gestion-des-suggestions">Nouvelle gestion des suggestions</h4>
+
+<p>RPM apporte maintenant une prise en charge officielle des paquets
+suggérés, qui diffère de la mise en œuvre précédente. Les paquets
+utilisent dorénavant la nouvelle balise <em>Recommends</em> au lieu de
+l’ancienne balise <em>Suggests</em>. Enfin, le format des fichiers de synthèse
+dans les <em>media</em> a été légèrement modifié.</p>
+
+<h4 id="nouveau-gnrateur-de-dpendances">Nouveau générateur de dépendances</h4>
+
+<p>Pendant quelques années, RPM a pris en charge deux façons de générer les
+dépendances lors de la construction de paquets :</p>
+
+<ul>
+  <li>l’ancienne, dite générateurs <em>externes</em></li>
+  <li>la nouvelle, dite générateurs <em>internes</em></li>
+</ul>
+
+<p>La plupart des distributions ont basculé sur les nouveaux générateurs
+<em>internes</em>, mais Mageia utilisait toujours les anciens générateurs
+<em>externes</em>. La version 5 se met à la page avec de nombreux avantages à
+la clé comme :</p>
+
+<ul>
+  <li>La construction des paquets est plus rapide</li>
+  <li>La compatibilité des fichiers .spec avec les technologies Fedora
+(&amp; Suse) s’en trouve améliorée</li>
+  <li>Les dépendances d’OCaml et d’autres technologies sont automatiques</li>
+</ul>
+
+<p>Pour de plus amples explications, vous pouvez lire :</p>
+
+<ul>
+  <li><a href="http://www.rpm.org/wiki/PackagerDocs/DependencyGenerator">RPM Dependency
+Generator</a> ;</li>
+  <li><a href="http://laiskiainen.org/blog/?p=35">A Tale of Three Dependency
+Generators</a>;</li>
+  <li><a href="http://rpm.org/wiki/Releases/4.9.0">RPM 4.9.0 Release Notes</a> .</li>
+</ul>
+
+<p>Le nouveau comportement a aussi demandé une <a href="http://fedoraproject.org/wiki/Packaging:AutoProvidesAndRequiresFiltering">modification du mécanisme
+d’exclusion de
+dépendances</a>.</p>
+
+<h4 id="urpm">Urpm</h4>
+
+<p>Une limite codée en dur, empêchant la mise à jour de mga4 vers mga5 en
+raison de certains paquets ayant une liste longue de plus de 64 000
+caractères, a été corrigée. Gurpmi va maintenant exécuter drakbug
+lorsqu’il se bloque ou rencontre des erreurs de segmentation, afin
+d’obtenir des rapports de bogue plus explicites. Les options urpmi
+inhérentes aux dépendances ont été renommées (<code class="highlighter-rouge">--no-suggests</code> devient
+<code class="highlighter-rouge">--no-recommends</code>) Les utilisateurs ont donc toujours à leur convenance
+cette possibilité de n’installer que le strict minimum, la distribution
+s’efforçant de réduire les dépendances nécessaires.</p>
+
+<h3 id="traduction--documentations">Traduction &amp; Documentations</h3>
+
+<h4 id="localisation-l10n--internationalisation-i18n">Localisation (l10n) / Internationalisation (i18n)</h4>
+
+<p>Firefox et Thunderbird ont été modifiés pour installer automatiquement
+les bons paquets de langue <code class="highlighter-rouge">-l10n-xx</code> selon le paquet de langue installé
+<code class="highlighter-rouge">locales-xx</code>. Si plusieurs paquets de langues <code class="highlighter-rouge">locales-xx</code> sont
+installés, le bon paquet devrait être sélectionné suivant le langage
+principal configuré pour le système. Le paquet <code class="highlighter-rouge">man-pages-de</code> pour
+l’allemand a été corrigé : il contient maintenant plus de 530 pages de
+manuel au lieu de 0 comme précédemment (Merci à Mario Blaettermann pour
+le rapport et la correction de bogue).</p>
+
+<h4 id="documentation-officielle">Documentation officielle</h4>
+
+<p>Tous les paquets <code class="highlighter-rouge">mageia-doc-installer-*</code> et <code class="highlighter-rouge">mageia-doc-mcc-*</code>
+localisés ont été fignolés pour utiliser la capture d’écran
+correspondante à la langue du système. Les textes d’aide en ligne pour
+le programme d’installation traditionnel (non-Live) sont maintenant
+disponibles dans plus de 20 langues. Les textes d’aide pour les boutons
+d’aide dans le Centre de Contrôle Mageia <code class="highlighter-rouge">mageia-doc-mcc*</code> sont
+maintenant disponibles en plus de 15 langues.</p>
+
+<h3 id="bureaux--environnements-graphiques">Bureaux &amp; Environnements graphiques</h3>
+
+<p>L’assistant <em>MageiaWelcome</em> démarre automatiquement dans la langue de
+l’utilisateur au lancement d’un bureau pour aider à configurer et à
+utiliser Mageia permettant d’installer les dernières mises à jour, les
+codecs audios/vidéos et plein d’autres bonnes choses…
+<img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6d616765696177656c636f6d65312e706e67/mageiawelcome1.png" alt="MageiaWelcome" title="Source : http://www.mageialinux-online.org/upload/mageiawelcome1.png" />
+<img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6d616765696177656c636f6d65322e706e67/mageiawelcome2.png" alt="MageiaWelcome2" title="Source : http://www.mageialinux-online.org/upload/mageiawelcome2.png" />
+<img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6d616765696177656c636f6d65332e706e67/mageiawelcome3.png" alt="MageiaWelcome3" title="Source : http://www.mageialinux-online.org/upload/mageiawelcome3.png" />
+<img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6d616765696177656c636f6d65342e706e67/mageiawelcome4.png" alt="MageiaWelcome4" title="Source : http://www.mageialinux-online.org/upload/mageiawelcome4.png" />
+<img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6d616765696177656c636f6d65352e706e67/mageiawelcome5.png" alt="MageiaWelcome5" title="Source : http://www.mageialinux-online.org/upload/mageiawelcome5.png" /></p>
+
+<h4 id="x-window-system-x11">X Window System (X11)</h4>
+
+<p>Mageia 5 embarque X.Org 1.16.4</p>
+
+<h4 id="kde-sc">KDE SC</h4>
+
+<p>KDE SC 4.14 est fourni.
+<img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6b64655f64353866362e706e67/kde_d58f6.png" alt="KDE" title="Source : http://www.mageialinux-online.org/upload/kde_d58f6.png" />
+KDE 4.14 est dédié à la mémoire de Volker Lanz. Il fournit une
+apparence, un ressenti et des fonctionnalités familières avec la
+stabilité solide comme le roc des dernières versions à support long
+terme de l’environnement de bureau Plasma (4.11.12) et des applications
+du dernier KDE SC (4.14). La couche KDE Telepathy offre des
+fonctionnalités comme le chiffrement Off-the-Record (OTR) pour la
+messagerie instantanée, la prise en charge de nombreux protocoles et un
+jeu d’éléments graphiques pour l’environnement Plasma. Les applications
+utilisant la couche multimédia sont maintenant basées sur la version 1.0
+de GStreamer, permettant une réduction notable des dépendances. Mageia
+accorde un soin particulier à ce bureau.</p>
+
+<h4 id="kf5">KF5</h4>
+
+<p>Plasma 5.1 &amp; KDE <a href="https://www.kde.org/info/kde-frameworks-5.0.0.php">Frameworks 5
+(en)</a> en version 5.5.
+est également de la partie. Il est installable uniquement avec les
+medias en ligne.</p>
+
+<h4 id="gnome">GNOME</h4>
+
+<p>GNOME 3.14 est fourni. Voir <a href="https://linuxfr.org/news/gnome-3-14-rebat-les-cartes">GNOME 3.14 rebat les
+cartes</a> <img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6d6761355f36346269745f676e6f6d652e706e67/mga5_64bit_gnome.png" alt="Mageia 5
+GNOME
+3.14" title="Source : http://www.mageialinux-online.org/upload/mga5_64bit_gnome.png" />
+Nous utilisons maintenant le thème standard Adwaita au lieu de
+Oxygen-gtk.</p>
+
+<h4 id="lxde">LXDE</h4>
+
+<p><img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6c7864652e706e67/lxde.png" alt="lxde" title="Source : http://www.mageialinux-online.org/upload/lxde.png" />
+LXDE est disponible en version 0.99. Cet environnement peut être
+installé à partir du DVD (installateur classique).</p>
+
+<h4 id="xfce">XFCE</h4>
+
+<p><img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f786663652e706e67/xfce.png" alt="xfce" title="Source : http://www.mageialinux-online.org/upload/xfce.png" />
+Cet environnement peut être installé dans sa dernière version 4.12.1 à
+partir du DVD (installateur classique) ou du DVD double architecture.
+<a href="https://linuxfr.org/news/xfce-4-12-est-la">Xfce 4.12 est là !</a></p>
+
+<h4 id="lxqt-remplaant-razorqt">LXQt (remplaçant RazorQt)</h4>
+
+<p><img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6c7871742e706e67/lxqt.png" alt="lxqt" title="Source : http://www.mageialinux-online.org/upload/lxqt.png" />
+LXQt en version 0.9.0 est le successeur de RazorQt. Il le remplace
+pendant la mise à niveau depuis Mageia 4. Pour plus d’information,
+vérifiez également
+l’<a href="https://wiki.mageia.org/en/Mageia_5_Errata#LXQt_.26_RazorQt">Errata</a>.
+Il est installable uniquement avec les <em>media</em> en ligne.</p>
+
+<h4 id="mate">Mate</h4>
+
+<p><img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f6d6174652e706e67/mate.png" alt="mate" title="Source : http://www.mageialinux-online.org/upload/mate.png" />
+Cet environnement peut être installé en version 1.8 à partir du DVD
+(installateur classique).</p>
+
+<h4 id="cinnamon">Cinnamon</h4>
+
+<p><img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f63696e6e616d6f6e2e706e67/cinnamon.png" alt="cinnamon" title="Source : http://www.mageialinux-online.org/upload/cinnamon.png" />Cet
+environnement peut être installé en version 2.4.5 à partir du DVD
+(installateur classique).</p>
+
+<h4 id="enlightenment">Enlightenment</h4>
+
+<p><img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f656e6c69676874656e6d656e742e706e67/enlightenment.png" alt="Enlightenment" title="Source : http://www.mageialinux-online.org/upload/enlightenment.png" />
+Cet environnement est livré dans sa version E18 basée sur les
+bibliothèques Enlightenment Foundation.</p>
+
+<h4 id="gestionnaires-lgers-de-fentres">Gestionnaires légers de fenêtres</h4>
+
+<p>Mageia 5 fournit aussi une multitude de gestionnaires de fenêtres petits
+et efficaces comme : afterstep, awesome, dwm, fluxbox, fvwm2,
+fvwm-crystal, i3, icewm, jwm, lightdm, matchbox, openbox, pekwm, sugar,
+swm, ou windowmaker.</p>
+
+<h4 id="applications-bureautiques">Applications bureautiques</h4>
+
+<ul>
+  <li>LibreOffice a été mis à jour en <a href="https://wiki.documentfoundation.org/ReleaseNotes/4.4/fr">version
+4.4</a></li>
+  <li>Calligra en 2.8.7</li>
+  <li>Abiword en 3.0.0</li>
+  <li>Gnumeric en 1.12.20</li>
+</ul>
+
+<h4 id="navigateur-internet--apps-web">Navigateur internet &amp; apps web</h4>
+
+<p>Firefox et Thunderbird sont dans leurs dernières versions ESR. <img src="https://img.linuxfr.org/img/687474703a2f2f7777772e6d61676569616c696e75782d6f6e6c696e652e6f72672f75706c6f61642f636170747572655f64755f323031355f30365f32315f30315f35375f30302e706e67/capture_du_2015_06_21_01_57_00.png" alt="Firefox
+31.6
+ESR" title="Source : http://www.mageialinux-online.org/upload/capture_du_2015_06_21_01_57_00.png" />
+Dans les dépôts on trouve facilement chaussure à son pied :
+<a href="http://fr.wikipedia.org/wiki/Transmission_%28logiciel%29">Transmission</a>,
+<a href="http://fr.wikipedia.org/wiki/Deluge_%28logiciel%29">Deluge</a>,
+<a href="http://fr.wikipedia.org/wiki/QBittorrent">qBittorrent</a>,
+<a href="http://fr.wikipedia.org/wiki/KTorrent">KTorrent</a>…</p>
+
+<ul>
+  <li>Les identifiants d’utilisateurs sont maintenant créés avec un UID à
+partir de 1000 au lieu de 500 auparavant, puisque c’est le choix de
+la majorité des nouvelles distributions ;</li>
+  <li><a href="https://handbrake.fr/features.php">Handbrake</a>, un convertisseur
+vidéo libre, a finalement été ajouté à nouveau dans Mageia. C’est
+maintenant possible car il n’inclut plus les encodeurs faac
+et fdk-aac. Il prend en charge l’encodage x265 ;</li>
+  <li>Le convertisseur vidéo <a href="http://www.linuxrising.org/">Transmageddon</a>
+prend en charge l’<a href="http://fr.wikipedia.org%C2%A0;/wiki/Video_Acceleration_API">accélération matérielle
+VAAPI</a>.</li>
+  <li><a href="http://oferkv.github.io/phototonic/">Phototonic</a> un lecteur et
+organiseur d’images, rapide, léger et à l’aspect Qt/C++ a
+été ajouté.</li>
+  <li>freshplayerplugin a été ajouté - c’est une surcouche qui permet à
+Firefox d’utiliser la dernière extension du lecteur flash
+pepperflash, à télécharger manuellement car elle vient seulement
+avec Google Chrome et Mageia ne peut pas l’embarquer par défaut.
+Pour plus de détails voir <a href="https://forums.mageia.org/en/viewtopic.php?f=41&amp;t=8568">ce sujet de
+forum</a> (en
+anglais), qui offre un script qui télécharge automatiquement la
+dernière version de l’extension pepperflash (c’est nécessaire
+seulement si vous utilisez Firefox sans installer Google Chrome) ;</li>
+  <li>Le paquet mailcap a été complétement mis à jour et synchronisé avec
+Fedora ;</li>
+  <li>Radio amateur - Les ajouts à la sélection de logiciels radio dans
+cette version sont :
+<a href="http://sourceforge.net/projects/xdxclusterclient/">xdx</a>,
+<a href="http://freedv.org/tiki-index.php">freedv</a>,
+<a href="http://chirp.danplanet.com/projects/chirp/wiki/Home">chirp</a> et
+<a href="http://www.qsl.net/kd2bd/splat.html">splat</a> ;</li>
+  <li>SDR <a href="http://gqrx.dk/">gqrx</a> a été ajouté pour compléter <a href="http://fr.wikipedia.org/wiki/GNU_Radio">Gnu
+Radio</a> et offre un accès
+facile au monde des logiciels Radio. Prise en charge incluse d’une
+vaste gamme de matériels SDR ;</li>
+  <li>Grâce à Juan Luis Baptiste, les images officielles de docker pour
+Mageia 3 et 4 sont maintenant disponibles sur le site officiel
+de docker. Pour plus de détails voir <a href="https://ml.mageia.org/wwsympa-wrapper.fcgi/arc/dev/2014-10/msg00196.html">ce
+poste</a>
+sur la liste de diffusion des développeurs Mageia. Docker et Docker
+Registry sont aussi empaquetés pour Mageia 5, ce qui vous permet
+d’utiliser et de gérer vos conteneurs.</li>
+</ul>
+
+<h3 id="paquets-obsoltes">Paquets obsolètes</h3>
+
+<ul>
+  <li>postgresql9.0, postgresql9.1 et postgresql9.2 ont été abandonnés ;
+Mageia 5 fournit postgresql9.3 et postgresql9.4. Si vous utilisez
+l’un des anciens paquets sur Mageia 4, assurez-vous de sauvegarder
+vos bases de données avant la mise à niveau, de sorte que vous
+puissiez les restaurer une fois votre système à jour ;</li>
+  <li>Les paquets gwibber et couchdb ont été abandonnés, ils n’étaient pas
+maintenus et inutilisables. le <a href="https://blogs.gnome.org/kenvandine/">service
+GNOME</a> peut être un bon
+remplacement pour gwibber ;</li>
+  <li>Openstack a été abandonné car il n’était pas maintenu et contenait
+de nombreux problèmes de sécurité non résolus ;</li>
+  <li>ruby-rails a été abandonné car il n’était pas maintenu ;</li>
+  <li>wings3d a été abandonné car il ne fonctionne pas sous Mageia 5 et
+les paquets Erlang nécessaires sont manquants ;</li>
+  <li>zarafa a été abandonné par manque de retour sur les problèmes de
+sécurité (<a href="https://bugs.mageia.org/show_bug.cgi?id=14993">Voir bug
+14993</a>) ;</li>
+  <li>Les bibliothèques C standard inutilisées ont été abandonnées : musl,
+klibc, uClibc (uniquement glibc &amp; dietlibc sont
+maintenant fournies).</li>
+</ul>
+
+<h3 id="problmes-connus-et-rapports-de-bogues">Problèmes connus et rapports de bogues</h3>
+
+<p>Vous pouvez utiliser <a href="https://bugs.mageia.org/">notre bugzilla</a>, mais
+s’il vous plaît, consultez les
+<a href="https://wiki.mageia.org/en/Mageia_5_Errata">Errata</a> avant de signaler
+un bug. Si vous n’avez pas encore de compte Mageia, vous pouvez en créer
+un à l’adresse <a href="https://identity.mageia.org/">https://identity.mageia.org/</a>. Si vous ne savez pas
+comment rapporter un bogue, <a href="https://wiki.mageia.org/en/Bugzilla#How-to_report_a_bug%7C">consultez le guide
+(en)</a>.</p>
+
+<h2 id="valeurs-sres--stabilit-valeurs-sres--stabilit">Valeurs sûres &amp; Stabilité {#valeurs-sûres–stabilité}</h2>
+
+<h3 id="dpts-en-ligne-de-mageia">Dépôts en ligne de Mageia</h3>
+
+<p>Les paquets de Mageia sont répartis dans trois dépôts/<em>media</em> suivant la
+licence. Le dépôt <strong>Core</strong> (cœur) est constitué des paquets essentiels
+ou spécifique à la distribution et de tous les logiciels entièrement
+libres qu’elle propose. L’ensemble des <em>media</em> <em>Core</em> est <strong>actif</strong> par
+défaut. Le dépôt <strong>NonFree</strong> (non-libre) comprend des paquets qui sont
+gratuits et redistribuables, mais à sources fermées (pilotes
+propriétaires des cartes graphiques NVIDIA et AMD/ATI, des
+micrologiciels pour certaines cartes wi-fi, etc). L’ensemble des <em>media</em>
+<em>nonfree</em> (<em>nonfree release</em> et <em>nonfree updates</em>) est configuré mais
+<strong>désactivé</strong> par défaut. Le dépôt <strong>Tainted</strong> (contaminé, entaché)
+comprend les paquets sous différentes licences, libres et non libres. Le
+principal critère est une infraction possible aux brevets et droits
+d’auteur (copyright) dans certains pays (par exemple les codecs
+multimédia nécessaires pour lire des fichiers audio/vidéo de différents
+layouts, les paquets nécessaires pour lire les DVD vidéo du commerce…)  ;
+l’ensemble des <em>media</em> <em>tainted</em> est configuré, mais <strong>désactivé</strong> par
+défaut, c’est-à-dire qu’il est à consentement préalable, donc vérifiez
+vos lois locales avant de redistribuer les paquets provenant de
+<em>tainted</em> (mais tout utilisateur peut les installer). Ce dépôt est à
+Mageia, ce que le dépôt RPM Fusion est à Fedora. <em>Sur un système 64bits,
+le dépôt 32bits est aussi ajouté. Si les dépôts nonfree et/ou tainted
+64bits sont activés, les dépôts 32bits correspondants seront activés
+automatiquement (ils peuvent être nécessaires pour des paquets comme
+Skype©, par exemple)</em></p>
+
+<h3 id="centre-de-contrle-mageia">Centre de Contrôle Mageia</h3>
+
+<p>Le Centre de Contrôle Mageia (MCC ou drakconf) facilite la gestion et la
+configuration du matériel, du système et des services. Ce centre de
+contrôle est disponible au travers d’une interface centrale regroupant
+tout les modules, mais aussi sous formes de modules indépendants, et
+enfin en interface pour terminal. <img src="https://img.linuxfr.org/img/687474703a2f2f617263686976652e6f70656e6d616e64726976612e6f72672f77696b692f66722f696d616765732f632f63352f43656e7472655f64655f636f6e74722543332542346c655f4d616e64726976615f74657874652e706e67/Centre_de_contr%C3%B4le_Mandriva_texte.png" alt="Le Centre de Contrôle en mode
+semi-graphique
+(console)." title="Source : http://archive.openmandriva.org/wiki/fr/images/c/c5/Centre_de_contr%C3%B4le_Mandriva_texte.png" /></p>
+
+<h4 id="utilisation">Utilisation</h4>
+
+<p>Il permet de configurer une grande partie de son système Mageia, de
+manière simple et conviviale. Il est composé de plusieurs modules
+organisés en onglets. Tous les modules peuvent aussi être lancés de
+manière autonome, sans nécessairement passer par le centre de contrôle
+Mageia, pourvu que l’entrée de menu existe pour ce module, ou que l’on
+connaisse la commande à taper dans une console. Le Centre de Contrôle
+agit sur le cœur du système et les changements peuvent avoir un effet
+pour tous les utilisateurs de la machine. C’est pourquoi il nécessite
+les droits administrateurs (ou droits root) et demande donc le mot de
+passe de l’utilisateur root si nécessaire (c’est-à-dire si l’on est pas
+root).</p>
+
+<h4 id="gestion-des-logiciels">Gestion des logiciels</h4>
+
+<p>Drakrpm (ou rpmdrake) est l’interface graphique de gestion des paquets
+logiciels, permettant la gestion des canaux, l’installation, la mise à
+jour, la désinstallation, la consultation des descriptions et la
+recherche. Pour en savoir plus, voir la documentation de
+<a href="https://doc.mageia.org/mcc/3/fr/content/rpmdrake.html">rpmdrake</a>.</p>
+
+<h4 id="utilisation-de-drakrpm">Utilisation de Drakrpm</h4>
+
+<p>Ce gestionnaire de logiciel est un des principaux outils de Mageia. Il
+vous permet d’installer les logiciels sous forme de paquets, de les
+mettre à jour, et de les désinstaller à votre gré. Tous les paquets sont
+rangés par catégorie dans la barre latérale à gauche. À chaque
+démarrage, le gestionnaire met à jour la liste des paquets disponibles
+(appelés <em>media</em>) à partir des serveurs de Mageia. Un système de filtres
+vous permet de n’afficher que certains paquets : soit vous n’affichez
+que les applications (par défaut), soit vous n’affichez que des mises à
+jour disponibles. Vous pouvez également afficher uniquement les paquets
+installés ou qui ne le sont pas, y compris pendant une recherche. Vous
+pouvez également rechercher soit par nom de paquet, soit dans les
+résumés de descriptions, soit dans les descriptions complètes des
+paquets, soit dans les noms de fichiers inclus dans les paquets.
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f72706d6472616b65312e706e67/rpmdrake1.png" alt="rpmdrake1" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/rpmdrake1.png" />
+Cet outil se trouve dans le Centre de Contrôle de Mageia, onglet
+« Gestion des logiciels », icône « Installer et désinstaller des
+logiciels ».</p>
+
+<ol>
+  <li>Filtre de layout de paquet : Il vous permet de n’afficher que certains
+layouts de paquets. Au premier démarrage il n’affiche que
+les applications. Vous pouvez afficher soit tous les paquets avec
+les dépendances et les librairies, soit uniquement des groupes de
+paquets, soit les applications seulement, soit les mises à jour
+seulement, soit des paquets rétro-portés de versions supérieures de
+Mageia Linux ;</li>
+  <li>Filtre d’état de paquet : Ce filtre vous permet soit de n’afficher
+que les paquets installés, soit les paquets qui ne sont pas
+installés seulement, soit tous les paquets qu’ils soient installés
+ou non ;</li>
+  <li>Mode de recherche : Cliquez sur la loupe pour rechercher parmi : les
+noms des paquets, leurs résumés, leurs descriptions complètes ou les
+fichiers inclus dans tous les paquets ;</li>
+  <li>Champ de recherche : Entrez dans ce champ un ou plusieurs mots clés.
+Si vous souhaitez utiliser plus d’un mot clé, utilisez un ‘|’ entre
+les mots clés. Par exemple, si vous recherchez mplayer et xine en
+même temps, tapez mplayer | xine ;</li>
+  <li>Effacer : Ce bouton vous permet d’effacer d’un clic tout mot clé
+rentré dans le champ de recherche ;</li>
+  <li>Liste des catégories : Ce panneau latéral regroupe toutes les
+catégories et sous catégories des logiciels disponibles ;</li>
+  <li>Panneau de description : Ce panneau affiche le nom du paquet, son
+résumé et sa description complète. Il fourni de nombreuses
+informations sur l’élément sélectionné. Il permet également
+d’afficher des détails précis sur le paquet, les fichiers contenus
+dans le paquet, ainsi qu’un historique des derniers changement
+effectués par le mainteneur du paquet.</li>
+</ol>
+
+<p>Une fois les filtres correctement paramétrés, le paquet peut être trouvé
+par catégorie (dans la zone 6 ci-dessus) ou par nom/résumé/description
+(dans la zone 4). Une liste de paquets répondant à la requête et, ne
+l’oubliez pas, aux media choisis est affichée avec les indicateurs de
+statut précisant si le paquet est installé/pas installé/une mise à jour…
+Pour changer ce statut, cocher ou décocher la case devant le nom du
+paquet et cliquer sur <code class="highlighter-rouge">Appliquer</code>.</p>
+
+<h4 id="maintenir--jour">Maintenir à jour</h4>
+
+<p>Pour mettre à jour, on utilise le module <strong>drakrpm-update</strong>. Il peut se
+lancer depuis le Centre de Contrôle ou en console en tapant
+drakrpm-update ou
+<a href="https://doc.mageia.org/mcc/3/fr/content/MageiaUpdate.html">MageiaUpdate</a>.
+Il permet de mettre à jour l’ensemble des applications et paquets
+installés, et installe donc les paquets les plus récents disponibles
+parmi les <em>media</em> configurés.
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f4d61676569615570646174652e706e67/MageiaUpdate.png" alt="MageiaUpdate" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/MageiaUpdate.png" />
+<strong>Matériel</strong>
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f6d63632d68617264776172652e706e67/mcc-hardware.png" alt="mcc-hardware" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/mcc-hardware.png" />
+<strong>Réseau et Internet</strong>
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f6d63632d6e6574776f726b2e706e67/mcc-network.png" alt="mcc-network" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/mcc-network.png" />
+<strong>Système</strong>
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f6d63632d73797374656d2e706e67/mcc-system.png" alt="mcc-system" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/mcc-system.png" />
+<strong>Partages réseau</strong>
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f6d63632d6e6574776f726b2d73686172696e672e706e67/mcc-network-sharing.png" alt="mcc-network-sharing" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/mcc-network-sharing.png" />
+<strong>Disques locaux</strong>
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f6d63632d6c6f63616c6469736b732e706e67/mcc-localdisks.png" alt="mcc-localdisks" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/mcc-localdisks.png" />
+<strong>Sécurité</strong>
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f6d63632d73656375726974792e706e67/mcc-security.png" alt="mcc-security" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/mcc-security.png" />
+<strong>Démarrage</strong>
+<img src="https://img.linuxfr.org/img/68747470733a2f2f646f632e6d61676569612e6f72672f6d63632f332f66722f636f6e74656e742f696d616765732f6d63632d626f6f742e706e67/mcc-boot.png" alt="mcc-boot" title="Source : https://doc.mageia.org/mcc/3/fr/content/images/mcc-boot.png" /></p>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="media-dinstallation"><em>Media</em> d’installation</h3>
+
+<p>Trois layouts de <em>media</em> sont disponibles : DVD 32 bits, DVD 64 bits, DVD
+DualArch. Ce dernier contient un choix précis et restreint de paquets,
+proposant ses bibliothèques en 32 &amp; 64 bits, et ayant comme bureau Xfce.
+Ces <em>media</em> sont gravables sur support optique ou copiables sur un
+disque USB. Ils proposent le lancement du système d’installation complet
+et classique, en interface graphique ou en interface ncurses. Cet
+installateur prend aussi en charge les recettes
+<a href="http://members.shaw.ca/mandrake/drakx/HTML/index.html">Autoinstall</a>,
+permet une installation en mode <em>oem</em> personnalisé, est capable de
+réaliser une installation en mode braille, ou encore d’utiliser une
+ligne série.</p>
+
+<h3 id="media-live"><em>Media</em> Live</h3>
+
+<p>Les <em>media</em> <em>Live</em> sont déclinés en huit variantes suivant la taille (CD
+et DVD), l’architecture matérielle (32 et 64 bits) et l’environnement de
+bureau (KDE et Gnome). Ils permettent tous l’installation simplifiée.</p>
+
+<h3 id="installation-par-le-rseau-filaire">Installation par le réseau filaire</h3>
+
+<p>Quatre mini <em>media</em> (entre 30 &amp; 80 Mo, 32 ou 64 bits, avec ou sans
+firmwares non libres) sont préparés pour ceux qui préfèrent une
+installation réseau (filaire). Ils permettent donc l’installation par
+internet ou depuis votre réseau, ce dernier pouvant comprendre
+simplement un fichier iso monté et partagé ou votre propre serveur
+d’installation. Ils supportent également les recettes <em>AutoInstall</em>.</p>
+
+<h2 id="mise--niveau-depuis-mageia-4">Mise à niveau depuis Mageia 4</h2>
+
+<p>La mise à niveau d’une Mageia version 4 vers une version 5 est supportée
+de plusieurs manières. Avant de mettre à niveau :</p>
+
+<ul>
+  <li>S’assurer vous que Mageia 4 soit parfaitement à jour ;</li>
+  <li>Prendre connaissance de la page des <a href="https://wiki.mageia.org/fr/Mageia_5_Errata#Probl.C3.A8mes_de_Mise_.C3.A0_Niveau%7C">problèmes
+connus</a>
+et sauvegarder les données importantes peut être utile. Si des
+dépôts tiers, tels que ceux de Google, ont été ajoutés lors de
+l’utilisation de Mageia 4, inclure <code class="highlighter-rouge">/etc/urpmi/urpmi.cfg</code> dans les
+« données importantes ». Le contenu de ce fichier peut ensuite être
+utilisé pour ajouter à nouveau les dépôts tiers, après la mise
+à niveau.</li>
+</ul>
+
+<p><em>La mise à niveau de Mageia 4 vers Mageia 5 n’est pas possible depuis
+les media live, ces derniers copiant simplement leur contenu sur le
+disque</em>.</p>
+
+<h3 id="avec-les-media-cd--dvd">Avec les <em>media</em> CD &amp; DVD</h3>
+
+<p>Vous pouvez utiliser le DVD de Mageia 5 pour faire une installation mais
+aussi pour faire une mise à niveau de la version précédente. Pour mettre
+à niveau :</p>
+
+<ul>
+  <li>Téléchargez l’image ISO depuis la <a href="http://mageia.org/fr/downloads/">page de
+téléchargement</a> de Mageia et
+gravez-la sur un DVD, ou installez-la sur une clé USB ; pour plus de
+détails sur ce point, jetez un œil à <a href="https://wiki.mageia.org/en/Installation_Media"><em>media</em> d’installation
+disponibles</a> ;</li>
+  <li>Démarrez sur le DVD et sélectionnez « Installer Mageia 5 » depuis le
+chargeur de démarrage dans le menu ;</li>
+  <li>Sélectionnez l’option de <a href="http://doc.mageia.org/installer/5/fr/content/selectInstallClass.html">Mise à
+jour</a>
+dans l’installeur (programme d’installation).</li>
+</ul>
+
+<h3 id="avec-internet">Avec Internet</h3>
+
+<h3 id="en-graphique">En graphique</h3>
+
+<p>L’applet de notification des mises à jour vous notifiera qu’une nouvelle
+version de Mageia est disponible et vous demandera si vous souhaitez
+faire la mise à niveau. Si vous acceptez, la mise à niveau se déroulera
+sans autre intervention. Si vous avez désactivé l’applet, ou si elle ne
+tourne plus de manière automatique pour une raison quelconque, vous
+pouvez lancer la mise à niveau soit par l’interface graphique
+(<strong>mgaonline</strong>), soit en ligne de commande (via <code class="highlighter-rouge">urpmi</code>). Les deux
+méthodes sont détaillées ci-après.</p>
+
+<h3 id="en-ligne-de-commande">En ligne de commande</h3>
+
+<p>Vous pouvez aussi faire la mise à niveau en utilisant urpmi à partir de
+votre émulateur de terminal.</p>
+
+<ul>
+  <li>Supprimer toutes les sources existantes des <em>media</em> sur votre
+système en exécutant cette commande en tant qu’utilisateur root dans
+un terminal : ` su urpmi.removemedia -a `</li>
+  <li>Ajouter les sources en ligne de Mageia 5, soit ;</li>
+  <li>En utilisant la méthode de LA LISTE DES MIROIRS (qui sélectionnera
+automatiquement un miroir en fonction de votre situation
+géographique) :
+` su urpmi.addmedia –distrib –mirrorlist ‘http://mirrors.mageia.org/api/mageia.5.$ARCH.list’ `</li>
+</ul>
+
+<p>(la variable $ARCH est soit i586 ou x86_64)</p>
+
+<ul>
+  <li>Ou utiliser un miroir de <em>media</em> spécifique : su urpmi.addmedia
+–distrib Vous pouvez récupérer la variable <code class="highlighter-rouge">mirror_url</code> en
+utilisant <a href="http://mirrors.mageia.org/distrib">l’application web des miroirs
+Mageia</a></li>
+  <li>Pour finir, commencer la mise à niveau :
+` su urpmi –replacefiles –auto-update –auto `</li>
+  <li>Il est préférable d’exécuter la commande ci-dessus une seconde fois,
+afin de s’assurer que tout les paquets ont bien été mis à jour.</li>
+</ul>
+
+<p>Pour plus d’informations, consultez le <a href="https://doc.mageia.org/installer/4/fr/content/index.html">manuel
+d’installation</a>.</p>
+
+<h2 id="mageia-cest-vous">Mageia c’est vous !!</h2>
+
+<p>Mageia est régie par un <a href="https://www.mageia.org/fr/about/code-of-conduct/">code de
+conduite</a> permettant
+de coopérer efficacement dans une atmosphère positive. Elle est
+organisée en équipes (traducteurs, développeurs, packageurs, testeurs
+[QA], communicants, etc.) qu’il est facile de rejoindre grâce à un
+système d’accompagnement des nouveaux contributeurs. Mais même en dehors
+de toute équipe, utiliser Mageia, en parler autour de soi, remonter les
+problèmes éventuels ou encore donner à l’association sont autant de
+manières de contribuer. Quelles que soient vos compétences, rendez-vous
+sur le site de la distribution pour <a href="http://www.mageia.org/fr/contribute/">contribuer à
+Mageia</a> et intégrer la
+communauté !</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

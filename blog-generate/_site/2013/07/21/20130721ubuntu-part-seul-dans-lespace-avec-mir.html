@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ubuntu part seul dans l&#39;espace avec MIR</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2013/07/21/20130721ubuntu-part-seul-dans-lespace-avec-mir.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Ubuntu part seul dans l'espace avec MIR</h1>
+    <p class="post-meta"><time datetime="2013-07-21T19:07:00+02:00" itemprop="datePublished">Jul 21, 2013</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="main">
+
+<div class="texte surlignable">
+
+Et voila, ubuntu fait encore parler d’elle !  
+Cette fois, on critique son choix sur le fait de choisir autre chose que
+les autres acteurs du libre pour remplacer xorg. Voila ce qu’on peut
+lire sur linuxfr.org :  
+&gt; Le monde du Libre s’est appuyé pendant de longues années sur le
+&gt; serveur d’affichage X Window System. Le protocole X date de 1984 et,
+&gt; en dépit de nombreuses extensions, il commence à montrer son âge. De
+&gt; nombreuses critiques ont été émises sur le caractère impénétrable de
+&gt; son code, sur son modèle de sécurité inexistant et sur son
+&gt; inadaptation aux machines modernes. Depuis 2008, un remplaçant
+&gt; répondant au nom de Wayland est développé par Kristian Høgsberg et de
+&gt; nombreux autres contributeurs. Ce nouveau protocole se débarrasse de
+&gt; tous les résidus accumulés par X au fil des années, et il propose une
+&gt; solution moderne et optimisée (voir cet article LWN qui explique les
+&gt; enjeux et cette vidéo de Daniel Stone à la conférence LCA 2013). Il
+&gt; est important de noter que les développeurs de Wayland sont souvent
+&gt; d’anciens développeurs X.Org (Stone est un bon exemple) qui ont donc
+&gt; une connaissance poussée des limitations du serveur X et une expertise
+&gt; suffisante pour jauger les qualités de Wayland. NdM : merci à
+&gt; patrick\_g pour son journal. Journal à l’origine de la dépêche (272
+&gt; clics)  
+&gt; Mir sur le wiki Ubuntu (254 clics)  
+&gt; Wayland — site officiel (213 clics)  
+&gt; Ubuntu Building Own Display Server, Unity To Switch to Qt/QML (OMG
+&gt; Ubuntu) (80 clics)  
+&gt; Canonical : les fouteurs de merde, le retour — un autre journal sur le
+&gt; sujet (497 clics) Après plusieurs années de développement (et de
+&gt; concertation), la première version stable 1.0 de Wayland est sortie en
+&gt; octobre dernier, et le futur des serveurs d’affichage libres semblait
+&gt; alors tout tracé. Après une phase de transition plus ou moins longue
+&gt; (le temps d’adapter les bibliothèques graphiques à Wayland), nous
+&gt; allions tous basculer vers ce nouveau protocole moderne et efficace.
+&gt; Bien entendu, comme pour de nombreuses autres briques du système, les
+&gt; machines sous Android utilisent une solution d’affichage spécifique
+&gt; (nommée SurfaceFlinger). On peut penser que Google a voulu un système
+&gt; optimisé pour les téléphones et sur lequel il pouvait avoir la main
+&gt; sans être obligé de collaborer avec la communauté. La situation future
+&gt; de l’affichage dans le monde Linux semblait donc claire :
+&gt; SurfaceFlinger pour les machines sous Android, et Wayland pour les
+&gt; systèmes GNU/Linux traditionnels. C’est pour ça que l’annonce de
+&gt; Canonical du développement de Mir, un tout nouveau remplaçant pour
+&gt; X.Org, a surpris et irrité de nombreux observateurs. Canonical désire
+&gt; faire converger ses projets afin d’avoir une pile unifiée pour les
+&gt; machines de bureau et les smartphones. Selon cette société, X.Org et
+&gt; Wayland ne sont pas adaptés à cette convergence et il était nécessaire
+&gt; de créer un nouveau protocole.  
+&gt; Dans le wiki dédié à Mir, certaines critiques étaient avancées sur
+&gt; Wayland, notamment la sécurité de Wayland y était critiquée, car la
+&gt; gestion des évènements était considéré comme semblable à celle de X et
+&gt; donc souffrait des mêmes problèmes de sécurité. Aux yeux des
+&gt; développeurs de Wayland, cette justification semble grotesque. Une
+&gt; discussion a immédiatement commencé sur le compte Google+ de Kristian
+&gt; Høgsberg, et les critiques pleuvent. Selon Daniel Stone la
+&gt; justification avancée est complètement fausse (et l’auteur du texte
+&gt; employé par Canonical n’a même pas pris la peine de se renseigner
+&gt; auprès des développeurs Wayland). En fait, dans Wayland (contrairement
+&gt; à X), les évènements en entrée sont envoyés à un seul client et les
+&gt; clients ne peuvent pas réémettre d’évènement. Donc, un client
+&gt; « pirate » qui détournerait les évènements en mettant une fenêtre
+&gt; transparente en plein écran ferait que les clients normaux ne
+&gt; reçoivent plus rien, ce qui est facile à voir… Kristian Høgsberg a
+&gt; également souligné l’absurdité des arguments : The things they claim
+&gt; wayland/weston input can’t be extended to support \[…\] is already
+&gt; implemented and working in weston today… « Selon eux, Wayland et
+&gt; Weston ne peuvent soi?disant pas gérer certaines entrées \[…\] qui
+&gt; sont pourtant déjà implémentées et fonctionnent dans Weston à ce
+&gt; jour… » Carsten Haitzler (le Rasterman du projet Enlightenment) est
+&gt; également très critique : A reads of the Mir stuff says to me “Oh,
+&gt; look. We don’t understand Wayland at all, neither do we grok X11 that
+&gt; much either.” Their reasoning on the input in Wayland are just total
+&gt; bunk. I would just say “ignore Mir/Canonical and just keep plodding on
+&gt; with Wayland.” « Une lecture des trucs sur Mir me fait dire : “Oh,
+&gt; écoute, on ne comprend rien à Wayland et on ne capte pas beaucoup X11
+&gt; non plus.” Leur raisonnement sur la gestion des entrées dans Wayland
+&gt; est tout simplement faux. Je dirais juste : “ignorons Mir/Canonical et
+&gt; continuons de travailler avec Wayland.” » Dave Airlie (développeur
+&gt; noyau pour les pilotes graphiques) souligne l’amateurisme que révèle
+&gt; ce projet : They barely have anyone competent enough to write a
+&gt; display server, the fact that they are actually quite ignorant of how
+&gt; Wayland works makes it even more apparent. « Ils n’ont quasiment
+&gt; personne de suffisamment compétent pour écrire un serveur d’affichage,
+&gt; leur ignorance du fonctionnement de Wayland le met d’autant plus en
+&gt; évidence. » Dave a également posté sur son blog au sujet du projet
+&gt; Mir : Now the question becomes : do you want the display server that
+&gt; you are going to base the future of the Linux desktop and possible
+&gt; mobile spaces on a server written by people too stupid to understand
+&gt; the current open source project in the space ? The thing is putting
+&gt; stuff on the screen really isn’t the hard part of display servers,
+&gt; getting input to where it needs to go is, and making it secure. Input
+&gt; methods are hard, input is hard, guess what they haven’t even
+&gt; contemplated implementing yet ? « La question est de savoir si vous
+&gt; souhaitez que l’avenir de Linux sur le bureau et potentiellement sur
+&gt; les plates?formes mobiles repose sur un serveur d’affichage qui est
+&gt; développé par des personnes incapables de comprendre la solution libre
+&gt; de référence? ? Le fait est que ce n’est pas afficher des choses à
+&gt; l’écran qui est la partie compliquée d’un serveur d’affichage? ;
+&gt; récupérer les entrées et les envoyer de manière sécurisée à leur
+&gt; destination, ça c’est difficile. Gérer les méthodes d’entrées est
+&gt; difficile, un système d’entrée est difficile. Devinez ce qu’ils n’ont
+&gt; pas encore envisagé d’implémenter? ? » Cette volée de bois vert
+&gt; générale s’explique par plusieurs facteurs. Tout d’abord, des grosses
+&gt; erreurs dans la description du fonctionnement de Wayland ont irrité
+&gt; beaucoup de monde. Et le fait que ce projet Mir soit en cours depuis
+&gt; plusieurs mois (comme le révèle l’analyse de l’arbre Bazaar) ne
+&gt; présage rien de bon quant au degré d’ouverture de Canonical. Pourquoi
+&gt; avoir ainsi travaillé en secret? ? En outre, comme c’est souvent le
+&gt; cas avec Canonical, toutes les contributions extérieures devront
+&gt; passer par un partage du droit d’auteur (Contributor License
+&gt; Agreement). Cela signifie que Canonical aura le droit de changer la
+&gt; licence de vos contributions et d’inclure votre code dans un produit
+&gt; propriétaire. Enfin, le projet Mir est vu comme un risque de
+&gt; fragmentation inutile du monde du Libre. Alors que Wayland semblait
+&gt; être la solution consensuelle sur laquelle tout le monde allait se
+&gt; rallier, l’apparition d’un projet concurrent, s’appuyant sur des
+&gt; justifications techniques douteuses et étant financé par une seule
+&gt; société, ne peut que diviser les forces. Suite à une discussion sur
+&gt; IRC entre un développeur de Mir et les développeurs de Wayland, le
+&gt; wiki sur Mir a été modifié, ce qui devrait apaiser les tensions :
+&gt; Kristian Høgsberg, s’il regrette le manque de discussion préalable,
+&gt; était surtout irrité par les critiques infondées listées sur le wiki
+&gt; de Mir. Nous verrons dans les prochains mois si le projet de Mark
+&gt; Shuttleworth se révèle être une bonne idée. Dans l’intervalle, on peut
+&gt; sortir le pop?corn et regarder les trolls se déchaîner? !
+&gt; &lt;/p&gt;
+
+<p>
+Les reactions s’enchainent, sur ce site mais pas seulement, sur tout les
+sites linuxiens et meme sur ubuntu.fr, on s’interroge ou on critique !
+Alors je vais faire l’avocat du diable, car plusieurs points n’ont pas
+été pris en compte.  
+Deja ubuntu va etre porté sur tv, téléphone, ordi et tablette, le tout
+pour eviter la surcharge de travail, doit etre homogéne et donc etre le
+« meme produit » sur toute ses surface.  
+Canonical doit donc etre « maitre » de ses faits et gestes or si les
+échanges avec Wayland se passe comme avec l’équipe gnome, rien de bon en
+sortira ! Ensuite un concurrent a Wayland est plutot rassurant, les deux
+vont vouloir etre le meilleur, et cette concurrence est bonne pour
+l’utilisateur final !
+
+&lt;/div&gt;
+
+Voir en ligne : [X Mir, un serveur d’affichage de
+trop? ?](http://linuxfr.org/news/mir-un-serveur-d-affichage-de-trop){.spip_out}
+
+&lt;/div&gt;
+</p></div></div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

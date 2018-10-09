@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Trolls, et autres vérités préconçues autour de GNU/Linux; ma réponse 6, Debian Stable forcément obsolète?!</title>
+  <meta name="description" content="{.aligncenter.size-full .wp-image-1549 width=”100” height=”123”} Je survole unedemande que j’ai eu en commentaire, je ferais réellement le billet plustard, p...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/09/17/trolls-et-autres-verites-preconcues-autour-de-gnulinux-ma-reponse-6-debian-stable-forcement-obsolete.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Trolls, et autres vérités préconçues autour de GNU/Linux; ma réponse 6, Debian Stable forcément obsolète?!</h1>
+    <p class="post-meta"><time datetime="2017-09-17T08:44:00+02:00" itemprop="datePublished">Sep 17, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="http://download.tuxfamily.org/passionlinux//2017/09/openlogo-100.jpg" alt="" />{.aligncenter
+.size-full .wp-image-1549 width=”100” height=”123”} Je survole une
+demande que j’ai eu en commentaire, je ferais réellement le billet plus
+tard, peut être dans la foulée de celui-ci, on verra selon notre emploi
+du temps. Le commentaire en question est celui-ci:</p>
+
+<blockquote>
+  <p>Pourrais-tu faire un articles sur les différentes méthodes(backports,
+pinning, etc..) pour avoir certains logiciels à jours(navigateurs web,
+mesa, noyaux linux, etc…) sur une debian stable ? Genre, nous
+rapporter quelles difficultés on peut rencontrer(problèmes des
+bibliothèques peut être ? ou lorsqu’on met à niveau, genre debian 8 à
+debian 9, et qu’on a quelques logiciels qu’on a mis à jour soit même,
+via différentes méthodes, peut-il y avoir un problème ? quelles sont
+alors les solutions a notre disposition ? etc…). Je te dis ça car je
+ne connais pas bien debian mais apprécie sa stabilité et j’aimerais
+tout de même garder certains logiciels à jours.
+&lt;/p&gt;</p>
+</blockquote>
+
+<p>Commentaire du billet “<a href="http://passiongnulinux.tuxfamily.org/2017/08/29/je-me-suis-fait-avoir-par-la-soi-disant-complexite-de-debian/">je me suis fait avoir par la soi-disant
+complexité de
+Debian</a>”.<br />
+<!--more--><br />
+Je voudrais revenir avant tout sur le titre, on entend souvent sur
+Debian stable qu’elle est inutilisable car obsolète, je le dis ici, tout
+ça est bidon et surtout montre à quel point les personnes disant ça ne
+connaissent pas la version stable. Tout d’abord Debian se veut universel
+et par la même, s’adapte à nos besoins, aux besoins de ses utilisateurs,
+il ne faut pas oublier une chose: Debian est faite pour et par ses
+utilisateurs… Donc en partant de ce constat ou plutôt de cette vérité
+on peut se dire ceci, celui qui veut du récent se dirigera sur Sid,
+celui qui veut du récent mais avec une certaine sécurité ira sur testing
+(je ne suis pas vraiment d’accord mais bon…) et celui qui veut du
+solide, bougeant peu, soit pour du serveur ou du desktop pro ou
+simplement comme moi un truc pépère qui me laisse tranquille, ira sur du
+stable. On peut vouloir du solide et du pépère, on peut aussi avoir
+envie pour certaines choses à du récent, c’est mon cas pour certains
+jeux ou logiciels. Je vais dans ce billet survoler les différentes
+possibilités, je ne parlerais pas de la méthode pour faire une
+<a href="https://wiki.debian.org/fr/DontBreakDebian">FrankenDebian</a>,
+c’est-à-dire le
+<a href="https://debian-facile.org/doc:systeme:apt:pinning">pinning</a>, je
+parlerais seulement des méthodes totalement indolores que sont le
+rétro-portage et les dépôts officieusement officiels. Pour commencer je
+parle de mon navigateur adoré, celui qui me suit depuis ses versions
+Phenix, depuis qu’il fut le remplaçant de mon regretté Mozilla, comme
+vous le savez Debian dans sa version stable (je ne parle que de sa
+version stable ici, donc quand je dirais Debian, il faudra se dire
+stable), préfère la sécurité et prends du coup la ESR qu’elle met à
+jours. Pour ceux à qui cela ne suffit pas, on peut se tourner vers les
+dépôts officieux de la <a href="http://mozilla.debian.net/">team Mozilla chez
+Debian.</a> En fait après vérification, les
+dépôts n’existent plus d’après <a href="https://debian-facile.org/doc:systeme:apt:sources.list:depots-tiers#mozilla-firefox">cette
+page</a>
+(partie Mozilla), on peut y lire:</p>
+
+<blockquote>
+  <p>Il n’existe plus de dépôt tiers mozilla pour installer la dernière
+version de Firefox. Les utilisateurs de unstable peuvent installer
+Firefox release. Les utilisateurs de Stretch (stable) et Buster
+(testing) peuvent l’installer en modifiant les priorités
+d’installation des paquets
+<a href="https://debian-facile.org/doc:systeme:apt:pinning" title="doc:systeme:apt:pinning">pinning</a>{.wikilink1}.
+&lt;/p&gt;</p>
+</blockquote>
+
+<p>Il reste donc la méthode simple que j’emploie depuis des lustres, celle
+qui consiste à télécharger le binaire sur le <a href="https://www.mozilla.org/fr/firefox/new/?scene=2">site de
+Mozilla</a>, de le
+décompresser dans mon cas pour que cette version soit uniquement
+disponible pour mon utilisateur, dans un dossier <em>/binaire</em> de mon
+<em>/home</em> et de faire un raccourci du fichier Firefox-bin pour le menu ou
+le bureau (Xfce/KDE). Si on veut que cela soit disponible à l’ensemble
+des utilisateurs, on pourra le mettre avec les bons droits (par exemple
+groupe famille) dans le dossier <em>/opt</em> de la racine (<em>/</em>). Pour
+Thunderbird et Seamonkey, on se contentera de faire pareil. Il y a un
+dépôt peu conseillé car il met un peu le bordel dans nos paquets, c’est
+le <a href="http://www.deb-multimedia.org/">deb-multimedia</a>, dépôt semi-officiel
+puisque c’est un développeur Debian (Christian Marillat) qui le
+maintient pour des questions de licences non compatible avec Debian.
+Dépôt qui portait le nom de debian-multimedia mais qui pour <a href="https://lists.alioth.debian.org/pipermail/pkg-multimedia-maintainers/2012-May/026678.html">une raison
+a dû changer de
+nom</a>
+pour éviter les quiproquos. On y trouve comme son nom l’indique, tout
+paquet qui a un rapport avec le multimédia. Quand je dis “met le
+bordel…” c’est ce que j’entends ici et là, car chez moi jamais eu de
+soucis, c’est plutôt que les gars allaient se plaindre d’un bug des
+paquets venant de chez C.Marillat(deb-multimedia) directement dans le
+BTS de Debian. Il y a aussi le fait que les paquets venant de
+deb-multimedia font doublons pour certains avec ceux de Debian. Mais
+bon, en regardant le lien donné plus haut sur le pourquoi du changement
+de nom, on comprend l’histoire. Pour l’utiliser, on ajoute les lignes
+suivantes dans son
+<a href="https://debian-facile.org/doc:systeme:apt:sources.list">sources.list</a>:
+<strong>deb http://www.deb-multimedia.org stretch main non-free</strong> ou <strong>deb
+ftp://ftp.deb-multimedia.org stretch main non-free</strong> ou <strong>deb
+http://www.deb-multimedia.org stable main non-free</strong> ou <strong>deb
+ftp://ftp.deb-multimedia.org stable main non-free</strong> Puis</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt update &amp;&amp; apt-get --allow-unauthenticated install deb-multimedia-keyring
+</code></pre></div>
+
+<p>On vérifie l’intégrité avec:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>sha256sum deb-multimedia-keyring_2016.8.1_all.deb 9faa6f6cba80aeb69c9bac139b74a3d61596d4486e2458c2c65efe9e21ff3c7d deb-multimedia-keyring_2016.8.1_all.deb
+</code></pre></div>
+
+<p>On aura ensuite le plaisir d’avoir Avidemux ou DVDrip. Comme je l’ai
+souvent dit ici sur <a href="http://passiongnulinux.tuxfamily.org/2016/07/10/20160710ce-que-je-fais-apres-linstallation-de-ma-debian/">ce
+blog</a>,
+j’utilise
+<a href="http://passiongnulinux.tuxfamily.org/2016/06/03/20160603les-retroportages-depot-backports/">Backports</a>,
+ce qui me permet par exemple d’avoir un Wine plus récent, Virtualbox
+plus récent (le cas pour Jessie), 0ad ou Minetest dans leurs dernières
+versions, on peut y trouver un kernel ou un LibreOffice plus récent…
+Pour ce faire, rien de bien compliqué, on rajoute les Backports:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code># Debian Stretch, dépôt de rétroportages ("backports") deb http://ftp.fr.debian.org/debian stretch-backports main contrib non-free
+</code></pre></div>
+
+<p>puis</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt update
+</code></pre></div>
+
+<p>Ensuite on installe un logiciel venant des Backports par un:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>apt-get -t stretch-backports install 0ad minetest wine32
+</code></pre></div>
+
+<div class="texte surlignable">
+
+Par la suite, les paquets installés depuis les <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="backports">backports</span> se mettront automatiquement
+à jour comme pour les paquets issus de la branche principale, seule la
+mise-à-jour initiale vers la version <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="rétroportée">rétroportée</span>
+nécessite cette déclaration explicite de la branche. Ce système est en
+place pour éviter que tous les paquets proposant une version candidate
+dans les <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="backports">backports</span> soient automatiquement
+mis-à-jour dans cette version, ce qui n’est généralement pas le
+comportement souhaité par l’utilisateur. Vous pourrez en apprendre plus
+sur le fonctionnement de ce système (et sur les possibilités de modifier
+ce comportement) dans l’article du <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="wiki">wiki</span> dédié aux
+priorités et aux [fichiers apt\_<span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="preferences">preferences</span>](https://debian-facile.org/doc:systeme:apt:pinning "doc:systeme:apt:pinning"){.wikilink1}.
+<div>
+
+La forme **-t <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="backports">backports</span>** installe sans problème
+les dépendances dans leur version **stretch-backports**. la forme
+*nom\_paquet/<span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="jessie-backports">stretch-backports</span>* pose des
+problèmes de dépendances <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="parce">parce</span> que la
+version prioritaire des dépendances n’est plus celle des <span class="scayt-misspell-word" data-scayt-lang="fr_FR" data-scayt-word="backports">backports</span> mais celle des autres
+sources déclarées.
+
+</div>
+
+</div>
+
+<p>Voir en ligne :
+<a href="http://passiongnulinux.tuxfamily.org/spip/debian-facile.org/doc:systeme:apt:sources.list#les_depots_debian_officiels">Debian-facile</a>{.spip_out}</p>
+
+<p>Dans le dernier cas, ceux qui souhaitent assumer plus de risques et de
+responsabilités peuvent parfois faire leurs propres rétroportages
+(backports) de la dernière version de logiciels Debian. Bien que non
+dénué de risques, l’auto-rétroportage est généralement plus sûr que
+d’autres approches. Lorsque l’auto-rétroportage échoue, il est probable
+que toute autre approche va briser votre système ((avec <em>make install</em>
+ou un script d’installation, par exemple). <span id="line-105" class="anchor"></span><span id="line-106" class="anchor"></span></p>
+
+<ul>
+  <li>
+    <p><a href="https://wiki.debian.org/fr/SimpleBackportCreation">fr/SimpleBackportCreation</a>
+<span id="line-107" class="anchor"></span></p>
+  </li>
+  <li>
+    <p><a href="http://ircbots.debian.net/factoids/factoid.php?key=simple+sid+backport">Instructions
+alternatives</a>{.http}
+(en anglais) sont disponibles à partir du <a href="https://wiki.debian.org/IRC/DpkgBot">robot IRC de
+Debian</a>. <span id="line-108" class="anchor"></span></p>
+  </li>
+  <li>
+    <p>Également sur IRC, le robot <em>judd</em> fournit la commande
+<a href="http://ircbots.debian.net/judd/#judd-builddep">checkbackport</a>{.http}
+qui offre des indications pour savoir si le rétroportage est
+possible, en interrogeant le
+<a href="https://wiki.debian.org/UltimateDebianDatabase">UltimateDebianDatabase</a>.</p>
+  </li>
+</ul>
+
+<p>J’en ai parlé
+<a href="http://passiongnulinux.tuxfamily.org/2016/06/03/20160603creation-de-paquets-deb-methode2-devscripts/">ici</a>
+, il est question que je fasse un billet plus propre et complet que le
+précédent. 1/ Pour commencer, nous faisons un dossier avec le nom du
+paquet, par exemple pour playonlinux:
+<code class="highlighter-rouge">$ mkdir /home/sebastien/packaging/playonlinux $ cd /home/sebastien/packaging/playonlinux</code>
+2/ On télécharge les sources debian du paquet:
+<code class="highlighter-rouge">$ apt-get source playonlinux</code> 3/ On télécharge en ROOT, les paquets
+nécessaires pour construire ce paquet: <code class="highlighter-rouge"># apt-get build-dep playonlinux</code>
+4/ On se remet en simple utilisateur, puis on rentre dans le dossier des
+sources debian:
+<code class="highlighter-rouge">$ cd '/home/sebastien/packaging/playonlinux/playonlinux-4.2.6'</code> 5/ On
+va dans voir le fichier /debian/watch qui permet, si bien fait, de faire
+tout automatiquement avec la commande uscan. Les sources mises à jour
+seront automatiquement recherchées, téléchargées, et la commande uupdate
+sera exécutée. <code class="highlighter-rouge">$ uscan</code> Si la commande uscan télécharge les sources
+mises à jour mais n’exécute pas la commande uupdate, vous devriez
+corriger le fichier debian/watch pour avoir debian uupdate après l’URL.
+6/ Normalement tout a été fait si le fichier watch est bien fait, du
+coup reste plus qu’à fabriquer le deb:
+<code class="highlighter-rouge">$ cd '/home/sebastien/packaging/playonlinux/playonlinux-4.2.8' $ debuild</code>
+On aura de jolis paquets deb, et pour finir un coup de <code class="highlighter-rouge">debuild clean</code>.
+Voila les différentes approches que j’utilise pour profiter de ma Stable
+avec quelques paquets plus récents.</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

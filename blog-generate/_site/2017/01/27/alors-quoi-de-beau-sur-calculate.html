@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Alors quoi de beau sur Calculate?</title>
+  <meta name="description" content="Je vous annonce de suite la couleur, je commence a être attaché a cettedistribution, j’ai plusieurs billets en cours sur la gestion des paquetssous Calculate...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2017/01/27/alors-quoi-de-beau-sur-calculate.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Alors quoi de beau sur Calculate?</h1>
+    <p class="post-meta"><time datetime="2017-01-27T00:54:00+01:00" itemprop="datePublished">Jan 27, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Je vous annonce de suite la couleur, je commence a être attaché a cette
+distribution, j’ai plusieurs billets en cours sur la gestion des paquets
+sous Calculate mais pour le moment c’est un peu juste. Alors quoi de
+beau sur Calculate, je dirais que la base Gentoo est encore plus
+frileuse que Debian, Si on compare une Sid et une Gentoo, il y a
+certains choix très inattendu, mais bon, on voit ça comme un gage de
+stabilité, bizarre mais quand c’est Debian, on dit tout de suite que
+c’est de l’obsolescence ! Bon parlons pas de ce qui fâche, parlons de ce
+qui me plait vraiment sur cette gentoo-like, ce que j’appel la
+compilation a la chaîne, avec de simple useflags on change quelques
+principes d’optimisation pour la compilation des différents programmes
+et composants, en enlevant ou ajoutant des options. <br />
+<!--more--><br />
+Dans mon cas, j’en utilise déjà pas mal, pour Mldonkey, pour Amule, pour
+Gwenview, pour Scumm… J’ai enfin un OS qui permet de gérer les options
+de compilations de mes programmes sans passer par de lourdes
+manipulations. Je reprend un exemple que je vais détailler plus tard
+dans un billet sur Emerge, je reprends le cas de Mldonkey, si je reprend
+<a href="http://passiongnulinux.tuxfamily.org/2016/06/03/20160603creation-de-paquets-deb-methode1-dpkg-buildpackage/">le billet sur Debian et le rebuild d’un
+paquet</a>,
+en l’occurrence le même (Mldonkey), on s’aperçois que pour changer des
+options de compilation de notre paquet, il faut simplement le rebuilder.
+C’est simple mais pas automatique, ça demande du temps et de refaire pas
+mal de chose a la mimine, je cite ici les différentes étapes:</p>
+
+<ol>
+  <li>
+    <p>Je récupère les sources de debian, apt-get source nom_du_paquet ou
+par exemple :</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code>apt-get source mldonkey
+</code></pre>    </div>
+  </li>
+  <li>
+    <p>Je m’occupe donc de mettre une version différente de celle du dépôt
+pour pas entrer en conflit avec les paquets du dépôt, par exemple si
+c’est la version 3.5.1 dans le dépôt, je change le miens
+en 3.5.1-scha1. Je le fais avec dch, :</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code>dch -v 3.1.5-2.scha1
+</code></pre>    </div>
+  </li>
+  <li>
+    <p>J’effectue les modification, admettons que je veux seulement changer
+un truc dans la compilation, par exemple la prise en charge de tout
+les protocoles, faudra aller dans le fichier rules du
+dossier /debian. Le fichier control me sers a transcrire les
+changements et alleger les dépendances (debian aime bien donner des
+versions a ses dépendances ce qui est nécessaire car elle a
+plusieurs versions (stable, testing, sid))Changements apporté au
+fichier rules :</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code> enable-multinet  enable-bittorrent  enable-filetp  enable-gnutella  enable-gnutella2  enable-fasttrack
+</code></pre>    </div>
+
+    <p>Description supplémentaire apporté au fichier changelog :</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code>mldonkey (3.1.5-2.scha1) UNRELEASED ; urgency=medium  * Activation des réseaux fasttrack, bittorrent, gnutella1&amp;2, filetp  Sebastien CHA &lt;sebastien@xxxxxxxx.xx.xx&gt; Wed, 15 Apr 2015 14:04:01 +0200
+</code></pre>    </div>
+  </li>
+  <li>
+    <p>On télécharge les dépendances du paquet a construire :</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code># apt-get build-dep mldonkey
+</code></pre>    </div>
+  </li>
+  <li>
+    <p>Ensuite pour construire le paquet on rentre un</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code>dpkg-buildpackage -rfakeroot -us -uc
+</code></pre>    </div>
+
+    <p>(-us -uc pour ne pas chiffrer avec une clef) A la suite de quoi nos
+nouveaux paquets sont disponibles comme on peut le voir par un « ls
+» :</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code>[ /Public/debian] :$ ls mldonkey-3.1.5 mldonkey_3.1.5-2.scha1.dsc mldonkey_3.1.5-2.debian.tar.xz mldonkey_3.1.5.orig.tar.bz2 mldonkey_3.1.5-2.dsc mldonkey-gui_3.1.5-2.scha1_amd64.deb mldonkey_3.1.5-2.scha1_amd64.changes mldonkey-server_3.1.5-2.scha1_amd64.deb mldonkey_3.1.5-2.scha1.debian.tar.xz
+</code></pre>    </div>
+
+    <p>
+Ce sont des étapes faciles mais pas anodines, je m'explique, a
+chaque mise a jour de ce paquet, on devra recommencer a refaire les
+étapes, ça va sur une Debian Stable qui bouge peu mais ça peu
+devenir vite lassant pour les autres versions. Je précise vite fait
+que les paquets RPM sont dans le même cas que Debian...
+
+</p>
+  </li>
+</ol>
+<p>Alors c’est vrai qu’on peut se faciliter la vie et passer par debuild,
+mais ça reste quand même quelque chose qui devra être recommencé a
+chaque changement ou mise a jour des dépendances de compilation ou du
+logiciel en lui même. Et c’est là où je veux en venir, sous Gentoo, donc
+sous Calculate, on informe le fichier /etc/portage/package.use/custom
+pour lui dire ce qu’on veut comme option de compilation, de cette
+manière:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>Mldonkey net-p2p/mldonkey gnutella fasttrack
+</code></pre></div>
+
+<p>Puis on réinstalle le paquet normalement avec un <em>emerge
+-avq net-p2p/mldonkey</em>, ce qui va lancer la compilation avec les
+nouvelles options. Et a chaque mise a jour du paquets ou d’une de ses
+dépendances, le paquets sera automatiquement recompilé avec les options
+qu’on a donné. Du coup, je me suis amusé a mettre des useflags dans
+certains de mes paquets habituels:</p>
+
+<div class="highlighter-rouge"><pre class="codehilite"><code>##fichier qui permet de changer les options de compilation differents # THUNDERBIRD #mail-client/thunderbird -linguas_* linguas_fr #mail-client/thunderbird -L10N_* L10N_fr # LANGUES #app-text/hunspell -linguas_* linguas_fr #app-text/hunspell -L10N_* L10N_fr app-text/aspell -linguas_* linguas_fr # SMPLAYER #media-video/smplayer -qt4 qt5 # Gwenview kde-apps/gwenview kipi # scummvm games-engines/scummvm mpeg2 # Ktorrent net-p2p/ktorrent infowidget # Kget #kde-apps/kget bittorrent ## Amule net-p2p/amule upnp geoip ## Mldonkey net-p2p/mldonkey gnutella
+</code></pre></div>
+
+<p>Bon pour ce qui est de ktorrent et de gwenview, je pense que ce sont des
+oublis ou des tentatives d’alléger la distribution en retirant des
+choses qui sont activés chez les autres distributions. Kipi permet a
+gwenview d’avoir les modules-externes et infowidget permet a ktorrent de
+nous donner pas mal d’infos sur le torrent. Si j’y pense je ferais peut
+être une demande de bugs pour ces deux là.  Celui qui m’intéresse le
+plus, celui que j’ai déjà parlé, c’est bien sur Scumm avec Mpeg2, qui
+permet de lire les vidéos de nos jeux… Primordiale et pourtant aucunes
+distributions n’activent cette option. Bon que dois je penser de cette
+semaine sur Calculate? Je m’y sens vraiment bien, c’est pas le grand
+coup de foudre comme j’ai pu avoir avec Frugalware, NuTyX et surtout la
+désormais morte 0linux mais c’est une belle découverte. Je m’y sens pas
+aussi serein que sous 0linux où je savais ou du moins j’arrivais a
+pondre des paquets avec des recettes de ma création, mais au moins
+j’arrive a avoir ce que je veux dans le grand nombre de paquets issus de
+Gentoo. Pour ce qui est de la création de paquets, il faudrait déjà que
+je comprenne quelque chose aux recettes de Gentoo…. :-) Je pense pas
+gagner quoique ce soit par rapport a mon openSUSE, la Tumbleweed est
+bien plus a jour, a plus de paquets, consomme moins de ressources mais
+je m’y sens bien sur cette Calculate. Sur <a href="#calculate-fr">IRC</a>, on est
+pas nombreux mais l’ambiance est sympathique. Voila pour ce qui est de
+ma semaine de plus sur cette distribution. Je pense que cette semaine
+j’aurais réussi a pondre un tuto sur la base d’emerge, mais bon, les
+weeks sont courts et les semaines se ressemblent et ne me laissent pas
+beaucoup de répits ;).</p>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

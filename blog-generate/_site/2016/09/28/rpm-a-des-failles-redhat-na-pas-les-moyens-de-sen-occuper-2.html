@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RPM a des failles, REDHAT n&#39;a pas les moyens de s&#39;en occuper !#2</title>
+  <meta name="description" content="Je fais suite ici au premier billet portant le mêmetitre,Cascador est venu compléter dans les commentaires et a donné le lien ouj’avais eu l’info, merci a lu...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://passiongnulinux.tuxfamily.org//2016/09/28/rpm-a-des-failles-redhat-na-pas-les-moyens-de-sen-occuper-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Seb's blog / PassionGNU/Linux, la passion du Libre..." href="https://passiongnulinux.tuxfamily.org//feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Seb's blog / PassionGNU/Linux, la passion du Libre...</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">À Propos</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/forum/">Forum</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/licence/">Licence</a>
+          
+        
+          
+          <a class="page-link" href="/liens/">Liens du web</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/mentions-legales/">Mentions légales</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">RPM a des failles, REDHAT n'a pas les moyens de s'en occuper !#2</h1>
+    <p class="post-meta"><time datetime="2016-09-28T13:08:00+02:00" itemprop="datePublished">Sep 28, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Je fais suite ici au premier billet portant <a href="http://passiongnulinux.tuxfamily.org/2016/09/23/rpm-a-des-failles-redhat-na-pas-les-moyens-de-sen-occuper/">le même
+titre</a>,
+Cascador est venu compléter dans les commentaires et a donné le lien ou
+j’avais eu l’info, merci a lui, car j’écris avec quelques difficultés,
+comme actuellement avec ma connexion qui est perdu, merci a Wordpress de
+sauvegarder directement dans mon navigateur pour éviter de perdre ce que
+j’écris, un plus qui fait que je garde ce Wordpress, même si je compte
+repasser maintenant a Dotclear au lieu de SPIP (c’est a méditer et pas a
+faire d’un simple coup de tête…). Je balance ici et non sur le
+précédent billet pas pour faire gonfler les stats de mon blog mais pour
+une question de praticité, en effet je vais citer les différents
+protagonistes et de plus, je pense que c’est quelque chose d’important
+car c’est le cœur d’une distribution qui est touché.<br />
+<!--more--><br />
+Sur le précédent je parlais de DEB et de RPM, ce n’est pas DEB (format
+de paquets) qui est touché mais bien le concurrent de RPM (outils en
+ligne de commande pour gérer ses paquets et non le format de paquets
+portant le même nom). Je cite un peu mes conneries:</p>
+
+<blockquote>
+  <p>Avant de partir, j’avais été interpellé par un sujet, ne trouvant plus
+ni la source ni d’autre qui en parle, une comparaison de RPM face a
+DEB que RPM et DEB comportaient des bugs et des failles, juste la
+c’est normale, mais que les corrections allaient plus vite sur DEB
+alors que RPM tardait a être corrigé et comme réponse REDHAT donnait
+qu’il n’avait pas les moyens pour corriger a toute allure ! Alors que
+DEB a corrigé très vite…
+&lt;/p&gt;</p>
+</blockquote>
+
+<p>Bon on recommence et on remplace la ou il y a
+<a href="https://fr.wikipedia.org/wiki/Deb">DEB</a> par
+<a href="https://fr.wikipedia.org/wiki/Dpkg">Dpkg</a> et donc il faut bien sur lire
+<a href="https://fr.wikipedia.org/wiki/RPM_Package_Manager">RPM</a> comme
+<a href="https://fr.wikipedia.org/wiki/Gestionnaire_de_paquets">gestionnaire de
+paquet</a> et non le
+<a href="https://fr.wikipedia.org/wiki/Gestionnaire_de_paquets#D.C3.A9finitions">format de
+paquets</a>,
+c’est ça d’être sans une connexion internet fiable et rapide, on se sent
+coupé du monde et on fait le téléphone arabe, ce qui donne un truc bien
+différent de ce qui est dit a l’origine!! Donc j’ai en effet lu sur le
+<a href="https://cyrille-borne.com/social/">blog de Cyrille</a>, ou plutôt l’un des
+blogs de Cyrille, un billet qui, je le reprend dans son intégralité ici
+mais qui est disponible <a href="https://cyrille-borne.com/social/index.php?article57/vulnerabilites-dans-rpm">a cette
+adresse</a>,
+parle de quelque chose qui n’a pas fait grand bruit et qui pourtant
+touche en profondeur chaque linuxien puisque c’est le gestionnaire de
+paquets, un outils puissant et surtout vitale pour le système. Je
+m’aperçois du reste que ce n’est pas Cyrille mais Cep qui l’écrit,
+<a href="http://passiongnulinux.tuxfamily.org/2016/08/05/lmde-lautre-deception/">c’est pas la première fois que je me fais piéger par c’est le blog de
+Cyrille donc c’est Cyrille qui écrit uniquement! (voir le commentaire de
+Cascador).</a>
+Voici le billet en question:</p>
+
+<blockquote>
+  <h1 id="vulnrabilits-dans-rpm">Vulnérabilités dans RPM</h1>
+
+  <p><small> Rédigé par cep - <time datetime="2016-08-31">31 août
+2016</time> - <a href="https://cyrille-borne.com/social/index.php?article57/vulnerabilites-dans-rpm#comments" title="Aucun commentaire">Aucun
+commentaire</a>
+</small> Hanno Böck, journaliste freelance, a réalisé quelques tests
+de sécurité sur les gestionnaires de paquets DPKG et RPM et remonté
+quelques bugs critiques qu’il a signalés aux différents responsables.
+Il semblerait que pour DPKG la réactivité à corriger les failles fut
+excellente. Concernant RPM ce ne serait pas le cas et il note aussi
+quelques difficultés à trouver des responsables. Il note par ailleurs,
+d’après lui, un développement cahotique. Ceci semble tout de même
+curieux lorsqu’on sait que derrière RPM il y a principalement Redhat.
+À suivre.
+<a href="https://blog.fuzzing-project.org/52-Multiple-vulnerabilities-in-RPM-and-a-rant.html">Sources</a></p>
+</blockquote>
+
+<p>Comme c’est intéressant mais ce qui est encore plus intéressant c’est
+<a href="https://blog.fuzzing-project.org/52-Multiple-vulnerabilities-in-RPM-and-a-rant.html">l’article
+source</a>
+en lui même, je passe par la traduction de google pour livrer quelque
+chose de potable dans notre langue et voici donc l’article complet en
+français traduis par google (j’espere avoir les droits:</p>
+
+<header class="clearfix">
+&gt; <span class="notranslate">[Multiples vulnérabilités dans RPM - et une diatribe](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://blog.fuzzing-project.org/52-Multiple-vulnerabilities-in-RPM-and-a-rant.html&amp;usg=ALkJrhjk8V702BZT8ufa8V_9exxitZKLew)</span>
+&gt; ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+&gt;
+&gt; <span class="notranslate"> <span> class="serendipity_byline block_level"&gt;<span> class="single_user"&gt;Publié par [Hanno
+&gt; Böck](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://blog.fuzzing-project.org/authors/1-Hanno-Boeck&amp;usg=ALkJrhjIpuB24ScRRavXRXTJmH0lGqw_fA)
+&gt; sur</span></span></span> <time datetime="2016-08-26T16:45:00+02:00">
+&gt; <span class="notranslate"> <span> class="serendipity_byline block_level"&gt;Vendredi, Août 26.
+&gt; 2016</span></span> </time>
+
+</header>
+<blockquote>
+  <div class="clearfix content serendipity_entry_body">
+
+<span class="notranslate"> L'année dernière en Novembre je décidai que
+ce pourrait être une bonne idée de fuzz les parseurs d'outils de
+gestion des paquets dans les distributions Linux.</span> <span class="notranslate"> Je me suis vite trouvé un couple de questions
+DPKG et RPM.</span> <span class="notranslate"> Pour dpkg le processus
+est allé très lisse.</span> <span class="notranslate"> Je leur ai
+signalé à l'équipe de sécurité de Debian, huit jours plus tard, des
+correctifs et des avis de sécurité ont été publiés à la fois par
+Debian et Ubuntu, les principales distributions utilisant dpkg.</span>
+<span class="notranslate"> Pour RPM le processus a été un peu plus
+difficile.</span> <span class="notranslate"> Si vous voulez signaler
+un bug à vous RPM premier peut se demander où en faire rapport.</span>
+<span class="notranslate"> Le RPM page web \[1\] est une installation
+de trac qui a son propre bug tracker.</span> <span class="notranslate"> Toutefois, si vous essayez d'enregistrer un
+compte là, vous serez redirigé vers un site HTTPS avec un certificat
+expiré qui ne correspond pas au nom de domaine.</span> <span class="notranslate"> Dans le cas où vous êtes courageux et dire à
+votre navigateur d'ignorer tous les avertissements, vous serez
+accueillis par un trac cassé prospectifs sans CSS.</span> <span class="notranslate"> Si vous passez et créer un compte, vous
+apprendrez que cela ne vous aide pas, parce que, pour être autorisé à
+signaler un bug, vous devez d'abord demander sur la liste de diffusion
+ou dans le canal IRC pour l'autorisation \[2\].</span> <span class="notranslate"> C'est probablement le point où beaucoup de
+journalistes bien intentionnés de bugs abandonner.</span> <span class="notranslate"> D'accord, mais RPM signifiait à l'origine
+"gestionnaire de paquets Red Hat" (on m'a dit aujourd'hui qu'il
+représente RPM Package Manager), alors peut-être Red Hat se sent
+responsable.</span> <span class="notranslate"> Donc, je l'ai signalé
+trois bugs avec des exemples de fichiers les déclencher à l'équipe de
+sécurité de Red Hat le 20 Novembre.</span> <span class="notranslate">
+La réponse a été - pour le moins - un peu insatisfaisantes.</span>
+<span class="notranslate"> Je vais vous citer pleinement: "Merci pour
+le rapport.</span> <span class="notranslate"> Nous avons également
+reçu au sujet de 30 rapports d'erreur dans RPM de</span> <span class="notranslate"> un journaliste différent récemment, donc le
+traitement de chacun d'eux (le vôtre et le</span> <span class="notranslate"> autres) vont prendre un peu de temps.</span>
+<span class="notranslate"> Nous ne disposons tout simplement les
+ressources</span> <span class="notranslate"> de passer des heures et
+des heures à analyser tous les rapports d'erreur ".</span> <span class="notranslate"> Ok, donc je ne suis pas le seul RPM de fuzzing et
+les peut-être des bugs seront corrigés un jour.</span> <span class="notranslate"> J'ai attendu.</span> <span class="notranslate">
+En attendant, je suis contacté par une autre personne qui avait
+également essayé de rapporter les bogues de fuzzing en RPM et qui a
+fait des expériences similaires (peut-être la même personne qui a
+rapporté les 30+ Crashers, je ne sais pas).</span> <span class="notranslate"> En Février, je décidé de demander à ce que l'état
+des choses est.</span> <span class="notranslate"> Je leur ai aussi
+donné une période de 30 jours jusqu'à ce que je publierai les bugs (je
+sais qu'il est maintenant passé depuis longtemps, je ne devrais pas
+avoir laissé cette question attendre si longtemps).</span> <span class="notranslate"> Je fini par avoir un appel avec un membre de
+l'équipe de sécurité de Red Hat et échangé quelques mails.</span>
+<span class="notranslate"> J'appris que RPM a un dépôt Github \[3\],
+qui contient des correctifs pour certains (mais pas tous) des
+questions que je rapporté, toutefois que cela nulle part référencées
+sur son site Internet.</span> <span class="notranslate"> Je puis
+Fuzzed le code RPM git actuelle à nouveau et a trouvé deux autres
+questions que je signale également l'équipe de sécurité de Red
+Hat.</span> <span class="notranslate"> Statut aujourd'hui est que la
+dernière version de RPM sur son site Internet - 4.12.0.1 - est à
+partir de Juillet 2015, de sorte que tous les bugs encore affecte
+cette version.</span> <span class="notranslate"> Cependant, il semble
+qu'il y ait un non-officiel 4.13 de presse qui est nulle part pour
+être trouvée sur la page Web du RPM, mais Red Hat utilise ensemble
+avec quelques corrections \[4\].</span> <span class="notranslate"> Et
+le dépôt Github dit la dernière version est 4.12.0, donc selon trois
+sources différentes trois versions différentes sont l'actuel (4.12.0,
+4.12.0.1, 4.13).</span> <span class="notranslate"> Un des bogues - un
+débordement de pile (en écriture) - est encore présent dans le dernier
+code sur Github.</span> <span class="notranslate"> **Commend et
+conclusion**</span> <span class="notranslate"> Ce blog se lit
+probablement comme un grand coup de gueule sur la façon non
+professionnelle Red Hat est dans le traitement des problèmes de
+sécurité potentiels.</span> <span class="notranslate"> Mais cela est
+contraire à mon expérience habituelle.</span> <span class="notranslate"> Je vois souvent des développeurs Red Hat étant
+très actif dans la communauté de la sécurité du logiciel libre et
+souvent contribuer de manière positive.</span> <span class="notranslate"> Tout simplement je pense mieux de Red Hat.</span>
+<span class="notranslate"> Ce n'est pas un vendeur de l'entreprise
+douteuse où je ne serais pas le moins peu surpris d'une telle
+réaction.</span> <span class="notranslate"> Le processus de
+développement de RPM semble être totalement chaotique, il est clair ni
+où l'on signale des bugs ni où l'on obtient les derniers bugs de code
+et de sécurité ne sont pas fixés dans un délai raisonnable.</span>
+<span class="notranslate"> Il y a eu quelques événements récents qui
+me font sentir particulièrement inquiet à ce sujet: Un inconnu a créé
+une entrée dans le numéro de suivi libarchive \[5\] qui pointe vers un
+document anonyme \[6\] avec une description très détaillée des
+diverses failles de sécurité dans le FreeBSD processus de mise à jour
+(la plupart d'entre eux sont encore non fixée).</span> <span class="notranslate"> La chose la plus inquiétante à ce sujet est
+cependant que le poste anonyme mentionne l'existence des documents
+similaires affectant plusieurs distributions Linux.</span> <span class="notranslate"> Ces documents ne sont pas encore publiquement
+montré et étant donné la nature incertaine de cet incident, il est
+difficile de savoir si jamais ils deviendront publics ou
+exister.</span> <span class="notranslate"> Mais cela devrait être
+encore assez pour avoir un oeil plus attentif aux failles de sécurité
+potentielles dans toutes les pièces de systèmes de gestion de paquets
+Linux raison.</span> <span class="notranslate"> Je ne l'ai pas analysé
+le processus d'installation du RPM en détail, je ne peux pas dire à
+quel point il est probable que l'outil RPM ne voit jamais un fichier
+d'entrée malformé.</span> <span class="notranslate"> Il semble
+téléchargements se produisent sur HTTP, mais la première chose qui se
+passe est une vérification de signature.</span> <span class="notranslate"> Comme la signature fait partie du fichier RPM il
+doit déjà être analysé pour cela.</span> <span class="notranslate">
+L'impact exact de ces bugs nécessiterait une analyse plus
+approfondie.</span> <span class="notranslate"> Mais indépendamment de
+la façon dont probable que ce soit, je pense que l'analyseur dans un
+tel élément crucial du logiciel devrait être robuste.</span> <span class="notranslate"> Il doit être sûr d'utiliser l'outil rpm pour
+afficher des informations sur un fichier sur la ligne de
+commande.</span> <span class="notranslate"> \[1\]
+[http://rpm.org/](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=http://rpm.org/&amp;usg=ALkJrhh4E4lroyqxHLnmBt_JOdsAZpfTiw)</span>
+<span class="notranslate"> \[2\]
+[http://rpm.org/wiki/ReportingBugs](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=http://rpm.org/wiki/ReportingBugs&amp;usg=ALkJrhj-R1bvbby-JHF2PMvf7yG93AhUtg)</span>
+<span class="notranslate"> \[3\]
+[https://github.com/rpm-software-management/rpm](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://github.com/rpm-software-management/rpm&amp;usg=ALkJrhiH82Lm2IseItGAtlJun7cCNXDgmQ)</span>
+<span class="notranslate"> \[4\]
+[http://pkgs.fedoraproject.org/cgit/rpms/rpm.git/diff/rpm-4.13.0-rpmtd-out-of-bounds.patch?h=f22&amp;id=165614f3dd42caa188f78b55e7723dad2900b2f4](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=http://pkgs.fedoraproject.org/cgit/rpms/rpm.git/diff/rpm-4.13.0-rpmtd-out-of-bounds.patch%3Fh%3Df22%26id%3D165614f3dd42caa188f78b55e7723dad2900b2f4&amp;usg=ALkJrhjfXWX0ljZnUWSXXGApZfchOi112Q)</span>
+<span class="notranslate"> \[5\]
+[https://github.com/libarchive/libarchive/issues/743](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://github.com/libarchive/libarchive/issues/743&amp;usg=ALkJrhhiiCCDXlAqwcPopjiAfDHMP3nnMA)</span>
+<span class="notranslate"> \[6\]
+[https://gist.github.com/anonymous/e48209b03f1dd9625a992717e7b89c4f](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://gist.github.com/anonymous/e48209b03f1dd9625a992717e7b89c4f&amp;usg=ALkJrhhLcZ0wPMgm56l_UZjPJy2Tdl5EwA)</span>
+<span class="notranslate"> Tous les bugs ont été trouvés avec l'aide
+de lop floue américain.</span> <span class="notranslate"> Voici les
+bugs:</span> <span class="notranslate"> Stack Overflow dans glob () /
+rpmglob.c.</span> <span class="notranslate"> Exemple de fichier (test
+avec rpm -i \[entrée\]):</span> <span class="notranslate">
+&lt;https://crashes.fuzzing-project.org/rpm-stackoverflow-glob.rpm&gt;</span>
+<span class="notranslate"> Non fixée dans le code de Git en
+cours.</span> <span class="notranslate"> Heap hors limites lu
+headerVerifyInfo () / header.c.</span> <span class="notranslate">
+Exemple de fichier (test avec "rpm -i \[entrée\]"):</span> <span class="notranslate">
+&lt;https://crashes.fuzzing-project.org/rpm-heap-oob-read-headerVerifyInfo.rpm&gt;</span>
+<span class="notranslate"> Git commit:</span> <span class="notranslate">
+[https://github.com/rpm-software-management/rpm/commit/8e847d52c811e9a57239e18672d40f781e0ec48e](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://github.com/rpm-software-management/rpm/commit/8e847d52c811e9a57239e18672d40f781e0ec48e&amp;usg=ALkJrhgXrBng_v9TC8orlX9SfJi3rOIwGQ)</span>
+<span class="notranslate"> accès pointeur Null / segfault dans
+StringFormat () / formats.c</span> <span class="notranslate"> Exemple
+de fichier (test avec "rpm -i \[entrée\]"):</span> <span class="notranslate">
+&lt;https://crashes.fuzzing-project.org/rpm-nullptr-rpmtdFormat.rpm&gt;</span>
+<span class="notranslate"> Git commit:</span> <span class="notranslate">
+[https://github.com/rpm-software-management/rpm/commit/cddf43a56f19711866371f02f378dc4095b0fadd](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://github.com/rpm-software-management/rpm/commit/cddf43a56f19711866371f02f378dc4095b0fadd&amp;usg=ALkJrhiyC-d-E-SBJkzz3_nC0B2x8uEAtQ)</span>
+<span class="notranslate"> Hors limites lu dans rpmtdGetNumber () /
+rpmtd.c</span> <span class="notranslate"> Exemple de fichier (test
+avec "rpm -qi -p - \[entrée\]")</span> <span class="notranslate">
+&lt;https://crashes.fuzzing-project.org/rpm-heap-oob-read-rpmtdGetNumber.rpm&gt;</span>
+<span class="notranslate"> Git commit:</span> <span class="notranslate">
+[https://github.com/rpm-software-management/rpm/commit/b722cf86200505b3e3fcbb2095c4ff61f1f5a2ab](https://translate.googleusercontent.com/translate_c?depth=1&amp;hl=fr&amp;prev=search&amp;rurl=translate.google.fr&amp;sl=en&amp;u=https://github.com/rpm-software-management/rpm/commit/b722cf86200505b3e3fcbb2095c4ff61f1f5a2ab&amp;usg=ALkJrhi-yqWy6tCandzdbn4LVZIzJvYLjw)</span>
+<span class="notranslate"> Enfin une chose gênant d'admettre: Dans mon
+rapport original j'ai inclus une autre segfault dans headerVerifyInfo
+() avec des raisons obscures.</span> <span class="notranslate">
+Cependant, je suis désormais incapable de reproduire celui-ci.</span>
+<span class="notranslate"> Il peut être dû au compilateur options,
+différents paramètres ou des dépendances de ligne de commande sur mon
+système qui ont changé.</span> <span class="notranslate"> Pour être
+complet, je suis toujours fournir le fichier de l'échantillon:</span>
+<span class="notranslate">
+&lt;https://crashes.fuzzing-project.org/rpm-segfault-headerVerifyInfo.rpm&gt;</span>
+<span class="notranslate"> (Idéalement, les développeurs de RPM
+devraient inclure tous les exemples de fichiers dans une suite de test
+qu'ils passent régulièrement contre une adresse assainisseur
+construction de RPM.)</span> <span class="notranslate"> S'il vous
+plaît note également que je pense que cette liste soit incomplète et
+il y a probablement plus de questions qui pourraient être découverts
+avec plus fuzzing.</span> <span class="notranslate"> Je vais tester
+qu'une fois tous les problèmes existants sont fixés.</span>
+
+</div>
+</blockquote>
+
+<div class="clearfix content serendipity_entry_body">
+
+Bon comme je l'ai dis, c'est du google traduction, mais c'est assez
+clair pour comprendre les grandes lignes, dont une qui me fait tiquer:
+
+</div>
+
+<blockquote>
+  <div class="clearfix content serendipity_entry_body">
+
+<span class="notranslate">"Merci pour le rapport.</span> <span class="notranslate"> Nous avons également reçu au sujet de 30 rapports
+d'erreur dans RPM de</span> <span class="notranslate"> un journaliste
+différent récemment, donc le traitement de chacun d'eux (le vôtre et
+le</span> <span class="notranslate"> autres) vont prendre un peu de
+temps.</span> <span class="notranslate"> Nous ne disposons tout
+simplement les ressources</span> <span class="notranslate"> de passer
+des heures et des heures à analyser tous les rapports d'erreur
+".</span>
+
+</div>
+</blockquote>
+
+<div class="clearfix content serendipity_entry_body">
+
+Comment redhat peut balancer de tels propos quand on sait que Debian a
+gentiment corrigé dans la semaine et je suppose en remerciant le rapport
+du gars. Comment une société qui a comme business modèle une
+distribution sécurisé peut dire de telle âneries?
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+Ce qui me choque aussi c'est le coté bordélique des distributions linux
+dont celles basé sur RPM et leur bugzilla, je trouve qu'il y a une
+meilleur approche avec le reportbug de Debian qu'avec un bugzilla, avec
+[reportbug](https://wiki.debian.org/fr/reportbug) on se sent plus
+impliqué et surtout plus proche des développeurs, c'est du reste pas
+plus compliqué si on est sur une debian puisque celle ci nous aide dans
+la démarche et que celle ci est faisable de plusieurs façons et par
+plusieurs moyens, on peut le faire via la console en ncurse, via une
+interface gtk ou via par mail.
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+De ce que je connais de bugzilla, c'est vrai que c'est simple, mais les
+doublons se fait très facilement la ou reportbug vérifie et nous montre
+ceux qui peuvent coïncider avec le notre.
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+Mais la question n'est pas la, d'un coté on a un modèle communautaire
+avec Debian qui fait le taff sans se plaindre de l'autre une entité
+commerciale et a but lucratif qui se fait de la tune, qui dit qu'ils
+n'ont pas assez de moyens, en gros ils ont les moyens pour faire des
+doublons avec des outils comme
+[DNF](https://fr.wikipedia.org/wiki/Dandified_Yum) (pourquoi ne pas
+avoir pris
+[zypper](https://fr.wikipedia.org/wiki/OpenSUSE#Ligne_de_commande_Zypper)
+de suse?) et d'autres développement que Cascador nous parle bien mieux
+que moi dans son billet [L’innovation du côté de chez Red
+Hat](https://www.blog-libre.org/2016/04/02/linnovation-du-cote-de-chez-red-hat/)
+mais n'a pas les moyens de mettre une personne sur la sécurité de
+l'outil de bas niveau mais qui se charge de tout au niveau des paquets?
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+Je ne suis pas un fan des redhat et consorts, je préfère de loin le
+monde de debian. Je trouve notamment que Redhat avec tout le bien qu'il
+apporte dans le logiciel opensource, est trop directive, considérant les
+besoins des utilisateurs de leurs systèmes gratuits ou même leurs avis
+comme moins important que les leurs. Aussi je pense qu'on est des rats
+de laboratoire pour eux, faut dire que les peu de contactes que j'ai eu
+avec Fedora m'ont bien refroidis et je garde une mauvaise image surtout
+de leur kde, dont les devs principaux ne sont pas non plus content du
+manque de moyens pour cet environnement(allez chez opensuse). Je suis
+plus suse, je les trouve déjà plus libertaire, plus soucieux des
+utilisateurs de leur système gratuits qu'est opensuse, plus a l’écoute.
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+Bon j'ai réparé mes erreurs, il ne reste plus qu'a citer mes sources:
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+&lt;https://blog.fuzzing-project.org/52-Multiple-vulnerabilities-in-RPM-and-a-rant.html&gt;
+
+</div>
+
+<div class="clearfix content serendipity_entry_body">
+
+&lt;https://lwn.net/Articles/698453/&gt;
+
+</div>
+
+  </div>
+
+<p style="text-align:center">Commencer la discussion: <a class="external text" href="https://passiongnulinux.tuxfamily.org/forum/" rel="nofollow">Venez écrire un commentaire dans le forum</a> </p>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Seb's blog / PassionGNU/Linux, la passion du Libre...</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Seb's blog / PassionGNU/Linux, la passion du Libre...</li>
+          <li><a href="mailto:passiongnulinux/@/gmail/./com">passiongnulinux/@/gmail/./com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/Passionlinux"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">Passionlinux</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Copyleft Seb95 - Licence WTFPL - Hébergé par tuxfamily.org - Généré par Jekyll
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
