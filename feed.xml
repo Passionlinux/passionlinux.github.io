@@ -6,9 +6,22 @@
 </description>
     <link>https://passiongnulinux.tuxfamily.org//</link>
     <atom:link href="https://passiongnulinux.tuxfamily.org//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Oct 2018 21:50:58 +0200</pubDate>
-    <lastBuildDate>Tue, 09 Oct 2018 21:50:58 +0200</lastBuildDate>
+    <pubDate>Tue, 09 Oct 2018 23:24:49 +0200</pubDate>
+    <lastBuildDate>Tue, 09 Oct 2018 23:24:49 +0200</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Le code source du site est enfin là!</title>
+        <description>&lt;p&gt;Quelque chose de rare, même dans le milieu du libre, le code source du site, c’est-à-dire billet, images, ect…, est disponible –devrais-je dire enfin disponible?– sur &lt;a href=&quot;https://github.com/Passionlinux/blog-generate&quot;&gt;Github&lt;/a&gt;. C’est un pas de plus dans ce que je voulais depuis que je me suis lancé dans le blog en 2006/2007.&lt;/p&gt;
+
+&lt;p&gt;Le site est dans sa forme actuelle, l’idéal que je m’en faisais et je ne toucherais plus à rien de significative à celui-ci.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Oct 2018 23:11:00 +0200</pubDate>
+        <link>https://passiongnulinux.tuxfamily.org//2018/10/09/codesource-est-la.html</link>
+        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/10/09/codesource-est-la.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Ghostwriter sous Debian</title>
@@ -238,37 +251,6 @@ iucode-tool                         Intel processor microcode tool
         <pubDate>Mon, 03 Sep 2018 16:39:00 +0200</pubDate>
         <link>https://passiongnulinux.tuxfamily.org//2018/09/03/nouveau-cap.html</link>
         <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/09/03/nouveau-cap.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>C&#39;est calme chez les linuxiens</title>
-        <description>&lt;p&gt;Je trouve que c’est le calme absolu dans le monde Linux, c’est inquiétant ou rassurant selon comment on interprète la chose, on peut croire à une baisse des motivations, que c’est dû aux vacances, ou simplement que les distributions sont dans l’ensemble, devenues bien sérieuses et stables.&lt;/p&gt;
-
-&lt;p&gt;Je pense pas que la motivation soit descendue, ceux qui aiment notre OS et le font, sont toujours là, les blogueurs aussi par la même et ce malgré qu’on annonce depuis des lustres la fin des blogs. Par contre les vacances ont joué un rôle dans le manque de nouveautés, ça et les distributions qui sont de moins en moins des tests à échelle réelle. Il reste encore des distributions “pour le CV”, mais si on regarde, elles disparaissent bien plus rapidement sans faire grand bruit, ainsi que des distributions qui pourtant avaient de fort potentiels…&lt;/p&gt;
-
-&lt;p&gt;Dans les distributions à fort potentiel, il y en a deux qui ne font plus parler d’elles, pourtant elles sont bien là, c’est Frugalware et Sabayon. La frugalware est toujours bien maintenue, reste à jour, est dans une unique version dite &lt;em&gt;current&lt;/em&gt; qui est une distribution en sortie continue. Je ne m’attarde pas trop car mine de rien, elle se porte bien mieux que ne fut un temps.&lt;/p&gt;
-
-&lt;p&gt;Non, je m’attarderais sur la Sabayon, qui pourtant partait d’une bonne intention, prendre une Gentoo et la rendre utilisable par tous, être ce que Ubuntu est pour Debian. Alors on ne sait pas ce qui a merdé en route, mais ce qui aurait dû devenir une bombe, n’est en fait qu’un pétard mouillé… Pour moi, ce qui m’avait bloqué, c’était toutes cette publicité, ces demandes de fonds, ce truc Paypal en gros et bien voyant sur leur site, tout ce coté “&lt;em&gt;être là pour être payé&lt;/em&gt;”, j’avais fuis et puis il y avait aussi cette lourdeur, aussi bien dans la gestion des paquets que dans l’utilisation de la machine. Dommage, il y avait un quelque chose.&lt;/p&gt;
-
-&lt;p&gt;Aujourd’hui, je vois beaucoup de blogueurs dire qu’il y a une baisse de qualité dans les distributions, je vois surtout des plaintes concernant Debian/Ubuntu et que les Snap/Flatpak vont nous sauver. Je pense clairement pas qu’il faut aller sur ce terrain glissant des paquets uniformisés, je fuirais –comme la peste– les distributions qui mettent par défaut ou en valeurs de tels paquets. Du reste c’est &lt;strong&gt;MA&lt;/strong&gt; raison pour ne pas aller sur Ubuntu malgré que je la trouve pertinente et de qualité, je préfère de loin une openSUSE et une Debian qui, pour le moment, n’ont pas cédé aux chants des sirènes.&lt;/p&gt;
-
-&lt;p&gt;De mon coté, je reste à dire que l’openSUSE est vraiment une superbe distribution, avec une communauté à l’écoute, on peut facilement y participer…, j’ai tout de même un soucis avec, c’est le RPM. Je le dis souvent ici, mais je suis utilisateur Debian convaincu, de loin je préfère le format DEB que son concurrent directe le RPM. Dans l’ensemble c’est équivalent voir le RPM surpasse le DEB dans certain domaine et inversement, mais à la fin je reviens toujours vers Debian. Je n’ai plus d’internet depuis fin Juillet, je ne peux donc faire mes mises à jour, je me sens donc mieux avec Debian qu’autre chose car je sais comment elle fonctionne. Pareil pour faire des paquets que je veux en plus récent, je dépends de personne, je sais faire proprement. C’est pas une question de meilleur ou de moins bien, juste une préférence dû à une habitude et une meilleur connaissance de l’outil, peut être aussi à une sorte de formatage inconscient qui s’opère depuis des lustres. L’autre soucis, qui n’en est pas un réellement, est sa dépendance envers une seule société comme Fedora, de plus SUSE se fait vendre/acheter assez fréquemment.&lt;/p&gt;
-
-&lt;p&gt;Me revoilà donc comme au début, sur une distribution qui m’endort, me dorlote, m’infantilise, me rendant incapable d’être sur autre chose, pourtant j’ai essayé et ce n’est pas que de le dire, j’ai changé mais non, je n’ai “confiance” que dans cette distribution. Là, en ce moment, je suis sur une Ubuntu, pas chez moi mais chez mes parents, pour être plus précis, une Ubuntu LTS 18.04, vraiment bien foutu… Trois trucs me chagrinent, j’étais un ardent utilisateur d’Unity, interface que je trouvais plus pratique et utilisable que GNOME, bien que dans mon cas, j’utilisais ce dernier sur Debian. GNOME version Ubuntu est pas mal, j’aime bien ce dock/dash latérale pour rester dans le visuel et l’ergonomie aussi proche que possible de l’ancienne interface Unity, par contre GNOME reste GNOME et devient vraiment un pachyderme; ce n’est faute d’Ubuntu, j’ai regardé et comparé sur Fedora, openSUSE et Debian SID, ça reste dans une sensation de lourdeur et de lenteur qui s’est accélérée depuis la 3.24 et qui donne des latences et des freezes de mes différents PC. Je pourrais dire que c’est uniquement la faute de mes PC, mais quand même, une dizaine me donnant les mêmes effets, surtout que dedans il y a des PC récents et costauds de marque ASUS,… non, je ne peux pas mettre la faute sur uniquement mes PC. On en vient à se demander si il n’est pas temps de changer, j’aurais du mal car j’ai pris goût à utiliser ce bureau mais il en va de mon calme et du peu de cheveux qui me restent. À moins que Debian arrive à faire un tour de passe passe et nous fournit une version plus rapide/moins lourde de son GNOME.&lt;/p&gt;
-
-&lt;p&gt;Actuellement GNOME 3.22 sous Stretch et 3.20 sous openSUSE Leap 42.3 sont vraiment légers et rapides, on sent la différence, mais à partir de la 3.24, ce fut le début de la fin pour moi. Je me mettrais bien un Xfce ou pourquoi pas un Mate, et ceci alors même que j’ai souvent dit ici que ce bureau est un GNOME pour ceux qui ne savaient pas laisser le passé derrière eux. Plus sérieusement, va falloir que je regarde de plus prés ce que les développeurs de GNOME comptent faire –ou ne pas faire dans leurs environnement–, prendre la décision qui sera la plus conservatrice –car je n’aime pas le changement– et la plus confortable.&lt;/p&gt;
-
-&lt;p&gt;Je papote et m’éloigne du sujet de ce billet, mais quel était au fait ce sujet? Rien, seulement qu’on entends que le libre est mort et les blogs avec. Le libre est mort au profit de l’opensource, mais quelle est la différence, d’un coté les sources sont là pour faire des économies et de l’autre ils sont présent pour le partage, mais dans les deux cas, l’utilisateur final que je suis, il fait comment pour savoir la différence? Oh, je ne suis pas que con, je connais évidement la différence mais dans mon utilisation de tous les jours, quelle est t’elle?&lt;/p&gt;
-
-&lt;p&gt;Bientôt dans mon nouveau chez moi, j’aurais tout le temps pour essayer de dépoussiérer cette question, finit internet pendant plusieurs mois, j’aurais donc d’autres loisirs, je ne taperais que rarement les billets, ne sachant pas si filezilla aimera passer par mon tel comme modem. Je commencerais par embellir le pavillon, puis le jardin, une fois finit je reprendrais mon loisir n°1: le modèle réduit télécommandé.&lt;/p&gt;
-
-&lt;p&gt;Il faut encore que je coince Devil505 pour lui parler de &lt;a href=&quot;https://posativ.org/isso/&quot;&gt;la trouvaille de Gilles&lt;/a&gt; pour se passer de Disqus, pas encore testé, je dois admettre que je suis pour le moment pas mal content de &lt;a href=&quot;https://passiongnulinux.tuxfamily.org/forum/&quot;&gt;ce forum sans &lt;em&gt;BDD&lt;/em&gt;&lt;/a&gt; qui laisse une grande liberté de dialogue. Je pense avoir ce que je cherchais depuis des lustres, le site est en statique, ça risque rien, les commentaires sont via un forum, sans trop de risque puisque pas d’infos privées. Le tout me laissant plus de temps pour ma famille et mes loisirs de base comme jouer à la console, des petites parties, je n’arrive plus à rester enfermé dans une pièce pour être devant la TV.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 27 Aug 2018 11:07:00 +0200</pubDate>
-        <link>https://passiongnulinux.tuxfamily.org//2018/08/27/linux-stable.html</link>
-        <guid isPermaLink="true">https://passiongnulinux.tuxfamily.org//2018/08/27/linux-stable.html</guid>
         
         
       </item>
